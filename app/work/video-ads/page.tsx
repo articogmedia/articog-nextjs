@@ -4,7 +4,7 @@ import { Footer } from '@/components/layout/Footer';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
 
-function VideoAdsGalleryPage() {
+export default function VideoAdsGalleryPage() {
   const examples = [
     { title: "DTC Lifestyle Reveal", type: "Client Work", industry: "Beauty", format: "9:16" },
     { title: "Automotive Cinematic", type: "Concept Piece", industry: "Automotive", format: "16:9" },
@@ -50,7 +50,7 @@ function VideoAdsGalleryPage() {
 
             <Section className="mt-20 py-12 border-t border-zinc-900 text-center">
               <p className="text-zinc-500 text-sm mb-8 italic">All displayed work is used with appropriate permissions.</p>
-              <Link href="/book-a-demo" className="text-white hover:underline underline-offset-4">
+              <Link to="/book-a-demo" className="text-white hover:underline underline-offset-4">
                 View all case studies →
               </Link>
             </Section>
@@ -61,5 +61,3 @@ function VideoAdsGalleryPage() {
     </div>
   );
 }
-
-export default VideoAdsGalleryPage;

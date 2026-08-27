@@ -24,14 +24,14 @@ export default function BeautySkincarePage() {
                   <h3 className="text-2xl font-bold mb-4">DTC Beauty Brand Scale</h3>
                   <p className="text-zinc-400 mb-6">How a leading skincare brand reduced creative production costs by 60% while increasing ROAS by 25% using Articog's AI creative pipeline.</p>
                   <Button asChild variant="outline" className="border-zinc-700 hover:bg-white hover:text-black">
-                    <Link href="/customers/ecommerce-brand">Read Case Study</Link>
+                    <Link to="/customers/ecommerce-brand">Read Case Study</Link>
                   </Button>
                 </div>
               </div>
             </Section>
             <Section className="py-20 text-center">
               <Button asChild className="bg-white text-black hover:bg-zinc-200 h-14 px-10 text-lg font-semibold rounded-full">
-                <Link href="/book-a-demo">Start Your Beauty Project</Link>
+                <Link to="/book-a-demo">Start Your Beauty Project</Link>
               </Button>
             </Section>
           </div>

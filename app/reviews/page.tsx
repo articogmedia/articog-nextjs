@@ -2,7 +2,7 @@ import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Quote, Info } from "lucide-react";
 
-function ReviewsPage() {
+export default function ReviewsPage() {
   const testimonials = [
     {
       name: "[Placeholder Name]",
@@ -93,5 +93,3 @@ function ReviewsPage() {
     </div>
   );
 }
-
-export default ReviewsPage;

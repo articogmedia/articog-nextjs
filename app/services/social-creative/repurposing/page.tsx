@@ -2,7 +2,7 @@ import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Map, Layers, Layout, Info } from "lucide-react";
 
-function RepurposingPage() {
+export default function RepurposingPage() {
   const steps = [
     {
       title: "Input-to-Output Mapping",
@@ -83,6 +83,3 @@ function RepurposingPage() {
     </div>
   );
 }
-
-
-export default RepurposingPage;

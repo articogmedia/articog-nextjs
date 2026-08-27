@@ -1,0 +1,59 @@
+import { Container, Section, Heading } from "@/components/ui";
+
+function AccessibilityPage() {
+  const sections = [
+    {
+      title: "Our Commitment",
+      content:
+        "Articog is committed to ensuring digital accessibility for all users, including those using assistive technology. We believe that everyone should be able to experience our website, and we are working to make our platform accessible to the widest possible audience.",
+    },
+    {
+      title: "Standards and Guidelines",
+      content:
+        "We aim to meet the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA as our standard for accessibility. This is an ongoing effort, and we regularly review our site to identify and address potential barriers.",
+    },
+    {
+      title: "Report an Issue",
+      content:
+        "If you encounter accessibility barriers or have suggestions on how we can improve the accessibility of our site, please contact us at info@articog.com. We welcome your feedback and will respond promptly to address any issues reported.",
+    },
+  ];
+
+  return (
+    <div className="bg-black min-h-screen">
+      <Section size="lg" className="pt-32 md:pt-40">
+        <Container>
+          <div className="mx-auto max-w-3xl mb-24">
+            <Heading as="h1" size="hero" className="mb-4">
+              Accessibility Statement
+            </Heading>
+            <p
+              className="font-sans text-sm mb-16"
+              style={{ color: "rgba(255,255,255,0.40)" }}
+            >
+              Last updated: August 19, 2026
+            </p>
+
+            <div className="space-y-12">
+              {sections.map((section) => (
+                <div key={section.title}>
+                  <h2 className="font-display text-xl font-semibold text-white mb-4">
+                    {section.title}
+                  </h2>
+                  <p
+                    className="font-sans text-base leading-relaxed"
+                    style={{ color: "rgba(255,255,255,0.65)" }}
+                  >
+                    {section.content}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </Section>
+    </div>
+  );
+}
+
+export default AccessibilityPage;

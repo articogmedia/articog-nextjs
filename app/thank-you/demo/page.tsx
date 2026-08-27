@@ -2,7 +2,7 @@ import { Link } from "@/components/ui/Link";
 import { Container, Section, Button } from "@/components/ui";
 import { CheckCircle2 } from "lucide-react";
 
-function ThankYouDemoPage() {
+export default function ThankYouDemoPage() {
   return (
     <Section size="lg" className="pt-32 md:pt-40 min-h-[80vh] flex items-center bg-black">
       <Container>
@@ -36,5 +36,3 @@ function ThankYouDemoPage() {
     </Section>
   );
 }
-
-export default ThankYouDemoPage;

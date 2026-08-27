@@ -3,7 +3,7 @@ import { siteContent } from "@/lib/content";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { ArrowRight, ChevronRight } from "lucide-react";
 
-function CustomersPage() {
+export default function CustomersPage() {
   const caseStudies = siteContent.caseStudies;
 
   return (
@@ -104,5 +104,3 @@ function CustomersPage() {
     </div>
   );
 }
-
-export default CustomersPage;

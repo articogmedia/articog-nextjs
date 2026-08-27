@@ -2,7 +2,7 @@ import { Link } from "@/components/ui/Link";
 import { Container, Section, Button } from "@/components/ui";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
-function ProductVisualsPage() {
+export default function ProductVisualsPage() {
   return (
     <>
       <Section size="lg" className="pt-32 md:pt-40 pb-20">
@@ -62,6 +62,3 @@ function ProductVisualsPage() {
     </>
   );
 }
-
-
-export default ProductVisualsPage;

@@ -1,10 +1,11 @@
 "use client";
+
 import { useState } from "react";
 import { Link } from "@/components/ui/Link";
 import { Container, Section, Button } from "@/components/ui";
 import { ArrowRight, Mail, Instagram, Linkedin, Twitter } from "lucide-react";
 
-function ContactPage() {
+export default function ContactPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
@@ -235,5 +236,3 @@ function ChevronDownIcon() {
     </svg>
   );
 }
-
-export default ContactPage;

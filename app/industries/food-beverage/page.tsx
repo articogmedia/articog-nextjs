@@ -60,7 +60,7 @@ export default function FoodBeveragePage() {
               <h2 className="text-2xl font-bold mb-8 text-white">Relevant Services</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Link 
-                  href="/services/product-visuals" 
+                  to="/services/product-visuals" 
                   className="group block bg-zinc-900/30 p-8 rounded-2xl border border-zinc-800 hover:border-zinc-700 transition-colors"
                 >
                   <h3 className="text-xl font-bold mb-2 group-hover:text-white transition-colors">Product Visuals</h3>
@@ -70,7 +70,7 @@ export default function FoodBeveragePage() {
                   </span>
                 </Link>
                 <Link 
-                  href="/services/ai-video-production/product-commercials" 
+                  to="/services/ai-video-production/product-commercials" 
                   className="group block bg-zinc-900/30 p-8 rounded-2xl border border-zinc-800 hover:border-zinc-700 transition-colors"
                 >
                   <h3 className="text-xl font-bold mb-2 group-hover:text-white transition-colors">Product Commercials</h3>
@@ -98,7 +98,7 @@ export default function FoodBeveragePage() {
               <div className="bg-gradient-to-b from-zinc-900 to-black p-12 rounded-3xl border border-zinc-800">
                 <h2 className="text-3xl font-bold mb-6 text-white">Ready to elevate your product creative?</h2>
                 <Button asChild className="bg-white text-black hover:bg-zinc-200 h-14 px-10 text-lg font-semibold rounded-full">
-                  <Link href="/book-a-demo">See Relevant Work</Link>
+                  <Link to="/book-a-demo">See Relevant Work</Link>
                 </Button>
               </div>
             </Section>

@@ -1,8 +1,14 @@
-import { Container, Section, Button } from "@/components/ui";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { Button } from "@/components/ui/Button";
+import { Container } from "@/components/ui/Container";
+import { Section } from "@/components/ui/Section";
 
 export default function AfinCommunityPage() {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col font-sans">
+      <Header />
+
       <main className="flex-grow pt-32 pb-20">
         <Container>
           <div className="max-w-4xl mx-auto">
@@ -28,13 +34,18 @@ export default function AfinCommunityPage() {
             </Section>
 
             <Section className="py-12 text-center">
-              <Button className="bg-white text-black hover:bg-zinc-200 h-14 px-10 text-lg font-semibold rounded-full">
-                Join the Community
+              <Button
+                asChild
+                className="bg-white text-black hover:bg-zinc-200 h-14 px-10 text-lg font-semibold rounded-full"
+              >
+                <a href="#">Join the Community</a>
               </Button>
             </Section>
           </div>
         </Container>
       </main>
+
+      <Footer />
     </div>
   );
 }

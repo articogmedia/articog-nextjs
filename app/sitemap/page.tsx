@@ -1,9 +1,10 @@
+import { Link } from "@/components/ui/Link";
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
-import { Link } from "@/components/ui/Link";
-function SitemapPage() {
+
+export default function SitemapPage() {
   const sitemapData = [
     {
       title: "Company",
@@ -129,7 +130,7 @@ function SitemapPage() {
                     {section.links.map((link) => (
                       <li key={link.href}>
                         <Link 
-                          href={link.href} 
+                          to={link.href} 
                           className="text-zinc-300 hover:text-white transition-colors text-[17px] font-medium block w-fit"
                         >
                           {link.label}
@@ -148,5 +149,3 @@ function SitemapPage() {
     </div>
   );
 }
-
-export default SitemapPage;

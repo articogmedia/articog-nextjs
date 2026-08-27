@@ -8,7 +8,7 @@ import { Linkedin } from "lucide-react";
   No inflated titles or claims. 
 */}
 
-function TeamPage() {
+export default function TeamPage() {
   const team = [
     {
       name: "[Name Placeholder]",
@@ -108,5 +108,3 @@ function TeamPage() {
     </div>
   );
 }
-
-export default TeamPage;

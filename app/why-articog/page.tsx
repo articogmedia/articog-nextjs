@@ -3,7 +3,7 @@ import { Container, Section, Button, Heading } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Comparison } from "@/components/sections/Comparison";
 
-function WhyArticogPage() {
+export default function WhyArticogPage() {
   const comparisonRows = [
     {
       attribute: "First output",
@@ -110,5 +110,3 @@ function WhyArticogPage() {
     </div>
   );
 }
-
-export default WhyArticogPage;

@@ -1,23 +1,26 @@
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
-import { Button } from '@/components/ui/Button';
-import { Container } from '@/components/ui/Container';
-import { Section } from '@/components/ui/Section';
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { Button } from "@/components/ui/Button";
+import { Container } from "@/components/ui/Container";
+import { Section } from "@/components/ui/Section";
 
-function PressPage() {
+export default function PressPage() {
   const mediaAssets = [
     {
       title: "Logo Pack",
-      description: "Official brand marks in various formats and colorways."
+      description:
+        "Official brand marks in various formats and colorways.",
     },
     {
       title: "Product Screenshots",
-      description: "High-resolution captures of the Articog platform in action."
+      description:
+        "High-resolution captures of the Articog platform in action.",
     },
     {
       title: "Company Boilerplate",
-      description: "Standard company description for press and editorial use."
-    }
+      description:
+        "Standard company description for press and editorial use.",
+    },
   ];
 
   return (
@@ -32,7 +35,8 @@ function PressPage() {
             </h1>
 
             <p className="text-zinc-400 text-xl mb-12 max-w-2xl leading-relaxed">
-              Resources and information for journalists and media covering Articog's mission to transform creative production with AI.
+              Resources and information for journalists and media covering
+              Articog&apos;s mission to transform creative production with AI.
             </p>
 
             <Section className="py-12 border-t border-zinc-900">
@@ -73,7 +77,11 @@ function PressPage() {
                   </h2>
 
                   <div className="bg-zinc-900/30 p-6 rounded-2xl border border-zinc-800 italic text-zinc-400 text-sm leading-relaxed">
-                    Articog is a next-generation AI creative production studio. We partner with leading brands and agencies to produce high-fidelity cinematic video, product commercials, and social content at unprecedented speed and scale, powered by advanced generative AI workflows.
+                    Articog is a next-generation AI creative production
+                    studio. We partner with leading brands and agencies to
+                    produce high-fidelity cinematic video, product
+                    commercials, and social content at unprecedented speed and
+                    scale, powered by advanced generative AI workflows.
                   </div>
                 </div>
 
@@ -83,7 +91,8 @@ function PressPage() {
                   </h2>
 
                   <p className="text-zinc-400 mb-4">
-                    For media inquiries, interviews, or additional assets, please reach out to our communications team.
+                    For media inquiries, interviews, or additional assets,
+                    please reach out to our communications team.
                   </p>
 
                   <a
@@ -102,7 +111,9 @@ function PressPage() {
               </h2>
 
               <p className="text-zinc-400 text-sm leading-relaxed max-w-2xl">
-                Articog logos and media materials may be used for editorial coverage according to our brand guidelines. For any other usage or specific permission questions, please contact us.
+                Articog logos and media materials may be used for editorial
+                coverage according to our brand guidelines. For any other
+                usage or specific permission questions, please contact us.
               </p>
             </Section>
 
@@ -111,7 +122,7 @@ function PressPage() {
                 asChild
                 className="bg-white text-black hover:bg-zinc-200 h-14 px-10 text-lg font-semibold rounded-full"
               >
-                <a href="/contact">Download Media Kit</a>
+                <a href="#">Download Media Kit</a>
               </Button>
             </Section>
           </div>
@@ -122,5 +133,3 @@ function PressPage() {
     </div>
   );
 }
-
-export default PressPage;

@@ -1,14 +1,6 @@
-// app/solutions/page.tsx
-import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 import { Container, Section, Button, Heading } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
-
-export const metadata: Metadata = {
-  title: "Solutions — Articog",
-  description:
-    "Find your use case. Whatever your creative bottleneck, there's a model built to solve it.",
-};
 
 export default function SolutionsPage() {
   const cards = [

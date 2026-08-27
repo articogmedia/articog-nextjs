@@ -1,10 +1,11 @@
+import { Link } from "@/components/ui/Link";
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
-import { Link } from "@/components/ui/Link";
-function PlaybooksPage() {
+
+export default function PlaybooksPage() {
   const playbooks = [
     {
       title: "The Creative Testing Framework",
@@ -52,7 +53,7 @@ function PlaybooksPage() {
                     <p className="text-zinc-400 text-sm leading-relaxed mb-4 flex-grow">{playbook.description}</p>
                     <div className="mb-6">
                       <span className="text-[10px] uppercase tracking-wider text-zinc-500 font-bold block mb-1">Relevant Service</span>
-                      <Link href={playbook.serviceLink} className="text-xs text-white hover:underline">{playbook.serviceName}</Link>
+                      <Link to={playbook.serviceLink} className="text-xs text-white hover:underline">{playbook.serviceName}</Link>
                     </div>
                     <Button variant="outline" className="w-full border-zinc-700 hover:bg-zinc-800 text-white">Use This Playbook</Button>
                   </div>
@@ -64,7 +65,7 @@ function PlaybooksPage() {
               <div className="bg-gradient-to-b from-zinc-900 to-black p-12 rounded-3xl border border-zinc-800">
                 <h2 className="text-3xl font-bold mb-6 text-white">Ready to implement these frameworks?</h2>
                 <Button asChild className="bg-white text-black hover:bg-zinc-200 h-14 px-10 text-lg font-semibold rounded-full">
-                  <Link href="/book-a-demo">Book a Demo</Link>
+                  <Link to="/book-a-demo">Book a Demo</Link>
                 </Button>
               </div>
             </Section>
@@ -76,5 +77,3 @@ function PlaybooksPage() {
     </div>
   );
 }
-
-export default PlaybooksPage;

@@ -2,7 +2,8 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
-function WhatsNewPage() {
+
+export default function WhatsNewPage() {
   // NOTE: This page should stay unlinked from main nav until there are enough updates to keep it fresh.
   
   interface UpdateEntry {
@@ -60,5 +61,3 @@ function WhatsNewPage() {
     </div>
   );
 }
-
-export default WhatsNewPage;

@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
 
-function EventsPage() {
+export default function EventsPage() {
   const upcomingEvents = [
     {
       title: "Scale Your Creative Production with AI-Native Workflows",
@@ -97,7 +97,7 @@ function EventsPage() {
               <div className="bg-zinc-900/30 p-12 rounded-3xl border border-zinc-800">
                 <h2 className="text-2xl font-bold mb-6 text-white">Want a custom walkthrough?</h2>
                 <Button asChild className="bg-white text-black hover:bg-zinc-200 h-12 px-8 text-base font-semibold rounded-full">
-                  <Link href="/book-a-demo">Book a Demo</Link>
+                  <Link to="/book-a-demo">Book a Demo</Link>
                 </Button>
               </div>
             </Section>
@@ -109,5 +109,3 @@ function EventsPage() {
     </div>
   );
 }
-
-export default EventsPage;

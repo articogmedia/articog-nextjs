@@ -3,7 +3,7 @@ import { Container, Section, Button, Heading } from "@/components/ui";
 import { ArrowRight } from "lucide-react";
 import { siteContent } from "@/lib/content";
 
-function AboutPage() {
+export default function AboutPage() {
   const problems = siteContent.problems;
 
   return (
@@ -113,7 +113,7 @@ function AboutPage() {
               Ready to scale your creative?
             </Heading>
             <Button asChild variant="primary" size="lg">
-              <Link href="/book-a-demo">
+              <Link to="/book-a-demo">
                 Work with us
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
@@ -140,5 +140,3 @@ function ApproachItem({ title, description }: { title: string; description: stri
     </div>
   );
 }
-
-export default AboutPage;

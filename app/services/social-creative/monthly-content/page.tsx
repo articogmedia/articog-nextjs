@@ -2,7 +2,7 @@ import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Calendar, Palette, Share2, ArrowRight } from "lucide-react";
 
-function MonthlySocialContentPage() {
+export default function MonthlySocialContentPage() {
   const included = [
     {
       title: "Posts Tailored to Your Calendar",
@@ -101,6 +101,3 @@ function MonthlySocialContentPage() {
     </div>
   );
 }
-
-
-export default MonthlySocialContentPage;

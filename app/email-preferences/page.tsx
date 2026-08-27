@@ -1,4 +1,5 @@
 "use client";
+
 import { Link } from "@/components/ui/Link";
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
@@ -6,7 +7,7 @@ import { Button } from '@/components/ui/Button';
 import { useState } from 'react';
 import { toast } from 'sonner';
 
-function EmailPreferencesPage() {
+export default function EmailPreferencesPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [unsubscribedAll, setUnsubscribedAll] = useState(false);
 
@@ -112,7 +113,7 @@ function EmailPreferencesPage() {
           </form>
 
           <div className="mt-12 text-center">
-            <Link href="/legal/privacy-policy" className="text-zinc-400 hover:text-white transition-colors underline underline-offset-4 decoration-zinc-800 text-sm">
+            <Link to="/legal/privacy-policy" className="text-zinc-400 hover:text-white transition-colors underline underline-offset-4 decoration-zinc-800 text-sm">
               Read our full Privacy Policy
             </Link>
           </div>
@@ -123,5 +124,3 @@ function EmailPreferencesPage() {
     </div>
   );
 }
-
-export default EmailPreferencesPage;

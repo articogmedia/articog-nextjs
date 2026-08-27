@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { Container, Section, Button, Heading } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 
-function WorkPage() {
+export default function WorkPage() {
   const categories = [
     {
       title: "Video Ads",
@@ -130,5 +130,3 @@ function WorkPage() {
     </div>
   );
 }
-
-export default WorkPage;

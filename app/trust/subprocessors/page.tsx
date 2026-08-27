@@ -58,7 +58,7 @@ export default function SubprocessorsPage() {
 
             <Section className="py-12 flex justify-center">
               <Button asChild className="bg-white text-black hover:bg-zinc-200 h-14 px-10 text-lg font-semibold rounded-full">
-                <Link href="/contact">Request Vendor Details</Link>
+                <Link to="/contact">Request Vendor Details</Link>
               </Button>
             </Section>
           </div>

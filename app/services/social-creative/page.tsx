@@ -2,7 +2,7 @@ import { Link } from "@/components/ui/Link";
 import { Container, Section, Button } from "@/components/ui";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
-function SocialCreativePage() {
+export default function SocialCreativePage() {
   return (
     <>
       <Section size="lg" className="pt-32 md:pt-40 pb-20">
@@ -62,6 +62,3 @@ function SocialCreativePage() {
     </>
   );
 }
-
-
-export default SocialCreativePage;

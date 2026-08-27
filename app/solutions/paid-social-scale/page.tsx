@@ -36,7 +36,7 @@ export default function PaidSocialScalePage() {
             </Section>
             <Section className="py-20 text-center">
               <Button asChild className="bg-white text-black hover:bg-zinc-200 h-14 px-10 text-lg font-semibold rounded-full transition-all shadow-lg shadow-white/5">
-                <Link href="/book-a-demo">Discuss Your Social Strategy</Link>
+                <Link to="/book-a-demo">Discuss Your Social Strategy</Link>
               </Button>
             </Section>
           </div>

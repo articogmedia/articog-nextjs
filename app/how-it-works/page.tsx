@@ -2,7 +2,7 @@ import { Link } from "@/components/ui/Link";
 import { ArrowRight } from "lucide-react";
 import { Container, Section, Button, Heading } from "@/components/ui";
 
-function HowItWorksPage() {
+export default function HowItWorksPage() {
   const steps = [
     {
       step: "Day 1",
@@ -109,5 +109,3 @@ function HowItWorksPage() {
     </div>
   );
 }
-
-export default HowItWorksPage;

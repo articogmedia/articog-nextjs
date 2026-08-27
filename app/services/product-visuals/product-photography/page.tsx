@@ -2,7 +2,7 @@ import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { ShoppingBag, Layout, Calendar, ShieldCheck } from "lucide-react";
 
-function ProductPhotographyPage() {
+export default function ProductPhotographyPage() {
   const useCases = [
     {
       title: "Ecommerce Listings",
@@ -109,6 +109,3 @@ function ProductPhotographyPage() {
     </div>
   );
 }
-
-
-export default ProductPhotographyPage;

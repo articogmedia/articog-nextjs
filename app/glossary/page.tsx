@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
 
-function GlossaryPage() {
+export default function GlossaryPage() {
   const terms = [
     {
       term: "AI-Native Production",
@@ -68,7 +68,8 @@ function GlossaryPage() {
                     <h3 className="text-2xl font-bold mb-3 text-white tracking-tight flex items-baseline gap-4">
                       {item.term}
                       {item.link && (
-                        <Link href={item.link} 
+                        <Link 
+                          to={item.link} 
                           className="text-xs font-medium text-zinc-500 hover:text-white border border-zinc-800 rounded-full px-3 py-1 transition-colors"
                         >
                           Related Service
@@ -87,7 +88,7 @@ function GlossaryPage() {
               <div className="bg-zinc-900/30 p-12 rounded-3xl border border-zinc-800">
                 <h2 className="text-2xl font-bold mb-6 text-white">Need more information?</h2>
                 <Button asChild className="bg-white text-black hover:bg-zinc-200 h-12 px-8 text-base font-semibold rounded-full">
-                  <Link href="/book-a-demo">Book a Demo</Link>
+                  <Link to="/book-a-demo">Book a Demo</Link>
                 </Button>
               </div>
             </Section>
@@ -99,5 +100,3 @@ function GlossaryPage() {
     </div>
   );
 }
-
-export default GlossaryPage;

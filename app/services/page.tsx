@@ -1,3 +1,4 @@
+import { Link } from "@/components/ui/Link";
 import { Container, Section, Button } from "@/components/ui";
 import { ArrowRight } from "lucide-react";
 
@@ -49,7 +50,6 @@ const serviceGroups = [
       },
     ],
   },
-
   {
     category: "Ad Creative",
     items: [
@@ -79,7 +79,6 @@ const serviceGroups = [
       },
     ],
   },
-
   {
     category: "Social",
     items: [
@@ -103,7 +102,6 @@ const serviceGroups = [
       },
     ],
   },
-
   {
     category: "Product Visuals",
     items: [
@@ -133,7 +131,6 @@ const serviceGroups = [
       },
     ],
   },
-
   {
     category: "Audio",
     items: [
@@ -157,7 +154,6 @@ const serviceGroups = [
       },
     ],
   },
-
   {
     category: "Strategy",
     items: [
@@ -187,7 +183,6 @@ const serviceGroups = [
       },
     ],
   },
-
   {
     category: "Post-Production",
     items: [
@@ -231,7 +226,7 @@ export default function ServicesPage() {
       {/* Hero */}
       <Section
         size="lg"
-        className="relative min-h-[60vh] overflow-hidden pt-32 md:pt-40"
+        className="relative pt-32 md:pt-40 overflow-hidden min-h-[60vh] flex items-center"
       >
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
@@ -241,7 +236,7 @@ export default function ServicesPage() {
             playsInline
             loop
             controls={false}
-            preload="metadata"
+            preload="auto"
             className="h-full w-full object-cover opacity-40"
             poster="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:best,f_auto,so_0,w_1920/v1786976270/web_1_1_1_1.jpg"
           >
@@ -249,8 +244,15 @@ export default function ServicesPage() {
               src="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:best,f_auto/v1786976270/web_1_1_1_1.mp4"
               type="video/mp4"
             />
+
+            <source
+              src="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:best,f_auto,w_960/v1786976270/web_1_1_1_1.mp4"
+              type="video/mp4"
+              media="(max-width: 768px)"
+            />
           </video>
 
+          {/* Dark Overlay */}
           <div
             className="absolute inset-0 z-10"
             style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
@@ -291,7 +293,7 @@ export default function ServicesPage() {
         </Container>
       </Section>
 
-      {/* Services */}
+      {/* Categorized Services */}
       <div className="pb-24">
         {serviceGroups.map((group) => (
           <Section key={group.category} size="md" className="py-12">
@@ -305,7 +307,7 @@ export default function ServicesPage() {
 
               <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                 {group.items.map((service) => (
-                  <a
+                  <Link
                     key={service.href}
                     href={service.href}
                     className="group flex flex-col rounded-2xl p-7 transition-all duration-200 hover:-translate-y-1"
@@ -328,14 +330,14 @@ export default function ServicesPage() {
                       {service.description}
                     </p>
 
-                    <span className="mt-auto inline-flex items-center gap-1.5 pt-5 font-sans text-sm font-medium text-accent transition-colors duration-200 group-hover:text-accent-hover">
+                    <span className="mt-auto pt-5 inline-flex items-center gap-1.5 font-sans text-sm font-medium text-accent group-hover:text-accent-hover transition-colors duration-200">
                       Learn more
                       <ArrowRight
                         size={14}
                         className="transition-transform duration-200 group-hover:translate-x-0.5"
                       />
                     </span>
-                  </a>
+                  </Link>
                 ))}
               </div>
             </Container>
@@ -348,7 +350,7 @@ export default function ServicesPage() {
         <Container>
           <div className="mx-auto max-w-xl text-center">
             <h2
-              className="mb-6 font-display font-semibold text-white"
+              className="font-display font-semibold text-white mb-6"
               style={{
                 fontSize: "clamp(1.8rem, 4vw, 2.6rem)",
                 lineHeight: 1.15,
@@ -359,10 +361,10 @@ export default function ServicesPage() {
             </h2>
 
             <Button asChild variant="primary" size="lg">
-              <a href="/book-a-demo">
+              <Link href="/book-a-demo">
                 Book a Demo
                 <ArrowRight size={15} />
-              </a>
+              </Link>
             </Button>
 
             <p

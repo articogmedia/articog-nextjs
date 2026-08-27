@@ -1,9 +1,10 @@
 "use client";
+
 import { Container, Section, Button, Heading } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { useState } from "react";
 
-function AiAdLibraryPage() {
+export default function AdLibraryPage() {
   const [activeCategory, setActiveCategory] = useState("All");
   
   const categories = ["All", "Video", "Static", "Audio"];
@@ -168,5 +169,3 @@ function AiAdLibraryPage() {
     </div>
   );
 }
-
-export default AiAdLibraryPage;

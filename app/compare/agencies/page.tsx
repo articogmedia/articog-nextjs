@@ -1,5 +1,6 @@
-import { Container, Section, Button, Heading } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
+import { Container, Section, Button, Heading } from "@/components/ui";
+import { Check, X } from "lucide-react";
 
 export default function CompareAgenciesPage() {
   const comparisons = [
@@ -26,8 +27,7 @@ export default function CompareAgenciesPage() {
     {
       feature: "Strategy & Production",
       agency: "Strategy and production often siloed in different teams.",
-      articog:
-        "Strategy and production integrated into a single, seamless pipeline.",
+      articog: "Strategy and production integrated into a single, seamless pipeline.",
     },
   ];
 
@@ -42,55 +42,25 @@ export default function CompareAgenciesPage() {
             >
               COMPARISON
             </span>
-
             <Heading as="h1" size="hero" className="mb-6">
               Articog vs Traditional Agencies
             </Heading>
-
-            <p
-              className="mx-auto max-w-2xl font-sans text-base md:text-lg leading-relaxed"
-              style={{ color: "rgba(255,255,255,0.65)" }}
-            >
-              We've reimagined creative production from the ground up. This is
-              a fair look at how our AI-native model stacks up against
-              traditional agency structures.
+            <p className="mx-auto max-w-2xl font-sans text-base md:text-lg leading-relaxed" style={{ color: "rgba(255,255,255,0.65)" }}>
+              We've reimagined creative production from the ground up. This is a fair look at how our AI-native model stacks up against traditional agency structures.
             </p>
           </div>
 
-          <div
-            className="mx-auto max-w-5xl mb-20 overflow-hidden rounded-2xl border border-white/[0.08]"
-            style={{ background: "rgba(255,255,255,0.02)" }}
-          >
+          <div className="mx-auto max-w-5xl mb-20 overflow-hidden rounded-2xl border border-white/[0.08]" style={{ background: "rgba(255,255,255,0.02)" }}>
             <div className="grid grid-cols-3 border-b border-white/[0.08] bg-white/[0.03]">
-              <div className="p-6 font-sans text-xs font-bold uppercase tracking-widest text-white/40">
-                Category
-              </div>
-
-              <div className="p-6 font-sans text-xs font-bold uppercase tracking-widest text-white/40">
-                Traditional Agency
-              </div>
-
-              <div className="p-6 font-sans text-xs font-bold uppercase tracking-widest text-accent">
-                Articog
-              </div>
+              <div className="p-6 font-sans text-xs font-bold uppercase tracking-widest text-white/40">Category</div>
+              <div className="p-6 font-sans text-xs font-bold uppercase tracking-widest text-white/40">Traditional Agency</div>
+              <div className="p-6 font-sans text-xs font-bold uppercase tracking-widest text-accent">Articog</div>
             </div>
-
             {comparisons.map((row) => (
-              <div
-                key={row.feature}
-                className="grid grid-cols-3 border-b border-white/[0.08] last:border-0"
-              >
-                <div className="p-6 font-display text-sm font-semibold text-white/90">
-                  {row.feature}
-                </div>
-
-                <div className="p-6 font-sans text-sm leading-relaxed text-white/40">
-                  {row.agency}
-                </div>
-
-                <div className="p-6 font-sans text-sm leading-relaxed text-white/70">
-                  {row.articog}
-                </div>
+              <div key={row.feature} className="grid grid-cols-3 border-b border-white/[0.08] last:border-0">
+                <div className="p-6 font-display text-sm font-semibold text-white/90">{row.feature}</div>
+                <div className="p-6 font-sans text-sm leading-relaxed text-white/40">{row.agency}</div>
+                <div className="p-6 font-sans text-sm leading-relaxed text-white/70">{row.articog}</div>
               </div>
             ))}
           </div>

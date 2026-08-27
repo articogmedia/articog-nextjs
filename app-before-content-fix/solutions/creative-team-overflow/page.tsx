@@ -1,0 +1,98 @@
+import { Container, Section, Heading, Button } from "@/components/ui";
+import { Link } from "@/components/ui/Link";
+import { Zap, Puzzle, TrendingUp, ArrowRight } from "lucide-react";
+
+export default function CreativeOverflowPage() {
+  const features = [
+    {
+      title: "On-Demand Capacity",
+      desc: "Spin up extra production support exactly when you need it, perfect for seasonal peaks or large campaign launches.",
+      icon: Zap,
+    },
+    {
+      title: "Seamless Brand Fit",
+      desc: "We work directly from your existing brand guidelines and assets. No long ramp-up time or creative misalignment.",
+      icon: Puzzle,
+    },
+    {
+      title: "Flexible Engagement",
+      desc: "Scale support up or down project by project. Get the help you need without being locked into a long-term retainer.",
+      icon: TrendingUp,
+    },
+  ];
+
+  return (
+    <div className="bg-black min-h-screen">
+      {/* Hero Section */}
+      <Section size="lg" className="pt-32 md:pt-40">
+        <Container>
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center rounded-full bg-white/5 px-3 py-1 mb-6 border border-white/10">
+              <span className="font-sans text-[10px] font-bold tracking-[0.2em] text-white/50 uppercase">
+                Solutions
+              </span>
+            </div>
+            <Heading as="h1" size="hero" className="mb-6">
+              In-House Creative Overflow
+            </Heading>
+            <p className="font-sans text-xl text-white/60 leading-relaxed">
+              Extend your existing creative team's capacity during peak demand—without hiring or outsourcing to a slow agency.
+            </p>
+          </div>
+        </Container>
+      </Section>
+
+      {/* How It Works Section */}
+      <Section className="py-20 bg-white/[0.02]">
+        <Container>
+          <div className="mb-12">
+            <h2 className="font-display text-3xl font-semibold text-white mb-4">How It Works</h2>
+            <p className="font-sans text-white/50 max-w-2xl">
+              We integrate with your internal workflow to provide the extra hands you need to cross the finish line.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {features.map((item) => (
+              <div 
+                key={item.title} 
+                className="p-8 rounded-2xl bg-white/5 border border-white/10"
+              >
+                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white mb-6">
+                  <item.icon className="w-5 h-5" />
+                </div>
+                <h3 className="font-display text-lg font-semibold text-white mb-2">{item.title}</h3>
+                <p className="font-sans text-sm text-white/50 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      {/* Comparison Note Section */}
+      <Section className="py-20 border-t border-white/5">
+        <Container>
+          <div className="p-8 md:p-12 rounded-2xl bg-white/5 border border-white/10 max-w-4xl border-l-4 border-l-white/20">
+            <h3 className="font-display text-2xl font-semibold text-white mb-4">A Note on Engagement</h3>
+            <p className="font-sans text-white/70 leading-relaxed max-w-2xl">
+              Unlike our <Link href="/solutions/monthly-creative-subscription" className="text-white hover:text-white/80 underline underline-offset-4">Monthly Creative Subscription</Link>, this solution is specifically for teams that already have creative resources in-house and need targeted overflow support, rather than a fully outsourced creative engine.
+            </p>
+          </div>
+        </Container>
+      </Section>
+
+      {/* CTA Section */}
+      <Section className="py-24 bg-white/[0.02]">
+        <Container>
+          <div className="text-center max-w-2xl mx-auto">
+            <h2 className="font-display text-4xl font-semibold text-white mb-8">Need extra hands on your next project?</h2>
+            <Link href="/book-a-demo">
+              <Button size="lg" className="rounded-full px-8 h-14 text-lg">
+                Get Overflow Support
+              </Button>
+            </Link>
+          </div>
+        </Container>
+      </Section>
+    </div>
+  );
+}

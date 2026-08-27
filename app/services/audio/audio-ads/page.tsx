@@ -62,7 +62,7 @@ export default function AudioAdsPage() {
                 <h2 className="text-3xl font-bold mb-4 tracking-tight">Sound like a market leader.</h2>
                 <p className="text-zinc-500 mb-8">Production ready in days, not weeks.</p>
                 <Button asChild className="bg-white text-black hover:bg-zinc-200 h-14 px-10 text-lg font-semibold rounded-full">
-                  <Link href="/book-a-demo">Create an Audio Ad</Link>
+                  <Link to="/book-a-demo">Create an Audio Ad</Link>
                 </Button>
               </div>
             </Section>

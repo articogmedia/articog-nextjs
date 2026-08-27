@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
 
-function GuidesPage() {
+export default function GuidesPage() {
   const guides = [
     {
       title: "The AI Video Revolution",
@@ -56,7 +56,7 @@ function GuidesPage() {
               <div className="bg-gradient-to-b from-zinc-900 to-black p-12 rounded-3xl border border-zinc-800">
                 <h2 className="text-3xl font-bold mb-6 text-white">Ready to start your first project?</h2>
                 <Button asChild className="bg-white text-black hover:bg-zinc-200 h-14 px-10 text-lg font-semibold rounded-full">
-                  <Link href="/book-a-demo">Book a Demo</Link>
+                  <Link to="/book-a-demo">Book a Demo</Link>
                 </Button>
               </div>
             </Section>
@@ -68,5 +68,3 @@ function GuidesPage() {
     </div>
   );
 }
-
-export default GuidesPage;

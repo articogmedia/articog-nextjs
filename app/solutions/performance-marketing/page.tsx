@@ -2,12 +2,6 @@ import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { RefreshCw, TrendingUp, Grid, ArrowRight } from "lucide-react";
 
-export const metadata = {
-  title: "Performance Marketing Creative — Articog",
-  description:
-    "Ongoing creative engine built for continuous ad testing and scaling. Fresh variants, performance-informed iteration, and multi-format coverage.",
-};
-
 export default function PerformanceMarketingPage() {
   const steps = [
     {
@@ -38,118 +32,81 @@ export default function PerformanceMarketingPage() {
                 Solutions
               </span>
             </div>
-
             <Heading as="h1" size="hero" className="mb-6">
               Performance Marketing Creative
             </Heading>
-
             <p className="font-sans text-xl text-white/60 leading-relaxed">
-              An ongoing creative engine built for continuous ad testing and
-              scaling—not a one-off batch of assets. Designed for teams that
-              need to stay ahead of the curve.
+              An ongoing creative engine built for continuous ad testing and scaling—not a one-off batch of assets. Designed for teams that need to stay ahead of the curve.
             </p>
           </div>
         </Container>
       </Section>
 
-      {/* How It Works */}
+      {/* How It Works Section */}
       <Section className="py-20 bg-white/[0.02]">
         <Container>
           <div className="mb-12">
-            <h2 className="font-display text-3xl font-semibold text-white mb-4">
-              How It Works
-            </h2>
-
+            <h2 className="font-display text-3xl font-semibold text-white mb-4">How It Works</h2>
             <p className="font-sans text-white/50 max-w-2xl">
-              Our systematic approach ensures your campaigns are always fueled
-              by high-performing creative assets.
+              Our systematic approach ensures your campaigns are always fueled by high-performing creative assets.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {steps.map((item) => (
-              <div
-                key={item.title}
+              <div 
+                key={item.title} 
                 className="p-8 rounded-2xl bg-white/5 border border-white/10"
               >
                 <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white mb-6">
                   <item.icon className="w-5 h-5" />
                 </div>
-
-                <h3 className="font-display text-lg font-semibold text-white mb-2">
-                  {item.title}
-                </h3>
-
-                <p className="font-sans text-sm text-white/50 leading-relaxed">
-                  {item.desc}
-                </p>
+                <h3 className="font-display text-lg font-semibold text-white mb-2">{item.title}</h3>
+                <p className="font-sans text-sm text-white/50 leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
         </Container>
       </Section>
 
-      {/* Specific Formats */}
+      {/* Specific Formats Section */}
       <Section className="py-20 border-t border-white/5">
         <Container>
           <div className="mb-12">
-            <h2 className="font-display text-3xl font-semibold text-white mb-4">
-              Specific Formats Included
-            </h2>
+            <h2 className="font-display text-3xl font-semibold text-white mb-4">Specific Formats Included</h2>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Link
+            <Link 
               href="/services/ai-video-production/performance-ads"
               className="group p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300"
             >
               <div className="flex justify-between items-start mb-4">
-                <h3 className="font-display text-xl font-semibold text-white">
-                  Performance Video Ads
-                </h3>
-
+                <h3 className="font-display text-xl font-semibold text-white">Performance Video Ads</h3>
                 <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
               </div>
-
-              <p className="font-sans text-white/50">
-                High-converting video creative optimized for social and digital
-                channels.
-              </p>
+              <p className="font-sans text-white/50">High-converting video creative optimized for social and digital channels.</p>
             </Link>
 
-            <Link
+            <Link 
               href="/services/ad-creative"
               className="group p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300"
             >
               <div className="flex justify-between items-start mb-4">
-                <h3 className="font-display text-xl font-semibold text-white">
-                  Static & Display Creative
-                </h3>
-
+                <h3 className="font-display text-xl font-semibold text-white">Static & Display Creative</h3>
                 <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
               </div>
-
-              <p className="font-sans text-white/50">
-                Static assets and display banners built for continuous testing.
-              </p>
+              <p className="font-sans text-white/50">Static assets and display banners built for continuous testing.</p>
             </Link>
           </div>
         </Container>
       </Section>
 
-      {/* CTA */}
+      {/* CTA Section */}
       <Section className="py-24 bg-white/[0.02]">
         <Container>
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="font-display text-4xl font-semibold text-white mb-8">
-              Scale your performance creative today
-            </h2>
-
+            <h2 className="font-display text-4xl font-semibold text-white mb-8">Scale your performance creative today</h2>
             <Link href="/book-a-demo">
-              <Button
-                size="lg"
-                className="rounded-full px-8 h-14 text-lg"
-              >
+              <Button size="lg" className="rounded-full px-8 h-14 text-lg">
                 Scale Your Performance Creative
               </Button>
             </Link>

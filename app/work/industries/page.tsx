@@ -2,7 +2,7 @@ import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { ArrowRight, ShoppingBag, Laptop, Home, Car, Coffee, Shirt } from "lucide-react";
 
-function WorkByIndustryPage() {
+export default function WorkByIndustryPage() {
   const industries = [
     { title: "DTC & Ecommerce", href: "/industries/dtc-ecommerce", icon: ShoppingBag },
     { title: "SaaS & Technology", href: "/industries/saas-technology", icon: Laptop },
@@ -53,5 +53,3 @@ function WorkByIndustryPage() {
     </div>
   );
 }
-
-export default WorkByIndustryPage;

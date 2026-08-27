@@ -6,12 +6,12 @@ import { Footer } from "@/components/layout/Footer";
 import "./globals.css";
 
 const inter = Inter({
-  variable: "--font-sans",
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
 const sora = Sora({
-  variable: "--font-display",
+  variable: "--font-sora",
   subsets: ["latin"],
 });
 
@@ -23,9 +23,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html
       lang="en"

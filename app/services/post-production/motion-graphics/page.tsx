@@ -58,7 +58,7 @@ export default function MotionGraphicsPage() {
               <div className="bg-zinc-900/20 p-12 rounded-3xl border border-zinc-800/50">
                 <h2 className="text-3xl font-bold mb-8">Bring your brand to life with motion.</h2>
                 <Button asChild className="bg-white text-black hover:bg-zinc-200 h-14 px-10 text-lg font-semibold rounded-full">
-                  <Link href="/book-a-demo">Add Motion</Link>
+                  <Link to="/book-a-demo">Add Motion</Link>
                 </Button>
               </div>
             </Section>

@@ -36,7 +36,7 @@ export default function CinematicBrandFilmsPage() {
             </Section>
             <Section className="py-20 text-center">
               <Button asChild className="bg-white text-black hover:bg-zinc-200 h-14 px-10 text-lg font-semibold rounded-full transition-all">
-                <Link href="/book-a-demo">Create Your Brand Film</Link>
+                <Link to="/book-a-demo">Create Your Brand Film</Link>
               </Button>
             </Section>
           </div>

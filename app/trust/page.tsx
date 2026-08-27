@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { Container, Section, Button, Heading } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 
-function TrustPage() {
+export default function TrustPage() {
   const cards = [
     {
       title: "AI & Intellectual Property",
@@ -85,5 +85,3 @@ function TrustPage() {
     </div>
   );
 }
-
-export default TrustPage;

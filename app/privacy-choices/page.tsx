@@ -1,6 +1,6 @@
 import { Container, Section, Heading } from "@/components/ui";
 
-function PrivacyChoicesPage() {
+export default function PrivacyChoicesPage() {
   const today = new Date().toLocaleDateString("en-US", {
     month: "long",
     day: "numeric",
@@ -80,5 +80,3 @@ function PrivacyChoicesPage() {
     </div>
   );
 }
-
-export default PrivacyChoicesPage;

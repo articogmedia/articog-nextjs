@@ -2,7 +2,7 @@ import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Instagram, Smartphone, Grid, Info } from "lucide-react";
 
-function SocialWorkPage() {
+export default function SocialWorkPage() {
   const formats = [
     {
       title: "Feed Post",
@@ -94,5 +94,3 @@ function SocialWorkPage() {
     </div>
   );
 }
-
-export default SocialWorkPage;

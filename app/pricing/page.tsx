@@ -1,10 +1,11 @@
 "use client";
+
 import { useState } from "react";
 import { Link } from "@/components/ui/Link";
 import { Container, Section, Button, Heading } from "@/components/ui";
 import { ArrowRight, Check, ChevronDown, ChevronUp } from "lucide-react";
 
-function PricingPage() {
+export default function PricingPage() {
   return (
     <>
       <Section size="lg" className="pt-32 md:pt-40">
@@ -101,7 +102,6 @@ function PricingPage() {
     </>
   );
 }
-
 
 function PricingCard({
   title,
@@ -207,5 +207,3 @@ function AccordionItem({ question, answer }: { question: string; answer: string 
     </div>
   );
 }
-
-export default PricingPage;

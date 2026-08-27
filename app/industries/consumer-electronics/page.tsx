@@ -35,7 +35,7 @@ export default function ConsumerElectronicsPage() {
             </Section>
             <Section className="py-20 text-center">
               <Button asChild className="bg-white text-black hover:bg-zinc-200 h-14 px-10 text-lg font-semibold rounded-full">
-                <Link href="/book-a-demo">Start Your Electronics Project</Link>
+                <Link to="/book-a-demo">Start Your Electronics Project</Link>
               </Button>
             </Section>
           </div>

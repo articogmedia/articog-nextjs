@@ -6,7 +6,7 @@ import { Link } from "@/components/ui/Link";
 import { Container, Section, Button } from "@/components/ui";
 import { ArrowRight } from "lucide-react";
 
-function BookADemoPage() {
+export default function BookADemoPage() {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -22,7 +22,10 @@ function BookADemoPage() {
   };
 
   return (
-    <Section size="lg" className="pt-32 md:pt-40 bg-black min-h-screen">
+    <Section
+      size="lg"
+      className="pt-32 md:pt-40 bg-black min-h-screen"
+    >
       <Container>
         <div className="mx-auto max-w-3xl">
           <div className="text-center mb-16">
@@ -67,8 +70,8 @@ function BookADemoPage() {
               onSubmit={handleSubmit}
               className="flex flex-col gap-8"
             >
+              {/* Work Email + Company Name */}
               <div className="grid gap-8 sm:grid-cols-2">
-                {/* Work Email */}
                 <div className="flex flex-col gap-2.5">
                   <label
                     htmlFor="email"
@@ -92,7 +95,6 @@ function BookADemoPage() {
                   />
                 </div>
 
-                {/* Company Name */}
                 <div className="flex flex-col gap-2.5">
                   <label
                     htmlFor="company"
@@ -117,8 +119,8 @@ function BookADemoPage() {
                 </div>
               </div>
 
+              {/* Role + Creative Need */}
               <div className="grid gap-8 sm:grid-cols-2">
-                {/* Your Role */}
                 <div className="flex flex-col gap-2.5">
                   <label
                     htmlFor="role"
@@ -141,7 +143,6 @@ function BookADemoPage() {
                   />
                 </div>
 
-                {/* Creative Need Dropdown */}
                 <div className="flex flex-col gap-2.5">
                   <label
                     htmlFor="need"
@@ -155,7 +156,7 @@ function BookADemoPage() {
                       id="need"
                       name="need"
                       defaultValue=""
-                      className="h-12 w-full appearance-none rounded-lg px-4 font-sans text-sm outline-none transition-all duration-200 bg-transparent"
+                      className="h-12 w-full appearance-none rounded-lg px-4 font-sans text-sm outline-none transition-all duration-200"
                       style={{
                         border: "1px solid rgba(255,255,255,0.08)",
                         color: "white",
@@ -188,7 +189,7 @@ function BookADemoPage() {
                   Service Interest
                 </label>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
                   {[
                     "Brand Film",
                     "Commercial/Ad",
@@ -199,17 +200,17 @@ function BookADemoPage() {
                   ].map((option) => (
                     <label
                       key={option}
-                      className="flex items-center gap-3 cursor-pointer group"
+                      className="group flex cursor-pointer items-center gap-3"
                     >
                       <div className="relative flex items-center justify-center">
                         <input
                           type="checkbox"
                           name="service-interest"
                           value={option}
-                          className="peer appearance-none h-5 w-5 rounded border border-white/10 bg-white/5 checked:bg-accent checked:border-accent transition-all duration-200"
+                          className="peer h-5 w-5 appearance-none rounded border border-white/10 bg-white/5 transition-all duration-200 checked:border-accent checked:bg-accent"
                         />
 
-                        <div className="absolute opacity-0 peer-checked:opacity-100 text-white pointer-events-none">
+                        <div className="pointer-events-none absolute text-white opacity-0 peer-checked:opacity-100">
                           <svg
                             width="10"
                             height="8"
@@ -228,7 +229,7 @@ function BookADemoPage() {
                         </div>
                       </div>
 
-                      <span className="font-sans text-sm text-white/60 group-hover:text-white transition-colors">
+                      <span className="font-sans text-sm text-white/60 transition-colors group-hover:text-white">
                         {option}
                       </span>
                     </label>
@@ -236,8 +237,8 @@ function BookADemoPage() {
                 </div>
               </div>
 
+              {/* Budget + Timeline */}
               <div className="grid gap-8 sm:grid-cols-2">
-                {/* Budget Range */}
                 <div className="flex flex-col gap-2.5">
                   <label
                     htmlFor="budget"
@@ -251,7 +252,7 @@ function BookADemoPage() {
                       id="budget"
                       name="budget"
                       defaultValue=""
-                      className="h-12 w-full appearance-none rounded-lg px-4 font-sans text-sm outline-none transition-all duration-200 bg-transparent"
+                      className="h-12 w-full appearance-none rounded-lg px-4 font-sans text-sm outline-none transition-all duration-200"
                       style={{
                         border: "1px solid rgba(255,255,255,0.08)",
                         color: "white",
@@ -273,7 +274,6 @@ function BookADemoPage() {
                   </div>
                 </div>
 
-                {/* Timeline */}
                 <div className="flex flex-col gap-2.5">
                   <label
                     htmlFor="timeline"
@@ -287,7 +287,7 @@ function BookADemoPage() {
                       id="timeline"
                       name="timeline"
                       defaultValue=""
-                      className="h-12 w-full appearance-none rounded-lg px-4 font-sans text-sm outline-none transition-all duration-200 bg-transparent"
+                      className="h-12 w-full appearance-none rounded-lg px-4 font-sans text-sm outline-none transition-all duration-200"
                       style={{
                         border: "1px solid rgba(255,255,255,0.08)",
                         color: "white",
@@ -319,23 +319,26 @@ function BookADemoPage() {
                 type="submit"
                 variant="primary"
                 size="xl"
-                className="w-full mt-4"
+                className="mt-4 w-full"
                 disabled={isLoading}
               >
                 {isLoading ? "Scheduling..." : "Schedule a Call"}
+
                 {!isLoading && <ArrowRight size={16} />}
               </Button>
 
               {/* Privacy Note */}
               <p
                 className="text-center font-sans text-[12px] leading-relaxed"
-                style={{ color: "rgba(255,255,255,0.35)" }}
+                style={{
+                  color: "rgba(255,255,255,0.35)",
+                }}
               >
                 By submitting, you agree to be contacted about your inquiry.
                 See our{" "}
                 <Link
                   href="/privacy"
-                  className="text-white/50 underline underline-offset-2 hover:text-white transition-colors"
+                  className="text-white/50 underline underline-offset-2 transition-colors hover:text-white"
                 >
                   Privacy Policy
                 </Link>
@@ -368,5 +371,3 @@ function ChevronDownIcon() {
     </svg>
   );
 }
-
-export default BookADemoPage;

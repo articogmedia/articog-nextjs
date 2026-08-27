@@ -1,6 +1,6 @@
 import { Container, Section, Heading } from "@/components/ui";
 
-function AccessibilityPage() {
+export default function AccessibilityPage() {
   const sections = [
     {
       title: "Our Commitment",
@@ -55,5 +55,3 @@ function AccessibilityPage() {
     </div>
   );
 }
-
-export default AccessibilityPage;

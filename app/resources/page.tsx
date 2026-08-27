@@ -2,7 +2,7 @@ import { Container, Section, Button, Heading } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { ArrowRight, BookOpen, FileText, BarChart, Calendar, Play } from "lucide-react";
 
-function ResourcesPage() {
+export default function ResourcesPage() {
   const categories = [
     {
       title: "Blog",
@@ -117,5 +117,3 @@ function ResourcesPage() {
     </div>
   );
 }
-
-export default ResourcesPage;

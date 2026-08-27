@@ -1,9 +1,10 @@
 "use client";
+
 import { Container, Section, Button, Heading } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { useState } from "react";
 
-function BlogPage() {
+export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState("All");
   
   const categories = ["All", "AI Video", "Ad Creative", "Industry Insights", "Company News"];
@@ -144,5 +145,3 @@ function BlogPage() {
     </div>
   );
 }
-
-export default BlogPage;

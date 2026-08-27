@@ -84,7 +84,7 @@ export default function AutomotiveFilmsPage() {
               <div className="bg-gradient-to-b from-zinc-900 to-black p-12 rounded-3xl border border-zinc-800">
                 <h2 className="text-3xl font-bold mb-6">Ready to accelerate your creative production?</h2>
                 <Button asChild className="bg-white text-black hover:bg-zinc-200 h-14 px-10 text-lg font-semibold rounded-full">
-                  <Link href="/book-a-demo">Create an Automotive Film</Link>
+                  <Link to="/book-a-demo">Create an Automotive Film</Link>
                 </Button>
               </div>
             </Section>

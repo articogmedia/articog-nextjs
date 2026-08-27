@@ -36,7 +36,7 @@ export default function LocalizationPage() {
             </Section>
             <Section className="py-20 text-center">
               <Button asChild className="bg-white text-black hover:bg-zinc-200 h-14 px-10 text-lg font-semibold rounded-full">
-                <Link href="/book-a-demo">Scale Globally</Link>
+                <Link to="/book-a-demo">Scale Globally</Link>
               </Button>
             </Section>
           </div>

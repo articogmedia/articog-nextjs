@@ -1,16 +1,32 @@
+import { Container, Section, Heading } from "@/components/ui";
+
 export default function CookiePolicyPage() {
   return (
-    <main className="min-h-screen bg-black text-white px-6 py-32">
-      <div className="mx-auto max-w-4xl">
-        <p className="mb-4 text-sm uppercase tracking-widest text-white/40">Legal</p>
-        <h1 className="mb-6 text-4xl font-bold md:text-6xl">Cookie Policy</h1>
-        <p className="text-lg leading-relaxed text-white/60">
-          This page provides information about cookies and similar technologies used by the Articog website.
-        </p>
-        <p className="mt-8 text-sm text-white/40">
-          Final legal and compliance copy should be reviewed and approved before publication.
-        </p>
-      </div>
-    </main>
+    <div className="bg-black min-h-screen">
+      <Section size="lg" className="pt-32 md:pt-40">
+        <Container>
+          <div className="mx-auto max-w-3xl">
+            <span className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-white/40">Legal</span>
+            <Heading as="h1" size="hero" className="mb-6">Cookie Policy</Heading>
+            <p className="font-sans text-sm text-white/30 mb-12 uppercase tracking-widest">Last updated: August 19, 2026</p>
+
+            <div className="space-y-12 font-sans text-sm leading-relaxed text-white/60">
+              <section>
+                <h2 className="text-xl font-display font-semibold text-white mb-4">1. What are cookies?</h2>
+                <p>Cookies are small text files that are stored on your device when you visit a website. They help the website recognize your device and remember information about your visit.</p>
+              </section>
+              <section>
+                <h2 className="text-xl font-display font-semibold text-white mb-4">2. How we use cookies</h2>
+                <p>We use cookies to enhance your browsing experience, analyze site traffic, and serve personalized content. Some cookies are necessary for the technical operation of our site.</p>
+              </section>
+              <section>
+                <h2 className="text-xl font-display font-semibold text-white mb-4">3. Managing your preferences</h2>
+                <p>You can manage your cookie preferences through your browser settings or by visiting our <a href="/privacy-choices" className="text-white underline">Privacy Choices</a> page.</p>
+              </section>
+            </div>
+          </div>
+        </Container>
+      </Section>
+    </div>
   );
 }

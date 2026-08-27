@@ -3,7 +3,7 @@ import { Footer } from '@/components/layout/Footer';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
 
-function CopyrightPage() {
+export default function CopyrightPage() {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col font-sans">
       <Header />
@@ -54,5 +54,3 @@ function CopyrightPage() {
     </div>
   );
 }
-
-export default CopyrightPage;

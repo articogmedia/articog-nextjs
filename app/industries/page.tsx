@@ -2,7 +2,7 @@ import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { ArrowRight, ShoppingBag, Laptop, Home, Smartphone, Sparkles, Car, Coffee, Shirt } from "lucide-react";
 
-function IndustriesPage() {
+export default function IndustriesPage() {
   const industries = [
     {
       title: "DTC & Ecommerce",
@@ -105,5 +105,3 @@ function IndustriesPage() {
     </div>
   );
 }
-
-export default IndustriesPage;

@@ -59,7 +59,7 @@ export default function AutomotiveMobilityPage() {
             <Section className="py-12 border-t border-zinc-900">
               <h2 className="text-2xl font-bold mb-8 text-white">Relevant Services</h2>
               <Link 
-                href="/services/ai-video-production/automotive" 
+                to="/services/ai-video-production/automotive" 
                 className="group block bg-zinc-900/30 p-8 rounded-2xl border border-zinc-800 hover:border-zinc-700 transition-colors max-w-md"
               >
                 <h3 className="text-xl font-bold mb-2 group-hover:text-white transition-colors">AI Video Production: Automotive</h3>
@@ -86,7 +86,7 @@ export default function AutomotiveMobilityPage() {
               <div className="bg-gradient-to-b from-zinc-900 to-black p-12 rounded-3xl border border-zinc-800">
                 <h2 className="text-3xl font-bold mb-6 text-white">Ready to transform your automotive creative?</h2>
                 <Button asChild className="bg-white text-black hover:bg-zinc-200 h-14 px-10 text-lg font-semibold rounded-full">
-                  <Link href="/book-a-demo">See Relevant Work</Link>
+                  <Link to="/book-a-demo">See Relevant Work</Link>
                 </Button>
               </div>
             </Section>

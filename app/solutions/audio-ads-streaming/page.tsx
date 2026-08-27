@@ -36,7 +36,7 @@ export default function AudioAdsStreamingPage() {
             </Section>
             <Section className="py-20 text-center">
               <Button asChild className="bg-white text-black hover:bg-zinc-200 h-14 px-10 text-lg font-semibold rounded-full">
-                <Link href="/book-a-demo">Start Audio Production</Link>
+                <Link to="/book-a-demo">Start Audio Production</Link>
               </Button>
             </Section>
           </div>

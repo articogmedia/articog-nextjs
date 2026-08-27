@@ -2,7 +2,7 @@ import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Palette, Copy, Shield, FileText, Package } from "lucide-react";
 
-function ImageLibrariesPage() {
+export default function ImageLibrariesPage() {
   const steps = [
     {
       title: "Style System",
@@ -93,6 +93,3 @@ function ImageLibrariesPage() {
     </div>
   );
 }
-
-
-export default ImageLibrariesPage;

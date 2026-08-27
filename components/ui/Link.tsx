@@ -1,23 +1,27 @@
-import type { AnchorHTMLAttributes } from "react";
 import NextLink from "next/link";
+import type { ComponentProps } from "react";
 
-interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
-  href: string;
-}
+type LinkProps = Omit<ComponentProps<typeof NextLink>, "href"> & {
+  href?: string;
+  to?: string;
+};
 
-export function Link({ href, children, ...props }: LinkProps) {
-  const isExternal = /^(https?:|mailto:|tel:|#)/.test(href);
+export function Link({ href, to, children, ...props }: LinkProps) {
+  const destination = href ?? to ?? "#";
+
+  const isExternal =
+    /^(https?:|mailto:|tel:|#)/.test(destination);
 
   if (isExternal) {
     return (
-      <a href={href} {...props}>
+      <a href={destination} {...props}>
         {children}
       </a>
     );
   }
 
   return (
-    <NextLink href={href} {...props}>
+    <NextLink href={destination} {...props}>
       {children}
     </NextLink>
   );

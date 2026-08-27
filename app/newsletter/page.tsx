@@ -1,10 +1,11 @@
+import { Link } from "@/components/ui/Link";
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
-import { Link } from "@/components/ui/Link";
-function NewsletterPage() {
+
+export default function NewsletterPage() {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col font-sans">
       <Header />
@@ -48,7 +49,7 @@ function NewsletterPage() {
                 </Button>
 
                 <p className="text-[12px] text-zinc-600 text-center leading-relaxed">
-                  You can unsubscribe at any time via the link in our emails or by visiting our <Link href="/email-preferences" className="underline hover:text-zinc-400 transition-colors">email preferences</Link> page.
+                  You can unsubscribe at any time via the link in our emails or by visiting our <Link to="/email-preferences" className="underline hover:text-zinc-400 transition-colors">email preferences</Link> page.
                 </p>
 
                 {/* 
@@ -66,5 +67,3 @@ function NewsletterPage() {
     </div>
   );
 }
-
-export default NewsletterPage;

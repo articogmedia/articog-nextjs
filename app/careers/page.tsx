@@ -1,7 +1,7 @@
 import { Container, Section, Button, Heading } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 
-function CareersPage() {
+export default function CareersPage() {
   // Placeholder for when roles are added later
   const roles: any[] = [];
 
@@ -60,5 +60,3 @@ function CareersPage() {
     </div>
   );
 }
-
-export default CareersPage;

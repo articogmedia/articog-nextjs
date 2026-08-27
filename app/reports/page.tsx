@@ -1,10 +1,11 @@
+import { Link } from "@/components/ui/Link";
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
-import { Link } from "@/components/ui/Link";
-function ReportsPage() {
+
+export default function ReportsPage() {
   const reports = [
     {
       title: "The State of AI Creative 2026",
@@ -60,7 +61,7 @@ function ReportsPage() {
               <div className="bg-zinc-900/30 p-12 rounded-3xl border border-zinc-800">
                 <h2 className="text-2xl font-bold mb-6 text-white">Looking for more resources?</h2>
                 <Button asChild className="bg-white text-black hover:bg-zinc-200 h-12 px-8 text-base font-semibold rounded-full">
-                  <Link href="/resources">View Resources</Link>
+                  <Link to="/resources">View Resources</Link>
                 </Button>
               </div>
             </Section>
@@ -72,5 +73,3 @@ function ReportsPage() {
     </div>
   );
 }
-
-export default ReportsPage;
