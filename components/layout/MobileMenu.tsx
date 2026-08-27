@@ -1,4 +1,4 @@
-
+"use client";
 import { useState, useEffect } from "react";
 import { Link } from "@/components/ui/Link";
 import { X, ChevronDown } from "lucide-react";
