@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /thank-you/demo
+Disallow: /404
+Disallow: /500
+
+Sitemap: https://articog.com/sitemap.xml
