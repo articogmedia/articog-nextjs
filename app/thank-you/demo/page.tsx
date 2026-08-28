@@ -1,3 +1,13 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Thank You — Articog",
+  description: "Thank you for booking a demo with Articog.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 import { Link } from "@/components/ui/Link";
 import { Container, Section, Button } from "@/components/ui";
 import { CheckCircle2 } from "lucide-react";

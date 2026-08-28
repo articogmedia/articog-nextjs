@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Pilot / Exploratory Project — Articog",
+  description: "Start small with a fixed-scope pilot project to evaluate quality and fit.",
+};
 import { Link } from "@/components/ui/Link";
 import { Container, Section, Button, Heading } from "@/components/ui";
 import { Check } from "lucide-react";

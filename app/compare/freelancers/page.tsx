@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Articog vs Freelancers — Articog",
+  description: "A balanced comparison of working with freelancers versus Articog's managed production team.",
+};
 import { Link } from "@/components/ui/Link";
 import { Container, Section, Button, Heading } from "@/components/ui";
 import { Check } from "lucide-react";

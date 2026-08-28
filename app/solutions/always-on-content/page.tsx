@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Always-On Content Engine — Articog",
+  description: "Recurring creative output for brands that need consistent monthly volume across social and campaigns.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Infinity, Layers, BarChart3, ArrowRight } from "lucide-react";

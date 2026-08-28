@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Resources — Articog",
+  description: "Guides, articles, and insights on AI creative production for modern brands.",
+};
 import { Container, Section, Button, Heading } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { ArrowRight, BookOpen, FileText, BarChart, Calendar, Play } from "lucide-react";

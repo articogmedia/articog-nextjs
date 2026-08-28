@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Static Ad Creative — Articog",
+  description: "High-volume static ad creative for paid social and display. Platform-native formats for Meta, LinkedIn, and more with full image rights.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Layout, Palette, ShieldCheck, Image as ImageIcon } from "lucide-react";

@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "AI Compositing & Cleanup — Articog",
+  description: "Using AI to fix, enhance and clean up existing footage. Remove unwanted elements and improve quality without a reshoot.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Eye, ShieldCheck, Wand2, UserCheck } from "lucide-react";

@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Quality Assurance — Articog",
+  description: "Our rigorous review process ensures every asset meets your brand's highest standards before delivery.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { ShieldCheck, Type, FileSearch, HardDrive, UserCheck, Info } from "lucide-react";

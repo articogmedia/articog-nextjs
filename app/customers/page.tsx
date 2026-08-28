@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Customer Success Stories | Articog",
+  description: "See how leading brands use Articog's Creative AI Production to scale creative output and drive performance.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { siteContent } from "@/lib/content";
 import { FinalCTA } from "@/components/sections/FinalCTA";

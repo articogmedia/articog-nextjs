@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Ad Creative — Articog",
+  description: "Static and display ad creative built for continuous performance testing. Scale your brand with high-volume, performance-optimized creative.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Share2, Monitor, Search, BarChart3, ArrowRight } from "lucide-react";

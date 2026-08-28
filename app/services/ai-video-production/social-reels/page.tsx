@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Social & Reel Production — Articog",
+  description: "Always-on short-form video for Instagram, TikTok and YouTube Shorts. Monthly content cycles for consistent social growth.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Smartphone, Type, Repeat, Scissors, Calendar } from "lucide-react";

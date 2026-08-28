@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Localization & Variants — Articog",
+  description: "Adapt your video campaigns for new languages and markets without reshooting. High-fidelity voice localization, subtitles, and cultural QA.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Globe, Languages, ShieldCheck, CheckSquare, Info } from "lucide-react";

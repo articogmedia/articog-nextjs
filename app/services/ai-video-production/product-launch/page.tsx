@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Product Launch Videos — Articog",
+  description: "Launch with one hero film that scales into every channel asset you need. Comprehensive AI video packages for high-impact product launches.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Rocket, Clock, CheckCircle2, Map, ArrowRight, Layers } from "lucide-react";

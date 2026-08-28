@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Storyboarding & Previsualization — Articog",
+  description: "Planning every shot before production begins to ensure consistency and eliminate surprises.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { List, Layout, Play, RefreshCw, Lock } from "lucide-react";

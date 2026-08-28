@@ -1,29 +1,21 @@
 import re
 from pathlib import Path
 
-OLD = Path("/c/Users/kyath/Downloads/faithful-rebuild-hero-main/faithful-rebuild-hero-main/src/routes")
-NEW = Path("/c/Users/kyath/articog-nextjs/app")
+OLD = Path(r"C:/Users/kyath/Downloads/faithful-rebuild-hero-main/faithful-rebuild-hero-main/src/routes")
+NEW = Path(r"C:/Users/kyath/articog-nextjs/app")
 
-def route_to_page(old_file):
+def target_for(old_file):
     rel = old_file.relative_to(OLD)
 
-    # Convert old route structure to Next.js app structure
-    if rel.name == "index.tsx":
-        target = NEW / rel.parent / "page.tsx"
-    elif rel.name.endswith(".tsx"):
-        target = NEW / rel.parent / "page.tsx"
-
-        # Special flat route files
-        if rel.parent == Path("."):
-            target = NEW / rel.stem / "page.tsx"
-
-        # Nested flat route files such as solutions/performance-marketing.tsx
-        elif rel.parent.name in ["solutions", "trust", "services", "work", "why-articog"]:
-            target = NEW / rel.parent / rel.stem / "page.tsx"
-    else:
+    if rel.name in ["__root.tsx", "404.tsx", "500.tsx"]:
         return None
 
-    return target
+    if rel.name == "index.tsx":
+        route = rel.parent
+    else:
+        route = rel.parent / rel.stem
+
+    return NEW / route / "page.tsx"
 
 def extract_metadata(text):
     title_match = re.search(
@@ -33,102 +25,80 @@ def extract_metadata(text):
 
     desc_match = re.search(
         r'name:\s*"description",\s*content:\s*"([^"]*)"',
-        text,
-        re.S
+        text
     )
 
     robots_match = re.search(
-        r'name:\s*"robots",\s*content:\s*"([^"]+)"',
+        r'name:\s*"robots",\s*content:\s*"([^"]*)"',
         text
     )
 
     if not title_match and not desc_match and not robots_match:
         return None
 
-    title = title_match.group(1) if title_match else None
-    description = desc_match.group(1) if desc_match else None
-    robots = robots_match.group(1) if robots_match else None
-
-    return title, description, robots
-
-def metadata_block(metadata):
-    title, description, robots = metadata
-
-    lines = [
-        'import type { Metadata } from "next";',
-        '',
-        'export const metadata: Metadata = {'
-    ]
-
-    if title:
-        lines.append(f'  title: {title!r},')
-
-    if description:
-        lines.append(f'  description: {description!r},')
-
-    if robots == "noindex, nofollow":
-        lines.extend([
-            '  robots: {',
-            '    index: false,',
-            '    follow: false,',
-            '  },'
-        ])
-
-    lines.append('};')
-    return "\n".join(lines) + "\n\n"
+    return {
+        "title": title_match.group(1) if title_match else None,
+        "description": desc_match.group(1) if desc_match else None,
+        "robots": robots_match.group(1) if robots_match else None,
+    }
 
 updated = 0
 skipped = 0
 missing = 0
 
 for old_file in OLD.rglob("*.tsx"):
-    text = old_file.read_text(encoding="utf-8")
-
-    metadata = extract_metadata(text)
+    old_text = old_file.read_text(encoding="utf-8")
+    metadata = extract_metadata(old_text)
 
     if not metadata:
         continue
 
-    target = route_to_page(old_file)
+    target = target_for(old_file)
 
-    if not target or not target.exists():
+    if target is None:
+        continue
+
+    if not target.exists():
+        print("[MISSING]", target)
         missing += 1
-        print(f"[MISSING] {old_file} -> {target}")
         continue
 
     new_text = target.read_text(encoding="utf-8")
 
-    # Don't add metadata twice
-    if "export const metadata" in new_text:
+    if "export const metadata" in new_text or "generateMetadata" in new_text:
+        print("[SKIP]", target)
         skipped += 1
-        print(f"[SKIP]    {target} (metadata already exists)")
         continue
 
-    block = metadata_block(metadata)
+    lines = ['import type { Metadata } from "next";', ""]
 
-    # Add metadata after "use client" if present,
-    # otherwise at the beginning.
-    if new_text.startswith('"use client";'):
-        parts = new_text.split("\n", 1)
-        new_text = parts[0] + "\n\n" + block + parts[1]
-    elif new_text.startswith("'use client';"):
-        parts = new_text.split("\n", 1)
-        new_text = parts[0] + "\n\n" + block + parts[1]
-    else:
-        new_text = block + new_text
+    lines.append("export const metadata: Metadata = {")
 
-    target.write_text(new_text, encoding="utf-8")
+    if metadata["title"]:
+        title = metadata["title"].replace('"', '\\"')
+        lines.append(f'  title: "{title}",')
 
+    if metadata["description"]:
+        description = metadata["description"].replace('"', '\\"')
+        lines.append(f'  description: "{description}",')
+
+    if metadata["robots"] == "noindex, nofollow":
+        lines.append("  robots: {")
+        lines.append("    index: false,")
+        lines.append("    follow: false,")
+        lines.append("  },")
+
+    lines.append("};")
+    lines.append("")
+
+    target.write_text("\n".join(lines) + new_text, encoding="utf-8")
+
+    print("[UPDATED]", target)
     updated += 1
-    print(f"[UPDATED] {target}")
-    print(f"          title: {metadata[0]}")
-    print(f"          description: {metadata[1]}")
 
-print()
-print("===================================")
-print("SEO MIGRATION COMPLETE")
-print("===================================")
-print(f"Updated : {updated}")
-print(f"Skipped : {skipped}")
-print(f"Missing : {missing}")
+print("")
+print("========== SEO MIGRATION ==========")
+print("Updated :", updated)
+print("Skipped :", skipped)
+print("Missing :", missing)
 print("===================================")

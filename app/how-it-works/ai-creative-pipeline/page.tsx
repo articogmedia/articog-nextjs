@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "The AI Creative Pipeline — Articog",
+  description: "Explore the technical details of our AI Creative Pipeline. From brief intake to multi-model generation and human-in-the-loop curation.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { ClipboardList, Cpu, UserCheck, RefreshCw } from "lucide-react";

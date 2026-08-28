@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Revisions & Delivery — Articog",
+  description: "Learn how feedback and final delivery work once assets are in review.",
+};
 import { Link } from "@/components/ui/Link";
 import { Container, Section, Button, Heading } from "@/components/ui";
 import { Check } from "lucide-react";

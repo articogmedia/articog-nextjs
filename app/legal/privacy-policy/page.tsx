@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy — Articog",
+  description: "How Articog collects, uses, and protects your personal information.",
+};
 import { Container, Section, Heading } from "@/components/ui";
 
 export default function PrivacyPolicyPage() {

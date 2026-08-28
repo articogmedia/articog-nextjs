@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Cookie Policy — Articog",
+  description: "Information about how Articog uses cookies and similar technologies.",
+};
 import { Container, Section, Heading } from "@/components/ui";
 
 export default function CookiePolicyPage() {

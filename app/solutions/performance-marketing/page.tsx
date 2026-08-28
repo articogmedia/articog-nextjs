@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Performance Marketing Creative — Articog",
+  description: "High-volume, testable creative for growth and performance teams who need constant new variants to beat ad fatigue.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { RefreshCw, TrendingUp, Grid, ArrowRight } from "lucide-react";

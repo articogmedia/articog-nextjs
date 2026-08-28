@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Reviews & Testimonials — Articog",
+  description: "What our clients say about working with Articog to scale their creative production.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Quote, Info } from "lucide-react";

@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Custom Image Libraries — Articog",
+  description: "Build large, consistent libraries of on-brand product images at scale. Professional style systems and batch delivery for high-volume catalogs.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Palette, Copy, Shield, FileText, Package } from "lucide-react";

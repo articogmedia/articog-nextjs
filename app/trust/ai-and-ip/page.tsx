@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "AI & Intellectual Property — Articog",
+  description: "How Articog handles AI tool use, ownership, and client intellectual property.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { ShieldCheck, Scale, FileText } from "lucide-react";

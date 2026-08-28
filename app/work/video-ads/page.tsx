@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Video Ad Creative — Articog",
+  description: "High-volume, performance-tested video ads for every platform. Scale your creative output without increasing headcount.",
+};
 import { Link } from "@/components/ui/Link";
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';

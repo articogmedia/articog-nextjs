@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Concept Development — Articog",
+  description: "Exploring multiple creative directions before committing to production to ensure alignment with your goals.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Layers, Target, Image, FileText, CheckCircle2 } from "lucide-react";

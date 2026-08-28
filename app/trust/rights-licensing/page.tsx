@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Rights, Licensing & Ownership — Articog",
+  description: "Commercial usage rights for AI, stock, music, and voice.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Shield, Clock, Music, ArrowRight } from "lucide-react";

@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "AI Voiceover — Articog",
+  description: "Clear, professional narration for video, ads and explainers with responsible AI voice production.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { ShieldCheck, UserX, CheckCircle2, Globe } from "lucide-react";

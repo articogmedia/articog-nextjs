@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Services — Articog",
+  description: "Articog's AI-native creative services: AI video production, ad creative, social creative, product visuals, creative strategy, and post-production.",
+};
 import { Link } from "@/components/ui/Link";
 import { Container, Section, Button } from "@/components/ui";
 import { ArrowRight } from "lucide-react";

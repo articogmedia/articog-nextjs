@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Your Privacy Choices — Articog",
+  description: "Information about your privacy rights and how to exercise them.",
+};
 import { Container, Section, Heading } from "@/components/ui";
 
 export default function PrivacyChoicesPage() {

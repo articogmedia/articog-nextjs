@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "E-Commerce Brand Case Study — Articog",
+  description: "How an E-commerce brand achieved 10x creative output with zero headcount increase using Articog.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Quote, ArrowRight, CheckCircle2, Layout, Image as ImageIcon } from "lucide-react";

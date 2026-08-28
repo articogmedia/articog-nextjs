@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Corporate & Internal Communications — Articog",
+  description: "Scalable video solutions for corporate training, internal announcements, and executive communications. Professional quality without the studio cost.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Users, Presentation, ShieldCheck, Zap } from "lucide-react";

@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Creative Testing at Scale — Articog",
+  description: "Structured, ongoing creative testing programs to drive continuous performance improvements through AI-native production.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Lightbulb, TableProperties, Tag, Zap, RefreshCcw, Info } from "lucide-react";

@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Trust Center — Articog",
+  description: "Built for enterprise confidence. Everything procurement, legal, and security teams need to evaluate Articog.",
+};
 import { ArrowRight } from "lucide-react";
 import { Container, Section, Button, Heading } from "@/components/ui";
 import { Link } from "@/components/ui/Link";

@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Creative Automation — Articog",
+  description: "Automate your visual production at scale. Generate thousands of on-brand variants for multi-channel campaigns with AI-driven workflows.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Cpu, Workflow, Layers, ShieldCheck } from "lucide-react";

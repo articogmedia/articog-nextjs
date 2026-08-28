@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Real Estate Films — Articog",
+  description: "Cinematic property and development films produced with AI. Responsible visualization for pre-construction and luxury listings.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { ShieldCheck, Eye, FileText, ArrowRight } from "lucide-react";

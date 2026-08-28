@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Articog vs Traditional Agencies — Articog",
+  description: "A comparison of Articog's AI-native model versus traditional agency structures.",
+};
 import { Link } from "@/components/ui/Link";
 import { Container, Section, Button, Heading } from "@/components/ui";
 import { Check, X } from "lucide-react";

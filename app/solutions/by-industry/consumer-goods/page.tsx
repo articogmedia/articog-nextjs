@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "AI for Consumer Goods — Articog",
+  description: "Scale your creative production for consumer goods. Photorealistic product visuals, high-volume ad creative, and rapid seasonal campaign production.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { ShoppingCart, RefreshCw, Zap, ShieldCheck } from "lucide-react";

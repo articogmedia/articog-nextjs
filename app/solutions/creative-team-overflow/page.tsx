@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "In-House Creative Overflow — Articog",
+  description: "Extend your internal team without full-time hires.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Zap, Puzzle, TrendingUp, ArrowRight } from "lucide-react";

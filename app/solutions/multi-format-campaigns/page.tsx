@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Multi-Format Campaign Production — Articog",
+  description: "Produce one integrated campaign across every format and channel from a single modular concept.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Layout, Target, Layers, CheckCircle2, Truck } from "lucide-react";

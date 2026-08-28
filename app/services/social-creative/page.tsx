@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Social Creative — Articog",
+  description: "Platform-native graphic content for organic and paid social. Elevate your presence with feed posts, stories, carousels, and more.",
+};
 import { Link } from "@/components/ui/Link";
 import { Container, Section, Button } from "@/components/ui";
 import { ArrowRight, CheckCircle2 } from "lucide-react";

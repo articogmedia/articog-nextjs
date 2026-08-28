@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Responsible AI — Articog",
+  description: "Our principles for ethical and responsible AI use in creative production.",
+};
 import { Container, Section, Button, Heading } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { ShieldCheck, UserCheck, Eye, AlertCircle } from "lucide-react";

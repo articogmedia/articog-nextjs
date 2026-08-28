@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "E-commerce Visuals — Articog",
+  description: "Product visuals built for online selling. PDP-safe output, marketplace specs, and promotional variants for Amazon and your own store.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { ShoppingBag, Layout, ZoomIn, Percent } from "lucide-react";

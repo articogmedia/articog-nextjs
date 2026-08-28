@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Campaign Key Visuals — Articog",
+  description: "Core visual systems that anchor campaigns across channels. Developing high-fidelity hero visuals and scalable creative frameworks.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Lightbulb, Target, LayoutGrid, CheckCircle2, ChevronRight } from "lucide-react";

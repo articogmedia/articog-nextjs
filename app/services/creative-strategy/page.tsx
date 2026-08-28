@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Creative Strategy & Concepting — Articog",
+  description: "The strategic foundation behind every production. Concept development, brand direction, and campaign architecture for AI-powered creative.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Lightbulb, Palette, LayoutGrid, MessageSquare } from "lucide-react";

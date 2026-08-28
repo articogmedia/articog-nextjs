@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Audio & Sound Production — Articog",
+  description: "Complete audio production for video projects and standalone audio ads. AI voiceover, custom sound design, and professional mastering.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Mic2, Music, Waves, Speaker, Info, ArrowRight, AudioLines } from "lucide-react";

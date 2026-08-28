@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Video Editing — Articog",
+  description: "Professional editorial assembly, cutdowns, captions, and motion graphics to turn raw footage into polished final cuts.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Scissors, Copy, Type, Tv, Clock } from "lucide-react";

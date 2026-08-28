@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Monthly Plans — Articog",
+  description: "Choose a subscription tier that matches your creative volume.",
+};
 import { Link } from "@/components/ui/Link";
 import { Container, Section, Button, Heading } from "@/components/ui";
 import { Check } from "lucide-react";

@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "AI Product Photography — Articog",
+  description: "Photorealistic product shots without a physical studio shoot. Clean catalog imagery and lifestyle scenes at scale with perfect product fidelity.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { ShoppingBag, Layout, Calendar, ShieldCheck } from "lucide-react";

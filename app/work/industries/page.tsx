@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Work by Industry — Articog",
+  description: "Explore our portfolio of AI creative production organized by industry vertical.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { ArrowRight, ShoppingBag, Laptop, Home, Car, Coffee, Shirt } from "lucide-react";

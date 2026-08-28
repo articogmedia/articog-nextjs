@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Creative Testing & Variants — Articog",
+  description: "Hypothesis-driven creative testing for paid campaigns. Structured variant taxonomy and clean asset tracking for performance insights.",
+};
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Microscope, ListTree, FileJson, Info } from "lucide-react";
