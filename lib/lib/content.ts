@@ -61,21 +61,21 @@ export const siteContent: SiteContent = {
       title: "Generate",
       description:
         "Our AI pipeline executes across models and iteration loops, calibrated to your brand. First outputs within hours.",
-      tag: "Day 1–2",
+      tag: "Day 1 2",
     },
     {
       step: 3,
       title: "Refine",
       description:
         "Review a curated selection. We iterate on your feedback. Fast cycles, no overhead.",
-      tag: "Day 2–3",
+      tag: "Day 2 3",
     },
     {
       step: 4,
       title: "Deliver",
       description:
         "Production-ready assets, versioned and platform-sized. One campaign or an ongoing content engine.",
-      tag: "Day 3–4",
+      tag: "Day 3 4",
     },
   ],
 

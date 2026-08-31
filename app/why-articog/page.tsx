@@ -13,15 +13,15 @@ export default function WhyArticogPage() {
   const comparisonRows = [
     {
       attribute: "First output",
-      agency: "4–8 weeks",
-      inhouse: "2–4 weeks",
-      articog: "2–4 days"
+      agency: "4 8 weeks",
+      inhouse: "2 4 weeks",
+      articog: "2 4 days"
     },
     {
       attribute: "Campaign delivery",
       agency: "12+ weeks",
-      inhouse: "6–8 weeks",
-      articog: "7–10 days"
+      inhouse: "6 8 weeks",
+      articog: "7 10 days"
     },
     {
       attribute: "Cost structure",
