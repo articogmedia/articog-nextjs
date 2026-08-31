@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { siteContent } from "@/lib/content";
 import { FinalCTA } from "@/components/sections/FinalCTA";
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 export default function CustomersPage() {
   const caseStudies = siteContent.caseStudies;

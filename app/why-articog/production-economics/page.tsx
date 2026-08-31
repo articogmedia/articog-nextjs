@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 };
 import { Container, Section, Button, Heading } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
-import { ArrowRight, BarChart3, Clock, Zap } from "lucide-react";
+import { BarChart3, Clock, Zap } from "lucide-react";
 
 export default function ProductionEconomicsPage() {
   const sections = [

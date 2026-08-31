@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
-import { ShieldCheck, Eye, FileText, ArrowRight } from "lucide-react";
+import { ShieldCheck, Eye, FileText } from "lucide-react";
 
 export default function RealEstateFilmsPage() {
   const disclosurePoints = [

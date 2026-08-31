@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
-import { Rocket, Clock, CheckCircle2, Map, ArrowRight, Layers } from "lucide-react";
+import { Clock, CheckCircle2, Map, Layers } from "lucide-react";
 
 export default function ProductLaunchPage() {
   const workflowSteps = [

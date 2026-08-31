@@ -1,7 +1,4 @@
 "use client";
-import { Link } from "@/components/ui/Link";
-import { ArrowRight } from "lucide-react";
-import { Button, Container } from "@/components/ui";
 import type { HeroContent, ProofStat } from "@/types";
 
 interface HeroProps {
@@ -9,7 +6,7 @@ interface HeroProps {
   stats: ProofStat[];
 }
 
-export function Hero({ content, stats }: HeroProps) {
+export function Hero({ content }: HeroProps) {
   const lines = content.headline.split("\n");
 
   return (

@@ -6,7 +6,6 @@ export const metadata: Metadata = {
 };
 import { Link } from "@/components/ui/Link";
 import { Container, Section, Button, Heading } from "@/components/ui";
-import { Check, X } from "lucide-react";
 
 export default function CompareAgenciesPage() {
   const comparisons = [

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
-import { Infinity, Layers, BarChart3, ArrowRight } from "lucide-react";
+import { Infinity, Layers, BarChart3 } from "lucide-react";
 
 export default function AlwaysOnContentPage() {
   const steps = [

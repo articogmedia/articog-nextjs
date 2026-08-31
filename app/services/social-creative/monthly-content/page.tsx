@@ -5,7 +5,7 @@ export const metadata: Metadata = {
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
-import { Calendar, Palette, Share2, ArrowRight } from "lucide-react";
+import { Calendar, Palette, Share2 } from "lucide-react";
 
 export default function MonthlySocialContentPage() {
   const included = [

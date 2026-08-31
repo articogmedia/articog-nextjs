@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
-import { Map, Layers, Layout, Info } from "lucide-react";
+import { Map, Layers, Layout } from "lucide-react";
 
 export default function RepurposingPage() {
   const steps = [

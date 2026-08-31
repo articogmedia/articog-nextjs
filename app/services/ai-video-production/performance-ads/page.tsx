@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
-import { FastForward, Zap, Maximize, BarChart3, Clock, CheckCircle2 } from "lucide-react";
+import { Zap, Maximize, BarChart3, Clock, CheckCircle2 } from "lucide-react";
 
 export default function PerformanceAdsPage() {
   const testingFeatures = [

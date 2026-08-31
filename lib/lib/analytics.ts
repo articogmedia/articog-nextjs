@@ -31,7 +31,7 @@ export function track({ name, properties }: TrackEvent): void {
   if (typeof window === "undefined") return;
 
   if (process.env['NODE_ENV'] === "development") {
-    // eslint-disable-next-line no-console
+     
     console.log(`[Analytics] ${name}`, properties ?? {});
     return;
   }

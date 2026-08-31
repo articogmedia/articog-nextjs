@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Link } from "@/components/ui/Link";
 import { Container, Section, Button, Heading } from "@/components/ui";
-import { ArrowRight, Check, ChevronDown, ChevronUp } from "lucide-react";
+import { Check, ChevronDown, ChevronUp } from "lucide-react";
 
 export default function PricingPage() {
   return (

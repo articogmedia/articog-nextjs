@@ -1,6 +1,6 @@
 "use client";
 import { Check } from "lucide-react";
-import { Container, Section, Heading } from "@/components/ui";
+import { Container, Section } from "@/components/ui";
 import type { ComparisonRow } from "@/types";
 import { useEffect, useRef } from "react";
 

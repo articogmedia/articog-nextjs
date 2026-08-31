@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
-import { ShieldCheck, FileText, Repeat, Lock, Video, CheckCircle2 } from "lucide-react";
+import { ShieldCheck, FileText, Repeat, Lock } from "lucide-react";
 
 export default function UGCStyleAdsPage() {
   const includedFeatures = [
