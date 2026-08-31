@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI Brand Films — Articog",
+  title: "AI Brand Films Articog",
   description: "High-craft brand storytelling without traditional production overhead. Cinematic AI brand films with human creative direction.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";

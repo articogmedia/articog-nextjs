@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI Video Production — Articog",
+  title: "AI Video Production Articog",
   description: "Flagship AI video production. End-to-end video combining AI generation with human creative direction for brand films, commercials, and ads.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Concept Development — Articog",
+  title: "Concept Development Articog",
   description: "Exploring multiple creative directions before committing to production to ensure alignment with your goals.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";

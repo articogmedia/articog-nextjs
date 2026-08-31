@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Creative Testing & Variants — Articog",
+  title: "Creative Testing & Variants Articog",
   description:
     "Hypothesis-driven creative testing for paid campaigns. Structured variant taxonomy and clean asset tracking for performance insights.",
 };

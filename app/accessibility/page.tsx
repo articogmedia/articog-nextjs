@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Accessibility Statement — Articog",
+  title: "Accessibility Statement Articog",
   description: "Articog's accessibility statement, detailing our commitment to an inclusive digital experience.",
 };
 import { Container, Section, Heading } from "@/components/ui";

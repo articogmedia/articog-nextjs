@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Creative Strategy & Concepting — Articog",
+  title: "Creative Strategy & Concepting Articog",
   description: "The strategic foundation behind every production. Concept development, brand direction, and campaign architecture for AI-powered creative.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
@@ -42,7 +42,7 @@ export default function CreativeStrategyPage() {
               Creative Strategy & Concepting
             </Heading>
             <p className="font-sans text-xl text-white/60 leading-relaxed">
-              The strategic foundation behind every production—where we translate your business goals into sharp creative direction before a single frame is generated.
+              The strategic foundation behind every production where we translate your business goals into sharp creative direction before a single frame is generated.
             </p>
           </div>
         </Container>

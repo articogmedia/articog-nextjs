@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Performance Creative Testing — Articog",
+  title: "Performance Creative Testing Articog",
   description: "Optimize your ad creative with data-driven testing. Rapidly generate and test video hooks, visual styles, and CTAs to lower your CPAs.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";

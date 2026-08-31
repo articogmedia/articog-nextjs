@@ -1,4 +1,4 @@
-// Static passthrough wrapper — framer-motion removed in v3.0.
+// Static passthrough wrapper framer-motion removed in v3.0.
 // Exists for import compatibility; all animation is CSS-based.
 
 import type { ReactNode } from "react";

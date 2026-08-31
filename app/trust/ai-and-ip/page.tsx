@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI & Intellectual Property — Articog",
+  title: "AI & Intellectual Property Articog",
   description: "How Articog handles AI tool use, ownership, and client intellectual property.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";

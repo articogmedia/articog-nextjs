@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Security & Confidentiality — Articog",
+  title: "Security & Confidentiality Articog",
   description: "NDA, access control, and data handling practices at Articog.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";

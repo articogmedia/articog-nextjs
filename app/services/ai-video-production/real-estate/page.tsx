@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Real Estate Films — Articog",
+  title: "Real Estate Films Articog",
   description: "Cinematic property and development films produced with AI. Responsible visualization for pre-construction and luxury listings.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";

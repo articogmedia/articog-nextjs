@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Pilot / Exploratory Project — Articog",
+  title: "Pilot / Exploratory Project Articog",
   description: "Start small with a fixed-scope pilot project to evaluate quality and fit.",
 };
 import { Link } from "@/components/ui/Link";
@@ -20,7 +20,7 @@ export default function PilotPage() {
     },
     {
       title: "Timeline",
-      description: "A fast, bounded delivery window—typically within 5-7 business days from brief alignment.",
+      description: "A fast, bounded delivery window typically within 5-7 business days from brief alignment.",
     },
     {
       title: "Rights",

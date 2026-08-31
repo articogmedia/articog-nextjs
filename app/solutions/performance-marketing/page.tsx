@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Performance Marketing Creative — Articog",
+  title: "Performance Marketing Creative Articog",
   description: "High-volume, testable creative for growth and performance teams who need constant new variants to beat ad fatigue.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
@@ -42,7 +42,7 @@ export default function PerformanceMarketingPage() {
               Performance Marketing Creative
             </Heading>
             <p className="font-sans text-xl text-white/60 leading-relaxed">
-              An ongoing creative engine built for continuous ad testing and scaling—not a one-off batch of assets. Designed for teams that need to stay ahead of the curve.
+              An ongoing creative engine built for continuous ad testing and scaling not a one-off batch of assets. Designed for teams that need to stay ahead of the curve.
             </p>
           </div>
         </Container>

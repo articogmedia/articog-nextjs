@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "How It Works — Articog",
+  title: "How It Works Articog",
   description: "Our human-directed, AI-accelerated creative production process.",
 };
 import { Link } from "@/components/ui/Link";

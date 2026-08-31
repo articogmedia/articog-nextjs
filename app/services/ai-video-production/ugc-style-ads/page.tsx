@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "UGC-Style Ads — Articog",
+  title: "UGC-Style Ads Articog",
   description: "Creator-style ad content produced at scale with responsible AI practices. High-engagement native creative that builds trust.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Responsible AI — Articog",
+  title: "Responsible AI Articog",
   description: "Our principles for ethical and responsible AI use in creative production.",
 };
 import { Container, Section, Button, Heading } from "@/components/ui";

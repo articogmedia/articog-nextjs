@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Campaign Key Visuals — Articog",
+  title: "Campaign Key Visuals Articog",
   description: "Core visual systems that anchor campaigns across channels. Developing high-fidelity hero visuals and scalable creative frameworks.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
@@ -80,7 +80,7 @@ export default function KeyVisualsPage() {
           <div className="mt-12 p-8 rounded-2xl bg-white/5 border border-white/10 max-w-2xl">
             <h4 className="font-display text-lg font-semibold text-white mb-3">Rollout Examples</h4>
             <p className="font-sans text-sm text-white/50 leading-relaxed mb-4">
-              Our process shows exactly how one key visual extends into a full campaign—from billboard-scale hero assets to social reels and display banners.
+              Our process shows exactly how one key visual extends into a full campaign from billboard-scale hero assets to social reels and display banners.
             </p>
             <div className="flex flex-wrap gap-3">
               {['Hero Key Visual', 'Social Reels', 'Display Ads', 'Out of Home'].map((tag) => (

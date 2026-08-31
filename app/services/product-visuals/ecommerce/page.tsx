@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "E-commerce Visuals — Articog",
+  title: "E-commerce Visuals Articog",
   description: "Product visuals built for online selling. PDP-safe output, marketplace specs, and promotional variants for Amazon and your own store.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
@@ -12,7 +12,7 @@ export default function EcommerceVisualsPage() {
   const steps = [
     {
       title: "PDP-Safe Output",
-      desc: "Images that meet product detail page requirements — clean backgrounds, accurate representation, and technical fidelity for high conversion.",
+      desc: "Images that meet product detail page requirements clean backgrounds, accurate representation, and technical fidelity for high conversion.",
       icon: ShoppingBag,
     },
     {
@@ -46,7 +46,7 @@ export default function EcommerceVisualsPage() {
               E-commerce Visuals
             </Heading>
             <p className="font-sans text-xl text-white/60 leading-relaxed">
-              Product visuals built specifically for online selling — your own site and marketplaces alike. Optimize every touchpoint of the digital shopping experience.
+              Product visuals built specifically for online selling your own site and marketplaces alike. Optimize every touchpoint of the digital shopping experience.
             </p>
           </div>
         </Container>

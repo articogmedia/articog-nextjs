@@ -1,7 +1,7 @@
 /**
  * Analytics abstraction layer.
  *
- * Swap the provider in one place — components never import a vendor SDK directly.
+ * Swap the provider in one place components never import a vendor SDK directly.
  *
  * To connect a provider, replace the TODO blocks below:
  *   - Vercel Analytics: import { track } from "@vercel/analytics"
@@ -37,7 +37,7 @@ export function track({ name, properties }: TrackEvent): void {
   }
 
   // TODO: integrate your analytics provider here
-  // Example — Vercel Analytics:
+  // Example Vercel Analytics:
   //   import { track as vaTrack } from "@vercel/analytics";
   //   vaTrack(name, properties);
 }

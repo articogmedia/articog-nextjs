@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Product Launch Campaigns — Articog",
+  title: "Product Launch Campaigns Articog",
   description: "Full creative support for your product launch, from strategy and timeline to every channel-specific asset.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";

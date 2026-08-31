@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Social Creative Work — Articog",
+  title: "Social Creative Work Articog",
   description: "Platform-native content built for organic and paid social.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";

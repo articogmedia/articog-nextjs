@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Production Cost & ROI Guide — Articog",
+  title: "Production Cost & ROI Guide Articog",
   description: "Understand the economics of AI-native creative production and how it compares to traditional models.",
 };
 import { Container, Section, Button, Heading } from "@/components/ui";

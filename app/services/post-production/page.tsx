@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI Post-Production — Articog",
+  title: "AI Post-Production Articog",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
@@ -63,7 +63,7 @@ export default function PostProductionPage() {
               Post-Production
             </Heading>
             <p className="font-sans text-xl text-white/60 leading-relaxed">
-              Finishing work — editing, compositing, color, audio and cleanup — for footage and assets whether they came from us or elsewhere.
+              Finishing work editing, compositing, color, audio and cleanup for footage and assets whether they came from us or elsewhere.
             </p>
           </div>
         </Container>

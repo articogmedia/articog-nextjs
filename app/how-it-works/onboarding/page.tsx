@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Onboarding — Articog",
+  title: "Onboarding Articog",
   description: "What happens before your first project kicks off. Our structured onboarding process ensures a smooth start.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";

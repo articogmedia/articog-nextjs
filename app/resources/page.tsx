@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Resources — Articog",
+  title: "Resources Articog",
   description: "Guides, articles, and insights on AI creative production for modern brands.",
 };
 import { Container, Section, Button, Heading } from "@/components/ui";

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "In-House Creative Overflow — Articog",
+  title: "In-House Creative Overflow Articog",
   description: "Extend your internal team without full-time hires.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
@@ -42,7 +42,7 @@ export default function CreativeOverflowPage() {
               In-House Creative Overflow
             </Heading>
             <p className="font-sans text-xl text-white/60 leading-relaxed">
-              Extend your existing creative team's capacity during peak demand—without hiring or outsourcing to a slow agency.
+              Extend your existing creative team's capacity during peak demand without hiring or outsourcing to a slow agency.
             </p>
           </div>
         </Container>

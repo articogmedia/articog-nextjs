@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Articog vs Freelancers — Articog",
+  title: "Articog vs Freelancers Articog",
   description: "A balanced comparison of working with freelancers versus Articog's managed production team.",
 };
 import { Link } from "@/components/ui/Link";

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Subprocessors — Articog",
+  title: "Subprocessors Articog",
   description: "A list of third-party subprocessors used by Articog to process data.",
 };
 import { Container, Section, Heading } from "@/components/ui";

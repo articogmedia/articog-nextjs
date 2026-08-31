@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI Product Commercials — Articog",
+  title: "AI Product Commercials Articog",
   description: "Premium AI commercials built around your real product inside AI-generated worlds. High-fidelity product accuracy and multi-channel outputs.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";

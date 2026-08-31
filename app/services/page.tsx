@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Services — Articog",
+  title: "Services Articog",
   description: "Articog's AI-native creative services: AI video production, ad creative, social creative, product visuals, creative strategy, and post-production.",
 };
 import { Link } from "@/components/ui/Link";
@@ -292,7 +292,7 @@ export default function ServicesPage() {
                 lineHeight: 1.65,
               }}
             >
-              From brand films to performance ad variants — one AI-native
+              From brand films to performance ad variants one AI-native
               production partner for every format your brand needs.
             </p>
           </div>

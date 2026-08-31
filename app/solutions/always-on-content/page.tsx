@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Always-On Content Engine — Articog",
+  title: "Always-On Content Engine Articog",
   description: "Recurring creative output for brands that need consistent monthly volume across social and campaigns.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
@@ -17,7 +17,7 @@ export default function AlwaysOnContentPage() {
     },
     {
       title: "Cross-Channel Coverage",
-      desc: "Organic and paid, video and static—all delivered from one unified engine for total brand consistency.",
+      desc: "Organic and paid, video and static all delivered from one unified engine for total brand consistency.",
       icon: Layers,
     },
     {

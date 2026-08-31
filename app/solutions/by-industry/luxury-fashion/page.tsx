@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI for Luxury & Fashion — Articog",
+  title: "AI for Luxury & Fashion Articog",
   description: "Elevate your fashion brand with high-craft AI creative. Cinematic lookbooks, photorealistic product fidelity, and brand-safe synthetic talent.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";

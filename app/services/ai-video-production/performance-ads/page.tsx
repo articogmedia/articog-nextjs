@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Performance Video Ads — Articog",
+  title: "Performance Video Ads Articog",
   description: "High-volume, on-brand video variants built for continuous performance testing and rapid iteration.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";

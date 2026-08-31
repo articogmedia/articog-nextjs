@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI Voiceover — Articog",
+  title: "AI Voiceover Articog",
   description: "Clear, professional narration for video, ads and explainers with responsible AI voice production.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
@@ -12,7 +12,7 @@ export default function AIVoiceoverPage() {
   const responsibleFeatures = [
     {
       title: "Voice Rights & Consent",
-      desc: "Any synthetic voice used is properly licensed or consented to — never an unauthorized clone of a real person.",
+      desc: "Any synthetic voice used is properly licensed or consented to never an unauthorized clone of a real person.",
       icon: ShieldCheck,
     },
     {

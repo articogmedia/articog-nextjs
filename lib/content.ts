@@ -1,5 +1,5 @@
 /**
- * Static site content — single source of truth for all page data.
+ * Static site content single source of truth for all page data.
  * Import directly into pages and components.
  */
 import type { SiteContent } from "@/types";

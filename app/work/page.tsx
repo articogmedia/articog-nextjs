@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Our Work — Articog",
+  title: "Our Work Articog",
   description: "Proof, not promises. A look at the creative we've produced across formats and industries.",
 };
 import { ArrowRight } from "lucide-react";

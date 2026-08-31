@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Product Visual Content — Articog",
+  title: "Product Visual Content Articog",
   description: "On-brand product visuals at any scale. Campaign posters, banners, OOH creative, and print-ready assets with consistent brand fidelity.",
 };
 import { Link } from "@/components/ui/Link";

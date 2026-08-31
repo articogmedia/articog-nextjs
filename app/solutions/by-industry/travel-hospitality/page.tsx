@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI for Travel & Hospitality — Articog",
+  title: "AI for Travel & Hospitality Articog",
   description: "Elevate your travel and hospitality creative. AI-generated destination content, cinematic property tours, and high-volume seasonal social creative.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";

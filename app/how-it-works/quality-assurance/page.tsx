@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Quality Assurance — Articog",
+  title: "Quality Assurance Articog",
   description: "Our rigorous review process ensures every asset meets your brand's highest standards before delivery.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";

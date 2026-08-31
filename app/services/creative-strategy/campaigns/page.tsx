@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Campaign Creative Strategy — Articog",
+  title: "Campaign Creative Strategy Articog",
   description: "Planning a full campaign system, not just a single asset. Integrated creative strategy for cross-channel impact.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";

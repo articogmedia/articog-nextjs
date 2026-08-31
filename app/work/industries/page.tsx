@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Work by Industry — Articog",
+  title: "Work by Industry Articog",
   description: "Explore our portfolio of AI creative production organized by industry vertical.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";

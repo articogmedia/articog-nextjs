@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Articog vs AI Tools Only — Comparison",
+  title: "Articog vs AI Tools Only Comparison",
   description: "A comparison of Articog's managed creative engine versus doing it yourself with raw AI tools. Why expertise and consistency matter.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
@@ -46,7 +46,7 @@ export default function CompareAIToolsPage() {
       metric: "Time Investment",
       diy: {
         value: "High Time Cost",
-        desc: "Hours spent prompting, re-generating, and troubleshooting outputs manually—taking time away from higher-value tasks.",
+        desc: "Hours spent prompting, re-generating, and troubleshooting outputs manually taking time away from higher-value tasks.",
       },
       articog: {
         value: "Low Friction",

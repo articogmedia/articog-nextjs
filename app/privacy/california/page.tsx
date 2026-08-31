@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "California Privacy Notice — Articog",
+  title: "California Privacy Notice Articog",
   description: "Supplemental privacy notice for California residents under CCPA/CPRA.",
 };
 import { Container, Section, Heading } from "@/components/ui";

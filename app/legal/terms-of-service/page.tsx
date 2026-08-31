@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — Articog",
+  title: "Terms of Service Articog",
   description: "The terms and conditions governing your use of Articog's website and services.",
 };
 import { Container, Section, Heading } from "@/components/ui";

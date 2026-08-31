@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI for Gaming & Apps — Articog",
+  title: "AI for Gaming & Apps Articog",
   description: "High-volume performance creative for gaming and mobile apps. Scalable cinematic teasers, gameplay-inspired ads, and platform-native content.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";

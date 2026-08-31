@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Music & Sound Design — Articog",
+  title: "Music & Sound Design Articog",
   description: "Original scoring, sound design and finishing for video and audio projects.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";

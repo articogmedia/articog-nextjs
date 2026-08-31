@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Articog vs Traditional Production — Comparison",
+  title: "Articog vs Traditional Production Comparison",
   description: "A comparison of Articog's AI-accelerated creative engine versus traditional agency production models for speed, scale, and cost.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";

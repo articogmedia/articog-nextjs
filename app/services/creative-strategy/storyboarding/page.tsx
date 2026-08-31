@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Storyboarding & Previsualization — Articog",
+  title: "Storyboarding & Previsualization Articog",
   description: "Planning every shot before production begins to ensure consistency and eliminate surprises.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
