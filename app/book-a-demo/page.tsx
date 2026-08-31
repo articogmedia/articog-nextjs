@@ -5,6 +5,24 @@ import { Link } from "@/components/ui/Link";
 import { Container, Section, Button } from "@/components/ui";
 import { ArrowRight } from "lucide-react";
 
+const CALENDLY_URL = "https://calendly.com/articog-media-01/articog-demo-call";
+
+declare global {
+  interface Window {
+    Calendly?: {
+      initPopupWidget: (options: {
+        url: string;
+        prefill?: {
+          name?: string;
+          firstName?: string;
+          lastName?: string;
+          email?: string;
+        };
+      }) => void;
+    };
+  }
+}
+
 export default function BookADemoPage() {
   const [isLoading, setIsLoading] = useState(false);
 
@@ -12,14 +30,30 @@ export default function BookADemoPage() {
     e.preventDefault();
     setIsLoading(true);
 
+    const formData = new FormData(e.currentTarget);
+    const firstName = (formData.get("firstName") as string) || "";
+    const lastName = (formData.get("lastName") as string) || "";
+    const email = (formData.get("email") as string) || "";
+
     setTimeout(() => {
       setIsLoading(false);
 
-      window.open(
-        "https://calendly.com/articog-media-01/articog-demo-call",
-        "_blank",
-        "noopener,noreferrer"
-      );
+      if (window.Calendly) {
+        // Opens Calendly's popup pre-filled with what we already collected,
+        // so the visitor isn't asked to re-type name/email.
+        window.Calendly.initPopupWidget({
+          url: CALENDLY_URL,
+          prefill: {
+            firstName,
+            lastName,
+            name: `${firstName} ${lastName}`.trim(),
+            email,
+          },
+        });
+      } else {
+        // Fallback if the widget script hasn't loaded yet for some reason
+        window.open(CALENDLY_URL, "_blank", "noopener,noreferrer");
+      }
     }, 400);
   };
 
@@ -74,6 +108,55 @@ export default function BookADemoPage() {
               onSubmit={handleSubmit}
               className="flex flex-col gap-8"
             >
+              {/* First Name + Last Name */}
+              <div className="grid gap-8 sm:grid-cols-2">
+                <div className="flex flex-col gap-2.5">
+                  <label
+                    htmlFor="firstName"
+                    className="font-sans text-[13px] font-medium text-white/70"
+                  >
+                    First Name <span className="text-accent">*</span>
+                  </label>
+
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    required
+                    placeholder="Jane"
+                    className="h-12 w-full rounded-lg px-4 font-sans text-sm outline-none transition-all duration-200"
+                    style={{
+                      background: "rgba(255,255,255,0.04)",
+                      border: "1px solid rgba(255,255,255,0.08)",
+                      color: "white",
+                    }}
+                  />
+                </div>
+
+                <div className="flex flex-col gap-2.5">
+                  <label
+                    htmlFor="lastName"
+                    className="font-sans text-[13px] font-medium text-white/70"
+                  >
+                    Last Name <span className="text-accent">*</span>
+                  </label>
+
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    required
+                    placeholder="Doe"
+                    className="h-12 w-full rounded-lg px-4 font-sans text-sm outline-none transition-all duration-200"
+                    style={{
+                      background: "rgba(255,255,255,0.04)",
+                      border: "1px solid rgba(255,255,255,0.08)",
+                      color: "white",
+                    }}
+                  />
+                </div>
+              </div>
+
               {/* Work Email + Company Name */}
               <div className="grid gap-8 sm:grid-cols-2">
                 <div className="flex flex-col gap-2.5">
