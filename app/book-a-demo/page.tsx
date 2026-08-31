@@ -1,24 +1,26 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { Link } from "@/components/ui/Link";
 import { Container, Section, Button } from "@/components/ui";
 import { ArrowRight } from "lucide-react";
 
 export default function BookADemoPage() {
-  const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
 
-    // Simulate API call
     setTimeout(() => {
       setIsLoading(false);
-      router.push("/thank-you/demo");
-    }, 800);
+
+      window.open(
+        "https://calendly.com/articog-media-01/articog-demo-call",
+        "_blank",
+        "noopener,noreferrer"
+      );
+    }, 400);
   };
 
   return (
@@ -28,6 +30,7 @@ export default function BookADemoPage() {
     >
       <Container>
         <div className="mx-auto max-w-3xl">
+          {/* Header */}
           <div className="text-center mb-16">
             <span
               className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em]"
@@ -59,6 +62,7 @@ export default function BookADemoPage() {
             </p>
           </div>
 
+          {/* Form */}
           <div
             className="rounded-2xl p-8 md:p-12"
             style={{
@@ -119,68 +123,27 @@ export default function BookADemoPage() {
                 </div>
               </div>
 
-              {/* Role + Creative Need */}
-              <div className="grid gap-8 sm:grid-cols-2">
-                <div className="flex flex-col gap-2.5">
-                  <label
-                    htmlFor="role"
-                    className="font-sans text-[13px] font-medium text-white/70"
-                  >
-                    Your Role
-                  </label>
+              {/* Your Role */}
+              <div className="flex flex-col gap-2.5">
+                <label
+                  htmlFor="role"
+                  className="font-sans text-[13px] font-medium text-white/70"
+                >
+                  Your Role
+                </label>
 
-                  <input
-                    type="text"
-                    id="role"
-                    name="role"
-                    placeholder="Creative Director"
-                    className="h-12 w-full rounded-lg px-4 font-sans text-sm outline-none transition-all duration-200"
-                    style={{
-                      background: "rgba(255,255,255,0.04)",
-                      border: "1px solid rgba(255,255,255,0.08)",
-                      color: "white",
-                    }}
-                  />
-                </div>
-
-                <div className="flex flex-col gap-2.5">
-                  <label
-                    htmlFor="need"
-                    className="font-sans text-[13px] font-medium text-white/70"
-                  >
-                    Creative Need
-                  </label>
-
-                  <div className="relative">
-                    <select
-                      id="need"
-                      name="need"
-                      defaultValue=""
-                      className="h-12 w-full appearance-none rounded-lg px-4 font-sans text-sm outline-none transition-all duration-200"
-                      style={{
-                        border: "1px solid rgba(255,255,255,0.08)",
-                        color: "white",
-                        backgroundColor: "#0A0A0A",
-                      }}
-                    >
-                      <option value="" disabled>
-                        Select an option
-                      </option>
-                      <option value="Brand Film">Brand Film</option>
-                      <option value="Commercial/Ad">Commercial/Ad</option>
-                      <option value="Social Content">Social Content</option>
-                      <option value="Product Visuals">
-                        Product Visuals
-                      </option>
-                      <option value="Audio Ad">Audio Ad</option>
-                      <option value="Other">Other</option>
-                    </select>
-
-                    <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-white/30">
-                      <ChevronDownIcon />
-                    </div>
-                  </div>
-                </div>
+                <input
+                  type="text"
+                  id="role"
+                  name="role"
+                  placeholder="Creative Director"
+                  className="h-12 w-full rounded-lg px-4 font-sans text-sm outline-none transition-all duration-200"
+                  style={{
+                    background: "rgba(255,255,255,0.04)",
+                    border: "1px solid rgba(255,255,255,0.08)",
+                    color: "white",
+                  }}
+                />
               </div>
 
               {/* Service Interest */}

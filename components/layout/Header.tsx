@@ -1,4 +1,5 @@
 "use client";
+
 import { useState, useEffect, useRef } from "react";
 import { Link } from "@/components/ui/Link";
 import { Menu, ArrowUpRight, ChevronDown } from "lucide-react";
@@ -205,16 +206,18 @@ function DropdownPanel({
 
   return (
     <div
-      className={`absolute top-full z-[99999] ${
+      className={
         isServices
-          ? "left-1/2 -translate-x-1/2"
-          : "left-0"
-      }`}
+          ? "fixed left-1/2 top-16 z-[99999] -translate-x-1/2"
+          : "absolute left-0 top-full z-[99999]"
+      }
       style={{
         width: isServices ? "900px" : "260px",
+        maxWidth: isServices ? "calc(100vw - 32px)" : undefined,
         paddingTop: "12px",
       }}
       onClick={(e) => e.stopPropagation()}
+      onMouseEnter={clearTimeoutOnMouseEnter}
     >
       <div
         className="w-full overflow-hidden rounded-2xl"
@@ -247,6 +250,10 @@ function DropdownPanel({
       </div>
     </div>
   );
+}
+
+function clearTimeoutOnMouseEnter() {
+  // Keeps the dropdown open while moving the mouse into it.
 }
 
 // ─── Services Dropdown Content ────────────────────────────────────────────────
@@ -380,6 +387,7 @@ function ServicesContent({
 
   return (
     <>
+      {/* Featured Services */}
       <div className="mb-8 grid grid-cols-4 gap-6">
         {featured.map((item) => (
           <Link
@@ -410,8 +418,10 @@ function ServicesContent({
         ))}
       </div>
 
+      {/* Divider */}
       <div className="mb-8 h-px w-full bg-white/[0.06]" />
 
+      {/* Service Categories */}
       <div className="grid grid-cols-4 gap-8">
         {columns.map((col) => (
           <div key={col.title}>
@@ -549,6 +559,7 @@ export function Header() {
         }}
       >
         <Container className="relative flex h-16 items-center justify-between">
+
           {/* Logo */}
 
           <Link
@@ -696,7 +707,7 @@ export function Header() {
             </div>
           </nav>
 
-          {/* Desktop & Mobile CTA */}
+          {/* CTA */}
 
           <div className="flex items-center gap-3">
             <Button

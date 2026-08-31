@@ -1,3 +1,5 @@
+import { Container, Section, Heading } from "@/components/ui";
+
 const PRIVACY_EMAIL = "info@articog.com";
 const EFFECTIVE_DATE = "[DATE]";
 const LAST_UPDATED = "[DATE]";
@@ -190,7 +192,7 @@ const sections: PolicySection[] = [
       },
       {
         kind: "p",
-        text: `To submit a California privacy request, contact us at ${PRIVACY_EMAIL} with the details of your request. We will respond in accordance with applicable law and may need to verify your identity before processing the request. An authorized agent may submit a request on your behalf where permitted by law.`,
+        text: `To submit a California privacy request, contact us at ${PRIVACY_EMAIL} with the details of your request. We will respond in accordance with applicable law and may need to verify your identity before processing your request. An authorized agent may submit a request on your behalf where permitted by law.`,
       },
     ],
   },
@@ -229,20 +231,20 @@ const sections: PolicySection[] = [
   },
 ];
 
-export default function PrivacyPage() {
+export default function PrivacyPolicyPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-black text-white">
-      <section className="pt-32 md:pt-40">
-        <div className="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-12">
-          <div className="mx-auto w-full max-w-[1060px]">
+    <div className="min-h-screen overflow-x-hidden bg-black">
+      <Section size="lg" className="pt-32 md:pt-40">
+        <Container>
+          <div className="mx-auto w-full max-w-[1060px] px-1 sm:px-2">
             <header className="mb-14 md:mb-20">
               <span className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-white/40">
                 Legal
               </span>
 
-              <h1 className="mb-6 font-sans text-6xl font-semibold tracking-[-0.055em] text-white md:text-7xl lg:text-[88px] lg:leading-[0.98]">
+              <Heading as="h1" size="hero" className="mb-6">
                 Privacy Policy
-              </h1>
+              </Heading>
 
               <p className="max-w-3xl font-sans text-base leading-relaxed text-white/55 md:text-lg">
                 Your privacy matters to us. This Privacy Policy explains how
@@ -250,7 +252,7 @@ export default function PrivacyPage() {
                 you use our website and services.
               </p>
 
-              <dl className="mt-10 grid gap-8 border-t border-white/[0.08] pt-8 sm:grid-cols-2 sm:gap-16">
+              <dl className="mt-10 grid gap-4 border-t border-white/[0.08] pt-8 sm:grid-cols-2">
                 <div className="min-w-0">
                   <dt className="font-sans text-[11px] font-semibold uppercase tracking-[0.16em] text-white/35">
                     Effective Date
@@ -279,12 +281,15 @@ export default function PrivacyPage() {
                   className="border-t border-white/[0.07] py-10 md:py-14"
                 >
                   <div className="grid gap-4 md:grid-cols-[auto_minmax(0,1fr)] md:gap-8">
-                    <span className="font-sans text-sm font-semibold tabular-nums text-violet-500 md:pt-1.5">
+                    <span
+                      aria-hidden="true"
+                      className="font-display text-sm font-semibold tabular-nums text-accent md:pt-1.5"
+                    >
                       {section.number.padStart(2, "0")}
                     </span>
 
                     <div className="min-w-0">
-                      <h2 className="mb-5 font-sans text-xl font-semibold text-white md:text-2xl">
+                      <h2 className="mb-5 font-display text-xl font-semibold text-white md:text-2xl">
                         {section.title}
                       </h2>
 
@@ -311,13 +316,16 @@ export default function PrivacyPage() {
                                     key={item}
                                     className="flex min-w-0 items-start gap-3 font-sans text-[15px] leading-[1.6] text-white/60"
                                   >
-                                    <span className="mt-[0.55em] h-1 w-1 shrink-0 rounded-full bg-violet-500" />
+                                    <span
+                                      aria-hidden="true"
+                                      className="mt-[0.55em] h-1 w-1 shrink-0 rounded-full bg-accent"
+                                    />
                                     <span className="min-w-0">{item}</span>
                                   </li>
                                 ))}
                               </ul>
                             </div>
-                          ),
+                          )
                         )}
                       </div>
                     </div>
@@ -330,12 +338,15 @@ export default function PrivacyPage() {
                 className="border-t border-white/[0.07] py-10 md:py-14"
               >
                 <div className="grid gap-4 md:grid-cols-[auto_minmax(0,1fr)] md:gap-8">
-                  <span className="font-sans text-sm font-semibold tabular-nums text-violet-500 md:pt-1.5">
+                  <span
+                    aria-hidden="true"
+                    className="font-display text-sm font-semibold tabular-nums text-accent md:pt-1.5"
+                  >
                     13
                   </span>
 
                   <div className="min-w-0">
-                    <h2 className="mb-5 font-sans text-xl font-semibold text-white md:text-2xl">
+                    <h2 className="mb-5 font-display text-xl font-semibold text-white md:text-2xl">
                       Contact Us
                     </h2>
 
@@ -346,7 +357,7 @@ export default function PrivacyPage() {
                     </p>
 
                     <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 md:p-8">
-                      <h3 className="font-sans text-base font-semibold text-white">
+                      <h3 className="font-display text-base font-semibold text-white">
                         Privacy Questions
                       </h3>
 
@@ -369,8 +380,8 @@ export default function PrivacyPage() {
               </section>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </Container>
+      </Section>
+    </div>
   );
 }
