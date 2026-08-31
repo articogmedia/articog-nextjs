@@ -6,7 +6,7 @@ function EcommerceVisualsPage() {
   const steps = [
     {
       title: "PDP-Safe Output",
-      desc: "Images that meet product detail page requirements — clean backgrounds, accurate representation, and technical fidelity for high conversion.",
+      desc: "Images that meet product detail page requirements   clean backgrounds, accurate representation, and technical fidelity for high conversion.",
       icon: ShoppingBag,
     },
     {
@@ -40,7 +40,7 @@ function EcommerceVisualsPage() {
               E-commerce Visuals
             </Heading>
             <p className="font-sans text-xl text-white/60 leading-relaxed">
-              Product visuals built specifically for online selling — your own site and marketplaces alike. Optimize every touchpoint of the digital shopping experience.
+              Product visuals built specifically for online selling   your own site and marketplaces alike. Optimize every touchpoint of the digital shopping experience.
             </p>
           </div>
         </Container>

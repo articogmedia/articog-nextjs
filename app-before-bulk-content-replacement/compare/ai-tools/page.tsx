@@ -40,7 +40,7 @@ function CompareAIToolsPage() {
       metric: "Time Investment",
       diy: {
         value: "High Time Cost",
-        desc: "Hours spent prompting, re-generating, and troubleshooting outputs manually—taking time away from higher-value tasks.",
+        desc: "Hours spent prompting, re-generating, and troubleshooting outputs manually taking time away from higher-value tasks.",
       },
       articog: {
         value: "Low Friction",

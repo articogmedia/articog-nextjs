@@ -3,7 +3,7 @@ import { Link } from "@/components/ui/Link";
 import { Microscope, ListTree, FileJson, Info } from "lucide-react";
 
 export const metadata = {
-  title: "Testing & Variants — Articog",
+  title: "Testing & Variants   Articog",
   description:
     "Structured, hypothesis-driven creative testing for paid campaigns.",
 };

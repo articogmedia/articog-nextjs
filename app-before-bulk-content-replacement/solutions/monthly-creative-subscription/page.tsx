@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Layers, Calendar, UserCheck, ArrowRight } from "lucide-react";
 
 export const metadata = {
-  title: "Monthly Creative Subscription — Articog",
+  title: "Monthly Creative Subscription   Articog",
   description:
     "Steady, predictable creative delivered every month. Video, social, and visuals without the overhead of a full in-house team or agency retainer.",
 };
@@ -12,7 +12,7 @@ export default function MonthlySubscriptionPage() {
   const steps = [
     {
       title: "Flexible Scope",
-      desc: "A mix of formats—video, social, and visual—tailored specifically to your monthly needs and goals.",
+      desc: "A mix of formats video, social, and visual tailored specifically to your monthly needs and goals.",
       icon: Layers,
     },
     {
@@ -45,7 +45,7 @@ export default function MonthlySubscriptionPage() {
 
             <p className="font-sans text-xl text-white/60 leading-relaxed">
               A steady, predictable stream of creative delivered every
-              month—video, social, and visuals, without the overhead of a full
+              month video, social, and visuals, without the overhead of a full
               in-house team or traditional agency retainer.
             </p>
           </div>

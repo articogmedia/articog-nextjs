@@ -67,7 +67,7 @@ export interface CTAContent {
 // ─── Aggregated data shapes ───────────────────────────────────────────────────
 
 /**
- * Data shape for the homepage — everything except case studies,
+ * Data shape for the homepage   everything except case studies,
  * which are fetched separately with a longer cache TTL.
  */
 export interface HomepageData {
@@ -82,7 +82,7 @@ export interface HomepageData {
 }
 
 /**
- * Full site content shape — used by seed data and Sanity schema compatibility.
+ * Full site content shape   used by seed data and Sanity schema compatibility.
  */
 export interface SiteContent extends HomepageData {
   caseStudies: CaseStudy[];

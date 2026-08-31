@@ -6,7 +6,7 @@ export default function AIVoiceoverPage() {
   const responsibleFeatures = [
     {
       title: "Voice Rights & Consent",
-      desc: "Any synthetic voice used is properly licensed or consented to — never an unauthorized clone of a real person.",
+      desc: "Any synthetic voice used is properly licensed or consented to   never an unauthorized clone of a real person.",
       icon: ShieldCheck,
     },
     {

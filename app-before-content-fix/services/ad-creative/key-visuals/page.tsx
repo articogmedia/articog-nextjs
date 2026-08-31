@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Campaign Key Visuals — Articog",
+  title: "Campaign Key Visuals   Articog",
   description:
     "Core visual systems that anchor campaigns across channels. Developing high-fidelity hero visuals and scalable creative frameworks.",
 };
@@ -118,7 +118,7 @@ export default function KeyVisualsPage() {
 
             <p className="mb-4 font-sans text-sm leading-relaxed text-white/50">
               Our process shows exactly how one key visual extends into a full
-              campaign—from billboard-scale hero assets to social reels and
+              campaign from billboard-scale hero assets to social reels and
               display banners.
             </p>
 

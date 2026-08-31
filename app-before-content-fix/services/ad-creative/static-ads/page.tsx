@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Static Ad Creative — Articog",
+  title: "Static Ad Creative   Articog",
   description:
     "High-volume static ad creative for paid social and display. Platform-native formats for Meta, LinkedIn, and more with full image rights.",
 };

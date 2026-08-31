@@ -11,7 +11,7 @@ export default function AlwaysOnContentPage() {
     },
     {
       title: "Cross-Channel Coverage",
-      desc: "Organic and paid, video and static—all delivered from one unified engine for total brand consistency.",
+      desc: "Organic and paid, video and static all delivered from one unified engine for total brand consistency.",
       icon: Layers,
     },
     {

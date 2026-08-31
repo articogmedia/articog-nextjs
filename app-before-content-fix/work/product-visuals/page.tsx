@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Container, Section, Heading, Button } from "@/components/ui";
 
 export const metadata = {
-  title: "Product Visual Content — Articog",
+  title: "Product Visual Content   Articog",
   description:
     "On-brand product visuals at scale. Product photography, campaign posters, and print-ready assets delivered in days.",
 };

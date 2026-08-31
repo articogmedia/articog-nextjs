@@ -25,7 +25,7 @@ function AboutPage() {
               className="mx-auto max-w-2xl font-sans text-lg md:text-xl leading-relaxed"
               style={{ color: "rgba(255,255,255,0.65)" }}
             >
-              Articog is a Creative AI Production Company. We produce AI brand films, commercials, ad creations, UGC, AI social content and audio ads for growth-stage brands — brief to delivery in days, not weeks.
+              Articog is a Creative AI Production Company. We produce AI brand films, commercials, ad creations, UGC, AI social content and audio ads for growth-stage brands   brief to delivery in days, not weeks.
             </p>
           </div>
         </Container>
@@ -81,7 +81,7 @@ function AboutPage() {
               className="font-sans text-base md:text-lg leading-relaxed"
               style={{ color: "rgba(255,255,255,0.65)" }}
             >
-              Every project combines AI-native production with human creative direction and quality oversight at every step. We don't just prompt and pray — we build, calibrate, and refine until the output meets enterprise brand standards.
+              Every project combines AI-native production with human creative direction and quality oversight at every step. We don't just prompt and pray   we build, calibrate, and refine until the output meets enterprise brand standards.
             </p>
           </div>
           

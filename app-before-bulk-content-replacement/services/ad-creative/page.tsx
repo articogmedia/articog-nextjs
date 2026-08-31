@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Ad Creative — Articog",
+  title: "Ad Creative   Articog",
   description:
     "Static and display ad creative built for continuous performance testing. Scale your brand with high-volume, performance-optimized creative.",
 };

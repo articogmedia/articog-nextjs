@@ -262,8 +262,8 @@ function BookADemoPage() {
                         Select budget
                       </option>
                       <option value="Under $5k">Under $5k</option>
-                      <option value="$5k–$15k">$5k–$15k</option>
-                      <option value="$15k–$50k">$15k–$50k</option>
+                      <option value="$5k to $15k">$5k to $15k</option>
+                      <option value="$15k to $50k">$15k to $50k</option>
                       <option value="$50k+">$50k+</option>
                     </select>
 

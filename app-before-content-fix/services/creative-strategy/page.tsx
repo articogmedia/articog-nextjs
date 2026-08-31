@@ -36,7 +36,7 @@ export default function CreativeStrategyPage() {
               Creative Strategy & Concepting
             </Heading>
             <p className="font-sans text-xl text-white/60 leading-relaxed">
-              The strategic foundation behind every production—where we translate your business goals into sharp creative direction before a single frame is generated.
+              The strategic foundation behind every production where we translate your business goals into sharp creative direction before a single frame is generated.
             </p>
           </div>
         </Container>

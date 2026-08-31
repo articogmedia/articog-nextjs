@@ -20,7 +20,7 @@ function ThankYouDemoPage() {
               letterSpacing: "-0.03em",
             }}
           >
-            Thanks — we&apos;ve got your request
+            Thanks   we&apos;ve got your request
           </h1>
           <p
             className="mx-auto mb-10 max-w-md font-sans text-base md:text-lg"

@@ -58,7 +58,7 @@ export default function PostProductionPage() {
               Post-Production
             </Heading>
             <p className="font-sans text-xl text-white/60 leading-relaxed">
-              Finishing work — editing, compositing, color, audio and cleanup — for footage and assets whether they came from us or elsewhere.
+              Finishing work   editing, compositing, color, audio and cleanup   for footage and assets whether they came from us or elsewhere.
             </p>
           </div>
         </Container>

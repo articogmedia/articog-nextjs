@@ -21,7 +21,7 @@ export default function AfinCommunityPage() {
                 </h2>
 
                 <p className="text-zinc-400 leading-relaxed">
-                  AFIN is a community initiative supported by Articog — details
+                  AFIN is a community initiative supported by Articog   details
                   to be added.
                 </p>
               </div>

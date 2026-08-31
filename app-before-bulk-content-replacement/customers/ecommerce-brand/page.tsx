@@ -3,7 +3,7 @@ import { Link } from "@/components/ui/Link";
 import { Quote, CheckCircle2, Image as ImageIcon } from "lucide-react";
 
 export const metadata = {
-  title: "E-Commerce Brand Case Study — Articog",
+  title: "E-Commerce Brand Case Study   Articog",
   description:
     "How an E-commerce brand achieved 10x creative output with zero headcount increase using Articog.",
 };

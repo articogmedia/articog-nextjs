@@ -3,7 +3,7 @@ import { Link } from "@/components/ui/Link";
 import { RefreshCw, TrendingUp, Grid, ArrowRight } from "lucide-react";
 
 export const metadata = {
-  title: "Performance Marketing Creative — Articog",
+  title: "Performance Marketing Creative   Articog",
   description:
     "Ongoing creative engine built for continuous ad testing and scaling. Fresh variants, performance-informed iteration, and multi-format coverage.",
 };
@@ -45,7 +45,7 @@ export default function PerformanceMarketingPage() {
 
             <p className="font-sans text-xl text-white/60 leading-relaxed">
               An ongoing creative engine built for continuous ad testing and
-              scaling—not a one-off batch of assets. Designed for teams that
+              scaling not a one-off batch of assets. Designed for teams that
               need to stay ahead of the curve.
             </p>
           </div>

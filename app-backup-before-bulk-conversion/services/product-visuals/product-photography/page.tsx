@@ -82,7 +82,7 @@ function ProductPhotographyPage() {
               </div>
               <div className="w-full md:w-2/3">
                 <p className="font-sans text-lg text-white/60 leading-relaxed mb-8">
-                  We understand that accuracy is everything. Using your actual product assets as the source, we ensure that every shot represents your product with 100% fidelity—from texture and color to form and labeling.
+                  We understand that accuracy is everything. Using your actual product assets as the source, we ensure that every shot represents your product with 100% fidelity from texture and color to form and labeling.
                 </p>
                 <div className="p-6 rounded-xl bg-white/5 border border-white/10 italic font-sans text-sm text-white/40">
                   "Your actual product is represented accurately in every shot, ensuring what your customers see is exactly what they get."
