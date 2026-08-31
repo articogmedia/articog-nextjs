@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Container, Section, Heading } from "@/components/ui";
+import { Heading } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Articog",
@@ -241,9 +241,9 @@ const sections: PolicySection[] = [
 export default function PrivacyPolicyPage() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-black text-white">
-      <Section size="lg" className="pt-32 md:pt-40">
-        <Container>
-          <div className="mx-auto w-full max-w-[1060px] px-1 sm:px-2">
+      <section className="pt-32 md:pt-40">
+        <div className="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-12">
+          <div className="mx-auto w-full max-w-[1060px]">
             <header className="mb-14 md:mb-20">
               <span className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-white/40">
                 Legal
@@ -264,6 +264,7 @@ export default function PrivacyPolicyPage() {
                   <dt className="font-sans text-[11px] font-semibold uppercase tracking-[0.16em] text-white/35">
                     Effective Date
                   </dt>
+
                   <dd className="mt-2 font-sans text-sm text-white/70">
                     {EFFECTIVE_DATE}
                   </dd>
@@ -273,6 +274,7 @@ export default function PrivacyPolicyPage() {
                   <dt className="font-sans text-[11px] font-semibold uppercase tracking-[0.16em] text-white/35">
                     Last Updated
                   </dt>
+
                   <dd className="mt-2 font-sans text-sm text-white/70">
                     {LAST_UPDATED}
                   </dd>
@@ -290,13 +292,13 @@ export default function PrivacyPolicyPage() {
                   <div className="grid gap-4 md:grid-cols-[auto_minmax(0,1fr)] md:gap-8">
                     <span
                       aria-hidden="true"
-                      className="font-sans text-sm font-semibold tabular-nums text-accent md:pt-1.5"
+                      className="font-display text-sm font-semibold tabular-nums text-accent md:pt-1.5"
                     >
                       {section.number.padStart(2, "0")}
                     </span>
 
                     <div className="min-w-0">
-                      <h2 className="mb-5 font-sans text-xl font-semibold text-white md:text-2xl">
+                      <h2 className="mb-5 font-display text-xl font-semibold text-white md:text-2xl">
                         {section.title}
                       </h2>
 
@@ -327,6 +329,7 @@ export default function PrivacyPolicyPage() {
                                       aria-hidden="true"
                                       className="mt-[0.55em] h-1 w-1 shrink-0 rounded-full bg-accent"
                                     />
+
                                     <span className="min-w-0">{item}</span>
                                   </li>
                                 ))}
@@ -347,13 +350,13 @@ export default function PrivacyPolicyPage() {
                 <div className="grid gap-4 md:grid-cols-[auto_minmax(0,1fr)] md:gap-8">
                   <span
                     aria-hidden="true"
-                    className="font-sans text-sm font-semibold tabular-nums text-accent md:pt-1.5"
+                    className="font-display text-sm font-semibold tabular-nums text-accent md:pt-1.5"
                   >
                     13
                   </span>
 
                   <div className="min-w-0">
-                    <h2 className="mb-5 font-sans text-xl font-semibold text-white md:text-2xl">
+                    <h2 className="mb-5 font-display text-xl font-semibold text-white md:text-2xl">
                       Contact Us
                     </h2>
 
@@ -364,7 +367,7 @@ export default function PrivacyPolicyPage() {
                     </p>
 
                     <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 md:p-8">
-                      <h3 className="font-sans text-base font-semibold text-white">
+                      <h3 className="font-display text-base font-semibold text-white">
                         Privacy Questions
                       </h3>
 
@@ -387,8 +390,8 @@ export default function PrivacyPolicyPage() {
               </section>
             </div>
           </div>
-        </Container>
-      </Section>
+        </div>
+      </section>
     </main>
   );
 }
