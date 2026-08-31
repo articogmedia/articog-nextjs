@@ -1,8 +1,15 @@
+import type { Metadata } from "next";
 import { Container, Section, Heading } from "@/components/ui";
 
+export const metadata: Metadata = {
+  title: "Privacy Policy | Articog",
+  description:
+    "How Articog collects, uses, shares, and protects your personal information.",
+};
+
 const PRIVACY_EMAIL = "info@articog.com";
-const EFFECTIVE_DATE = "[DATE]";
-const LAST_UPDATED = "[DATE]";
+const EFFECTIVE_DATE = "August 19, 2026";
+const LAST_UPDATED = "August 19, 2026";
 
 type Block =
   | { kind: "p"; text: string }
@@ -233,7 +240,7 @@ const sections: PolicySection[] = [
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-black">
+    <main className="min-h-screen overflow-x-hidden bg-black text-white">
       <Section size="lg" className="pt-32 md:pt-40">
         <Container>
           <div className="mx-auto w-full max-w-[1060px] px-1 sm:px-2">
@@ -252,7 +259,7 @@ export default function PrivacyPolicyPage() {
                 you use our website and services.
               </p>
 
-              <dl className="mt-10 grid gap-4 border-t border-white/[0.08] pt-8 sm:grid-cols-2">
+              <dl className="mt-10 grid gap-8 border-t border-white/[0.08] pt-8 sm:grid-cols-2 sm:gap-16">
                 <div className="min-w-0">
                   <dt className="font-sans text-[11px] font-semibold uppercase tracking-[0.16em] text-white/35">
                     Effective Date
@@ -283,13 +290,13 @@ export default function PrivacyPolicyPage() {
                   <div className="grid gap-4 md:grid-cols-[auto_minmax(0,1fr)] md:gap-8">
                     <span
                       aria-hidden="true"
-                      className="font-display text-sm font-semibold tabular-nums text-accent md:pt-1.5"
+                      className="font-sans text-sm font-semibold tabular-nums text-accent md:pt-1.5"
                     >
                       {section.number.padStart(2, "0")}
                     </span>
 
                     <div className="min-w-0">
-                      <h2 className="mb-5 font-display text-xl font-semibold text-white md:text-2xl">
+                      <h2 className="mb-5 font-sans text-xl font-semibold text-white md:text-2xl">
                         {section.title}
                       </h2>
 
@@ -325,7 +332,7 @@ export default function PrivacyPolicyPage() {
                                 ))}
                               </ul>
                             </div>
-                          )
+                          ),
                         )}
                       </div>
                     </div>
@@ -340,13 +347,13 @@ export default function PrivacyPolicyPage() {
                 <div className="grid gap-4 md:grid-cols-[auto_minmax(0,1fr)] md:gap-8">
                   <span
                     aria-hidden="true"
-                    className="font-display text-sm font-semibold tabular-nums text-accent md:pt-1.5"
+                    className="font-sans text-sm font-semibold tabular-nums text-accent md:pt-1.5"
                   >
                     13
                   </span>
 
                   <div className="min-w-0">
-                    <h2 className="mb-5 font-display text-xl font-semibold text-white md:text-2xl">
+                    <h2 className="mb-5 font-sans text-xl font-semibold text-white md:text-2xl">
                       Contact Us
                     </h2>
 
@@ -357,7 +364,7 @@ export default function PrivacyPolicyPage() {
                     </p>
 
                     <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 md:p-8">
-                      <h3 className="font-display text-base font-semibold text-white">
+                      <h3 className="font-sans text-base font-semibold text-white">
                         Privacy Questions
                       </h3>
 
@@ -382,6 +389,6 @@ export default function PrivacyPolicyPage() {
           </div>
         </Container>
       </Section>
-    </div>
+    </main>
   );
 }
