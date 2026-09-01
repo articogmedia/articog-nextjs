@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Services Articog",
-  description: "Articog's AI-native creative services: AI video production, ad creative, social creative, product visuals, creative strategy, and post-production.",
+  description:
+    "Articog's AI-native creative services: AI video production, ad creative, social creative, product visuals, creative strategy, and post-production.",
 };
+
 import { Link } from "@/components/ui/Link";
 import { Container, Section, Button } from "@/components/ui";
 import { ArrowRight } from "lucide-react";
@@ -232,9 +234,9 @@ export default function ServicesPage() {
       {/* Hero */}
       <Section
         size="lg"
-        className="relative pt-32 md:pt-40 overflow-hidden min-h-[60vh] flex items-center"
+        className="relative flex min-h-[60vh] items-center overflow-hidden pt-32 md:pt-40"
       >
-        {/* Background Video */}
+        {/* Optimized Background Video */}
         <div className="absolute inset-0 z-0">
           <video
             autoPlay
@@ -243,25 +245,30 @@ export default function ServicesPage() {
             loop
             controls={false}
             preload="auto"
+            poster="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:eco,f_auto,w_1920,so_0/v1786976270/web_1_1_1_1.jpg"
             className="h-full w-full object-cover opacity-40"
-            poster="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:best,f_auto,so_0,w_1920/v1786976270/web_1_1_1_1.jpg"
+            aria-hidden="true"
           >
+            {/* Desktop */}
             <source
-              src="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:best,f_auto/v1786976270/web_1_1_1_1.mp4"
+              src="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:eco,f_auto,vc_auto,w_1920/v1786976270/web_1_1_1_1.mp4"
               type="video/mp4"
+              media="(min-width: 769px)"
             />
 
+            {/* Mobile */}
             <source
-              src="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:best,f_auto,w_960/v1786976270/web_1_1_1_1.mp4"
+              src="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:eco,f_auto,vc_auto,w_960/v1786976270/web_1_1_1_1.mp4"
               type="video/mp4"
-              media="(max-width: 768px)"
             />
           </video>
 
           {/* Dark Overlay */}
           <div
             className="absolute inset-0 z-10"
-            style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
+            style={{
+              backgroundColor: "rgba(0, 0, 0, 0.5)",
+            }}
           />
         </div>
 
@@ -269,7 +276,9 @@ export default function ServicesPage() {
           <div className="mx-auto max-w-3xl text-center">
             <span
               className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em]"
-              style={{ color: "rgba(255,255,255,0.40)" }}
+              style={{
+                color: "rgba(255,255,255,0.40)",
+              }}
             >
               Services
             </span>
@@ -306,7 +315,9 @@ export default function ServicesPage() {
             <Container>
               <h2
                 className="mb-10 font-display text-2xl font-semibold text-white"
-                style={{ letterSpacing: "-0.02em" }}
+                style={{
+                  letterSpacing: "-0.02em",
+                }}
               >
                 {group.category}
               </h2>
@@ -324,19 +335,23 @@ export default function ServicesPage() {
                   >
                     <h3
                       className="font-display text-lg font-semibold text-white transition-colors duration-200 group-hover:text-white/90"
-                      style={{ letterSpacing: "-0.01em" }}
+                      style={{
+                        letterSpacing: "-0.01em",
+                      }}
                     >
                       {service.title}
                     </h3>
 
                     <p
                       className="mt-3 font-sans text-sm leading-relaxed"
-                      style={{ color: "rgba(255,255,255,0.50)" }}
+                      style={{
+                        color: "rgba(255,255,255,0.50)",
+                      }}
                     >
                       {service.description}
                     </p>
 
-                    <span className="mt-auto pt-5 inline-flex items-center gap-1.5 font-sans text-sm font-medium text-accent group-hover:text-accent-hover transition-colors duration-200">
+                    <span className="mt-auto inline-flex items-center gap-1.5 pt-5 font-sans text-sm font-medium text-accent transition-colors duration-200 group-hover:text-accent-hover">
                       Learn more
                       <ArrowRight
                         size={14}
@@ -356,7 +371,7 @@ export default function ServicesPage() {
         <Container>
           <div className="mx-auto max-w-xl text-center">
             <h2
-              className="font-display font-semibold text-white mb-6"
+              className="mb-6 font-display font-semibold text-white"
               style={{
                 fontSize: "clamp(1.8rem, 4vw, 2.6rem)",
                 lineHeight: 1.15,
@@ -375,7 +390,9 @@ export default function ServicesPage() {
 
             <p
               className="mt-8 font-sans text-xs"
-              style={{ color: "rgba(255,255,255,0.28)" }}
+              style={{
+                color: "rgba(255,255,255,0.28)",
+              }}
             >
               No commitment required. First conversation is free.
             </p>

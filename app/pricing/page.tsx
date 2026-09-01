@@ -17,14 +17,21 @@ export default function PricingPage() {
             >
               PRICING
             </span>
+
             <Heading as="h1" size="hero" className="mb-6">
               Pricing that scales with you
             </Heading>
+
             <p
               className="mx-auto max-w-2xl font-sans text-base md:text-lg"
-              style={{ color: "rgba(255,255,255,0.55)", lineHeight: 1.65 }}
+              style={{
+                color: "rgba(255,255,255,0.55)",
+                lineHeight: 1.65,
+              }}
             >
-              Stop paying for overhead. Our flexible model replaces rigid agency retainers and expensive in-house headcount with a high-performance creative engine built for speed.
+              Stop paying for overhead. Our flexible model replaces rigid
+              agency retainers and expensive in-house headcount with a
+              high-performance creative engine built for speed.
             </p>
           </div>
 
@@ -43,10 +50,11 @@ export default function PricingPage() {
               buttonText="Talk to us"
               href="/book-a-demo"
             />
+
             {/* Monthly Subscription */}
             <PricingCard
               title="Monthly Subscription"
-              price="Starting at $2,500/mo"
+              price="Custom quote"
               description="For ongoing content and recurring creative needs"
               features={[
                 "Ongoing production engine",
@@ -58,6 +66,7 @@ export default function PricingPage() {
               href="/pricing/monthly-plans"
               popular
             />
+
             {/* Enterprise */}
             <PricingCard
               title="Enterprise"
@@ -82,15 +91,18 @@ export default function PricingPage() {
             <Heading as="h2" size="section" className="mb-10 text-center">
               Frequently Asked Questions
             </Heading>
+
             <div className="space-y-4">
               <AccordionItem
                 question="How does the monthly model work?"
                 answer="You get a steady stream of creative production delivered on a predictable cadence. It eliminates the need for complex project management or expensive internal hiring."
               />
+
               <AccordionItem
                 question="Can I change plans later?"
                 answer="Yes, your creative engine can scale up or down as your business objectives evolve."
               />
+
               <AccordionItem
                 question="Is there a minimum commitment?"
                 answer="Our subscription model is built for long-term partnership but offers the flexibility that traditional agency retainers lack."
@@ -120,7 +132,6 @@ function PricingCard({
   href: string;
   popular?: boolean;
 }) {
-
   return (
     <div
       className={`relative flex flex-col rounded-2xl p-8 transition-all duration-300 ${
@@ -131,7 +142,9 @@ function PricingCard({
         border: popular
           ? "1px solid rgba(102, 51, 238, 0.4)"
           : "1px solid rgba(255,255,255,0.08)",
-        boxShadow: popular ? "0 20px 40px rgba(102, 51, 238, 0.1)" : "none",
+        boxShadow: popular
+          ? "0 20px 40px rgba(102, 51, 238, 0.1)"
+          : "none",
       }}
     >
       {popular && (
@@ -142,9 +155,11 @@ function PricingCard({
           Most Popular
         </span>
       )}
+
       <h3 className="font-display text-2xl font-semibold text-white mb-2">
         {title}
       </h3>
+
       <div className="mb-4 font-sans text-lg font-medium text-accent">
         {price}
       </div>
@@ -155,22 +170,37 @@ function PricingCard({
       >
         {description}
       </p>
+
       <ul className="mb-10 space-y-4 flex-1">
         {features.map((feature) => (
           <li key={feature} className="flex items-start gap-3 text-sm">
             <Check size={16} className="mt-0.5 shrink-0 text-accent" />
-            <span style={{ color: "rgba(255,255,255,0.60)" }}>{feature}</span>
+            <span style={{ color: "rgba(255,255,255,0.60)" }}>
+              {feature}
+            </span>
           </li>
         ))}
       </ul>
-      <Button asChild variant={popular ? "primary" : "secondary"} size="lg" className="w-full">
+
+      <Button
+        asChild
+        variant={popular ? "primary" : "secondary"}
+        size="lg"
+        className="w-full"
+      >
         <Link href={href}>{buttonText}</Link>
       </Button>
     </div>
   );
 }
 
-function AccordionItem({ question, answer }: { question: string; answer: string }) {
+function AccordionItem({
+  question,
+  answer,
+}: {
+  question: string;
+  answer: string;
+}) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -188,12 +218,14 @@ function AccordionItem({ question, answer }: { question: string; answer: string 
         <span className="font-sans text-base font-medium text-white/90">
           {question}
         </span>
+
         {isOpen ? (
           <ChevronUp size={18} className="text-white/40" />
         ) : (
           <ChevronDown size={18} className="text-white/40" />
         )}
       </button>
+
       {isOpen && (
         <div className="p-5 pt-0">
           <p

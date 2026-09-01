@@ -1,4 +1,5 @@
 "use client";
+
 import { Container, Section, Heading } from "@/components/ui";
 import type { CaseStudy } from "@/types";
 
@@ -18,39 +19,39 @@ export function CaseStudies({ caseStudies }: CaseStudiesProps) {
           loop
           controls={false}
           preload="auto"
+          poster="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:eco,f_auto,w_1920,so_0/v1786974706/Web_2.jpg"
           className="h-full w-full object-cover"
-          poster="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:best,f_auto,so_0,w_1920/v1786974706/Web_2.jpg"
-          onLoadedMetadata={(e) => {
-            e.currentTarget.muted = true;
-            e.currentTarget.play().catch(() => {
-              // Fallback
-              const playVideo = () => {
-                e.currentTarget.play();
-                window.removeEventListener('touchstart', playVideo);
-              };
-              window.addEventListener('touchstart', playVideo);
-            });
-          }}
+          aria-hidden="true"
         >
+          {/* Desktop / large screens */}
           <source
-            src="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:best,f_auto/v1786974706/Web_2.mp4"
+            src="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:eco,f_auto,vc_auto,w_1920/v1786974706/Web_2.mp4"
             type="video/mp4"
+            media="(min-width: 769px)"
           />
+
+          {/* Mobile / smaller screens */}
           <source
-            src="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:best,f_auto,w_960/v1786974706/Web_2.mp4"
+            src="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:eco,f_auto,vc_auto,w_960/v1786974706/Web_2.mp4"
             type="video/mp4"
-            media="(max-width: 768px)"
           />
         </video>
+
         {/* Dark Overlay */}
-        <div 
-          className="absolute inset-0 z-10" 
-          style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
+        <div
+          className="absolute inset-0 z-10"
+          style={{
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
+          }}
         />
       </div>
+
       <Container className="relative z-20">
-        <div className="max-w-lg mb-16">
-          <Heading as="h2" size="label" className="mb-4">Proof</Heading>
+        <div className="mb-16 max-w-lg">
+          <Heading as="h2" size="label" className="mb-4">
+            Proof
+          </Heading>
+
           <Heading as="h2" size="section" className="mb-0">
             Real outcomes. No composites.
           </Heading>
@@ -60,41 +61,50 @@ export function CaseStudies({ caseStudies }: CaseStudiesProps) {
           {caseStudies.map((cs) => (
             <article
               key={cs.client}
-              className="flex flex-col rounded-2xl overflow-hidden border border-white/[0.08] hover:border-white/[0.14] transition-colors duration-200"
+              className="flex flex-col overflow-hidden rounded-2xl border border-white/[0.08] transition-colors duration-200 hover:border-white/[0.14]"
             >
               {/* Metric */}
-              <div className="px-6 pt-6 pb-5 border-b border-white/[0.08]">
+              <div className="border-b border-white/[0.08] px-6 pb-5 pt-6">
                 <p
                   className="font-display font-semibold text-white"
-                  style={{ fontSize: "2.8rem", lineHeight: 1, letterSpacing: "-0.04em" }}
+                  style={{
+                    fontSize: "2.8rem",
+                    lineHeight: 1,
+                    letterSpacing: "-0.04em",
+                  }}
                 >
                   {cs.metric}
                 </p>
+
                 <p className="mt-1 font-sans text-xs uppercase tracking-wider text-white/35">
                   {cs.metricLabel}
                 </p>
               </div>
 
               {/* Body */}
-              <div className="flex flex-col flex-1 p-6 gap-5">
+              <div className="flex flex-1 flex-col gap-5 p-6">
                 <div className="flex-1">
-                  <h3 className="font-display text-sm font-semibold text-white leading-snug">
+                  <h3 className="font-display text-sm font-semibold leading-snug text-white">
                     {cs.outcome}
                   </h3>
                 </div>
 
-                <div className="flex items-end justify-between pt-4 border-t border-white/[0.08]">
+                <div className="flex items-end justify-between border-t border-white/[0.08] pt-4">
                   <div>
                     <p className="font-display text-sm font-semibold text-white/65">
                       {cs.client}
                     </p>
-                    <p className="font-sans text-xs text-white/35">{cs.industry}</p>
+
+                    <p className="font-sans text-xs text-white/35">
+                      {cs.industry}
+                    </p>
                   </div>
-                  <div className="flex gap-1.5 flex-wrap justify-end">
+
+                  <div className="flex flex-wrap justify-end gap-1.5">
                     {cs.tags.slice(0, 2).map((tag) => (
                       <span
                         key={tag}
-                        className="font-sans text-[10px] px-2 py-0.5 rounded-full border border-white/[0.08] text-white/35"
+                        className="rounded-full border border-white/[0.08] px-2 py-0.5 font-sans text-[10px] text-white/35"
                       >
                         {tag}
                       </span>

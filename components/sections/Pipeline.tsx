@@ -1,4 +1,5 @@
 "use client";
+
 import { Container, Section, Heading } from "@/components/ui";
 import type { PipelineStep } from "@/types";
 
@@ -9,7 +10,7 @@ interface PipelineProps {
 export function Pipeline({ steps }: PipelineProps) {
   return (
     <Section id="pipeline" className="relative overflow-hidden p-0">
-      {/* Background Video for whole section */}
+      {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
           autoPlay
@@ -18,50 +19,64 @@ export function Pipeline({ steps }: PipelineProps) {
           loop
           controls={false}
           preload="auto"
+          poster="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:eco,f_auto,w_1920,so_0/v1786976270/web_1_1_1_1.jpg"
           className="h-full w-full object-cover"
-          poster="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:best,f_auto,so_0,w_1920/v1786976270/web_1_1_1_1.jpg"
-          onLoadedMetadata={(e) => {
-            e.currentTarget.muted = true;
-            e.currentTarget.play().catch(() => {
-              // Fallback
-              const playVideo = () => {
-                e.currentTarget.play();
-                window.removeEventListener('touchstart', playVideo);
-              };
-              window.addEventListener('touchstart', playVideo);
-            });
-          }}
+          aria-hidden="true"
         >
+          {/* Desktop / large screens */}
           <source
-            src="https://res.cloudinary.com/hmy5ctzy/video/upload/v1786976270/web_1_1_1_1.mp4"
+            src="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:eco,f_auto,vc_auto,w_1920/v1786976270/web_1_1_1_1.mp4"
+            type="video/mp4"
+            media="(min-width: 769px)"
+          />
+
+          {/* Mobile / smaller screens */}
+          <source
+            src="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:eco,f_auto,vc_auto,w_960/v1786976270/web_1_1_1_1.mp4"
             type="video/mp4"
           />
         </video>
+
         {/* Subtle base overlay */}
-        <div className="absolute inset-0 bg-black/15 z-10" />
+        <div className="absolute inset-0 z-10 bg-black/15" />
       </div>
 
       <Container className="relative z-20 py-16 md:py-24">
         {/* Header */}
-        <div className="max-w-lg mb-16">
-          <Heading as="h2" size="label" className="mb-4" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.9)" }}>How It Works</Heading>
-          <Heading as="h2" size="section" className="mb-0" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.9)" }}>
+        <div className="mb-16 max-w-lg">
+          <Heading
+            as="h2"
+            size="label"
+            className="mb-4"
+            style={{
+              textShadow: "0 2px 8px rgba(0,0,0,0.9)",
+            }}
+          >
+            How It Works
+          </Heading>
+
+          <Heading
+            as="h2"
+            size="section"
+            className="mb-0"
+            style={{
+              textShadow: "0 2px 8px rgba(0,0,0,0.9)",
+            }}
+          >
             From brief to live in days.
           </Heading>
         </div>
 
         {/* Steps */}
-        <div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 overflow-hidden rounded-2xl border border-white/[0.12] bg-transparent backdrop-blur-[2px]"
-        >
+        <div className="grid grid-cols-1 overflow-hidden rounded-2xl border border-white/[0.12] bg-transparent backdrop-blur-[2px] sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((step) => (
             <div
               key={step.step}
-              className="relative flex flex-col gap-5 p-7 group cursor-default hover:bg-white/[0.04] transition-colors duration-200 border-b last:border-b-0 sm:border-b-0 sm:border-r last:sm:border-r-0 lg:border-r lg:last:border-r-0"
+              className="group relative flex cursor-default flex-col gap-5 border-b p-7 transition-colors duration-200 last:border-b-0 hover:bg-white/[0.04] sm:border-b-0 sm:border-r sm:last:border-r-0 lg:border-r lg:last:border-r-0"
             >
               {/* Hover accent top line */}
               <div
-                className="absolute top-0 left-0 right-0 h-px scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
+                className="absolute left-0 right-0 top-0 h-px origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"
                 style={{ background: "#6633EE" }}
               />
 
@@ -77,12 +92,13 @@ export function Pipeline({ steps }: PipelineProps) {
                 >
                   {step.step}
                 </div>
+
                 {step.tag && (
                   <span
                     className="font-sans text-[10px] font-bold uppercase tracking-wider"
-                    style={{ 
+                    style={{
                       color: "rgba(255,255,255,0.85)",
-                      textShadow: "0 2px 8px rgba(0,0,0,0.9)"
+                      textShadow: "0 2px 8px rgba(0,0,0,0.9)",
                     }}
                   >
                     {step.tag}
@@ -91,15 +107,21 @@ export function Pipeline({ steps }: PipelineProps) {
               </div>
 
               {/* Content */}
-              <div className="space-y-2 flex-1">
-                <h3 className="font-display text-base font-bold text-white" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.9)" }}>
+              <div className="flex-1 space-y-2">
+                <h3
+                  className="font-display text-base font-bold text-white"
+                  style={{
+                    textShadow: "0 2px 8px rgba(0,0,0,0.9)",
+                  }}
+                >
                   {step.title}
                 </h3>
+
                 <p
                   className="font-sans text-sm font-medium leading-relaxed"
-                  style={{ 
+                  style={{
                     color: "#FFFFFF",
-                    textShadow: "0 2px 8px rgba(0,0,0,0.9)"
+                    textShadow: "0 2px 8px rgba(0,0,0,0.9)",
                   }}
                 >
                   {step.description}
