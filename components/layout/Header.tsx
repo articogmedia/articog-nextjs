@@ -115,7 +115,6 @@ export const menuGroups = [
       { label: "Social & UGC", href: "/work/social" },
       { label: "AI Ad Library", href: "/ai-ad-library" },
       { label: "Customer Stories", href: "/customers" },
-      { label: "Reviews", href: "/reviews" },
     ],
   },
   {
@@ -172,11 +171,9 @@ export const menuGroups = [
     label: "Company",
     links: [
       { label: "About Us", href: "/about" },
-      { label: "Our Team", href: "/team" },
       { label: "Careers", href: "/careers" },
       { label: "Press & Media", href: "/press" },
       { label: "Newsletter", href: "/newsletter" },
-      { label: "What's New", href: "/whats-new" },
       { label: "Contact", href: "/contact" },
     ],
   },

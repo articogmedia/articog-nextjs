@@ -90,7 +90,6 @@ const footerNavSections = [
     title: "Company",
     links: [
       { label: "About Us", href: "/about" },
-      { label: "Our Team", href: "/team" },
       { label: "Careers", href: "/careers" },
       { label: "Press & Media", href: "/press" },
       { label: "Trust Center", href: "/trust" },

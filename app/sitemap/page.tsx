@@ -10,7 +10,6 @@ export default function SitemapPage() {
       links: [
         { label: "Home", href: "/" },
         { label: "About", href: "/about" },
-        { label: "Team", href: "/team" },
         { label: "Careers", href: "/careers" },
         { label: "Contact", href: "/contact" },
         { label: "Press & Media", href: "/press" },
@@ -65,7 +64,6 @@ export default function SitemapPage() {
         { label: "Resources Hub", href: "/resources" },
         { label: "Blog", href: "/blog" },
         { label: "Customer Stories", href: "/customers" },
-        { label: "Reviews", href: "/reviews" },
         { label: "AI Ad Library", href: "/ai-ad-library" },
         { label: "Help Center", href: "/help" },
         { label: "Guides", href: "/guides" },

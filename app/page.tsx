@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Articog - Creative AI Production Company | AI Brand Films & Ad Creations",
+  title: "Articog | Creative AI Production Company | AI Brand Films & Ad Creations",
   description: "Articog is a Creative AI Production Company. We produce AI brand films, commercials, ad creations, UGC, AI social content, and audio ads for growth-stage brands. Brief to delivery in days, not weeks.",
 };
 import { siteContent } from "@/lib/content";
@@ -83,7 +83,7 @@ const webPageSchema = {
   "@type": "WebPage",
   "@id": "https://articog.com/#webpage",
   url: "https://articog.com",
-  name: "Articog - AI Creative Production Studio",
+  name: "Articog | AI Creative Production Studio",
   isPartOf: { "@id": "https://articog.com/#website" },
   about: { "@id": "https://articog.com/#organization" },
   description:

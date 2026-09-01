@@ -12,42 +12,42 @@ export default function AdLibraryPage() {
 
   const examples = [
     {
-      title: "[Example Title]",
+      title: "DTC Launch Creative",
       type: "Client Work",
       category: "Video",
       industry: "DTC & Ecommerce",
       format: "9:16 Vertical"
     },
     {
-      title: "[Example Title]",
+      title: "Beauty Campaign Concept",
       type: "Concept Piece",
       category: "Static",
       industry: "Beauty & Skincare",
       format: "4:5 Portrait"
     },
     {
-      title: "[Example Title]",
+      title: "SaaS Product Story",
       type: "Client Work",
       category: "Video",
       industry: "SaaS & Technology",
       format: "16:9 Landscape"
     },
     {
-      title: "[Example Title]",
+      title: "Consumer Electronics Spot",
       type: "Concept Piece",
       category: "Audio",
       industry: "Consumer Electronics",
       format: "Spot"
     },
     {
-      title: "[Example Title]",
+      title: "Real Estate Visual Set",
       type: "Client Work",
       category: "Static",
       industry: "Real Estate",
       format: "1:1 Square"
     },
     {
-      title: "[Example Title]",
+      title: "Performance Social Series",
       type: "Concept Piece",
       category: "Video",
       industry: "DTC & Ecommerce",

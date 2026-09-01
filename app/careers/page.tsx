@@ -36,7 +36,7 @@ export default function CareersPage() {
             {roles.length === 0 ? (
               <div className="rounded-2xl p-12 border border-white/[0.08] bg-white/[0.01] text-center">
                 <p className="font-sans text-base text-white/60 mb-6">
-                  We don't have open roles right now check back soon or reach out to introduce yourself.
+                  We are not currently hiring, but we are always interested in hearing from exceptional creative technologists and production specialists.
                 </p>
                 <Button asChild variant="secondary">
                   <Link href="/contact">Introduce Yourself</Link>

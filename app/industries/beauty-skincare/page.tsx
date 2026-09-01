@@ -21,10 +21,10 @@ export default function BeautySkincarePage() {
               <div className="bg-zinc-900/50 rounded-3xl border border-zinc-800 overflow-hidden">
                 <div className="aspect-video bg-zinc-800"></div>
                 <div className="p-8">
-                  <h3 className="text-2xl font-bold mb-4">DTC Beauty Brand Scale</h3>
-                  <p className="text-zinc-400 mb-6">How a leading skincare brand reduced creative production costs by 60% while increasing ROAS by 25% using Articog's AI creative pipeline.</p>
+                  <h3 className="text-2xl font-bold mb-4">Beauty brand creative at scale</h3>
+                  <p className="text-zinc-400 mb-6">For beauty and skincare brands, Articog helps maintain premium visuals while producing more campaign variants, faster iteration cycles, and consistent localization across channels.</p>
                   <Button asChild variant="outline" className="border-zinc-700 hover:bg-white hover:text-black">
-                    <Link to="/customers/ecommerce-brand">Read Case Study</Link>
+                    <Link to="/book-a-demo">Discuss Your Launch</Link>
                   </Button>
                 </div>
               </div>

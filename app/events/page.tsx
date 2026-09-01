@@ -19,8 +19,7 @@ export default function EventsPage() {
             </p>
 
             <p className="border-t border-zinc-900 pt-10 text-lg text-zinc-400">
-              No upcoming webinars or events at this time. Check back soon for
-              updates.
+              We will share upcoming webinars, learning sessions, and production events here as they are scheduled.
             </p>
           </div>
         </Container>

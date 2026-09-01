@@ -38,7 +38,7 @@ export default function TrustPage() {
     {
       title: "Subprocessors & Key Vendors",
       description: "Transparency into the third-party tools and vendors we use to deliver our services.",
-      href: "/trust/subprocessors",
+      href: "/legal/subprocessors",
     },
   ];
 
