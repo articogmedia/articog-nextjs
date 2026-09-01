@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { Container, Section, Heading } from "@/components/ui";
 import type { CaseStudy } from "@/types";
 
@@ -8,33 +9,61 @@ interface CaseStudiesProps {
 }
 
 export function CaseStudies({ caseStudies }: CaseStudiesProps) {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [shouldLoad, setShouldLoad] = useState(false);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setShouldLoad(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { rootMargin: "200px" }
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <Section className="relative overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
+          ref={videoRef}
           autoPlay
           muted
           playsInline
           loop
           controls={false}
-          preload="auto"
-          poster="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:eco,f_auto,w_1920,so_0/v1786974706/Web_2.jpg"
+          preload={shouldLoad ? "metadata" : "none"}
+          poster="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:good,f_auto,w_1600,so_0/v1786974706/Web_2.jpg"
           className="h-full w-full object-cover"
           aria-hidden="true"
         >
-          {/* Desktop / large screens */}
-          <source
-            src="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:eco,f_auto,vc_auto,w_1920/v1786974706/Web_2.mp4"
-            type="video/mp4"
-            media="(min-width: 769px)"
-          />
+          {shouldLoad && (
+            <>
+              {/* Desktop / large screens */}
+              <source
+                src="https://res.cloudinary.com/hmy5ctzy/video/upload/f_mp4,vc_h264,q_auto:good,w_1600,dpr_auto,c_limit/v1786974706/Web_2.mp4"
+                type="video/mp4"
+                media="(min-width: 769px)"
+              />
 
-          {/* Mobile / smaller screens */}
-          <source
-            src="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:eco,f_auto,vc_auto,w_960/v1786974706/Web_2.mp4"
-            type="video/mp4"
-          />
+              {/* Mobile / smaller screens */}
+              <source
+                src="https://res.cloudinary.com/hmy5ctzy/video/upload/f_mp4,vc_h264,q_auto:good,w_960,dpr_auto,c_limit/v1786974706/Web_2.mp4"
+                type="video/mp4"
+              />
+            </>
+          )}
         </video>
 
         {/* Dark Overlay */}

@@ -244,21 +244,21 @@ export default function ServicesPage() {
             playsInline
             loop
             controls={false}
-            preload="auto"
-            poster="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:eco,f_auto,w_1920,so_0/v1786976270/web_1_1_1_1.jpg"
+            preload="metadata"
+            poster="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:good,f_auto,w_1600,so_0/v1786976270/web_1_1_1_1.jpg"
             className="h-full w-full object-cover opacity-40"
             aria-hidden="true"
           >
             {/* Desktop */}
             <source
-              src="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:eco,f_auto,vc_auto,w_1920/v1786976270/web_1_1_1_1.mp4"
+              src="https://res.cloudinary.com/hmy5ctzy/video/upload/f_mp4,vc_h264,q_auto:good,w_1600,dpr_auto,c_limit/v1786976270/web_1_1_1_1.mp4"
               type="video/mp4"
               media="(min-width: 769px)"
             />
 
             {/* Mobile */}
             <source
-              src="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:eco,f_auto,vc_auto,w_960/v1786976270/web_1_1_1_1.mp4"
+              src="https://res.cloudinary.com/hmy5ctzy/video/upload/f_mp4,vc_h264,q_auto:good,w_960,dpr_auto,c_limit/v1786976270/web_1_1_1_1.mp4"
               type="video/mp4"
             />
           </video>

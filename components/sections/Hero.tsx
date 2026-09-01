@@ -25,13 +25,13 @@ export function Hero({ content }: HeroProps) {
           playsInline
           loop
           controls={false}
-          preload="auto"
-          poster="https://res.cloudinary.com/hmy5ctzy/video/upload/f_jpg,q_auto,w_1280,so_0/v1786961383/Web_3.jpg"
+          preload="metadata"
+          poster="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:good,f_auto,w_1280,so_0/v1786961383/Web_3.jpg"
           className="h-full w-full object-cover opacity-60"
           aria-hidden="true"
         >
           <source
-            src="https://res.cloudinary.com/hmy5ctzy/video/upload/f_mp4,vc_h264,q_auto,w_1280,c_limit/v1786961383/Web_3.mp4"
+            src="https://res.cloudinary.com/hmy5ctzy/video/upload/f_mp4,vc_h264,q_auto:good,w_1280,dpr_auto,c_limit/v1786961383/Web_3.mp4"
             type="video/mp4"
           />
         </video>
