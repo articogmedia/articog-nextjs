@@ -34,6 +34,14 @@ export default function RootLayout({
       className={`${inter.variable} ${sora.variable} h-full antialiased`}
     >
       <head>
+        <link rel="preconnect" href="https://res.cloudinary.com" />
+        <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+        <link
+          rel="preload"
+          as="video"
+          href="https://res.cloudinary.com/hmy5ctzy/video/upload/f_mp4,vc_h264,q_auto:good,w_1280,dpr_auto,c_limit/v1786961383/Web_3.mp4"
+          type="video/mp4"
+        />
         <link
           href="https://assets.calendly.com/assets/external/widget.css"
           rel="stylesheet"

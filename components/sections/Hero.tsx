@@ -25,7 +25,7 @@ export function Hero({ content }: HeroProps) {
           playsInline
           loop
           controls={false}
-          preload="metadata"
+          preload="auto"
           poster="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:good,f_auto,w_1280,so_0/v1786961383/Web_3.jpg"
           className="h-full w-full object-cover opacity-60"
           aria-hidden="true"
