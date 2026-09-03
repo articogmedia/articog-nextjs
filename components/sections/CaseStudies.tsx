@@ -38,7 +38,6 @@ export function CaseStudies({ caseStudies }: CaseStudiesProps) {
 
     video.muted = true;
     video.defaultMuted = true;
-    video.load();
 
     const playVideo = () => {
       if (video.paused && video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
@@ -74,27 +73,15 @@ export function CaseStudies({ caseStudies }: CaseStudiesProps) {
           loop
           controls={false}
           preload={shouldLoad ? "auto" : "none"}
+          src={
+            shouldLoad
+              ? "https://res.cloudinary.com/hmy5ctzy/video/upload/f_mp4,vc_h264,q_auto:good,w_1600,dpr_auto,c_limit/v1786974706/Web_2.mp4"
+              : undefined
+          }
           poster="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:good,f_auto,w_1600,so_0/v1786974706/Web_2.jpg"
           className="h-full w-full object-cover"
           aria-hidden="true"
-        >
-          {shouldLoad && (
-            <>
-              {/* Desktop / large screens */}
-              <source
-                src="https://res.cloudinary.com/hmy5ctzy/video/upload/f_mp4,vc_h264,q_auto:good,w_1600,dpr_auto,c_limit/v1786974706/Web_2.mp4"
-                type="video/mp4"
-                media="(min-width: 769px)"
-              />
-
-              {/* Mobile / smaller screens */}
-              <source
-                src="https://res.cloudinary.com/hmy5ctzy/video/upload/f_mp4,vc_h264,q_auto:good,w_960,dpr_auto,c_limit/v1786974706/Web_2.mp4"
-                type="video/mp4"
-              />
-            </>
-          )}
-        </video>
+        />
 
         {/* Dark Overlay */}
         <div

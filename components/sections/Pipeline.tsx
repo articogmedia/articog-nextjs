@@ -37,7 +37,6 @@ export function Pipeline({ steps }: PipelineProps) {
 
     video.muted = true;
     video.defaultMuted = true;
-    video.load();
 
     const playVideo = () => {
       if (video.paused && video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
@@ -73,27 +72,15 @@ export function Pipeline({ steps }: PipelineProps) {
           loop
           controls={false}
           preload={shouldLoad ? "auto" : "none"}
+          src={
+            shouldLoad
+              ? "https://res.cloudinary.com/hmy5ctzy/video/upload/f_mp4,vc_h264,q_auto:eco,w_1920/v1786976270/web_1_1_1_1.mp4"
+              : undefined
+          }
           poster="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:eco,f_auto,w_1920,so_0/v1786976270/web_1_1_1_1.jpg"
           className="h-full w-full object-cover"
           aria-hidden="true"
-        >
-          {shouldLoad && (
-            <>
-              {/* Desktop / large screens */}
-              <source
-                src="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:eco,f_auto,vc_auto,w_1920/v1786976270/web_1_1_1_1.mp4"
-                type="video/mp4"
-                media="(min-width: 769px)"
-              />
-
-              {/* Mobile / smaller screens */}
-              <source
-                src="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:eco,f_auto,vc_auto,w_960/v1786976270/web_1_1_1_1.mp4"
-                type="video/mp4"
-              />
-            </>
-          )}
-        </video>
+        />
 
         {/* Subtle base overlay */}
         <div className="absolute inset-0 z-10 bg-black/15" />
