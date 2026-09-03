@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Heading } from "@/components/ui";
+import { Plus } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Articog",
@@ -474,24 +475,33 @@ export default function PrivacyPolicyPage() {
 
             <div className="flex flex-col">
               {sections.map((section) => (
-                <section
+                <details
                   key={section.id}
                   id={section.id}
-                  className="border-t border-white/[0.07] py-10 md:py-14"
+                  className="group border-t border-white/[0.07]"
                 >
-                  <div className="grid gap-4 md:grid-cols-[auto_minmax(0,1fr)] md:gap-8">
+                  <summary className="flex cursor-pointer list-none items-center gap-4 py-7 marker:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent md:py-8 [&::-webkit-details-marker]:hidden">
                     <span
                       aria-hidden="true"
-                      className="font-display text-sm font-semibold tabular-nums text-accent md:pt-1.5"
+                      className="font-display text-sm font-semibold tabular-nums text-accent"
                     >
                       {section.number.padStart(2, "0")}
                     </span>
 
-                    <div className="min-w-0">
-                      <h2 className="mb-5 font-display text-xl font-semibold text-white md:text-2xl">
-                        {section.title}
-                      </h2>
+                    <h2 className="min-w-0 flex-1 font-display text-xl font-semibold text-white md:text-2xl">
+                      {section.title}
+                    </h2>
 
+                    <Plus
+                      aria-hidden="true"
+                      className="h-5 w-5 shrink-0 text-white/50 transition-transform duration-200 group-open:rotate-45"
+                    />
+                  </summary>
+
+                  <div className="grid gap-4 pb-10 md:grid-cols-[auto_minmax(0,1fr)] md:gap-8 md:pb-14">
+                    <span aria-hidden="true" className="hidden md:block" />
+
+                    <div className="min-w-0">
                       <div className="flex flex-col gap-6">
                         {section.blocks.map((block, i) =>
                           block.kind === "p" ? (
@@ -530,25 +540,35 @@ export default function PrivacyPolicyPage() {
                       </div>
                     </div>
                   </div>
-                </section>
+                </details>
               ))}
 
-              <section
+              <details
                 id="contact-us"
-                className="border-t border-white/[0.07] py-10 md:py-14"
+                className="group border-t border-white/[0.07]"
               >
-                <div className="grid gap-4 md:grid-cols-[auto_minmax(0,1fr)] md:gap-8">
+                <summary className="flex cursor-pointer list-none items-center gap-4 py-7 marker:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent md:py-8 [&::-webkit-details-marker]:hidden">
                   <span
                     aria-hidden="true"
-                    className="font-display text-sm font-semibold tabular-nums text-accent md:pt-1.5"
+                    className="font-display text-sm font-semibold tabular-nums text-accent"
                   >
                     17
                   </span>
 
+                  <h2 className="min-w-0 flex-1 font-display text-xl font-semibold text-white md:text-2xl">
+                    Contact Us
+                  </h2>
+
+                  <Plus
+                    aria-hidden="true"
+                    className="h-5 w-5 shrink-0 text-white/50 transition-transform duration-200 group-open:rotate-45"
+                  />
+                </summary>
+
+                <div className="grid gap-4 pb-10 md:grid-cols-[auto_minmax(0,1fr)] md:gap-8 md:pb-14">
+                  <span aria-hidden="true" className="hidden md:block" />
+
                   <div className="min-w-0">
-                    <h2 className="mb-5 font-display text-xl font-semibold text-white md:text-2xl">
-                      Contact Us
-                    </h2>
 
                     <p className="mb-8 max-w-[68ch] font-sans text-[15px] leading-[1.75] text-white/60 md:text-base">
                       If you have questions about this Privacy Policy, want to
@@ -581,7 +601,7 @@ export default function PrivacyPolicyPage() {
                     </div>
                   </div>
                 </div>
-              </section>
+              </details>
             </div>
           </div>
         </div>
