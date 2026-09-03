@@ -25,12 +25,42 @@ export function CaseStudies({ caseStudies }: CaseStudiesProps) {
           }
         });
       },
-      { rootMargin: "200px" }
+      { rootMargin: "400px" }
     );
 
     observer.observe(video);
     return () => observer.disconnect();
   }, []);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video || !shouldLoad) return;
+
+    video.muted = true;
+    video.defaultMuted = true;
+    video.load();
+
+    const playVideo = () => {
+      if (video.paused && video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
+        void video.play().catch(() => undefined);
+      }
+    };
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") {
+        playVideo();
+      }
+    };
+
+    playVideo();
+    video.addEventListener("loadeddata", playVideo, { once: true });
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      video.removeEventListener("loadeddata", playVideo);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, [shouldLoad]);
 
   return (
     <Section className="relative overflow-hidden">
@@ -43,7 +73,7 @@ export function CaseStudies({ caseStudies }: CaseStudiesProps) {
           playsInline
           loop
           controls={false}
-          preload={shouldLoad ? "metadata" : "none"}
+          preload={shouldLoad ? "auto" : "none"}
           poster="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:good,f_auto,w_1600,so_0/v1786974706/Web_2.jpg"
           className="h-full w-full object-cover"
           aria-hidden="true"

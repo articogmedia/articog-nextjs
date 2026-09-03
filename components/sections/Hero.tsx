@@ -17,10 +17,11 @@ export function Hero({ content }: HeroProps) {
     if (!video) return;
 
     video.muted = true;
+    video.defaultMuted = true;
 
     const playVideo = () => {
-      if (video.paused) {
-        video.play().catch(() => undefined);
+      if (video.paused && video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
+        void video.play().catch(() => undefined);
       }
     };
 
@@ -31,11 +32,11 @@ export function Hero({ content }: HeroProps) {
     };
 
     playVideo();
-    video.addEventListener("canplay", playVideo);
+    video.addEventListener("loadeddata", playVideo, { once: true });
     document.addEventListener("visibilitychange", handleVisibilityChange);
 
     return () => {
-      video.removeEventListener("canplay", playVideo);
+      video.removeEventListener("loadeddata", playVideo);
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
   }, []);

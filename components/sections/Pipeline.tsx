@@ -36,10 +36,12 @@ export function Pipeline({ steps }: PipelineProps) {
     if (!video || !shouldLoad) return;
 
     video.muted = true;
+    video.defaultMuted = true;
+    video.load();
 
     const playVideo = () => {
-      if (video.paused) {
-        video.play().catch(() => undefined);
+      if (video.paused && video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
+        void video.play().catch(() => undefined);
       }
     };
 
@@ -50,11 +52,11 @@ export function Pipeline({ steps }: PipelineProps) {
     };
 
     playVideo();
-    video.addEventListener("canplay", playVideo);
+    video.addEventListener("loadeddata", playVideo, { once: true });
     document.addEventListener("visibilitychange", handleVisibilityChange);
 
     return () => {
-      video.removeEventListener("canplay", playVideo);
+      video.removeEventListener("loadeddata", playVideo);
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
   }, [shouldLoad]);
@@ -70,7 +72,7 @@ export function Pipeline({ steps }: PipelineProps) {
           playsInline
           loop
           controls={false}
-          preload={shouldLoad ? "metadata" : "none"}
+          preload={shouldLoad ? "auto" : "none"}
           poster="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:eco,f_auto,w_1920,so_0/v1786976270/web_1_1_1_1.jpg"
           className="h-full w-full object-cover"
           aria-hidden="true"
