@@ -18,43 +18,43 @@ const serviceGroups = [
         title: "AI Video Production",
         href: "/services/ai-video-production",
         description:
-          "Premium cinematic video generated with state-of-the-art AI.",
+          "Premium cinematic video produced with AI.",
       },
       {
         title: "Brand Films",
         href: "/services/ai-video-production/brand-films",
         description:
-          "Evocative, high-fidelity films that define your brand identity.",
+          "High-fidelity films that define your brand identity.",
       },
       {
         title: "Product Commercials",
         href: "/services/ai-video-production/product-commercials",
         description:
-          "Striking product showcases built for conversion and impact.",
+          "Product showcases built for conversion.",
       },
       {
         title: "Performance Ads",
         href: "/services/ai-video-production/performance-ads",
         description:
-          "Direct-response video creative optimized for cross-channel ROI.",
+          "Direct-response video creative for cross-channel ROI.",
       },
       {
         title: "Social & Reel Production",
         href: "/services/ai-video-production/social-reels",
         description:
-          "Fast-paced, vertically-optimized content for modern platforms.",
+          "Fast, vertical content for modern platforms.",
       },
       {
         title: "Product Launch Videos",
         href: "/services/ai-video-production/product-launch",
         description:
-          "High-impact announcement films to build momentum.",
+          "Announcement films that build momentum.",
       },
       {
         title: "Localization & Variants",
         href: "/services/ai-video-production/localization",
         description:
-          "Adapt campaigns for global markets with voice localization.",
+          "Adapt campaigns for global markets with localized voice.",
       },
     ],
   },
@@ -65,25 +65,25 @@ const serviceGroups = [
         title: "Ad Creative",
         href: "/services/ad-creative",
         description:
-          "Scalable static and video assets for global performance marketing.",
+          "Static and video assets for global performance marketing.",
       },
       {
         title: "Performance Video Ads",
         href: "/services/ai-video-production/performance-ads",
         description:
-          "High-velocity video testing and production for paid media.",
+          "Video testing and production for paid media.",
       },
       {
         title: "Testing & Variants",
         href: "/services/ad-creative/testing-variants",
         description:
-          "Structured, hypothesis-driven creative testing for paid campaigns.",
+          "Hypothesis-driven testing for paid campaigns.",
       },
       {
         title: "Campaign Key Visuals",
         href: "/services/ad-creative/key-visuals",
         description:
-          "Developing the core visual system that anchors a campaign across channels.",
+          "The core visual system for a campaign across channels.",
       },
     ],
   },

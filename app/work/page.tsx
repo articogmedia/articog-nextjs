@@ -71,7 +71,7 @@ export default function WorkPage() {
               Real outcomes. No composites.
             </Heading>
             <p className="mx-auto max-w-2xl font-sans text-base md:text-lg leading-relaxed mb-12" style={{ color: "rgba(255,255,255,0.65)" }}>
-              Proof, not promises. A look at the creative we've produced across formats and industries that drives tangible business results.
+              Selected work across formats and industries.
             </p>
           </div>
 

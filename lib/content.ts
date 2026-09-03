@@ -26,19 +26,19 @@ export const siteContent: SiteContent = {
       number: "01",
       title: "Your creative team is the bottleneck",
       description:
-        "Content demand scales. Headcount doesn't. Campaigns slip and assets get recycled.",
+        "Content demand scales, but headcount doesn't. Campaigns slip and assets get recycled.",
     },
     {
       number: "02",
       title: "Agencies move too slowly",
       description:
-        "Four-week turnarounds and retainers that don't flex with volume.",
+        "Four-week turnarounds and retainers that don't flex with demand.",
     },
     {
       number: "03",
       title: "Spend scales. Creative doesn't.",
       description:
-        "Spend grows, but creative volume stays flat. Audiences saturate.",
+        "Spend grows, but creative volume stays flat and audiences saturate.",
     },
     {
       number: "04",
@@ -53,28 +53,28 @@ export const siteContent: SiteContent = {
       step: 1,
       title: "Brief",
       description:
-        "Share your goal and references. We set direction before production.",
+        "Share your goal and references. We set direction first.",
       tag: "Day 1",
     },
     {
       step: 2,
       title: "Generate",
       description:
-        "Our AI pipeline runs across brand-calibrated models and iteration loops. First outputs arrive within hours.",
+        "Our brand-calibrated AI pipeline produces first outputs within hours.",
       tag: "Day 1 2",
     },
     {
       step: 3,
       title: "Refine",
       description:
-        "Review a curated selection. We refine it from your feedback in fast, low-overhead cycles.",
+        "Review a curated selection. We refine it through fast feedback cycles.",
       tag: "Day 2 3",
     },
     {
       step: 4,
       title: "Deliver",
       description:
-        "Production-ready assets, versioned and sized for each platform, for one campaign or ongoing production.",
+        "Receive production-ready assets, versioned for every platform.",
       tag: "Day 3 4",
     },
   ],

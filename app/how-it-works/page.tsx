@@ -13,22 +13,22 @@ export default function HowItWorksPage() {
     {
       step: "Day 1",
       title: "Brief",
-      description: "Share your goal and references, we map creative direction before generating anything. We align on brand voice, visual aesthetics, and performance objectives to ensure every output is strategically sound. Our creative leads translate your business requirements into a comprehensive production roadmap."
+      description: "Share your goal and references. We align on brand voice, visual direction, and performance objectives before production."
     },
     {
       step: "Day 1-2",
       title: "Generate",
-      description: "Our AI pipeline executes across models and iteration loops calibrated to your brand, with first outputs ready within hours. We leverage a custom stack of creative models to produce high-fidelity cinematic and visual content at unprecedented speed. This phase allows us to explore a wider range of creative territories while maintaining strict adherence to your brand guidelines."
+      description: "Our brand-calibrated AI pipeline explores creative directions and delivers first outputs within hours."
     },
     {
       step: "Day 2-3",
       title: "Refine",
-      description: "Review a curated selection of outputs, we iterate on your feedback with fast cycles and no production overhead. Every asset is polished by our creative directors to ensure it meets enterprise-grade standards for storytelling and quality. Our iterative loop is designed for precision, allowing for rapid adjustments without the delays typical of traditional post-production."
+      description: "Review a curated selection. Creative directors refine each asset through fast feedback cycles."
     },
     {
       step: "Day 3-4",
       title: "Deliver",
-      description: "Receive production-ready assets, fully versioned and sized for every platform your campaign requires. We provide all necessary aspect ratios, file formats, and language variants ready for immediate deployment. Every deliverable is optimized for peak performance across organic social, paid media, and digital storefronts."
+      description: "Receive production-ready assets in the formats, aspect ratios, and language variants your campaign needs."
     }
   ];
 
@@ -94,7 +94,7 @@ export default function HowItWorksPage() {
               Human oversight, every step
             </Heading>
             <p className="font-sans text-base leading-relaxed mb-8" style={{ color: "rgba(255,255,255,0.60)" }}>
-              AI accelerates our speed, but humans ensure our quality. Every project is led by an experienced Creative Director who maintains absolute brand safety, legal compliance, and creative excellence. We don't just generate; we direct models to execute your specific vision.
+              A Creative Director reviews every project for brand safety, legal compliance, and quality.
             </p>
           </div>
         </Container>

@@ -117,8 +117,7 @@ export function Footer() {
             </Link>
 
             <p className="font-sans text-sm leading-relaxed max-w-xs text-white/40">
-              Creative AI Production. Built to Scale. High-performance
-              creative for growth-stage brands.
+              AI creative production for growth-stage brands.
             </p>
 
             <div className="flex items-center gap-3.5 pt-4">

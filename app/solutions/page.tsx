@@ -12,57 +12,57 @@ export default function SolutionsPage() {
   const cards = [
     {
       title: "Monthly Creative Subscription",
-      description: "For teams that need a steady, predictable stream of creative every month.",
+      description: "For teams that need steady creative every month.",
       href: "/solutions/monthly-creative-subscription",
     },
     {
       title: "Performance Marketing Creative",
-      description: "For growth teams that need high-volume ad variants optimized for performance.",
+      description: "For growth teams that need high-volume, performance-focused ad variants.",
       href: "/solutions/performance-marketing",
     },
     {
       title: "Product Launch Campaigns",
-      description: "Full creative support for your product launch, from timeline to channel rollout.",
+      description: "Creative support for your launch, from timeline to channel rollout.",
       href: "/solutions/product-launch",
     },
     {
       title: "Creative Testing at Scale",
-      description: "Ongoing creative testing programs built to drive continuous growth.",
+      description: "Ongoing testing programs built for continuous growth.",
       href: "/solutions/creative-testing",
     },
     {
       title: "Multi-Format Campaign Production",
-      description: "Produce one integrated campaign across every format and channel from a single modular concept.",
+      description: "Build one campaign across every format and channel from a modular concept.",
       href: "/solutions/multi-format-campaigns",
     },
     {
       title: "Always-On Content Engine",
-      description: "For brands that need continuous organic and paid content without a growing internal team.",
+      description: "For brands that need continuous organic and paid content without more headcount.",
       href: "/solutions/always-on-content",
     },
     {
       title: "Enterprise Creative Production",
-      description: "Creative production built for large organizations with strict security and governance requirements.",
+      description: "Production for large organizations with strict security and governance needs.",
       href: "/solutions/enterprise",
     },
     {
       title: "Agency White-Label",
-      description: "Scale your agency capacity with invisible, reliable production delivered under your brand.",
+      description: "Scale agency capacity with reliable production under your brand.",
       href: "/solutions/agency-white-label",
     },
     {
       title: "Localization & Global Campaigns",
-      description: "Adapt your message for every market with AI-native localization and regional optimization.",
+      description: "Adapt your message for every market with localized, region-ready creative.",
       href: "/solutions/localization-global",
     },
     {
       title: "Creative Automation",
-      description: "Integrate production into your workflow with brief-to-delivery automation.",
+      description: "Integrate brief-to-delivery production into your workflow.",
       href: "/solutions/creative-automation",
     },
     {
       title: "Dynamic Creative Optimization",
-      description: "Real-time variant generation and optimization based on performance signals.",
+      description: "Generate and optimize variants from performance signals.",
       href: "/solutions/dynamic-creative",
     },
   ];

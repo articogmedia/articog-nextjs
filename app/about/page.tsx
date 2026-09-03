@@ -31,7 +31,7 @@ export default function AboutPage() {
               className="mx-auto max-w-2xl font-sans text-lg md:text-xl leading-relaxed"
               style={{ color: "rgba(255,255,255,0.65)" }}
             >
-              Articog is a Creative AI Production Company. We produce AI brand films, commercials, ad creations, UGC, AI social content and audio ads for growth-stage brands brief to delivery in days, not weeks.
+              Articog produces brand films, commercials, ad creations, UGC, social content, and audio ads for growth-stage brands, from brief to delivery in days.
             </p>
           </div>
         </Container>
@@ -87,22 +87,22 @@ export default function AboutPage() {
               className="font-sans text-base md:text-lg leading-relaxed"
               style={{ color: "rgba(255,255,255,0.65)" }}
             >
-              Every project combines AI-native production with human creative direction and quality oversight at every step. We don't just prompt and pray we build, calibrate, and refine until the output meets enterprise brand standards.
+              AI accelerates production; creative directors set direction and review every deliverable for brand alignment, quality, and compliance.
             </p>
           </div>
           
           <div className="grid gap-10 md:grid-cols-3">
             <ApproachItem
               title="AI-Native Production"
-              description="Our proprietary pipeline leverages the latest models to generate high-fidelity assets at scale."
+              description="Our pipeline uses calibrated models to produce high-fidelity assets at scale."
             />
             <ApproachItem
               title="Human Creative Direction"
-              description="Experienced creative directors map every project to ensure emotional resonance and brand alignment."
+              description="Creative directors guide each project for emotional resonance and brand alignment."
             />
             <ApproachItem
               title="Quality Oversight"
-              description="Rigorous human checks at every stage of the generation process to guarantee production-ready files."
+              description="Human checks at every stage ensure production-ready files."
             />
           </div>
         </Container>

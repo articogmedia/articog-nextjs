@@ -59,10 +59,10 @@ export default function ResourcesPage() {
               RESOURCES
             </span>
             <Heading as="h1" size="hero" className="mb-6">
-              Production Insights
+              Resources
             </Heading>
             <p className="mx-auto max-w-2xl font-sans text-base md:text-lg leading-relaxed mb-12" style={{ color: "rgba(255,255,255,0.65)" }}>
-              Practical guidance for AI-native creative production.
+              Guides, playbooks, reports, and events for creative teams.
             </p>
           </div>
 

@@ -29,9 +29,8 @@ export default function PricingPage() {
                 lineHeight: 1.65,
               }}
             >
-              Stop paying for overhead. Our flexible model replaces rigid
-              agency retainers and expensive in-house headcount with a
-              high-performance creative engine built for speed.
+              Flexible production without agency retainers or additional
+              headcount.
             </p>
           </div>
 
@@ -95,17 +94,17 @@ export default function PricingPage() {
             <div className="space-y-4">
               <AccordionItem
                 question="How does the monthly model work?"
-                answer="You get a steady stream of creative production delivered on a predictable cadence. It eliminates the need for complex project management or expensive internal hiring."
+                answer="You get a steady stream of creative production on a predictable cadence, without additional hiring."
               />
 
               <AccordionItem
                 question="Can I change plans later?"
-                answer="Yes, your creative engine can scale up or down as your business objectives evolve."
+                answer="Yes. Scale production up or down as your objectives evolve."
               />
 
               <AccordionItem
                 question="Is there a minimum commitment?"
-                answer="Our subscription model is built for long-term partnership but offers the flexibility that traditional agency retainers lack."
+                answer="The subscription is built for long-term partnership with more flexibility than a traditional retainer."
               />
             </div>
           </div>
