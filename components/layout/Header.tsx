@@ -2,7 +2,15 @@
 
 import { useState, useEffect, useRef } from "react";
 import { Link } from "@/components/ui/Link";
-import { Menu, ArrowUpRight, ChevronDown } from "lucide-react";
+import {
+  ArrowUpRight,
+  ChevronDown,
+  Film,
+  Menu,
+  Smartphone,
+  TestTube2,
+  Workflow,
+} from "lucide-react";
 import { Button, Container } from "@/components/ui";
 import { MobileMenu } from "./MobileMenu";
 
@@ -265,25 +273,25 @@ function ServicesContent({
       title: "Brand Films & Commercials",
       desc: "Story-led films and broadcast-ready ads, produced from brief in days.",
       href: "/services/ai-video-production",
-      icon: <ArrowUpRight size={14} />,
+      icon: <Film size={14} />,
     },
     {
       title: "AI Social & UGC",
       desc: "Platform-native creations for Instagram, TikTok, YouTube and LinkedIn at scale.",
       href: "/work/social",
-      icon: <ArrowUpRight size={14} />,
+      icon: <Smartphone size={14} />,
     },
     {
       title: "ML Ad Creations",
       desc: "Hundreds of on-brand variants, continuously optimised on performance signals.",
       href: "/services/ad-creative/testing-variants",
-      icon: <ArrowUpRight size={14} />,
+      icon: <TestTube2 size={14} />,
     },
     {
       title: "Creative Automations",
       desc: "Brief-to-delivery workflow integration, 80% fewer manual production steps.",
       href: "/how-it-works/ai-creative-pipeline",
-      icon: <ArrowUpRight size={14} />,
+      icon: <Workflow size={14} />,
     },
   ];
 
@@ -400,6 +408,7 @@ function ServicesContent({
               <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/[0.06] bg-white/[0.03] text-zinc-400 transition-colors group-hover:text-white">
                 {item.icon}
               </div>
+              <ArrowUpRight size={14} className="text-zinc-500 transition-colors group-hover:text-white" />
             </div>
 
             <div>
