@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Container, Section, Heading } from "@/components/ui";
 import type { CaseStudy } from "@/types";
 
@@ -12,7 +12,7 @@ export function CaseStudies({ caseStudies }: CaseStudiesProps) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [shouldLoad, setShouldLoad] = useState(false);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
@@ -38,6 +38,8 @@ export function CaseStudies({ caseStudies }: CaseStudiesProps) {
 
     video.muted = true;
     video.defaultMuted = true;
+    video.autoplay = true;
+    video.setAttribute("muted", "");
 
     const playVideo = () => {
       if (video.paused && video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
@@ -52,11 +54,11 @@ export function CaseStudies({ caseStudies }: CaseStudiesProps) {
     };
 
     playVideo();
-    video.addEventListener("loadeddata", playVideo, { once: true });
+    video.addEventListener("canplay", playVideo, { once: true });
     document.addEventListener("visibilitychange", handleVisibilityChange);
 
     return () => {
-      video.removeEventListener("loadeddata", playVideo);
+      video.removeEventListener("canplay", playVideo);
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
   }, [shouldLoad]);
@@ -66,7 +68,13 @@ export function CaseStudies({ caseStudies }: CaseStudiesProps) {
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
-          ref={videoRef}
+          ref={(video) => {
+            videoRef.current = video;
+            if (video) {
+              video.defaultMuted = true;
+              video.muted = true;
+            }
+          }}
           autoPlay
           muted
           playsInline

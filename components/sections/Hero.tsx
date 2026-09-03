@@ -1,7 +1,7 @@
 "use client";
 
 import type { HeroContent, ProofStat } from "@/types";
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 interface HeroProps {
   content: HeroContent;
@@ -12,12 +12,14 @@ export function Hero({ content }: HeroProps) {
   const lines = content.headline.split("\n");
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
     video.muted = true;
     video.defaultMuted = true;
+    video.autoplay = true;
+    video.setAttribute("muted", "");
 
     const playVideo = () => {
       if (video.paused && video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
@@ -32,11 +34,11 @@ export function Hero({ content }: HeroProps) {
     };
 
     playVideo();
-    video.addEventListener("loadeddata", playVideo, { once: true });
+    video.addEventListener("canplay", playVideo, { once: true });
     document.addEventListener("visibilitychange", handleVisibilityChange);
 
     return () => {
-      video.removeEventListener("loadeddata", playVideo);
+      video.removeEventListener("canplay", playVideo);
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
   }, []);
@@ -51,7 +53,13 @@ export function Hero({ content }: HeroProps) {
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
-          ref={videoRef}
+          ref={(video) => {
+            videoRef.current = video;
+            if (video) {
+              video.defaultMuted = true;
+              video.muted = true;
+            }
+          }}
           autoPlay
           muted
           playsInline
