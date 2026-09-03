@@ -160,7 +160,7 @@ export function Footer() {
 
         {/* Bottom */}
         <div
-          className="mt-20 pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left"
+          className="mt-20 grid gap-6 pt-8 text-center md:grid-cols-[minmax(0,1fr)_auto_minmax(10rem,1fr)] md:items-center md:text-left"
           style={{ borderTop: `1px solid ${border}` }}
         >
           <div className="flex flex-col gap-1">
@@ -173,7 +173,7 @@ export function Footer() {
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 md:col-start-2 md:row-start-1">
             <Link
               href="/legal/terms-of-service"
               className="font-sans text-[10px] text-white/25 hover:text-white transition-colors uppercase tracking-[0.15em]"

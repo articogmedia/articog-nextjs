@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Heading } from "@/components/ui";
-import { Plus } from "lucide-react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Articog",
@@ -474,7 +474,33 @@ export default function PrivacyPolicyPage() {
             </header>
 
             <div className="flex flex-col">
-              {sections.map((section) => (
+              <section
+                id="introduction"
+                className="border-t border-white/[0.07] py-10 md:py-14"
+              >
+                <div className="min-w-0">
+                  <div className="min-w-0">
+                    <h2 className="mb-5 font-display text-xl font-semibold text-white md:text-2xl">
+                      Introduction
+                    </h2>
+
+                    <div className="flex flex-col gap-6">
+                      {sections[0].blocks
+                        .filter((block): block is Extract<Block, { kind: "p" }> => block.kind === "p")
+                        .map((block, i) => (
+                        <p
+                          key={i}
+                          className="max-w-[68ch] font-sans text-[15px] leading-[1.75] text-white/60 md:text-base"
+                        >
+                          {block.text}
+                        </p>
+                        ))}
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              {sections.slice(1).map((section, index) => (
                 <details
                   key={section.id}
                   id={section.id}
@@ -485,16 +511,20 @@ export default function PrivacyPolicyPage() {
                       aria-hidden="true"
                       className="font-display text-sm font-semibold tabular-nums text-accent"
                     >
-                      {section.number.padStart(2, "0")}
+                      {(index + 1).toString().padStart(2, "0")}
                     </span>
 
                     <h2 className="min-w-0 flex-1 font-display text-xl font-semibold text-white md:text-2xl">
                       {section.title}
                     </h2>
 
-                    <Plus
+                    <ChevronDown
                       aria-hidden="true"
-                      className="h-5 w-5 shrink-0 text-white/50 transition-transform duration-200 group-open:rotate-45"
+                      className="h-5 w-5 shrink-0 text-white/50 group-open:hidden"
+                    />
+                    <ChevronUp
+                      aria-hidden="true"
+                      className="hidden h-5 w-5 shrink-0 text-white/50 group-open:block"
                     />
                   </summary>
 
@@ -552,16 +582,20 @@ export default function PrivacyPolicyPage() {
                     aria-hidden="true"
                     className="font-display text-sm font-semibold tabular-nums text-accent"
                   >
-                    17
+                    16
                   </span>
 
                   <h2 className="min-w-0 flex-1 font-display text-xl font-semibold text-white md:text-2xl">
                     Contact Us
                   </h2>
 
-                  <Plus
+                  <ChevronDown
                     aria-hidden="true"
-                    className="h-5 w-5 shrink-0 text-white/50 transition-transform duration-200 group-open:rotate-45"
+                    className="h-5 w-5 shrink-0 text-white/50 group-open:hidden"
+                  />
+                  <ChevronUp
+                    aria-hidden="true"
+                    className="hidden h-5 w-5 shrink-0 text-white/50 group-open:block"
                   />
                 </summary>
 
