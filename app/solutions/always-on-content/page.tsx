@@ -42,7 +42,7 @@ export default function AlwaysOnContentPage() {
               Always-On Content Engine
             </Heading>
             <p className="font-sans text-xl text-white/60 leading-relaxed">
-              Continuous content production across video, social, and visuals. Built so you never run out of on-brand content, without the overhead of growing your internal team.
+              Continuous video, social, and visual production without growing your internal team.
             </p>
           </div>
         </Container>
@@ -54,7 +54,7 @@ export default function AlwaysOnContentPage() {
           <div className="mb-12">
             <h2 className="font-display text-3xl font-semibold text-white mb-4">How It Works</h2>
             <p className="font-sans text-white/50 max-w-2xl">
-              Our infrastructure becomes an extension of your team, delivering high-volume creative at the speed of culture.
+              Our infrastructure extends your team with high-volume creative.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

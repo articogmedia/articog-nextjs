@@ -301,8 +301,8 @@ export default function ServicesPage() {
                 lineHeight: 1.65,
               }}
             >
-              From brand films to performance ad variants one AI-native
-              production partner for every format your brand needs.
+              One AI-native partner for every format, from brand films to
+              performance ads.
             </p>
           </div>
         </Container>

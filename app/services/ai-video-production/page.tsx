@@ -57,7 +57,7 @@ export default function AIVideoProductionPage() {
               AI Video Production
             </Heading>
             <p className="font-sans text-xl text-white/60 leading-relaxed">
-              Our flagship service. We deliver end-to-end video production that combines the exponential power of generative AI with senior human creative direction.
+              Our flagship service: end-to-end video combining generative AI with senior creative direction.
             </p>
           </div>
         </Container>

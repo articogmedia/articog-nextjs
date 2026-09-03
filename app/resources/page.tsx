@@ -62,7 +62,7 @@ export default function ResourcesPage() {
               Production Insights
             </Heading>
             <p className="mx-auto max-w-2xl font-sans text-base md:text-lg leading-relaxed mb-12" style={{ color: "rgba(255,255,255,0.65)" }}>
-              A collection of guides, articles, and playbooks to help your team navigate the shift to AI-native creative production.
+              Practical guidance for AI-native creative production.
             </p>
           </div>
 

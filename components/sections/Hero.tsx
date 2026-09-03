@@ -1,6 +1,7 @@
 "use client";
 
 import type { HeroContent, ProofStat } from "@/types";
+import { useEffect, useRef } from "react";
 
 interface HeroProps {
   content: HeroContent;
@@ -9,6 +10,35 @@ interface HeroProps {
 
 export function Hero({ content }: HeroProps) {
   const lines = content.headline.split("\n");
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.muted = true;
+
+    const playVideo = () => {
+      if (video.paused) {
+        video.play().catch(() => undefined);
+      }
+    };
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") {
+        playVideo();
+      }
+    };
+
+    playVideo();
+    video.addEventListener("canplay", playVideo);
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      video.removeEventListener("canplay", playVideo);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, []);
 
   return (
     <section
@@ -20,6 +50,7 @@ export function Hero({ content }: HeroProps) {
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
+          ref={videoRef}
           autoPlay
           muted
           playsInline

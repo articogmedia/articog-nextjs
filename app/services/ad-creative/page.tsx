@@ -72,7 +72,7 @@ export default function AdCreativePage() {
           <div className="mb-12">
             <h2 className="font-display text-3xl font-semibold text-white mb-4">What We Deliver</h2>
             <p className="font-sans text-white/50 max-w-2xl">
-              From social feeds to global display networks, we deliver assets built for the specific nuances of every channel.
+              From social feeds to global display, we build assets for each channel.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -117,7 +117,7 @@ export default function AdCreativePage() {
             <div>
               <h2 className="font-display text-4xl font-semibold text-white mb-6">Built to Test</h2>
               <p className="font-sans text-lg text-white/60 leading-relaxed mb-6">
-                Stop relying on "best guesses." We deliver hundreds of on-brand variants, continuously optimized based on performance signals rather than one static set.
+                Stop relying on "best guesses." We deliver hundreds of on-brand variants optimized by performance signals.
               </p>
               <div className="space-y-4">
                 {[

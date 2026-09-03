@@ -72,7 +72,7 @@ export default function IndustriesPage() {
               Industries We Serve
             </Heading>
             <p className="font-sans text-xl text-white/60 leading-relaxed mb-12">
-              Creative production tailored to the specific needs of different sectors. We build the engine that powers your vertical.
+              Creative production tailored to each sector.
             </p>
           </div>
 

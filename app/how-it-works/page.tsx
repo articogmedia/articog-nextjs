@@ -47,7 +47,7 @@ export default function HowItWorksPage() {
               From brief to live in days
             </Heading>
             <p className="mx-auto max-w-2xl font-sans text-base md:text-lg leading-relaxed mb-12" style={{ color: "rgba(255,255,255,0.65)" }}>
-              The traditional production model is broken. We replaced rigid timelines and massive overhead with a high-velocity creative engine powered by AI and directed by humans.
+              We replace rigid timelines and overhead with a high-velocity engine powered by AI and directed by humans.
             </p>
           </div>
 

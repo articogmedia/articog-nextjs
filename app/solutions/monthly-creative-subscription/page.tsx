@@ -42,7 +42,7 @@ export default function MonthlySubscriptionPage() {
               Monthly Creative Subscription
             </Heading>
             <p className="font-sans text-xl text-white/60 leading-relaxed">
-              A steady, predictable stream of creative delivered every month video, social, and visuals, without the overhead of a full in-house team or traditional agency retainer.
+              A predictable monthly stream of video, social, and visual creative without a full in-house team or agency retainer.
             </p>
           </div>
         </Container>

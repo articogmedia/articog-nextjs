@@ -105,7 +105,7 @@ export function Comparison({ rows }: ComparisonProps) {
         </div>
 
         <p className="mt-5 text-center font-sans text-xs text-white/30">
-          Based on observed outcomes across Articog client engagements.
+          Based on Articog client engagements.
         </p>
       </Container>
     </Section>

@@ -82,7 +82,7 @@ export function CaseStudies({ caseStudies }: CaseStudiesProps) {
           </Heading>
 
           <Heading as="h2" size="section" className="mb-0">
-            Real outcomes. No composites.
+            Client outcomes.
           </Heading>
         </div>
 

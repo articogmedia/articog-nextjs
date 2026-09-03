@@ -82,7 +82,7 @@ export default function SolutionsPage() {
               Solutions built around how you work
             </Heading>
             <p className="mx-auto max-w-2xl font-sans text-base md:text-lg leading-relaxed mb-12" style={{ color: "rgba(255,255,255,0.65)" }}>
-              Whether you need high-volume performance assets or strategic brand storytelling, we build the engine that scales with your ambition.
+              From performance assets to brand storytelling, we build an engine that scales with you.
             </p>
           </div>
 

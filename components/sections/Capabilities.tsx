@@ -1,4 +1,15 @@
-import { Film, BookOpen, Monitor, Image, Mic, TrendingUp, Zap, Cpu, type LucideIcon } from "lucide-react";
+import {
+  AudioLines,
+  BookOpen,
+  Film,
+  Image,
+  Monitor,
+  Smartphone,
+  TestTube2,
+  Workflow,
+  Zap,
+  type LucideIcon,
+} from "lucide-react";
 import { Container, Section, Heading } from "@/components/ui";
 import type { Capability } from "@/types";
 
@@ -7,10 +18,10 @@ const iconMap: Record<string, LucideIcon> = {
   "book-open": BookOpen,
   monitor: Monitor,
   image: Image,
-  mic: Mic,
-  "trending-up": TrendingUp,
-  zap: Zap,
-  cpu: Cpu,
+  mic: AudioLines,
+  "trending-up": Smartphone,
+  zap: TestTube2,
+  cpu: Workflow,
 };
 
 interface CapabilitiesProps {
@@ -23,7 +34,7 @@ export function Capabilities({ capabilities }: CapabilitiesProps) {
       <Container className="relative z-20">
         <div className="max-w-lg mb-16">
           <Heading as="h2" size="label" className="mb-4 text-white/50">Services</Heading>
-          <Heading as="h2" size="section" className="mb-0 text-white">Every creative format, delivered.</Heading>
+          <Heading as="h2" size="section" className="mb-0 text-white">Creative formats, delivered.</Heading>
         </div>
 
         <div className="rounded-2xl overflow-hidden border border-white/[0.08] bg-black">

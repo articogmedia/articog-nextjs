@@ -26,7 +26,7 @@ export function FinalCTA({ content }: FinalCTAProps) {
               className="font-sans text-xs font-medium"
               style={{ color: "rgba(255,255,255,0.55)" }}
             >
-              Now accepting new projects
+              Accepting new projects
             </span>
           </div>
 
@@ -62,7 +62,7 @@ export function FinalCTA({ content }: FinalCTAProps) {
             className="mt-8 font-sans text-xs"
             style={{ color: "rgba(255,255,255,0.28)" }}
           >
-            No commitment required. First conversation is free.
+            No commitment. Free first conversation.
           </p>
         </div>
       </Container>

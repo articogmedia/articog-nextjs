@@ -190,28 +190,7 @@ export function Footer() {
             </Link>
 
             <Link
-              href="/legal/dpa"
-              className="font-sans text-[10px] text-white/25 hover:text-white transition-colors uppercase tracking-[0.15em]"
-            >
-              DPA
-            </Link>
-
-            <Link
-              href="/legal/msa"
-              className="font-sans text-[10px] text-white/25 hover:text-white transition-colors uppercase tracking-[0.15em]"
-            >
-              MSA
-            </Link>
-
-            <Link
-              href="/legal/cookie-policy"
-              className="font-sans text-[10px] text-white/25 hover:text-white transition-colors uppercase tracking-[0.15em]"
-            >
-              Cookies
-            </Link>
-
-            <Link
-              href="/legal/accessibility"
+              href="/accessibility"
               className="font-sans text-[10px] text-white/25 hover:text-white transition-colors uppercase tracking-[0.15em]"
             >
               Accessibility
@@ -224,33 +203,6 @@ export function Footer() {
               Copyright
             </Link>
 
-            <Link
-              href="/privacy-choices"
-              className="font-sans text-[10px] text-white/25 hover:text-white transition-colors uppercase tracking-[0.15em]"
-            >
-              Privacy Choices
-            </Link>
-
-            <Link
-              href="/privacy/california"
-              className="font-sans text-[10px] text-white/25 hover:text-white transition-colors uppercase tracking-[0.15em]"
-            >
-              CA Notice
-            </Link>
-
-            <Link
-              href="/email-preferences"
-              className="font-sans text-[10px] text-white/25 hover:text-white transition-colors uppercase tracking-[0.15em]"
-            >
-              Email Prefs
-            </Link>
-
-            <Link
-              href="/privacy/request"
-              className="font-sans text-[10px] text-white/25 hover:text-white transition-colors uppercase tracking-[0.15em]"
-            >
-              Data Request
-            </Link>
           </div>
         </div>
       </Container>

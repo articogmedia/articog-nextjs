@@ -14,8 +14,6 @@ declare global {
         url: string;
         prefill?: {
           name?: string;
-          firstName?: string;
-          lastName?: string;
           email?: string;
         };
       }) => void;
@@ -34,6 +32,11 @@ export default function BookADemoPage() {
     const firstName = (formData.get("firstName") as string) || "";
     const lastName = (formData.get("lastName") as string) || "";
     const email = (formData.get("email") as string) || "";
+    const name = `${firstName} ${lastName}`.trim();
+    const calendlyUrl = `${CALENDLY_URL}?${new URLSearchParams({
+      name,
+      email,
+    }).toString()}`;
 
     setTimeout(() => {
       setIsLoading(false);
@@ -42,17 +45,15 @@ export default function BookADemoPage() {
         // Opens Calendly's popup pre-filled with what we already collected,
         // so the visitor isn't asked to re-type name/email.
         window.Calendly.initPopupWidget({
-          url: CALENDLY_URL,
+          url: calendlyUrl,
           prefill: {
-            firstName,
-            lastName,
-            name: `${firstName} ${lastName}`.trim(),
+            name,
             email,
           },
         });
       } else {
         // Fallback if the widget script hasn't loaded yet for some reason
-        window.open(CALENDLY_URL, "_blank", "noopener,noreferrer");
+        window.open(calendlyUrl, "_blank", "noopener,noreferrer");
       }
     }, 400);
   };
@@ -383,7 +384,7 @@ export default function BookADemoPage() {
                 By submitting, you agree to be contacted about your inquiry.
                 See our{" "}
                 <Link
-                  href="/privacy"
+                  href="/privacy-policy"
                   className="text-white/50 underline underline-offset-2 transition-colors hover:text-white"
                 >
                   Privacy Policy

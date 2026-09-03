@@ -33,7 +33,7 @@ export default function SocialCreativePage() {
             <div>
               <h2 className="font-display text-2xl font-semibold text-white mb-6">What We Deliver</h2>
               <p className="text-white/60 leading-relaxed">
-                Social strategy requires volume and velocity. Our AI-native workflow allows you to maintain an active, high-quality presence across every platform without burning out your internal team.
+                Social strategy needs volume and velocity. Our AI-native workflow keeps every platform active without overloading your team.
               </p>
             </div>
             <div>

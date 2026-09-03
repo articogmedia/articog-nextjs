@@ -2,39 +2,95 @@
 
 import { Container, Section, Heading } from "@/components/ui";
 import type { PipelineStep } from "@/types";
+import { useEffect, useRef, useState } from "react";
 
 interface PipelineProps {
   steps: PipelineStep[];
 }
 
 export function Pipeline({ steps }: PipelineProps) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [shouldLoad, setShouldLoad] = useState(false);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldLoad(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px" },
+    );
+
+    observer.observe(video);
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video || !shouldLoad) return;
+
+    video.muted = true;
+
+    const playVideo = () => {
+      if (video.paused) {
+        video.play().catch(() => undefined);
+      }
+    };
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") {
+        playVideo();
+      }
+    };
+
+    playVideo();
+    video.addEventListener("canplay", playVideo);
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      video.removeEventListener("canplay", playVideo);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, [shouldLoad]);
+
   return (
     <Section id="pipeline" className="relative overflow-hidden p-0">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
+          ref={videoRef}
           autoPlay
           muted
           playsInline
           loop
           controls={false}
-          preload="auto"
+          preload={shouldLoad ? "metadata" : "none"}
           poster="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:eco,f_auto,w_1920,so_0/v1786976270/web_1_1_1_1.jpg"
           className="h-full w-full object-cover"
           aria-hidden="true"
         >
-          {/* Desktop / large screens */}
-          <source
-            src="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:eco,f_auto,vc_auto,w_1920/v1786976270/web_1_1_1_1.mp4"
-            type="video/mp4"
-            media="(min-width: 769px)"
-          />
+          {shouldLoad && (
+            <>
+              {/* Desktop / large screens */}
+              <source
+                src="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:eco,f_auto,vc_auto,w_1920/v1786976270/web_1_1_1_1.mp4"
+                type="video/mp4"
+                media="(min-width: 769px)"
+              />
 
-          {/* Mobile / smaller screens */}
-          <source
-            src="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:eco,f_auto,vc_auto,w_960/v1786976270/web_1_1_1_1.mp4"
-            type="video/mp4"
-          />
+              {/* Mobile / smaller screens */}
+              <source
+                src="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:eco,f_auto,vc_auto,w_960/v1786976270/web_1_1_1_1.mp4"
+                type="video/mp4"
+              />
+            </>
+          )}
         </video>
 
         {/* Subtle base overlay */}
@@ -63,7 +119,7 @@ export function Pipeline({ steps }: PipelineProps) {
               textShadow: "0 2px 8px rgba(0,0,0,0.9)",
             }}
           >
-            From brief to live in days.
+            From brief to live.
           </Heading>
         </div>
 

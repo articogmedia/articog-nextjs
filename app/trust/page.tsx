@@ -57,7 +57,7 @@ export default function TrustPage() {
               Built on trust and transparency
             </Heading>
             <p className="mx-auto max-w-2xl font-sans text-base md:text-lg leading-relaxed mb-12" style={{ color: "rgba(255,255,255,0.65)" }}>
-              As an AI-native production company, we take IP, security, and licensing seriously. Here is how we protect your brand, your data, and your creative ownership.
+              We take IP, security, and licensing seriously. Learn how we protect your brand, data, and creative ownership.
             </p>
           </div>
 

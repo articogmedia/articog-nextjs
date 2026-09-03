@@ -33,7 +33,7 @@ export default function ProductVisualsPage() {
             <div>
               <h2 className="font-display text-2xl font-semibold text-white mb-6">What We Deliver</h2>
               <p className="text-white/60 leading-relaxed">
-                Elevate your product presence without traditional studio logistics. We combine precise product rendering with AI-native environments to deliver visual content at scale.
+                Elevate your product presence without studio logistics. We combine precise rendering with AI-native environments for scalable visual content.
               </p>
             </div>
             <div>
