@@ -4,7 +4,6 @@ import Script from "next/script";
 import { Inter, Sora } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { ArticogAIWidget } from "@/components/ArticogAIWidget";
 import "./globals.css";
 
 const inter = Inter({
@@ -51,7 +50,6 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
-        <ArticogAIWidget />
         <Script
           src="https://assets.calendly.com/assets/external/widget.js"
           strategy="afterInteractive"
