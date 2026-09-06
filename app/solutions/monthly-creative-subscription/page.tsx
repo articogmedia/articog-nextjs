@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://articog.com/solutions/monthly-creative-subscription" },
   title: "Monthly Creative Subscription Articog",
   description: "Steady, predictable creative delivered every month. Video, social, and visuals without the overhead of a full in-house team or agency retainer.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Layers, Calendar, UserCheck, ArrowRight } from "lucide-react";
+import { SolutionDetails } from "@/components/sections/SolutionDetails";
 
 export default function MonthlySubscriptionPage() {
   const steps = [
@@ -74,11 +76,13 @@ export default function MonthlySubscriptionPage() {
         </Container>
       </Section>
 
+      <SolutionDetails category="monthly" />
+
       {/* Pricing Link Section */}
       <Section className="py-20 border-t border-white/5">
         <Container>
           <Link 
-            href="/pricing"
+            href="/pricing#monthly-plans"
             className="group flex items-center justify-between p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300 max-w-2xl"
           >
             <div>

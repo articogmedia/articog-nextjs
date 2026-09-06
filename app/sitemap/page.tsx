@@ -1,7 +1,13 @@
+import type { Metadata } from "next";
+
 import { Link } from "@/components/ui/Link";
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Container } from '@/components/ui/Container';
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://articog.com/sitemap" },
+};
 
 export default function SitemapPage() {
   const sitemapData = [
@@ -34,8 +40,8 @@ export default function SitemapPage() {
         { label: "Solutions Hub", href: "/solutions" },
         { label: "Monthly Subscription", href: "/solutions/monthly-creative-subscription" },
         { label: "Product Launch", href: "/solutions/product-launch" },
-        { label: "Creative Testing", href: "/solutions/creative-testing" },
-        { label: "Multi-Format Campaigns", href: "/solutions/multi-format-campaigns" },
+        { label: "Performance Marketing", href: "/solutions/performance-marketing" },
+        { label: "Product Launch", href: "/solutions/product-launch" },
         { label: "Enterprise Solutions", href: "/solutions/enterprise" },
       ]
     },
@@ -43,11 +49,7 @@ export default function SitemapPage() {
       title: "Industries",
       links: [
         { label: "Industries Hub", href: "/industries" },
-        { label: "DTC & Ecommerce", href: "/industries/dtc-ecommerce" },
-        { label: "SaaS & Technology", href: "/industries/saas-technology" },
-        { label: "Real Estate", href: "/industries/real-estate" },
-        { label: "Consumer Electronics", href: "/industries/consumer-electronics" },
-        { label: "Beauty & Skincare", href: "/industries/beauty-skincare" },
+        { label: "Industries We Serve", href: "/industries" },
       ]
     },
     {
@@ -56,21 +58,17 @@ export default function SitemapPage() {
         { label: "Work Hub", href: "/work" },
         { label: "Video Ads", href: "/work/video-ads" },
         { label: "Social Gallery", href: "/work/social" },
+        { label: "Product Visuals", href: "/work/product-visuals" },
+        { label: "Work by Industry", href: "/work/industries" },
       ]
     },
     {
       title: "Resources",
       links: [
-        { label: "Resources Hub", href: "/resources" },
         { label: "Blog", href: "/blog" },
         { label: "Customer Stories", href: "/customers" },
         { label: "AI Ad Library", href: "/ai-ad-library" },
         { label: "Help Center", href: "/help" },
-        { label: "Guides", href: "/guides" },
-        { label: "Playbooks", href: "/playbooks" },
-        { label: "Reports", href: "/reports" },
-        { label: "Events", href: "/events" },
-        { label: "Glossary", href: "/glossary" },
       ]
     },
     {
@@ -80,26 +78,24 @@ export default function SitemapPage() {
         { label: "Trust Center", href: "/trust" },
         { label: "AI & IP Ownership", href: "/trust/ai-and-ip" },
         { label: "Security & Data Protection", href: "/trust/security" },
-        { label: "Responsible AI", href: "/trust/responsible-ai" },
         { label: "Pricing Hub", href: "/pricing" },
-        { label: "Monthly Plans", href: "/pricing/monthly-plans" },
-        { label: "Pilot Projects", href: "/pricing/pilot" },
+        { label: "Pricing FAQ", href: "/pricing/faq" },
       ]
     },
     {
       title: "Legal",
       links: [
-        { label: "Privacy Policy", href: "/legal/privacy-policy" },
+        { label: "Privacy Policy", href: "/privacy-policy" },
         { label: "Terms of Service", href: "/legal/terms-of-service" },
-        { label: "DPA", href: "/legal/dpa" },
-        { label: "MSA", href: "/legal/msa" },
+        { label: "DPA Requests", href: "/contact" },
+        { label: "MSA Requests", href: "/contact" },
         { label: "Cookie Policy", href: "/legal/cookie-policy" },
         { label: "Accessibility", href: "/legal/accessibility" },
         { label: "Copyright", href: "/copyright" },
         { label: "Privacy Choices", href: "/privacy-choices" },
         { label: "California Privacy Notice", href: "/privacy/california" },
         { label: "Email Preferences", href: "/email-preferences" },
-        { label: "Subprocessors", href: "/legal/subprocessors" },
+        { label: "Subprocessor Requests", href: "/contact" },
         { label: "Data Rights Request", href: "/privacy/request" },
       ]
     }

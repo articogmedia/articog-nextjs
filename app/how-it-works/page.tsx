@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "How It Works Articog",
   description: "Our human-directed, AI-accelerated creative production process.",
+  alternates: { canonical: "https://articog.com/how-it-works" },
 };
 import { Link } from "@/components/ui/Link";
 import { ArrowRight } from "lucide-react";
@@ -30,6 +31,22 @@ export default function HowItWorksPage() {
       title: "Deliver",
       description: "Receive production-ready assets in the formats, aspect ratios, and language variants your campaign needs."
     }
+  ];
+
+  const onboardingSteps = [
+    ["Brand Assets", "Collecting your logo, guidelines, and existing creative for reference to ensure brand consistency."],
+    ["Stakeholders", "Identifying who's involved in review and approval to streamline the feedback loop."],
+    ["Rights & Permissions", "Confirming usage rights and any necessary consents upfront to protect your brand."],
+    ["Approval SLAs", "Agreeing on how fast reviews and feedback will happen to maintain production momentum."],
+    ["First Project Roadmap", "A clear, milestone-driven timeline for your first deliverable and campaign launch."],
+  ];
+
+  const deliverySteps = [
+    ["Feedback Windows", "A defined period for review and feedback on each round to maintain production velocity."],
+    ["Version Control", "Every revision clearly labeled and tracked so nothing gets lost and the latest version is always accessible."],
+    ["Revision Policy", "A clear number of included revision rounds per project, with any additional disputes handled case by case."],
+    ["Final Formats", "Assets delivered in every aspect ratio, file format, and technical spec your campaign requires."],
+    ["Archive", "Delivered projects kept securely accessible for future reference and repurposing."],
   ];
 
   return (
@@ -83,6 +100,44 @@ export default function HowItWorksPage() {
                 Take a deeper technical look at our internal creative engine.
               </p>
             </Link>
+          </div>
+        </Container>
+      </Section>
+
+      <Section size="md" className="pt-0">
+        <Container>
+          <div className="mb-12 text-center">
+            <Heading as="h2" size="section" className="mb-4">Getting Started</Heading>
+            <p className="mx-auto max-w-2xl font-sans text-white/50">
+              We ensure every technical and creative foundation is in place before production begins.
+            </p>
+          </div>
+          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {onboardingSteps.map(([title, description]) => (
+              <div key={title} className="flex flex-col gap-4 rounded-2xl border border-white/10 bg-white/5 p-8">
+                <h3 className="font-display text-xl font-semibold text-white">{title}</h3>
+                <p className="font-sans text-sm leading-relaxed text-white/50">{description}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      <Section size="md" className="pt-0">
+        <Container>
+          <div className="mb-12 text-center">
+            <Heading as="h2" size="section" className="mb-4">Revisions & Delivery</Heading>
+            <p className="mx-auto max-w-2xl font-sans text-white/50">
+              Our structured review process ensures quality and speed, from initial feedback through to final coordinated delivery across all your channels.
+            </p>
+          </div>
+          <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {deliverySteps.map(([title, description]) => (
+              <div key={title} className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-8">
+                <h3 className="mb-4 font-display text-xl font-semibold text-white">{title}</h3>
+                <p className="font-sans text-sm leading-relaxed text-white/50">{description}</p>
+              </div>
+            ))}
           </div>
         </Container>
       </Section>

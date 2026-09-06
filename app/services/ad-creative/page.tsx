@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://articog.com/services/ad-creative" },
   title: "Ad Creative Articog",
   description: "Static and display ad creative built for continuous performance testing. Scale your brand with high-volume, performance-optimized creative.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Share2, Monitor, Search, BarChart3, ArrowRight } from "lucide-react";
+import { ServiceDetails } from "@/components/sections/ServiceDetails";
 
 export default function AdCreativePage() {
   const deliverables = [
@@ -30,17 +32,17 @@ export default function AdCreativePage() {
   const subServices = [
     {
       title: "Static Ad Creative",
-      href: "/services/ad-creative/static-ads",
+      href: "/services/ad-creative",
       description: "High-volume static creative for paid social and display networks.",
     },
     {
       title: "Testing & Variants",
-      href: "/services/ad-creative/testing-variants",
+      href: "/services/ad-creative",
       description: "Structured, hypothesis-driven creative testing for paid campaigns.",
     },
     {
       title: "Campaign Key Visuals",
-      href: "/services/ad-creative/key-visuals",
+      href: "/services/ad-creative",
       description: "Developing the core visual system that anchors a campaign across channels.",
     },
   ];
@@ -109,6 +111,8 @@ export default function AdCreativePage() {
           </div>
         </Container>
       </Section>
+
+      <ServiceDetails category="ad-creative" />
 
       {/* Built to Test Section */}
       <Section className="py-24 border-t border-white/5">

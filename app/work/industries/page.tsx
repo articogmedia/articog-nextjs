@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Work by Industry Articog",
   description: "Explore our portfolio of AI creative production organized by industry vertical.",
+  alternates: { canonical: "https://articog.com/work/industries" },
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
@@ -10,12 +11,12 @@ import { ArrowRight, ShoppingBag, Laptop, Home, Car, Coffee, Shirt } from "lucid
 
 export default function WorkByIndustryPage() {
   const industries = [
-    { title: "DTC & Ecommerce", href: "/industries/dtc-ecommerce", icon: ShoppingBag },
-    { title: "SaaS & Technology", href: "/industries/saas-technology", icon: Laptop },
-    { title: "Real Estate", href: "/industries/real-estate", icon: Home },
-    { title: "Automotive & Mobility", href: "/industries/automotive-mobility", icon: Car },
-    { title: "Food & Beverage", href: "/industries/food-beverage", icon: Coffee },
-    { title: "Fashion & Lifestyle", href: "/industries/fashion-lifestyle", icon: Shirt },
+    { title: "DTC & Ecommerce", href: "/industries#dtc-ecommerce", icon: ShoppingBag },
+    { title: "SaaS & Technology", href: "/industries#saas-technology", icon: Laptop },
+    { title: "Real Estate", href: "/industries#real-estate", icon: Home },
+    { title: "Automotive & Mobility", href: "/industries#automotive-mobility", icon: Car },
+    { title: "Food & Beverage", href: "/industries#food-beverage", icon: Coffee },
+    { title: "Fashion & Lifestyle", href: "/industries#fashion-lifestyle", icon: Shirt },
   ];
 
   return (

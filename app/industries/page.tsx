@@ -2,60 +2,62 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Industries We Serve Articog",
-  description: "Creative production tailored to the specific needs of different sectors.",
+  description: "Creative production tailored to the specific needs of DTC, SaaS, electronics, beauty, automotive, food, fashion, real estate, and more.",
+  alternates: { canonical: "https://articog.com/industries" },
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { ArrowRight, ShoppingBag, Laptop, Home, Smartphone, Sparkles, Car, Coffee, Shirt } from "lucide-react";
+import { IndustryDetails } from "@/components/sections/IndustryDetails";
 
 export default function IndustriesPage() {
   const industries = [
     {
       title: "DTC & Ecommerce",
       description: "Performance-driven creative for brands that need to convert.",
-      href: "/industries/dtc-ecommerce",
+      href: "/industries#dtc-ecommerce",
       icon: ShoppingBag,
     },
     {
       title: "SaaS & Technology",
       description: "Accurate UI and clear storytelling for complex software.",
-      href: "/industries/saas-technology",
+      href: "/industries#saas-technology",
       icon: Laptop,
     },
     {
       title: "Real Estate",
       description: "Immersive visuals for listings, developments, and investors.",
-      href: "/industries/real-estate",
+      href: "/industries#real-estate",
       icon: Home,
     },
     {
       title: "Consumer Electronics",
       description: "Product visuals that highlight technical precision and design.",
-      href: "/industries/consumer-electronics",
+      href: "/industries#consumer-electronics",
       icon: Smartphone,
     },
     {
       title: "Beauty & Skincare",
       description: "Lifestyle creative that emphasizes product benefits.",
-      href: "/industries/beauty-skincare",
+      href: "/industries#beauty-skincare",
       icon: Sparkles,
     },
     {
       title: "Automotive & Mobility",
       description: "Cinematic vehicle films and marketing visuals produced with AI.",
-      href: "/industries/automotive-mobility",
+      href: "/industries#automotive-mobility",
       icon: Car,
     },
     {
       title: "Food & Beverage",
       description: "Product visuals and seasonal campaigns for food and beverage brands.",
-      href: "/industries/food-beverage",
+      href: "/industries#food-beverage",
       icon: Coffee,
     },
     {
       title: "Fashion & Lifestyle",
       description: "Campaign visuals and social content for fashion brands.",
-      href: "/industries/fashion-lifestyle",
+      href: "/industries#fashion-lifestyle",
       icon: Shirt,
     },
   ];
@@ -97,6 +99,8 @@ export default function IndustriesPage() {
               </Link>
             ))}
           </div>
+
+          <IndustryDetails />
 
           <div className="text-center pt-12 border-t border-white/10">
             <p className="font-sans text-base mb-6 text-white/60">Ready to build for your industry?</p>

@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://articog.com/services/audio" },
   title: "Audio & Sound Production Articog",
   description: "Complete audio production for video projects and standalone audio ads. AI voiceover, custom sound design, and professional mastering.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Mic2, Music, Waves, Speaker, Info, ArrowRight, AudioLines } from "lucide-react";
+import { ServiceDetails } from "@/components/sections/ServiceDetails";
 
 export default function AudioPage() {
   const deliverables = [
@@ -77,7 +79,7 @@ export default function AudioPage() {
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
             <Link
-              href="/services/audio/ai-voiceover"
+              href="/services/audio"
               className="group p-8 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-white/20 transition-all duration-300"
             >
               <div className="flex items-center justify-between mb-8">
@@ -95,7 +97,7 @@ export default function AudioPage() {
             </Link>
 
             <Link
-              href="/services/audio/music-sound-design"
+              href="/services/audio"
               className="group p-8 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-white/20 transition-all duration-300"
             >
               <div className="flex items-center justify-between mb-8">
@@ -121,6 +123,8 @@ export default function AudioPage() {
           </div>
         </Container>
       </Section>
+
+      <ServiceDetails category="audio" />
 
       <Section className="py-24">
         <Container>

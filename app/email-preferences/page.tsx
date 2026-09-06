@@ -113,7 +113,7 @@ export default function EmailPreferencesPage() {
           </form>
 
           <div className="mt-12 text-center">
-            <Link to="/legal/privacy-policy" className="text-zinc-400 hover:text-white transition-colors underline underline-offset-4 decoration-zinc-800 text-sm">
+            <Link to="/privacy-policy" className="text-zinc-400 hover:text-white transition-colors underline underline-offset-4 decoration-zinc-800 text-sm">
               Read our full Privacy Policy
             </Link>
           </div>

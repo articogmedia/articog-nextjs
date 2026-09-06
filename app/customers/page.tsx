@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Customer Success Stories | Articog",
   description: "See how leading brands use Articog's Creative AI Production to scale creative output and drive performance.",
+  alternates: { canonical: "https://articog.com/customers" },
 };
-import { Container, Section, Heading, Button } from "@/components/ui";
+import { Container, Section, Heading } from "@/components/ui";
 import { siteContent } from "@/lib/content";
 import { FinalCTA } from "@/components/sections/FinalCTA";
-import { ChevronRight } from "lucide-react";
 
 export default function CustomersPage() {
   const caseStudies = siteContent.caseStudies;
@@ -88,9 +88,6 @@ export default function CustomersPage() {
                       </p>
                       <p className="font-sans text-xs text-white/30">{cs.industry}</p>
                     </div>
-                    <Button variant="ghost" size="sm" className="h-8 w-8 p-0 rounded-full bg-white/[0.03] border border-white/[0.08]">
-                      <ChevronRight size={14} className="text-white/40" />
-                    </Button>
                   </div>
                 </div>
               </article>

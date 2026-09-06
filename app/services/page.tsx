@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://articog.com/services" },
   title: "Services Articog",
   description:
     "Articog's AI-native creative services: AI video production, ad creative, social creative, product visuals, creative strategy, and post-production.",
@@ -22,37 +23,37 @@ const serviceGroups = [
       },
       {
         title: "Brand Films",
-        href: "/services/ai-video-production/brand-films",
+        href: "/services/ai-video-production",
         description:
           "High-fidelity films that define your brand identity.",
       },
       {
         title: "Product Commercials",
-        href: "/services/ai-video-production/product-commercials",
+        href: "/services/ai-video-production",
         description:
           "Product showcases built for conversion.",
       },
       {
         title: "Performance Ads",
-        href: "/services/ai-video-production/performance-ads",
+        href: "/services/ad-creative",
         description:
           "Direct-response video creative for cross-channel ROI.",
       },
       {
         title: "Social & Reel Production",
-        href: "/services/ai-video-production/social-reels",
+        href: "/services/social-creative",
         description:
           "Fast, vertical content for modern platforms.",
       },
       {
         title: "Product Launch Videos",
-        href: "/services/ai-video-production/product-launch",
+        href: "/services/ai-video-production",
         description:
           "Announcement films that build momentum.",
       },
       {
         title: "Localization & Variants",
-        href: "/services/ai-video-production/localization",
+        href: "/services/ai-video-production",
         description:
           "Adapt campaigns for global markets with localized voice.",
       },
@@ -69,19 +70,19 @@ const serviceGroups = [
       },
       {
         title: "Performance Video Ads",
-        href: "/services/ai-video-production/performance-ads",
+        href: "/services/ad-creative",
         description:
           "Video testing and production for paid media.",
       },
       {
         title: "Testing & Variants",
-        href: "/services/ad-creative/testing-variants",
+        href: "/services/ad-creative",
         description:
           "Hypothesis-driven testing for paid campaigns.",
       },
       {
         title: "Campaign Key Visuals",
-        href: "/services/ad-creative/key-visuals",
+        href: "/services/ad-creative",
         description:
           "The core visual system for a campaign across channels.",
       },
@@ -98,13 +99,13 @@ const serviceGroups = [
       },
       {
         title: "Monthly Social Content",
-        href: "/services/social-creative/monthly-content",
+        href: "/services/social-creative",
         description:
           "Consistent content cycles to maintain your brand presence.",
       },
       {
         title: "Creative Repurposing",
-        href: "/services/social-creative/repurposing",
+        href: "/services/social-creative",
         description:
           "Turn existing content into new formats and channels intelligently.",
       },
@@ -121,19 +122,19 @@ const serviceGroups = [
       },
       {
         title: "AI Product Photography",
-        href: "/services/product-visuals/product-photography",
+        href: "/services/product-visuals",
         description:
           "Photorealistic product scenes without the physical studio.",
       },
       {
         title: "Custom Image Libraries",
-        href: "/services/product-visuals/image-libraries",
+        href: "/services/product-visuals",
         description:
           "Build large, consistent libraries of on-brand product images.",
       },
       {
         title: "E-commerce Visuals",
-        href: "/services/product-visuals/ecommerce",
+        href: "/services/product-visuals",
         description:
           "Visuals built for conversion on your site and global marketplaces.",
       },
@@ -150,13 +151,13 @@ const serviceGroups = [
       },
       {
         title: "AI Voiceover",
-        href: "/services/audio/ai-voiceover",
+        href: "/services/audio",
         description:
           "Hyper-realistic synthetic voice production with full rights clearance.",
       },
       {
         title: "Music & Sound Design",
-        href: "/services/audio/music-sound-design",
+        href: "/services/audio",
         description:
           "Custom scoring and immersive soundscapes for cinematic impact.",
       },
@@ -173,19 +174,19 @@ const serviceGroups = [
       },
       {
         title: "Campaign Strategy",
-        href: "/services/creative-strategy/campaigns",
+        href: "/services/creative-strategy",
         description:
           "Planning full campaign systems for cross-channel impact.",
       },
       {
         title: "Concept Development",
-        href: "/services/creative-strategy/concept-development",
+        href: "/services/creative-strategy",
         description:
           "Exploring multiple creative directions before committing to production.",
       },
       {
         title: "Storyboarding & Previs",
-        href: "/services/creative-strategy/storyboarding",
+        href: "/services/creative-strategy",
         description:
           "Visualizing and sequencing every shot before production begins.",
       },
@@ -202,25 +203,25 @@ const serviceGroups = [
       },
       {
         title: "Motion Graphics",
-        href: "/services/post-production/motion-graphics",
+        href: "/services/post-production",
         description:
           "Animated titles, callouts, and branded elements for video.",
       },
       {
         title: "Upscaling & Mastering",
-        href: "/services/post-production/mastering",
+        href: "/services/post-production",
         description:
           "Technical mastering for high-resolution delivery.",
       },
       {
         title: "AI Compositing",
-        href: "/services/post-production/ai-compositing",
+        href: "/services/post-production",
         description:
           "Integrating assets seamlessly into complex cinematic scenes.",
       },
       {
         title: "Video Editing",
-        href: "/services/post-production/video-editing",
+        href: "/services/post-production",
         description:
           "Smart narrative assembly and sequence optimization.",
       },

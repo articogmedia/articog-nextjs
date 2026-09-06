@@ -33,7 +33,7 @@ export default function BookADemoPage() {
     const lastName = (formData.get("lastName") as string) || "";
     const email = (formData.get("email") as string) || "";
     const name = `${firstName} ${lastName}`.trim();
-    const calendlyUrl = `${CALENDLY_URL}?${new URLSearchParams({
+    const fallbackCalendlyUrl = `${CALENDLY_URL}?${new URLSearchParams({
       name,
       email,
     }).toString()}`;
@@ -45,7 +45,7 @@ export default function BookADemoPage() {
         // Opens Calendly's popup pre-filled with what we already collected,
         // so the visitor isn't asked to re-type name/email.
         window.Calendly.initPopupWidget({
-          url: calendlyUrl,
+          url: CALENDLY_URL,
           prefill: {
             name,
             email,
@@ -53,7 +53,7 @@ export default function BookADemoPage() {
         });
       } else {
         // Fallback if the widget script hasn't loaded yet for some reason
-        window.open(calendlyUrl, "_blank", "noopener,noreferrer");
+        window.open(fallbackCalendlyUrl, "_blank", "noopener,noreferrer");
       }
     }, 400);
   };

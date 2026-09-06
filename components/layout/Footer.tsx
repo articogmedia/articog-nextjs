@@ -77,13 +77,8 @@ const footerNavSections = [
     title: "Resources",
     links: [
       { label: "Blog", href: "/blog" },
-      { label: "Guides", href: "/guides" },
-      { label: "Playbooks", href: "/playbooks" },
-      { label: "Reports", href: "/reports" },
       { label: "AI Ad Library", href: "/ai-ad-library" },
       { label: "Help Center", href: "/help" },
-      { label: "Events", href: "/events" },
-      { label: "Glossary", href: "/glossary" },
     ],
   },
   {
@@ -182,14 +177,14 @@ export function Footer() {
             </Link>
 
             <Link
-              href="/legal/privacy-policy"
+              href="/privacy-policy"
               className="font-sans text-[10px] text-white/25 hover:text-white transition-colors uppercase tracking-[0.15em]"
             >
               Privacy
             </Link>
 
             <Link
-              href="/accessibility"
+              href="/legal/accessibility"
               className="font-sans text-[10px] text-white/25 hover:text-white transition-colors uppercase tracking-[0.15em]"
             >
               Accessibility

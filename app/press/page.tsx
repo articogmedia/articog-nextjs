@@ -1,8 +1,14 @@
+import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
+
+export const metadata: Metadata = {
+  title: "Press & Media Kit | Articog",
+  description: "Resources and information for journalists and media covering Articog's mission to transform creative production with AI.",
+  alternates: { canonical: "https://articog.com/press" },
+};
 
 export default function PressPage() {
   const mediaAssets = [
@@ -58,12 +64,6 @@ export default function PressPage() {
                       {asset.description}
                     </p>
 
-                    <Button
-                      variant="outline"
-                      className="w-full border-zinc-700 hover:bg-zinc-800 text-white"
-                    >
-                      Download
-                    </Button>
                   </div>
                 ))}
               </div>
@@ -117,14 +117,6 @@ export default function PressPage() {
               </p>
             </Section>
 
-            <Section className="py-20 text-center">
-              <Button
-                asChild
-                className="bg-white text-black hover:bg-zinc-200 h-14 px-10 text-lg font-semibold rounded-full"
-              >
-                <a href="#">Download Media Kit</a>
-              </Button>
-            </Section>
           </div>
         </Container>
       </main>

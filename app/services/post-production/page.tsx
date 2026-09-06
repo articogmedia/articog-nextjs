@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://articog.com/services/post-production" },
   title: "AI Post-Production Articog",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Scissors, Layers, Palette, Volume2, Sparkles, Info, ArrowRight } from "lucide-react";
+import { ServiceDetails } from "@/components/sections/ServiceDetails";
 
 export default function PostProductionPage() {
   const whatWeDeliver = [
@@ -39,12 +41,12 @@ export default function PostProductionPage() {
   const subPages = [
     {
       title: "Video Editing",
-      href: "/services/post-production/video-editing",
+      href: "/services/post-production",
       description: "Professional narrative and performance editing for all formats.",
     },
     {
       title: "AI Compositing & Cleanup",
-      href: "/services/post-production/ai-compositing",
+      href: "/services/post-production",
       description: "Advanced visual refinement and element integration.",
     },
   ];
@@ -122,6 +124,8 @@ export default function PostProductionPage() {
           </div>
         </Container>
       </Section>
+
+      <ServiceDetails category="post-production" />
 
       <Section className="py-24">
         <Container>

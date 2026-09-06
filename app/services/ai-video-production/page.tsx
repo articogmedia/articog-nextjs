@@ -1,26 +1,28 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://articog.com/services/ai-video-production" },
   title: "AI Video Production Articog",
   description: "Flagship AI video production. End-to-end video combining AI generation with human creative direction for brand films, commercials, and ads.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { ServiceDetails } from "@/components/sections/ServiceDetails";
 import { ShieldCheck, ArrowRight, Zap, Users } from "lucide-react";
 
 export default function AIVideoProductionPage() {
   const deliverables = [
-    { title: "Brand Films", path: "/services/ai-video-production/brand-films", desc: "High-concept films that tell your brand's story with cinematic quality." },
-    { title: "Product Commercials", path: "/services/ai-video-production/product-commercials", desc: "Dynamic commercial spots showcasing products in stunning environments." },
-    { title: "Performance Ads", path: "/services/ai-video-production/performance-ads", desc: "Data-driven creative optimized for conversion across paid social." },
-    { title: "Social & Reels", path: "/services/ai-video-production/social-reels", desc: "Fast-paced, native content designed for high engagement on vertical platforms." },
-    { title: "UGC-Style Ads", path: "/services/ai-video-production/ugc-style-ads", desc: "Authentic-feeling content that builds trust and drives action." },
-    { title: "Product Launch", path: "/services/ai-video-production/product-launch", desc: "Complete visual packages to make your next launch unforgettable." },
-    { title: "SaaS & Explainers", path: "/services/ai-video-production/saas-explainers", desc: "Clear, engaging product explainer videos built for high conversion." },
-    { title: "Real Estate Films", path: "/services/ai-video-production/real-estate", desc: "Cinematic property and development films with responsible AI visualization." },
-    { title: "Corporate & Internal", path: "/services/ai-video-production/corporate-internal", desc: "Scalable video for training, announcements, and executive communications." },
-    { title: "Localization & Variants", path: "/services/ai-video-production/localization", desc: "Adapt campaigns for global markets with voice localization and cultural QA." },
+    { title: "Brand Films", path: "/services/ai-video-production", desc: "High-concept films that tell your brand's story with cinematic quality." },
+    { title: "Product Commercials", path: "/services/ai-video-production", desc: "Dynamic commercial spots showcasing products in stunning environments." },
+    { title: "Performance Ads", path: "/services/ad-creative", desc: "Data-driven creative optimized for conversion across paid social." },
+    { title: "Social & Reels", path: "/services/social-creative", desc: "Fast-paced, native content designed for high engagement on vertical platforms." },
+    { title: "UGC-Style Ads", path: "/services/ad-creative", desc: "Authentic-feeling content that builds trust and drives action." },
+    { title: "Product Launch", path: "/services/ai-video-production", desc: "Complete visual packages to make your next launch unforgettable." },
+    { title: "SaaS & Explainers", path: "/services/ai-video-production", desc: "Clear, engaging product explainer videos built for high conversion." },
+    { title: "Real Estate Films", path: "/services/ai-video-production", desc: "Cinematic property and development films with responsible AI visualization." },
+    { title: "Corporate & Internal", path: "/services/ai-video-production", desc: "Scalable video for training, announcements, and executive communications." },
+    { title: "Localization & Variants", path: "/services/ai-video-production", desc: "Adapt campaigns for global markets with voice localization and cultural QA." },
   ];
 
   const faqs = [
@@ -123,6 +125,8 @@ export default function AIVideoProductionPage() {
           </div>
         </Container>
       </Section>
+
+      <ServiceDetails category="ai-video" />
 
       {/* FAQ Section */}
       <Section className="py-20 bg-white/[0.02]">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://articog.com/why-articog" },
   title: "Why Articog Articog",
   description: "How Articog compares to traditional agencies and in-house teams.",
 };
@@ -76,7 +77,7 @@ export default function WhyArticogPage() {
         <Container>
           <div className="grid gap-6 md:grid-cols-2 mb-24">
             <Link
-              href="/compare/traditional-production"
+              href="/compare/vs-traditional-production"
               className="group rounded-2xl p-10 border border-white/[0.08] transition-all hover:border-white/20 hover:bg-white/[0.02]"
               style={{ background: "rgba(255,255,255,0.01)" }}
             >
@@ -89,7 +90,7 @@ export default function WhyArticogPage() {
               </p>
             </Link>
             <Link
-              href="/compare/ai-tools"
+              href="/compare/vs-ai-tools"
               className="group rounded-2xl p-10 border border-white/[0.08] transition-all hover:border-white/20 hover:bg-white/[0.02]"
               style={{ background: "rgba(255,255,255,0.01)" }}
             >

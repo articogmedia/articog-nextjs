@@ -53,7 +53,7 @@ export const menuGroups = [
       },
       {
         label: "Creative Testing",
-        href: "/solutions/creative-testing",
+        href: "/solutions/performance-marketing",
       },
       {
         label: "Enterprise Solutions",
@@ -61,7 +61,7 @@ export const menuGroups = [
       },
       {
         label: "Localization & Global",
-        href: "/solutions/localization-global",
+        href: "/solutions/product-launch",
       },
       {
         label: "Product Launch",
@@ -69,11 +69,11 @@ export const menuGroups = [
       },
       {
         label: "Agency White-Label",
-        href: "/solutions/agency-white-label",
+        href: "/solutions/creative-team-overflow",
       },
       {
         label: "Creative Automation",
-        href: "/solutions/creative-automation",
+        href: "/solutions/performance-marketing",
       },
     ],
   },
@@ -83,35 +83,35 @@ export const menuGroups = [
       { label: "Overview", href: "/industries" },
       {
         label: "DTC & Ecommerce",
-        href: "/industries/dtc-ecommerce",
+        href: "/industries#dtc-ecommerce",
       },
       {
         label: "SaaS & Technology",
-        href: "/industries/saas-technology",
+        href: "/industries#saas-technology",
       },
       {
         label: "Automotive & Mobility",
-        href: "/industries/automotive-mobility",
+        href: "/industries#automotive-mobility",
       },
       {
         label: "Food & Beverage",
-        href: "/industries/food-beverage",
+        href: "/industries#food-beverage",
       },
       {
         label: "Fashion & Lifestyle",
-        href: "/industries/fashion-lifestyle",
+        href: "/industries#fashion-lifestyle",
       },
       {
         label: "Real Estate",
-        href: "/industries/real-estate",
+        href: "/industries#real-estate",
       },
       {
         label: "Consumer Electronics",
-        href: "/industries/consumer-electronics",
+        href: "/industries#consumer-electronics",
       },
       {
         label: "Beauty & Skincare",
-        href: "/industries/beauty-skincare",
+        href: "/industries#beauty-skincare",
       },
     ],
   },
@@ -142,7 +142,7 @@ export const menuGroups = [
       },
       {
         label: "Quality Assurance",
-        href: "/how-it-works/quality-assurance",
+        href: "/how-it-works/ai-creative-pipeline",
       },
       {
         label: "Trust Center",
@@ -150,7 +150,7 @@ export const menuGroups = [
       },
       {
         label: "Responsible AI",
-        href: "/trust/responsible-ai",
+        href: "/trust/ai-and-ip",
       },
       {
         label: "Security & Data",
@@ -158,21 +158,16 @@ export const menuGroups = [
       },
       {
         label: "Subprocessors",
-        href: "/legal/subprocessors",
+        href: "/contact",
       },
     ],
   },
   {
     label: "Resources",
     links: [
-      { label: "Resources Hub", href: "/resources" },
       { label: "Blog", href: "/blog" },
-      { label: "Guides", href: "/guides" },
-      { label: "Playbooks", href: "/playbooks" },
-      { label: "Reports", href: "/reports" },
-      { label: "Events & Webinars", href: "/events" },
-      { label: "Glossary", href: "/glossary" },
       { label: "Help Center", href: "/help" },
+      { label: "AI Ad Library", href: "/ai-ad-library" },
     ],
   },
   {
@@ -284,7 +279,7 @@ function ServicesContent({
     {
       title: "ML Ad Creations",
       desc: "Hundreds of on-brand variants, continuously optimised on performance signals.",
-      href: "/services/ad-creative/testing-variants",
+      href: "/services/ad-creative",
       icon: <TestTube2 size={14} />,
     },
     {
@@ -305,7 +300,7 @@ function ServicesContent({
         },
         {
           label: "Brand Storytelling",
-          href: "/services/creative-strategy/storyboarding",
+          href: "/services/creative-strategy",
         },
         {
           label: "Commercials & Ads",
@@ -351,7 +346,7 @@ function ServicesContent({
       links: [
         {
           label: "Brand Awareness",
-          href: "/solutions/multi-format-campaigns",
+          href: "/solutions/product-launch",
         },
         {
           label: "Performance Marketing",
@@ -693,11 +688,11 @@ export function Header() {
                     },
                     {
                       label: "Monthly Plans",
-                      href: "/pricing/monthly-plans",
+                      href: "/pricing#monthly-plans",
                     },
                     {
                       label: "Pilot Project",
-                      href: "/pricing/pilot",
+                      href: "/pricing#pilot",
                     },
                     {
                       label: "Pricing FAQ",

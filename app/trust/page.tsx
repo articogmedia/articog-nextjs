@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://articog.com/trust" },
   title: "Trust Center Articog",
   description: "Built for enterprise confidence. Everything procurement, legal, and security teams need to evaluate Articog.",
 };
@@ -28,7 +29,7 @@ export default function TrustPage() {
     {
       title: "Responsible AI",
       description: "We follow strict ethical guidelines for AI use, including mandatory human review, verified likeness consent, and clear escalation paths to ensure brand safety.",
-      href: "/trust/responsible-ai",
+      href: "/trust/ai-and-ip",
     },
     {
       title: "Data Handling & Retention",
@@ -38,7 +39,7 @@ export default function TrustPage() {
     {
       title: "Subprocessors & Key Vendors",
       description: "Transparency into the third-party tools and vendors we use to deliver our services.",
-      href: "/legal/subprocessors",
+      href: "/contact",
     },
   ];
 

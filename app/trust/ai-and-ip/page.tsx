@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://articog.com/trust/ai-and-ip" },
   title: "AI & Intellectual Property Articog",
   description: "How Articog handles AI tool use, ownership, and client intellectual property.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
-import { ShieldCheck, Scale, FileText } from "lucide-react";
+import { ShieldCheck, Scale, FileText, UserCheck, Eye, AlertCircle } from "lucide-react";
 
 export default function AIIPPage() {
   const policies = [
@@ -25,6 +26,29 @@ export default function AIIPPage() {
       title: "Third-Party Rights",
       desc: "We take rigorous care to ensure that all generated content avoids infringing upon third-party intellectual property. Our quality review process includes checks to maintain brand integrity and legal safety.",
       icon: FileText,
+    },
+  ];
+
+  const responsibleAIPrinciples = [
+    {
+      title: "Consent for Likeness & Voice",
+      description: "We strictly adhere to ethical standards regarding synthetic media. Any use of a real person's likeness or voice in our production pipeline requires explicit, documented authorization and proper licensing.",
+      icon: UserCheck,
+    },
+    {
+      title: "No Deceptive Impersonation",
+      description: "We do not produce content designed to deceive audiences. Our AI-generated assets are intended for creative expression and brand storytelling, not for misleading impersonation without proper disclosure where appropriate.",
+      icon: ShieldCheck,
+    },
+    {
+      title: "Human Review",
+      description: "AI is an accelerator, not an autopilot. Every asset produced by Articog undergoes a thorough manual review by our creative team to ensure brand integrity, quality standards, and ethical compliance before final delivery.",
+      icon: Eye,
+    },
+    {
+      title: "Escalation & Governance",
+      description: "We maintain clear internal governance for AI production. A defined escalation process exists for flagging and resolving any content concerns, ensuring that all work meets our high bars for responsibility and quality.",
+      icon: AlertCircle,
     },
   ];
 
@@ -78,6 +102,34 @@ export default function AIIPPage() {
           <div className="p-8 md:p-12 rounded-2xl bg-white/5 border border-white/10 max-w-4xl text-center mx-auto">
             <p className="font-sans text-white/70 leading-relaxed">
               While these policies represent our standard approach, specific Intellectual Property terms and legal protections are clearly set out in each client's individual service agreement.
+            </p>
+          </div>
+        </Container>
+      </Section>
+
+      <Section className="py-20 bg-white/[0.02]">
+        <Container>
+          <div className="mb-12 max-w-3xl">
+            <h2 className="font-display text-3xl font-semibold text-white mb-4">Responsible AI Principles</h2>
+            <p className="font-sans text-white/50 leading-relaxed">
+              The principles and ethical guardrails that guide how we use AI to build the future of creative production.
+            </p>
+          </div>
+          <div className="grid gap-8 md:grid-cols-2">
+            {responsibleAIPrinciples.map((principle) => (
+              <div key={principle.title} className="rounded-2xl p-8 border border-white/[0.08]" style={{ background: "rgba(255,255,255,0.01)" }}>
+                <div className="mb-6 w-12 h-12 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center">
+                  <principle.icon className="w-6 h-6 text-white/40" />
+                </div>
+                <h3 className="text-xl font-display font-semibold text-white mb-4">{principle.title}</h3>
+                <p className="font-sans text-sm leading-relaxed text-white/50">{principle.description}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center pt-16 mt-16 border-t border-white/10">
+            <h2 className="font-display text-3xl font-semibold text-white mb-6">Commitment to Transparency</h2>
+            <p className="mx-auto max-w-xl font-sans text-base text-white/60">
+              Our approach to AI is built on the foundation of trust. We work closely with brand legal and creative teams to ensure every project aligns with both industry standards and company-specific values.
             </p>
           </div>
         </Container>

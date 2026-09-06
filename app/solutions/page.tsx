@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://articog.com/solutions" },
   title: "Solutions Articog",
   description: "Find your use case. Whatever your creative bottleneck, there's a model built to solve it.",
 };
@@ -26,44 +27,14 @@ export default function SolutionsPage() {
       href: "/solutions/product-launch",
     },
     {
-      title: "Creative Testing at Scale",
-      description: "Ongoing testing programs built for continuous growth.",
-      href: "/solutions/creative-testing",
-    },
-    {
-      title: "Multi-Format Campaign Production",
-      description: "Build one campaign across every format and channel from a modular concept.",
-      href: "/solutions/multi-format-campaigns",
-    },
-    {
-      title: "Always-On Content Engine",
-      description: "For brands that need continuous organic and paid content without more headcount.",
-      href: "/solutions/always-on-content",
+      title: "In-House Creative Overflow",
+      description: "Extend your internal team's capacity during peak demand without full-time hires.",
+      href: "/solutions/creative-team-overflow",
     },
     {
       title: "Enterprise Creative Production",
       description: "Production for large organizations with strict security and governance needs.",
       href: "/solutions/enterprise",
-    },
-    {
-      title: "Agency White-Label",
-      description: "Scale agency capacity with reliable production under your brand.",
-      href: "/solutions/agency-white-label",
-    },
-    {
-      title: "Localization & Global Campaigns",
-      description: "Adapt your message for every market with localized, region-ready creative.",
-      href: "/solutions/localization-global",
-    },
-    {
-      title: "Creative Automation",
-      description: "Integrate brief-to-delivery production into your workflow.",
-      href: "/solutions/creative-automation",
-    },
-    {
-      title: "Dynamic Creative Optimization",
-      description: "Generate and optimize variants from performance signals.",
-      href: "/solutions/dynamic-creative",
     },
   ];
 

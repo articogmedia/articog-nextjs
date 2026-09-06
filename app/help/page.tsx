@@ -44,7 +44,7 @@ export default function HelpCenterPage() {
     },
     {
       title: "Pricing",
-      links: [{ label: "View Pricing FAQ", href: "/pricing/faq" }],
+      links: [{ label: "View Pricing FAQ", href: "/pricing#faq" }],
       faqs: [
         {
           q: "How is production priced?",
@@ -77,7 +77,7 @@ export default function HelpCenterPage() {
     },
     {
       title: "Working with AI",
-      links: [{ label: "Our Responsible AI Principles", href: "/trust/responsible-ai" }],
+      links: [{ label: "Our Responsible AI Principles", href: "/trust/ai-and-ip" }],
       faqs: [
         {
           q: "How is AI used responsibly at Articog?",
@@ -87,7 +87,7 @@ export default function HelpCenterPage() {
     },
     {
       title: "Revisions",
-      links: [{ label: "Revision Policy", href: "/how-it-works/revisions-delivery" }],
+      links: [{ label: "Revision Policy", href: "/how-it-works" }],
       faqs: [
         {
           q: "What is your revision policy?",
@@ -105,6 +105,49 @@ export default function HelpCenterPage() {
         }
       ]
     }
+  ];
+
+  const glossaryTerms = [
+    {
+      term: "AI-Native Production",
+      definition: "A production framework where generative AI is not just a tool but the core infrastructure. This allows for near-instant iteration and the ability to scale creative output without linear increases in cost or time.",
+      link: "/services/ai-video-production",
+    },
+    {
+      term: "Brand Consistency at Scale",
+      definition: "The process of ensuring that every generated asset adheres to strict visual and tonal guidelines across thousands of variants. This is achieved through proprietary model tuning and rigorous automated quality assurance passes.",
+      link: "/why-articog/production-economics",
+    },
+    {
+      term: "Creative Variant Testing",
+      definition: "The systematic generation and deployment of multiple ad iterations to identify high-performing creative elements. AI enables the production of hundreds of specific variants tailored to different audience segments in minutes.",
+      link: "/solutions/performance-marketing",
+    },
+    {
+      term: "UGC-Style Content",
+      definition: "User-Generated Content (UGC) style assets that are produced using AI to mimic the authentic, low-fidelity aesthetic favored on social platforms like TikTok and Reels, while maintaining professional brand standards.",
+      link: "/work/social",
+    },
+    {
+      term: "Post-Production",
+      definition: "The final technical stage of content creation, including motion graphics, color grading, upscaling, and audio mastering. Our AI-driven post-production delivers studio-quality finishes at a fraction of traditional timelines.",
+      link: "/services/post-production",
+    },
+    {
+      term: "Localization",
+      definition: "Adapting creative content for different geographic markets through language translation, cultural nuance adjustment, and visual element swapping, ensuring global relevance while maintaining core brand messaging.",
+      link: "/solutions/product-launch",
+    },
+    {
+      term: "Performance Creative",
+      definition: "Advertising assets designed specifically to drive measurable actions, such as clicks or conversions. These are optimized through data-driven AI generation based on real-time campaign performance metrics.",
+      link: "/services/ad-creative",
+    },
+    {
+      term: "Key Visual",
+      definition: "The central graphic or image that serves as the foundation for a campaign's visual identity. AI allows for the rapid exploration of multiple key visual concepts to establish the strongest creative direction for a brand.",
+      link: "/services/creative-strategy",
+    },
   ];
 
   return (
@@ -162,6 +205,23 @@ export default function HelpCenterPage() {
                 </div>
               </div>
             ))}
+
+            <section id="glossary" className="scroll-mt-32">
+              <div className="mb-6 border-b border-white/[0.1] pb-4">
+                <h2 className="font-display text-2xl font-semibold text-white">Glossary</h2>
+              </div>
+              <div className="grid gap-8 md:grid-cols-2">
+                {glossaryTerms.map((item) => (
+                  <div key={item.term}>
+                    <h3 className="mb-2 font-display text-lg font-semibold text-white">{item.term}</h3>
+                    <p className="mb-3 font-sans text-sm leading-relaxed text-white/50">{item.definition}</p>
+                    <Link href={item.link} className="text-[11px] font-sans font-bold uppercase tracking-widest text-white/40 hover:text-white transition-colors">
+                      Related Service →
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </section>
           </div>
 
           <div className="text-center pt-16 border-t border-white/10">

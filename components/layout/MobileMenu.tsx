@@ -106,8 +106,8 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             {openGroups.includes("Pricing") && (
               <div className="flex flex-col gap-1 pb-4 pl-3">
                 <Link href="/pricing" onClick={onClose} className="font-sans text-[13px] px-3 py-2 rounded-lg text-white/50 hover:text-white/85 transition-colors">Pricing Overview</Link>
-                <Link href="/pricing/monthly-plans" onClick={onClose} className="font-sans text-[13px] px-3 py-2 rounded-lg text-white/50 hover:text-white/85 transition-colors">Monthly Plans</Link>
-                <Link href="/pricing/pilot" onClick={onClose} className="font-sans text-[13px] px-3 py-2 rounded-lg text-white/50 hover:text-white/85 transition-colors">Pilot Project</Link>
+                <Link href="/pricing#monthly-plans" onClick={onClose} className="font-sans text-[13px] px-3 py-2 rounded-lg text-white/50 hover:text-white/85 transition-colors">Monthly Plans</Link>
+                <Link href="/pricing#pilot" onClick={onClose} className="font-sans text-[13px] px-3 py-2 rounded-lg text-white/50 hover:text-white/85 transition-colors">Pilot Project</Link>
                 <Link href="/pricing/faq" onClick={onClose} className="font-sans text-[13px] px-3 py-2 rounded-lg text-white/50 hover:text-white/85 transition-colors">Pricing FAQ</Link>
               </div>
             )}

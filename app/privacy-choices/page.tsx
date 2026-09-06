@@ -3,6 +3,7 @@ import { Container, Section, Heading } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://articog.com/privacy-choices" },
   title: "Your Privacy Choices | Articog",
   description: "Information about your privacy rights and how to exercise them.",
 };

@@ -6,9 +6,6 @@ import { Container, Section, Button } from "@/components/ui";
 import {
   ArrowRight,
   Mail,
-  Instagram,
-  Linkedin,
-  Twitter,
 } from "lucide-react";
 
 export default function ContactPage() {
@@ -347,35 +344,6 @@ export default function ContactPage() {
               </p>
             </div>
 
-            {/* Socials */}
-            <div>
-              <h3 className="font-display font-semibold text-white mb-6">
-                Connect
-              </h3>
-
-              <div className="flex gap-6">
-                <a
-                  href="#"
-                  className="text-white/40 hover:text-white transition-colors"
-                >
-                  <Linkedin size={20} />
-                </a>
-
-                <a
-                  href="#"
-                  className="text-white/40 hover:text-white transition-colors"
-                >
-                  <Instagram size={20} />
-                </a>
-
-                <a
-                  href="#"
-                  className="text-white/40 hover:text-white transition-colors"
-                >
-                  <Twitter size={20} />
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </Container>

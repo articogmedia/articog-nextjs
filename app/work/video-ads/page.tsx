@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Video Ad Creative Articog",
   description: "High-volume, performance-tested video ads for every platform. Scale your creative output without increasing headcount.",
+  alternates: { canonical: "https://articog.com/work/video-ads" },
 };
 import { Link } from "@/components/ui/Link";
 import { Header } from '@/components/layout/Header';
@@ -33,11 +34,8 @@ export default function VideoAdsGalleryPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {examples.map((item, idx) => (
-                <div key={idx} className="group cursor-pointer">
+                <div key={idx} className="group">
                   <div className="aspect-video bg-zinc-900 rounded-2xl border border-zinc-800 mb-4 overflow-hidden relative">
-                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                      <span className="text-sm font-bold uppercase tracking-widest">View Project</span>
-                    </div>
                   </div>
                   <div className="flex justify-between items-start mb-2">
                     <h3 className="font-bold text-lg">{item.title}</h3>
@@ -57,7 +55,7 @@ export default function VideoAdsGalleryPage() {
             <Section className="mt-20 py-12 border-t border-zinc-900 text-center">
               <p className="text-zinc-500 text-sm mb-8 italic">All displayed work is used with appropriate permissions.</p>
               <Link to="/book-a-demo" className="text-white hover:underline underline-offset-4">
-                View all case studies →
+                Book a Demo →
               </Link>
             </Section>
           </div>

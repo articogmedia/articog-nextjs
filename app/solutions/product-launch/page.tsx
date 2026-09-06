@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://articog.com/solutions/product-launch" },
   title: "Product Launch Campaigns Articog",
   description: "Full creative support for your product launch, from strategy and timeline to every channel-specific asset.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Calendar, Layout, CheckCircle2, Globe, Share2, Info } from "lucide-react";
+import { SolutionDetails } from "@/components/sections/SolutionDetails";
 
 export default function ProductLaunchSolutionPage() {
   const howItWorks = [
@@ -85,11 +87,13 @@ export default function ProductLaunchSolutionPage() {
           <div className="mt-12 p-6 rounded-xl bg-white/5 border border-white/10 flex items-start gap-4 max-w-2xl mx-auto">
             <Info className="w-5 h-5 text-white/40 mt-0.5 flex-shrink-0" />
             <p className="font-sans text-sm text-white/50 italic leading-relaxed">
-              Looking for cinematic hero films? Check out our <Link href="/services/ai-video-production/product-launch" className="text-white underline hover:text-white/80 transition-colors">Product Launch Video service</Link>.
+              Looking for cinematic hero films? Check out our <Link href="/services/ai-video-production" className="text-white underline hover:text-white/80 transition-colors">AI Video Production service</Link>.
             </p>
           </div>
         </Container>
       </Section>
+
+      <SolutionDetails category="launch" />
 
       <Section className="py-24">
         <Container>

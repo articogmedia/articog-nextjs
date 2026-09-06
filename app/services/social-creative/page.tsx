@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://articog.com/services/social-creative" },
   title: "Social Creative Articog",
   description: "Platform-native graphic content for organic and paid social. Elevate your presence with feed posts, stories, carousels, and more.",
 };
 import { Link } from "@/components/ui/Link";
 import { Container, Section, Button } from "@/components/ui";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ServiceDetails } from "@/components/sections/ServiceDetails";
 
 export default function SocialCreativePage() {
   return (
@@ -55,6 +57,8 @@ export default function SocialCreativePage() {
           </div>
         </Container>
       </Section>
+
+      <ServiceDetails category="social" />
 
       <Section className="py-32">
         <Container className="text-center">

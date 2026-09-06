@@ -202,29 +202,7 @@ export const siteContent: SiteContent = {
     },
   ],
 
-  testimonials: [
-    {
-      quote:
-        "What used to take our agency a month now takes Articog a week. I can't tell the difference in output quality, and it's completely changed how we plan campaigns.",
-      author: "Head of Growth",
-      role: "Head of Growth",
-      company: "E-Commerce Brand",
-    },
-    {
-      quote:
-        "We briefed them Monday morning. By Thursday we were live with a full creative suite across every channel. No agency could have moved that fast.",
-      author: "Creative Director",
-      role: "Creative Director",
-      company: "DTC Brand",
-    },
-    {
-      quote:
-        "The volume was a step change, but what surprised us was the consistency. Every asset felt on-brand. That is rare at scale.",
-      author: "VP Marketing",
-      role: "VP Marketing",
-      company: "SaaS Company",
-    },
-  ],
+  testimonials: [],
 
   cta: {
     headline: "Your next campaign.\nDelivered in days.",

@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://articog.com/services/creative-strategy" },
   title: "Creative Strategy & Concepting Articog",
   description: "The strategic foundation behind every production. Concept development, brand direction, and campaign architecture for AI-powered creative.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Lightbulb, Palette, LayoutGrid, MessageSquare } from "lucide-react";
+import { ServiceDetails } from "@/components/sections/ServiceDetails";
 
 export default function CreativeStrategyPage() {
   const capabilities = [
@@ -88,6 +90,8 @@ export default function CreativeStrategyPage() {
           </div>
         </Container>
       </Section>
+
+      <ServiceDetails category="strategy" />
 
       {/* CTA Section */}
       <Section className="py-24 bg-white/[0.02]">

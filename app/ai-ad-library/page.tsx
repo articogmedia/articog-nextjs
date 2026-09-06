@@ -8,8 +8,6 @@ export default function AdLibraryPage() {
   const [activeCategory, setActiveCategory] = useState("All");
   
   const categories = ["All", "Video", "Static", "Audio"];
-  const industries = ["All", "DTC & Ecommerce", "SaaS & Technology", "Real Estate", "Beauty & Skincare"];
-
   const examples = [
     {
       title: "DTC Launch Creative",
@@ -55,6 +53,10 @@ export default function AdLibraryPage() {
     }
   ];
 
+  const visibleExamples = activeCategory === "All"
+    ? examples
+    : examples.filter((example) => example.category === activeCategory);
+
   return (
     <div className="bg-black min-h-screen">
       <Section size="lg" className="pt-32 md:pt-40">
@@ -92,18 +94,10 @@ export default function AdLibraryPage() {
               ))}
             </div>
 
-            <div className="flex items-center gap-4">
-               <select className="bg-black border border-white/10 rounded-lg px-4 py-2 font-sans text-xs text-white/60 focus:outline-none focus:border-white/30 cursor-pointer">
-                  <option>All Industries</option>
-                  {industries.slice(1).map(ind => (
-                    <option key={ind}>{ind}</option>
-                  ))}
-               </select>
-            </div>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-20">
-            {examples.map((item, index) => (
+            {visibleExamples.map((item, index) => (
               <div 
                 key={index}
                 className="group relative aspect-[4/5] rounded-2xl border border-white/[0.08] overflow-hidden bg-white/[0.02]"
@@ -138,11 +132,6 @@ export default function AdLibraryPage() {
                   </h3>
                 </div>
 
-                <button className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <span className="px-6 py-2 bg-white text-black font-sans text-xs font-bold rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    View Asset
-                  </span>
-                </button>
               </div>
             ))}
           </div>

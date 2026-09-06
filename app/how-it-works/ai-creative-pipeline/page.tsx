@@ -3,10 +3,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "The AI Creative Pipeline Articog",
   description: "Explore the technical details of our AI Creative Pipeline. From brief intake to multi-model generation and human-in-the-loop curation.",
+  alternates: { canonical: "https://articog.com/how-it-works/ai-creative-pipeline" },
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
-import { ClipboardList, Cpu, UserCheck, RefreshCw } from "lucide-react";
+import { ClipboardList, Cpu, UserCheck, RefreshCw, ShieldCheck, Type, FileSearch, HardDrive, Info } from "lucide-react";
 
 export default function AICreativePipelinePage() {
   const stages = [
@@ -31,6 +32,14 @@ export default function AICreativePipelinePage() {
       icon: RefreshCw,
     },
   ];
+
+  const qaStandards = [
+    ["Product & Logo Integrity", "Accurate representation of your brand identity and product features in every asset we produce.", ShieldCheck],
+    ["Text Accuracy", "Checking for legibility, spelling, and correctness of any on-screen or on-image text elements.", Type],
+    ["Policy Review", "Verifying assets against platform-specific advertising policies and legal requirements.", FileSearch],
+    ["Final Technical QC", "Double-checking resolution, frame rate, file format, and naming conventions before delivery.", HardDrive],
+    ["Human Review", "Every AI-generated asset is reviewed by a professional editor; we never ship automatically.", UserCheck],
+  ] as const;
 
   return (
     <div className="bg-black min-h-screen">
@@ -75,6 +84,37 @@ export default function AICreativePipelinePage() {
                 <p className="font-sans text-base text-white/50 leading-relaxed">{stage.desc}</p>
               </div>
             ))}
+          </div>
+        </Container>
+      </Section>
+
+      <Section className="py-20 bg-white/[0.02]">
+        <Container>
+          <div className="mb-12">
+            <h2 className="font-display text-3xl font-semibold text-white mb-4 text-center">Our QA Standards</h2>
+            <p className="font-sans text-white/50 max-w-2xl mx-auto text-center">
+              Our multi-stage verification process ensures error-free delivery at scale.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {qaStandards.map(([title, description, Icon]) => (
+              <div key={title} className="p-8 rounded-2xl bg-white/5 border border-white/10 flex flex-col gap-4">
+                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
+                  <Icon className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-display text-xl font-semibold text-white mb-2">{title}</h3>
+                  <p className="font-sans text-sm text-white/50 leading-relaxed">{description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 p-6 rounded-xl bg-white/5 border border-white/10 flex items-start gap-4 max-w-2xl mx-auto">
+            <Info className="w-5 h-5 text-white/40 mt-0.5 flex-shrink-0" />
+            <p className="font-sans text-sm text-white/50 italic leading-relaxed">
+              Learn more about our broader <Link href="/trust" className="text-white underline hover:text-white/80 transition-colors">Trust & Safety</Link> practices.
+            </p>
           </div>
         </Container>
       </Section>

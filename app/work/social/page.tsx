@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Social Creative Work Articog",
   description: "Platform-native content built for organic and paid social.",
+  alternates: { canonical: "https://articog.com/work/social" },
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";

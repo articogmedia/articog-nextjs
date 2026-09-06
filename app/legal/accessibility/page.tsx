@@ -1,22 +1,60 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://articog.com/legal/accessibility" },
   title: "Accessibility Statement Articog",
-  description: "Articog's commitment to digital accessibility and inclusive design.",
+  description: "Articog's accessibility statement, detailing our commitment to an inclusive digital experience.",
 };
 import { Container, Section, Heading } from "@/components/ui";
 
 export default function AccessibilityPage() {
+  const sections = [
+    {
+      title: "Our Commitment",
+      content:
+        "Articog is committed to ensuring digital accessibility for all users, including those using assistive technology. We believe that everyone should be able to experience our website, and we are working to make our platform accessible to the widest possible audience.",
+    },
+    {
+      title: "Standards and Guidelines",
+      content:
+        "We aim to meet the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA as our standard for accessibility. This is an ongoing effort, and we regularly review our site to identify and address potential barriers.",
+    },
+    {
+      title: "Report an Issue",
+      content:
+        "If you encounter accessibility barriers or have suggestions on how we can improve the accessibility of our site, please contact us at info@articog.com. We welcome your feedback and will respond promptly to address any issues reported.",
+    },
+  ];
+
   return (
     <div className="bg-black min-h-screen">
       <Section size="lg" className="pt-32 md:pt-40">
         <Container>
-          <div className="mx-auto max-w-3xl">
-            <span className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-white/40">Legal</span>
-            <Heading as="h1" size="hero" className="mb-6">Accessibility</Heading>
-            <div className="space-y-8 font-sans text-base leading-relaxed text-white/60">
-              <p>Articog is committed to ensuring digital accessibility for everyone. We are continually improving the user experience for all users and applying the relevant accessibility standards.</p>
-              <p>For detailed information, please contact us at <a href="mailto:info@articog.com" className="text-white underline">info@articog.com</a>.</p>
+          <div className="mx-auto max-w-3xl mb-24">
+            <Heading as="h1" size="hero" className="mb-4">
+              Accessibility Statement
+            </Heading>
+            <p
+              className="font-sans text-sm mb-16"
+              style={{ color: "rgba(255,255,255,0.40)" }}
+            >
+              Last updated: August 19, 2026
+            </p>
+
+            <div className="space-y-12">
+              {sections.map((section) => (
+                <div key={section.title}>
+                  <h2 className="font-display text-xl font-semibold text-white mb-4">
+                    {section.title}
+                  </h2>
+                  <p
+                    className="font-sans text-base leading-relaxed"
+                    style={{ color: "rgba(255,255,255,0.65)" }}
+                  >
+                    {section.content}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </Container>

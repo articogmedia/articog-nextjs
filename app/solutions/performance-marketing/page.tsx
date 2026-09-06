@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://articog.com/solutions/performance-marketing" },
   title: "Performance Marketing Creative Articog",
   description: "High-volume, testable creative for growth and performance teams who need constant new variants to beat ad fatigue.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { RefreshCw, TrendingUp, Grid, ArrowRight } from "lucide-react";
+import { SolutionDetails } from "@/components/sections/SolutionDetails";
 
 export default function PerformanceMarketingPage() {
   const steps = [
@@ -74,6 +76,8 @@ export default function PerformanceMarketingPage() {
         </Container>
       </Section>
 
+      <SolutionDetails category="performance" />
+
       {/* Specific Formats Section */}
       <Section className="py-20 border-t border-white/5">
         <Container>
@@ -82,7 +86,7 @@ export default function PerformanceMarketingPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Link 
-              href="/services/ai-video-production/performance-ads"
+              href="/services/ad-creative"
               className="group p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300"
             >
               <div className="flex justify-between items-start mb-4">

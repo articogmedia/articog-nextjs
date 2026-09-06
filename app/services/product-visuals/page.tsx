@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://articog.com/services/product-visuals" },
   title: "Product Visual Content Articog",
   description: "On-brand product visuals at any scale. Campaign posters, banners, OOH creative, and print-ready assets with consistent brand fidelity.",
 };
 import { Link } from "@/components/ui/Link";
 import { Container, Section, Button } from "@/components/ui";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ServiceDetails } from "@/components/sections/ServiceDetails";
 
 export default function ProductVisualsPage() {
   return (
@@ -55,6 +57,8 @@ export default function ProductVisualsPage() {
           </div>
         </Container>
       </Section>
+
+      <ServiceDetails category="product-visuals" />
 
       <Section className="py-32">
         <Container className="text-center">

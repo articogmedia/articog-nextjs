@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://articog.com/trust/security" },
   title: "Security & Confidentiality Articog",
   description: "NDA, access control, and data handling practices at Articog.",
 };

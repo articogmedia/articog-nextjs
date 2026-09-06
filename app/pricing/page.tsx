@@ -6,6 +6,29 @@ import { Container, Section, Button, Heading } from "@/components/ui";
 import { Check, ChevronDown, ChevronUp } from "lucide-react";
 
 export default function PricingPage() {
+  const plans = [
+    { title: "Starter", price: "$2,500/mo", description: "For small teams needing consistent creative output.", capacity: "Up to 5 assets per month", formats: "All social & static formats", turnaround: "3-5 business days", features: ["Dedicated Creative Lead", "2 revision rounds", "Brand voice alignment", "Platform optimization"] },
+    { title: "Growth", price: "$5,000/mo", description: "For growing brands scaling their content production.", capacity: "Up to 12 assets per month", formats: "Video, Static, & Social", turnaround: "2-4 business days", features: ["Priority production", "3 revision rounds", "Creative strategy", "Custom image library"], popular: true },
+    { title: "Scale", price: "$10,000/mo", description: "For enterprise teams with high-volume requirements.", capacity: "Up to 30 assets per month", formats: "Full-funnel creative engine", turnaround: "1-3 business days", features: ["Unlimited revisions", "White-glove service", "Campaign management", "Advanced IP governance"] },
+  ];
+
+  const pilotSteps = [
+    ["Eligibility", "Best suited for brands new to working with us, providing a low-risk way to experience our high-velocity production."],
+    ["Fixed Scope", "A clearly defined single deliverable, not open-ended, ensuring we hit specific creative and performance targets."],
+    ["Timeline", "A fast, bounded delivery window typically within 5-7 business days from brief alignment."],
+    ["Rights", "Full usage rights for the pilot deliverable are confirmed and granted upfront upon final delivery."],
+    ["What Happens After", "A clear path to a larger engagement if the pilot goes well, with absolutely no obligation to continue."],
+  ];
+
+  const faqs = [
+    ["How is pricing structured?", "We offer project-based, subscription, or enterprise models depending on your specific volume and creative needs. See our main Pricing page for a high-level overview of these categories."],
+    ["How does the monthly model work?", "You get a steady stream of creative production on a predictable cadence, without additional hiring."],
+    ["Is there a minimum commitment?", "Commitment varies by plan. While our monthly subscriptions are designed for long-term partnership, pilot projects are available for a lower-commitment exploratory start."],
+    ["What's included in a project?", "Each project typically includes creative concepting, high-fidelity production using our AI engine, and a pre-agreed number of revision rounds to ensure the final asset meets your standards."],
+    ["How does billing work?", "Specific billing terms and cycles (e.g., net-30, up-front for pilots) will be confirmed and detailed during your initial onboarding call based on your chosen plan."],
+    ["Can I change plans later?", "Yes, your creative engine can scale up or down as your business objectives evolve. Plan adjustments are handled directly with your account team and discussed during onboarding."],
+  ];
+
   return (
     <>
       <Section size="lg" className="pt-32 md:pt-40">
@@ -62,7 +85,7 @@ export default function PricingPage() {
                 "Dedicated creative lead",
               ]}
               buttonText="See Monthly Plans"
-              href="/pricing/monthly-plans"
+              href="#monthly-plans"
               popular
             />
 
@@ -81,31 +104,53 @@ export default function PricingPage() {
               href="/book-a-demo"
             />
           </div>
+
+          <div id="monthly-plans" className="scroll-mt-24 border-t border-white/5 pt-20">
+            <div className="mb-12 text-center">
+              <Heading as="h2" size="section" className="mb-4">Monthly Plans</Heading>
+              <p className="mx-auto max-w-2xl font-sans text-white/50">Choose a subscription tier that matches your creative volume. All plans include human-directed AI production built for performance.</p>
+            </div>
+            <div className="grid gap-6 md:grid-cols-3">
+              {plans.map((plan) => (
+                <div key={plan.title} className={`relative flex flex-col rounded-2xl p-8 ${plan.popular ? "scale-105 z-10" : ""}`} style={{ background: "rgba(255,255,255,0.03)", border: plan.popular ? "1px solid rgba(102, 51, 238, 0.4)" : "1px solid rgba(255,255,255,0.08)", boxShadow: plan.popular ? "0 20px 40px rgba(102, 51, 238, 0.1)" : "none" }}>
+                  {plan.popular && <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full px-3 py-1 font-sans text-[10px] font-bold uppercase tracking-wider text-white" style={{ background: "#6633EE" }}>Most Popular</span>}
+                  <h3 className="mb-2 font-display text-2xl font-semibold text-white">{plan.title}</h3>
+                  <div className="mb-4 font-sans text-lg font-medium text-accent">{plan.price}</div>
+                  <p className="mb-6 font-sans text-sm text-white/50">{plan.description}</p>
+                  <div className="mb-8 space-y-4">
+                    <div className="border-t border-white/5 pt-4"><p className="mb-1 text-[10px] uppercase tracking-widest text-white/40">Capacity</p><p className="text-sm text-white/80">{plan.capacity}</p></div>
+                    <div className="border-t border-white/5 pt-4"><p className="mb-1 text-[10px] uppercase tracking-widest text-white/40">Formats</p><p className="text-sm text-white/80">{plan.formats}</p></div>
+                    <div className="border-t border-white/5 pt-4"><p className="mb-1 text-[10px] uppercase tracking-widest text-white/40">Turnaround</p><p className="text-sm text-white/80">{plan.turnaround}</p></div>
+                  </div>
+                  <ul className="mb-10 flex-1 space-y-4">
+                    {plan.features.map((feature) => <li key={feature} className="flex items-start gap-3 text-sm"><Check size={16} className="mt-0.5 shrink-0 text-accent" /><span className="text-white/60">{feature}</span></li>)}
+                  </ul>
+                  <Button asChild variant={plan.popular ? "primary" : "secondary"} size="lg" className="w-full"><Link href="/book-a-demo">Choose a Plan</Link></Button>
+                </div>
+              ))}
+            </div>
+            <p className="mt-10 text-center font-sans text-sm text-white/40">Need a custom volume or multi-brand support? <Link href="/book-a-demo" className="text-white underline underline-offset-4">Talk to us about Enterprise.</Link><br />Plan changes and overage handling are discussed during onboarding.</p>
+          </div>
+
+          <div id="pilot" className="scroll-mt-24 border-t border-white/5 pt-20">
+            <div className="mb-12 text-center"><Heading as="h2" size="section" className="mb-4">Pilot / Exploratory Project</Heading><p className="mx-auto max-w-2xl font-sans text-white/50">Experience the Articog creative engine with a single, high-impact pilot. Evaluate our quality, speed, and workflow before committing to a larger scale.</p></div>
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {pilotSteps.map(([title, description]) => <div key={title} className="rounded-2xl border border-white/[0.08] p-8" style={{ background: "rgba(255,255,255,0.02)" }}><div className="mb-6 flex h-10 w-10 items-center justify-center rounded-full bg-accent/10"><Check size={20} className="text-accent" /></div><h3 className="mb-4 font-display text-xl font-semibold text-white">{title}</h3><p className="font-sans text-sm leading-relaxed text-white/50">{description}</p></div>)}
+            </div>
+            <div className="mt-10 text-center"><Button asChild variant="primary" size="lg"><Link href="/book-a-demo">Start a Pilot</Link></Button></div>
+          </div>
         </Container>
       </Section>
 
       <Section size="md" className="pt-0">
         <Container>
-          <div className="mx-auto max-w-3xl">
+          <div id="faq" className="mx-auto max-w-3xl scroll-mt-24">
             <Heading as="h2" size="section" className="mb-10 text-center">
               Frequently Asked Questions
             </Heading>
 
             <div className="space-y-4">
-              <AccordionItem
-                question="How does the monthly model work?"
-                answer="You get a steady stream of creative production on a predictable cadence, without additional hiring."
-              />
-
-              <AccordionItem
-                question="Can I change plans later?"
-                answer="Yes. Scale production up or down as your objectives evolve."
-              />
-
-              <AccordionItem
-                question="Is there a minimum commitment?"
-                answer="The subscription is built for long-term partnership with more flexibility than a traditional retainer."
-              />
+              {faqs.map(([question, answer]) => <AccordionItem key={question} question={question} answer={answer} />)}
             </div>
           </div>
         </Container>

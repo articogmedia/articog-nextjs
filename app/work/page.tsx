@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Our Work Articog",
   description: "Proof, not promises. A look at the creative we've produced across formats and industries.",
+  alternates: { canonical: "https://articog.com/work" },
 };
 import { ArrowRight } from "lucide-react";
 import { Container, Section, Button, Heading } from "@/components/ui";
@@ -19,6 +20,16 @@ export default function WorkPage() {
       title: "Social & UGC",
       description: "Platform-native social creations and UGC-style content.",
       href: "/work/social",
+    },
+    {
+      title: "Product Visuals",
+      description: "High-fidelity product visuals and campaign assets.",
+      href: "/work/product-visuals",
+    },
+    {
+      title: "Work by Industry",
+      description: "Explore creative production across industry verticals.",
+      href: "/work/industries",
     },
     {
       title: "AI Ad Library",

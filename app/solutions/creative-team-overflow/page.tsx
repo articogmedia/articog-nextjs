@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://articog.com/solutions/creative-team-overflow" },
   title: "In-House Creative Overflow Articog",
   description: "Extend your internal team without full-time hires.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Zap, Puzzle, TrendingUp } from "lucide-react";
+import { SolutionDetails } from "@/components/sections/SolutionDetails";
 
 export default function CreativeOverflowPage() {
   const features = [
@@ -73,6 +75,8 @@ export default function CreativeOverflowPage() {
           </div>
         </Container>
       </Section>
+
+      <SolutionDetails category="overflow" />
 
       {/* Comparison Note Section */}
       <Section className="py-20 border-t border-white/5">
