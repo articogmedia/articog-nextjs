@@ -3,11 +3,8 @@
  *
  * Swap the provider in one place components never import a vendor SDK directly.
  *
- * To connect a provider, replace the TODO blocks below:
- *   - Vercel Analytics: import { track } from "@vercel/analytics"
- *   - PostHog:          posthog.capture(name, properties)
- *   - Segment:          window.analytics?.track(name, properties)
- *   - Mixpanel:         mixpanel.track(name, properties)
+ * The active provider is Google Analytics 4, configured by
+ * NEXT_PUBLIC_GA_MEASUREMENT_ID.
  */
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -25,6 +22,13 @@ interface TrackEvent {
   properties?: Record<string, string | number | boolean>;
 }
 
+declare global {
+  interface Window {
+    dataLayer: unknown[];
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 // ─── Core ─────────────────────────────────────────────────────────────────────
 
 export function track({ name, properties }: TrackEvent): void {
@@ -36,10 +40,12 @@ export function track({ name, properties }: TrackEvent): void {
     return;
   }
 
-  // TODO: integrate your analytics provider here
-  // Example Vercel Analytics:
-  //   import { track as vaTrack } from "@vercel/analytics";
-  //   vaTrack(name, properties);
+  if (!window.gtag) {
+    window.dataLayer = window.dataLayer ?? [];
+    window.gtag = (...args: unknown[]) => window.dataLayer.push(args);
+  }
+
+  window.gtag("event", name, properties ?? {});
 }
 
 // ─── Convenience helpers ──────────────────────────────────────────────────────
