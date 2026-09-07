@@ -78,10 +78,7 @@ export default function AudioPage() {
           </div>
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link
-              href="/services/audio"
-              className="group p-8 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-white/20 transition-all duration-300"
-            >
+            <div className="group p-8 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-white/20 transition-all duration-300">
               <div className="flex items-center justify-between mb-8">
                 <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-white">
                   <Mic2 className="w-6 h-6" />
@@ -94,12 +91,9 @@ export default function AudioPage() {
               <p className="font-sans text-sm text-white/50 leading-relaxed">
                 Hyper-realistic synthetic voice production for localization and rapid iteration.
               </p>
-            </Link>
+            </div>
 
-            <Link
-              href="/services/audio"
-              className="group p-8 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-white/20 transition-all duration-300"
-            >
+            <div className="group p-8 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-white/20 transition-all duration-300">
               <div className="flex items-center justify-between mb-8">
                 <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-white">
                   <AudioLines className="w-6 h-6" />
@@ -112,7 +106,7 @@ export default function AudioPage() {
               <p className="font-sans text-sm text-white/50 leading-relaxed">
                 Custom scoring and immersive soundscapes for cinematic impact.
               </p>
-            </Link>
+            </div>
           </div>
 
           <div className="mt-12 p-6 rounded-xl bg-white/5 border border-white/10 flex items-start gap-4 max-w-2xl">

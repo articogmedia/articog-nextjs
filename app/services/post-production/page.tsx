@@ -41,12 +41,12 @@ export default function PostProductionPage() {
   const subPages = [
     {
       title: "Video Editing",
-      href: "/services/post-production",
+      href: null,
       description: "Professional narrative and performance editing for all formats.",
     },
     {
       title: "AI Compositing & Cleanup",
-      href: "/services/post-production",
+      href: null,
       description: "Advanced visual refinement and element integration.",
     },
   ];
@@ -108,19 +108,30 @@ export default function PostProductionPage() {
       <Section className="py-20">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {subPages.map((page) => (
-              <Link
-                key={page.href}
-                href={page.href}
-                className="group p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/[0.08] transition-all"
-              >
-                <h3 className="font-display text-xl font-semibold text-white mb-2">{page.title}</h3>
-                <p className="font-sans text-sm text-white/50 mb-6">{page.description}</p>
-                <span className="inline-flex items-center gap-2 text-sm text-white/80 font-medium group-hover:text-white transition-colors">
-                  Learn more <ArrowRight className="w-4 h-4" />
-                </span>
-              </Link>
-            ))}
+            {subPages.map((page) => {
+              const card = (
+                <>
+                  <h3 className="font-display text-xl font-semibold text-white mb-2">{page.title}</h3>
+                  <p className="font-sans text-sm text-white/50 mb-6">{page.description}</p>
+                  {page.href && (
+                    <span className="inline-flex items-center gap-2 text-sm text-white/80 font-medium group-hover:text-white transition-colors">
+                      Learn more <ArrowRight className="w-4 h-4" />
+                    </span>
+                  )}
+                </>
+              );
+              const className = "group p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/[0.08] transition-all";
+
+              return page.href ? (
+                <Link key={page.title} href={page.href} className={className}>
+                  {card}
+                </Link>
+              ) : (
+                <div key={page.title} className={className}>
+                  {card}
+                </div>
+              );
+            })}
           </div>
         </Container>
       </Section>

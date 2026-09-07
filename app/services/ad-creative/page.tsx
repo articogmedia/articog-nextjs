@@ -33,17 +33,17 @@ export default function AdCreativePage() {
   const subServices = [
     {
       title: "Static Ad Creative",
-      href: "/services/ad-creative",
+      href: null,
       description: "High-volume static creative for paid social and display networks.",
     },
     {
       title: "Testing & Variants",
-      href: "/services/ad-creative",
+      href: null,
       description: "Structured, hypothesis-driven creative testing for paid campaigns.",
     },
     {
       title: "Campaign Key Visuals",
-      href: "/services/ad-creative",
+      href: null,
       description: "Developing the core visual system that anchors a campaign across channels.",
     },
   ];
@@ -94,21 +94,32 @@ export default function AdCreativePage() {
           </div>
 
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
-            {subServices.map((service) => (
-              <Link
-                key={service.href}
-                href={service.href}
-                className="group p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/[0.08] hover:border-white/20 transition-all duration-300 flex flex-col justify-between"
-              >
-                <div>
-                  <h3 className="font-display text-xl font-semibold text-white mb-3">{service.title}</h3>
-                  <p className="font-sans text-sm text-white/50 leading-relaxed mb-6">{service.description}</p>
+            {subServices.map((service) => {
+              const card = (
+                <>
+                  <div>
+                    <h3 className="font-display text-xl font-semibold text-white mb-3">{service.title}</h3>
+                    <p className="font-sans text-sm text-white/50 leading-relaxed mb-6">{service.description}</p>
+                  </div>
+                  {service.href && (
+                    <div className="flex items-center text-xs font-bold tracking-widest text-white/30 group-hover:text-white/60 transition-colors uppercase">
+                      Learn More <ArrowRight className="ml-2 w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  )}
+                </>
+              );
+              const className = "group p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/[0.08] hover:border-white/20 transition-all duration-300 flex flex-col justify-between";
+
+              return service.href ? (
+                <Link key={service.title} href={service.href} className={className}>
+                  {card}
+                </Link>
+              ) : (
+                <div key={service.title} className={className}>
+                  {card}
                 </div>
-                <div className="flex items-center text-xs font-bold tracking-widest text-white/30 group-hover:text-white/60 transition-colors uppercase">
-                  Learn More <ArrowRight className="ml-2 w-3 h-3 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </Link>
-            ))}
+              );
+            })}
           </div>
         </Container>
       </Section>

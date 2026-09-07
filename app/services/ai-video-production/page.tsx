@@ -18,11 +18,11 @@ export default function AIVideoProductionPage() {
     { title: "Performance Ads", path: "/services/ad-creative", desc: "Data-driven creative optimized for conversion across paid social." },
     { title: "Social & Reels", path: "/services/social-creative", desc: "Fast-paced, native content designed for high engagement on vertical platforms." },
     { title: "UGC-Style Ads", path: "/services/ad-creative", desc: "Authentic-feeling content that builds trust and drives action." },
-    { title: "Product Launch", path: "/services/ai-video-production", desc: "Complete visual packages to make your next launch unforgettable." },
-    { title: "SaaS & Explainers", path: "/services/ai-video-production", desc: "Clear, engaging product explainer videos built for high conversion." },
-    { title: "Real Estate Films", path: "/services/ai-video-production", desc: "Cinematic property and development films with responsible AI visualization." },
-    { title: "Corporate & Internal", path: "/services/ai-video-production", desc: "Scalable video for training, announcements, and executive communications." },
-    { title: "Localization & Variants", path: "/services/ai-video-production", desc: "Adapt campaigns for global markets with voice localization and cultural QA." },
+    { title: "Product Launch", path: null, desc: "Complete visual packages to make your next launch unforgettable." },
+    { title: "SaaS & Explainers", path: null, desc: "Clear, engaging product explainer videos built for high conversion." },
+    { title: "Real Estate Films", path: null, desc: "Cinematic property and development films with responsible AI visualization." },
+    { title: "Corporate & Internal", path: null, desc: "Scalable video for training, announcements, and executive communications." },
+    { title: "Localization & Variants", path: null, desc: "Adapt campaigns for global markets with voice localization and cultural QA." },
   ];
 
   const faqs = [
