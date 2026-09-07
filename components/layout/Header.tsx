@@ -543,7 +543,9 @@ export function Header() {
     <>
       <header
         ref={headerRef}
-        className="fixed left-0 right-0 top-0 z-[1000] transition-all duration-300"
+        className={`fixed left-0 right-0 top-0 z-[1000] transition-all duration-300 ${
+          mobileOpen ? "hidden lg:block" : ""
+        }`}
         style={{
           background: scrolled
             ? "rgba(0,0,0,0.90)"
