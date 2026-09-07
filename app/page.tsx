@@ -14,6 +14,7 @@ import {
   Comparison,
   CaseStudies,
   FinalCTA,
+  HomeVisualShowcase,
   
 } from "@/components/sections";
 
@@ -98,7 +99,7 @@ export default function HomePage() {
   const { caseStudies, ...homepage } = siteContent;
 
   return (
-    <>
+    <div className="overflow-x-clip">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
@@ -111,11 +112,12 @@ export default function HomePage() {
       <Hero content={homepage.hero} stats={homepage.proofStats} />
       <Problems problems={homepage.problems} />
       <Capabilities capabilities={homepage.capabilities} />
+      <HomeVisualShowcase />
       
       <Pipeline steps={homepage.pipeline} />
       <Comparison rows={homepage.comparison} />
       <CaseStudies caseStudies={caseStudies.slice(0, 1)} />
       <FinalCTA content={homepage.cta} />
-    </>
+    </div>
   );
 }
