@@ -1,0 +1,200 @@
+.document {
+  position: relative;
+  height: 720vh;
+  margin-inline: calc(50% - 50vw);
+  background: #090909;
+  border-block: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  min-height: 42rem;
+  overflow: hidden;
+  padding: clamp(7rem, 12vh, 10rem) clamp(1.25rem, 5vw, 5rem) 2rem;
+  perspective: 1500px;
+  transform-style: preserve-3d;
+  background: radial-gradient(circle at 50% 45%, rgba(255, 255, 255, 0.045), transparent 34%), #090909;
+}
+
+.header,
+.footer {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  max-width: 80rem;
+  margin-inline: auto;
+}
+
+.kicker {
+  margin: 0 0 0.7rem;
+  color: rgba(255, 255, 255, 0.42);
+  font: 600 0.68rem/1.2 var(--font-sans);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.header h2 {
+  margin: 0;
+  color: white;
+  font: 500 clamp(1.8rem, 3.6vw, 3.5rem)/1.05 var(--font-display);
+  letter-spacing: -0.03em;
+}
+
+.note {
+  max-width: 10rem;
+  margin: 0 0 0.15rem;
+  color: rgba(255, 255, 255, 0.42);
+  font: 0.72rem/1.45 var(--font-sans);
+  text-align: right;
+}
+
+.stage {
+  position: absolute;
+  inset: 18% 0 10%;
+  perspective: 1500px;
+  transform-style: preserve-3d;
+}
+
+.rule {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(42rem, 72vw);
+  height: min(56rem, 72vh);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transform: translate(-50%, -50%) rotate(3deg);
+  pointer-events: none;
+}
+
+.artwork {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #111;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.5);
+  cursor: zoom-in;
+  transform-style: preserve-3d;
+  transition: box-shadow 450ms ease, border-color 350ms ease;
+  will-change: transform, opacity;
+}
+
+.artwork:hover,
+.artwork:focus-visible {
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 2.5rem 6rem rgba(0, 0, 0, 0.7);
+  outline: none;
+}
+
+.artwork img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.88) contrast(1.04);
+}
+
+.portrait { width: min(31vw, 29rem); height: min(63vh, 39rem); }
+.landscape { width: min(47vw, 48rem); height: min(48vh, 30rem); }
+.square { width: min(38vw, 36rem); height: min(55vh, 35rem); }
+
+.footer {
+  position: absolute;
+  right: clamp(1.25rem, 5vw, 5rem);
+  bottom: 2rem;
+  left: clamp(1.25rem, 5vw, 5rem);
+  align-items: center;
+  gap: 1.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  font: 600 0.68rem/1 var(--font-display);
+  letter-spacing: 0.15em;
+}
+
+.progressTrack {
+  width: min(15rem, 32vw);
+  height: 1px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.progressTrack span {
+  display: block;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.78);
+  transition: width 120ms linear;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: grid;
+  place-items: center;
+  padding: 4rem 1.5rem 2rem;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(18px);
+}
+
+.modal > img {
+  max-width: min(90vw, 70rem);
+  max-height: 88vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.75);
+}
+
+.close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .document { height: 680vh; }
+  .sticky { min-height: 38rem; perspective: 1050px; }
+  .stage { inset-block: 20% 12%; }
+  .portrait { width: min(42vw, 26rem); height: min(58vh, 32rem); }
+  .landscape { width: min(60vw, 40rem); height: min(42vh, 24rem); }
+  .square { width: min(48vw, 31rem); height: min(48vh, 28rem); }
+}
+
+@media (max-width: 640px) {
+  .document { height: 570vh; }
+  .sticky { min-height: 36rem; padding: 6.5rem 1.25rem 1.5rem; perspective: 850px; }
+  .header { align-items: flex-start; }
+  .header h2 { max-width: 13rem; font-size: 2rem; }
+  .note { display: none; }
+  .stage { inset: 22% 0 14%; }
+  .rule { width: 76vw; height: 61vh; }
+  .portrait { width: min(68vw, 18rem); height: min(54vh, 25rem); }
+  .landscape { width: min(82vw, 21rem); height: min(35vh, 16rem); }
+  .square { width: min(74vw, 19rem); height: min(45vh, 20rem); }
+  .footer { right: 1.25rem; bottom: 1.5rem; left: 1.25rem; }
+  .progressTrack { width: 40vw; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .document { height: auto; }
+  .sticky { position: relative; height: auto; min-height: 42rem; }
+  .stage { position: relative; inset: auto; height: 34rem; margin-top: 2rem; perspective: 900px; }
+  .artwork { opacity: 0.18 !important; transform: translate3d(-50%, -50%, -180px) scale(0.82) !important; }
+  .artwork:first-of-type { z-index: 5; opacity: 1 !important; transform: translate3d(-50%, -50%, 0) scale(1) !important; }
+  .footer { position: relative; right: auto; bottom: auto; left: auto; margin-top: 1rem; }
+}

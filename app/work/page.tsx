@@ -8,6 +8,7 @@ export const metadata: Metadata = {
 import { ArrowRight } from "lucide-react";
 import { Container, Section, Button, Heading } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
+import { CreativeDocument } from "./CreativeDocument";
 
 export default function WorkPage() {
   const categories = [
@@ -61,6 +62,8 @@ export default function WorkPage() {
               Selected work across formats and industries.
             </p>
           </div>
+
+          <CreativeDocument />
 
           <div className="grid gap-6 md:grid-cols-2 mb-20">
             {categories.map((cat) => (
