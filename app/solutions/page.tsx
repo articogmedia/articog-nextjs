@@ -57,21 +57,21 @@ export default function SolutionsPage() {
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 mb-24">
+          <div className="grid gap-3 md:grid-cols-2 mb-24">
             {cards.map((card) => (
               <Link
                 key={card.title}
                 href={card.href}
-                className="group rounded-2xl p-8 border border-white/[0.08] transition-all hover:border-white/20 hover:bg-white/[0.02]"
+                className="group flex items-center justify-between rounded-xl p-5 border border-white/[0.08] transition-colors hover:border-white/20 hover:bg-white/[0.02]"
                 style={{ background: "rgba(255,255,255,0.01)" }}
               >
-                <h3 className="mb-4 font-display text-xl font-semibold text-white flex items-center justify-between">
-                  {card.title}
-                  <ArrowRight size={18} className="opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0" />
-                </h3>
-                <p className="font-sans text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.50)" }}>
-                  {card.description}
-                </p>
+                <div>
+                  <h3 className="font-display text-base font-semibold text-white">{card.title}</h3>
+                  <p className="mt-1 font-sans text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.50)" }}>
+                    {card.description}
+                  </p>
+                </div>
+                <ArrowRight size={18} className="ml-4 shrink-0 text-white/35 transition-transform group-hover:translate-x-0.5 group-hover:text-white/70" />
               </Link>
             ))}
           </div>

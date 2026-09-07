@@ -275,20 +275,27 @@ export function ServiceDetails({ category }: { category: ServiceCategory }) {
             The capabilities below are part of this service category and can be combined around your brief.
           </p>
         </div>
-        <div className="space-y-12">
+        <div className="space-y-3">
           {serviceGroups[category].map((group) => (
-            <div key={group.title}>
-              <h3 className="mb-3 font-display text-2xl font-semibold text-white">{group.title}</h3>
-              <p className="mb-6 max-w-3xl font-sans leading-relaxed text-white/50">{group.description}</p>
-              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {group.items.map((item) => (
-                  <div key={item.title} className="rounded-2xl border border-white/10 bg-white/5 p-6">
-                    <h4 className="mb-2 font-display text-lg font-semibold text-white">{item.title}</h4>
-                    <p className="font-sans text-sm leading-relaxed text-white/50">{item.description}</p>
-                  </div>
-                ))}
+            <details key={group.title} className="group rounded-2xl border border-white/10 bg-white/[0.02]">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 p-5 marker:hidden md:p-6">
+                <div className="max-w-3xl">
+                  <h3 className="font-display text-xl font-semibold text-white">{group.title}</h3>
+                  <p className="mt-2 font-sans text-sm leading-relaxed text-white/50">{group.description}</p>
+                </div>
+                <span className="shrink-0 font-sans text-2xl font-light text-white/40 transition-transform group-open:rotate-45">+</span>
+              </summary>
+              <div className="border-t border-white/10 p-5 md:p-6">
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+                  {group.items.map((item) => (
+                    <div key={item.title} className="rounded-xl border border-white/10 p-5">
+                      <h4 className="mb-2 font-display text-base font-semibold text-white">{item.title}</h4>
+                      <p className="font-sans text-sm leading-relaxed text-white/50">{item.description}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+            </details>
           ))}
         </div>
       </Container>

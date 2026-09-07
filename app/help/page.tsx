@@ -3,7 +3,7 @@
 import { Container, Section, Button, Heading } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { useState } from "react";
-import { Search, ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 function AccordionItem({ title, children }: { title: string; children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -154,7 +154,7 @@ export default function HelpCenterPage() {
     <div className="bg-black min-h-screen">
       <Section size="lg" className="pt-32 md:pt-40">
         <Container>
-          <div className="mx-auto max-w-3xl text-center mb-16">
+          <div className="mx-auto max-w-3xl text-center mb-12">
             <span
               className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em]"
               style={{ color: "rgba(255,255,255,0.40)" }}
@@ -165,21 +165,9 @@ export default function HelpCenterPage() {
               Help Center
             </Heading>
             
-            {/* Search Bar Placeholder */}
-            <div className="relative max-w-xl mx-auto mb-4">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-white/20" size={18} />
-              <input 
-                type="text" 
-                placeholder="Search for articles, guides, or keywords..." 
-                className="w-full bg-white/[0.03] border border-white/[0.1] rounded-full py-4 pl-12 pr-6 font-sans text-sm text-white placeholder:text-white/20 focus:outline-none focus:border-white/30 transition-colors"
-              />
-            </div>
-            <p className="font-sans text-[11px] text-white/30 uppercase tracking-widest mt-4">
-              Common topics: Ownership, Pricing, Turnaround Time, AI Workflow
-            </p>
           </div>
 
-          <div className="max-w-3xl mx-auto space-y-16 mb-24">
+          <div className="max-w-3xl mx-auto space-y-12 mb-20">
             {sections.map((section, idx) => (
               <div key={idx} className="scroll-mt-32" id={section.title.toLowerCase().replace(/\s+/g, '-')}>
                 <div className="flex items-end justify-between mb-6 border-b border-white/[0.1] pb-4">

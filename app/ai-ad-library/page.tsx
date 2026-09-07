@@ -3,6 +3,7 @@
 import { Container, Section, Button, Heading } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { useState } from "react";
+import { YouTubeEmbed } from "@/components/blog/YouTubeEmbed";
 
 export default function AdLibraryPage() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -96,19 +97,20 @@ export default function AdLibraryPage() {
 
           </div>
 
+          <div className="mb-16 max-w-3xl">
+            <YouTubeEmbed
+              videoId="l5pReVGFVqs"
+              title="These Actors Don’t Exist. This Entire Ad Was Made With AI | Articog"
+            />
+          </div>
+
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-20">
             {visibleExamples.map((item, index) => (
               <div 
                 key={index}
-                className="group relative aspect-[4/5] rounded-2xl border border-white/[0.08] overflow-hidden bg-white/[0.02]"
+                className="group relative rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6"
               >
-                <div className="absolute inset-0 flex items-center justify-center text-white/5 font-display text-lg uppercase tracking-[0.2em] select-none">
-                  Preview
-                </div>
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
-                
-                <div className="absolute top-4 left-4 flex gap-2">
+                <div className="mb-12 flex gap-2">
                   <span className={`text-[9px] font-sans font-bold uppercase tracking-wider px-2 py-0.5 rounded border ${
                     item.type === 'Client Work' 
                       ? 'bg-blue-500/10 text-blue-400 border-blue-500/20' 
@@ -118,7 +120,7 @@ export default function AdLibraryPage() {
                   </span>
                 </div>
 
-                <div className="absolute bottom-6 left-6 right-6">
+                <div>
                   <div className="flex flex-wrap gap-2 mb-3">
                     <span className="text-[8px] font-sans font-bold uppercase tracking-[0.1em] text-white/40 bg-white/[0.05] px-1.5 py-0.5 rounded">
                       {item.category}

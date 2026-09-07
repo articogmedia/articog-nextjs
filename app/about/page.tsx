@@ -8,11 +8,8 @@ export const metadata: Metadata = {
 import { Link } from "@/components/ui/Link";
 import { Container, Section, Button, Heading } from "@/components/ui";
 import { ArrowRight } from "lucide-react";
-import { siteContent } from "@/lib/content";
 
 export default function AboutPage() {
-  const problems = siteContent.problems;
-
   return (
     <div className="bg-black">
       {/* Hero Section */}
@@ -41,38 +38,16 @@ export default function AboutPage() {
       {/* Why We Exist Section */}
       <Section size="md" className="border-t border-white/[0.05]">
         <Container>
-          <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-24">
-            <div className="lg:col-span-4">
-              <div className="lg:sticky lg:top-28 space-y-3">
-                <Heading as="h2" size="label">Why We Exist</Heading>
-                <Heading as="p" size="section">
-                  Why creative production is broken
-                </Heading>
-              </div>
+          <div className="mx-auto grid max-w-4xl gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+            <div className="space-y-3">
+              <Heading as="h2" size="label">Why We Exist</Heading>
+              <Heading as="p" size="section">
+                Why creative production is broken
+              </Heading>
             </div>
-            <div className="lg:col-span-8 divide-y divide-white/[0.07]">
-              {problems.map((p) => (
-                <article key={p.number} className="flex gap-6 py-6">
-                  <span
-                    className="font-display text-xs font-semibold shrink-0 pt-1 w-7 tabular-nums"
-                    style={{ color: "rgba(255,255,255,0.3)" }}
-                  >
-                    {p.number}
-                  </span>
-                  <div className="space-y-1.5">
-                    <h3 className="font-display text-base font-semibold text-white">
-                      {p.title}
-                    </h3>
-                    <p
-                      className="font-sans text-sm leading-relaxed"
-                      style={{ color: "rgba(255,255,255,0.50)" }}
-                    >
-                      {p.description}
-                    </p>
-                  </div>
-                </article>
-              ))}
-            </div>
+            <p className="font-sans text-lg leading-relaxed text-white/60">
+              Content demand scales, but headcount doesn&apos;t. Campaigns slip and assets get recycled. Spend grows, but creative volume stays flat and audiences saturate.
+            </p>
           </div>
         </Container>
       </Section>

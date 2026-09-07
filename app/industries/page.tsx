@@ -64,7 +64,7 @@ export default function IndustriesPage() {
 
   return (
     <div className="bg-black min-h-screen">
-      <Section size="lg" className="pt-32 md:pt-40 text-center">
+      <Section size="lg" className="pt-32 pb-24 md:pt-40 md:pb-32 text-center">
         <Container>
           <div className="max-w-3xl mx-auto">
             <span className="font-sans text-[10px] font-bold tracking-[0.2em] text-white/50 uppercase mb-6 inline-block">
@@ -78,27 +78,49 @@ export default function IndustriesPage() {
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-24 max-w-6xl mx-auto text-left">
+          <div className="mx-auto mb-24 grid max-w-5xl gap-px overflow-hidden rounded-2xl border border-white/[0.1] bg-white/[0.1] text-left sm:grid-cols-2">
             {industries.map((industry) => (
               <Link
                 key={industry.title}
                 href={industry.href}
-                className="group rounded-2xl p-8 border border-white/[0.08] transition-all hover:border-white/20 hover:bg-white/[0.02]"
-                style={{ background: "rgba(255,255,255,0.01)" }}
+                className="group flex min-h-32 flex-col justify-between bg-black p-5 transition-colors hover:bg-white/[0.04] md:min-h-36 md:p-6"
               >
-                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mb-6">
-                  <industry.icon className="w-5 h-5 text-white" />
+                <div className="flex items-center justify-between">
+                  <industry.icon className="h-4 w-4 text-white/50" />
+                  <ArrowRight size={15} className="text-white/30 transition-transform group-hover:translate-x-0.5 group-hover:text-white/70" />
                 </div>
-                <h3 className="mb-4 font-display text-xl font-semibold text-white flex items-center justify-between">
-                  {industry.title}
-                  <ArrowRight size={18} className="opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0" />
-                </h3>
-                <p className="font-sans text-sm leading-relaxed text-white/50">
-                  {industry.description}
-                </p>
+                <div className="mt-8">
+                  <h3 className="font-display text-base font-semibold text-white">{industry.title}</h3>
+                  <p className="mt-2 max-w-sm font-sans text-xs leading-relaxed text-white/50">{industry.description}</p>
+                </div>
               </Link>
             ))}
           </div>
+
+          <section className="relative mx-auto mb-20 min-h-[18rem] max-w-6xl overflow-hidden rounded-2xl border border-white/[0.08] text-left">
+            <video
+              autoPlay
+              muted
+              playsInline
+              loop
+              controls={false}
+              preload="metadata"
+              poster="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:good,f_auto,w_1600,so_0/v1786974706/Web_2.jpg"
+              className="absolute inset-0 h-full w-full object-cover opacity-55"
+              aria-hidden="true"
+            >
+              <source
+                src="https://res.cloudinary.com/hmy5ctzy/video/upload/f_mp4,vc_h264,q_auto:good,w_1600,dpr_auto,c_limit/v1786974706/Web_2.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div className="absolute inset-0 bg-black/45" />
+            <div className="relative flex min-h-[18rem] items-end p-6 md:p-8">
+              <p className="font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-white/60">
+                Selected work
+              </p>
+            </div>
+          </section>
 
           <IndustryDetails />
 

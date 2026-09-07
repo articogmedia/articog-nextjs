@@ -149,45 +149,64 @@ const industryDetails: IndustryDetail[] = [
 
 export function IndustryDetails() {
   return (
-    <Section className="border-t border-white/10 py-20 text-left">
+    <Section className="border-t border-white/10 py-28 text-left md:py-36">
       <Container>
-        <div className="mb-12 max-w-3xl">
-          <h2 className="mb-4 font-display text-3xl font-semibold text-white">Creative production by industry</h2>
-          <p className="font-sans leading-relaxed text-white/50">Each sector brings different requirements for fidelity, speed, compliance, and channel delivery.</p>
+        <div className="mb-12 max-w-2xl md:mb-16">
+          <p className="mb-3 font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-white/40">Explore by industry</p>
+          <h2 className="font-display text-3xl font-semibold tracking-tight text-white md:text-4xl">Creative production by industry</h2>
         </div>
-        <div className="space-y-16">
+        <div className="grid gap-4 lg:grid-cols-2">
           {industryDetails.map((industry) => (
-            <section key={industry.id} id={industry.id} className="scroll-mt-24">
-              <div className="mb-6 max-w-3xl">
-                <h3 className="mb-3 font-display text-2xl font-semibold text-white">{industry.title}</h3>
-                <p className="font-sans leading-relaxed text-white/60">{industry.positioning}</p>
-              </div>
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-                {industry.considerations.map((item) => (
-                  <div key={item.title} className="rounded-2xl border border-white/[0.08] bg-white/[0.01] p-6">
-                    <h4 className="mb-3 font-display text-lg font-semibold text-white">{item.title}</h4>
-                    <p className="font-sans text-sm leading-relaxed text-white/50">{item.description}</p>
+            <details key={industry.id} id={industry.id} className="group scroll-mt-24 overflow-hidden rounded-2xl border border-white/[0.1] bg-white/[0.02] transition-colors open:border-white/[0.2]">
+              <summary className="flex min-h-64 cursor-pointer list-none flex-col justify-between gap-8 p-6 marker:hidden md:min-h-72 md:p-8">
+                <div className="flex items-start justify-between gap-6">
+                  <div className="min-w-0">
+                    <h3 className="font-display text-xl font-semibold text-white md:text-2xl">{industry.title}</h3>
+                    <p className="mt-4 max-w-xl font-sans text-sm leading-relaxed text-white/60">{industry.positioning}</p>
                   </div>
-                ))}
-              </div>
-              {industry.serviceLinks && (
-                <div className="mt-6 flex flex-wrap gap-4 text-sm font-medium">
-                  {industry.serviceLinks.map((link) => (
-                    <Link key={link.href} href={link.href} className="text-white underline underline-offset-4 hover:text-white/70">{link.label}</Link>
-                  ))}
+                  <span className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 text-lg font-light leading-none text-white/50 transition-transform group-open:rotate-45">+</span>
                 </div>
-              )}
-              {industry.faqs && (
-                <div className="mt-8 grid gap-6 md:grid-cols-2">
-                  {industry.faqs.map((faq) => (
-                    <div key={faq.question} className="border-l border-white/20 pl-5">
-                      <h4 className="mb-2 font-display text-base font-semibold text-white">{faq.question}</h4>
-                      <p className="font-sans text-sm leading-relaxed text-white/50">{faq.answer}</p>
+                <div>
+                  <p className="mb-3 font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-white/35">Key focus</p>
+                  <p className="max-w-xl font-display text-sm font-medium leading-relaxed text-white/80">{industry.considerations[0].title}</p>
+                  {industry.serviceLinks && (
+                    <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-xs font-medium">
+                      {industry.serviceLinks.map((link) => (
+                        <span key={link.href} className="text-white/70">{link.label}</span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </summary>
+              <div className="border-t border-white/[0.08] px-6 pb-6 pt-6 md:px-8 md:pb-8">
+                <p className="mb-4 font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-white/35">Additional details</p>
+                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                  {industry.considerations.map((item) => (
+                    <div key={item.title} className="rounded-xl border border-white/[0.08] bg-black/10 p-4">
+                      <h4 className="mb-2 font-display text-sm font-semibold text-white">{item.title}</h4>
+                      <p className="font-sans text-xs leading-relaxed text-white/50">{item.description}</p>
                     </div>
                   ))}
                 </div>
-              )}
-            </section>
+                {industry.serviceLinks && (
+                  <div className="mt-5 flex flex-wrap gap-4 text-sm font-medium">
+                    {industry.serviceLinks.map((link) => (
+                      <Link key={link.href} href={link.href} className="text-white underline underline-offset-4 hover:text-white/70">{link.label}</Link>
+                    ))}
+                  </div>
+                )}
+                {industry.faqs && (
+                  <div className="mt-6 grid gap-4 md:grid-cols-2">
+                    {industry.faqs.map((faq) => (
+                      <div key={faq.question} className="border-l border-white/20 pl-5">
+                        <h4 className="mb-2 font-display text-base font-semibold text-white">{faq.question}</h4>
+                        <p className="font-sans text-sm leading-relaxed text-white/50">{faq.answer}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </details>
           ))}
         </div>
       </Container>

@@ -323,42 +323,29 @@ export default function ServicesPage() {
                 {group.category}
               </h2>
 
-              <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {group.items.map((service) => (
                   <Link
                     key={service.href}
                     href={service.href}
-                    className="group flex flex-col rounded-2xl p-7 transition-all duration-200 hover:-translate-y-1"
+                    className="group flex items-center justify-between rounded-xl p-5 transition-colors duration-200 hover:bg-white/[0.05]"
                     style={{
                       background: "rgba(255,255,255,0.03)",
                       border: "1px solid rgba(255,255,255,0.08)",
                     }}
                   >
                     <h3
-                      className="font-display text-lg font-semibold text-white transition-colors duration-200 group-hover:text-white/90"
+                      className="font-display text-base font-semibold text-white transition-colors duration-200 group-hover:text-white/90"
                       style={{
                         letterSpacing: "-0.01em",
                       }}
                     >
                       {service.title}
                     </h3>
-
-                    <p
-                      className="mt-3 font-sans text-sm leading-relaxed"
-                      style={{
-                        color: "rgba(255,255,255,0.50)",
-                      }}
-                    >
-                      {service.description}
-                    </p>
-
-                    <span className="mt-auto inline-flex items-center gap-1.5 pt-5 font-sans text-sm font-medium text-accent transition-colors duration-200 group-hover:text-accent-hover">
-                      Learn more
-                      <ArrowRight
-                        size={14}
-                        className="transition-transform duration-200 group-hover:translate-x-0.5"
-                      />
-                    </span>
+                    <ArrowRight
+                      size={14}
+                      className="shrink-0 text-white/35 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:text-white/70"
+                    />
                   </Link>
                 ))}
               </div>

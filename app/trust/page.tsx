@@ -13,33 +13,19 @@ export default function TrustPage() {
   const cards = [
     {
       title: "AI & Intellectual Property",
-      description: "As an AI-native production company, we take intellectual property seriously. We structure every engagement so you retain ownership of the final creative work, with clear documentation of how AI tools are used in the production process.",
       href: "/trust/ai-and-ip",
     },
     {
       title: "Security & Confidentiality",
-      description: "Client briefs, product details, and brand assets are handled with strict confidentiality. We use controlled access, NDA protections, and careful vendor selection to keep your data and creative direction secure.",
       href: "/trust/security",
     },
     {
       title: "Rights, Licensing & Ownership",
-      description: "Delivered assets come with clearly defined commercial usage rights. We handle music, stock, voice, and third-party licensing so your team can publish with confidence.",
       href: "/trust/rights-licensing",
     },
     {
-      title: "Responsible AI",
-      description: "We follow strict ethical guidelines for AI use, including mandatory human review, verified likeness consent, and clear escalation paths to ensure brand safety.",
-      href: "/trust/ai-and-ip",
-    },
-    {
       title: "Data Handling & Retention",
-      description: "Learn how we manage, store, and protect your brand's data and creative materials throughout the production process.",
       href: "/trust/data-handling",
-    },
-    {
-      title: "Subprocessors & Key Vendors",
-      description: "Transparency into the third-party tools and vendors we use to deliver our services.",
-      href: "/contact",
     },
   ];
 
@@ -62,23 +48,29 @@ export default function TrustPage() {
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-3 mb-24">
+          <div className="grid gap-3 md:grid-cols-2 mb-12">
             {cards.map((card) => (
               <Link
                 key={card.title}
                 href={card.href}
-                className="group rounded-2xl p-8 border border-white/[0.08] transition-all hover:border-white/20 hover:bg-white/[0.02]"
+                className="group flex items-center justify-between rounded-xl p-5 border border-white/[0.08] transition-colors hover:border-white/20 hover:bg-white/[0.02]"
                 style={{ background: "rgba(255,255,255,0.01)" }}
               >
-                <h3 className="mb-4 font-display text-xl font-semibold text-white flex items-center justify-between">
+                <h3 className="font-display text-base font-semibold text-white">
                   {card.title}
-                  <ArrowRight size={18} className="opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0" />
                 </h3>
-                <p className="font-sans text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.50)" }}>
-                  {card.description}
-                </p>
+                <ArrowRight size={18} className="ml-4 shrink-0 text-white/35 transition-transform group-hover:translate-x-0.5 group-hover:text-white/70" />
               </Link>
             ))}
+          </div>
+
+          <div className="mb-24 flex flex-wrap justify-center gap-x-6 gap-y-2 border-t border-white/10 pt-5 text-center">
+            <Link href="/trust/ai-and-ip" className="font-sans text-xs text-white/45 transition-colors hover:text-white">
+              Responsible AI
+            </Link>
+            <Link href="/contact" className="font-sans text-xs text-white/45 transition-colors hover:text-white">
+              Subprocessors & Key Vendors
+            </Link>
           </div>
 
           <div className="text-center pt-12 border-t border-white/10">

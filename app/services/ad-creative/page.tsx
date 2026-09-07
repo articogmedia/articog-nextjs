@@ -7,8 +7,9 @@ export const metadata: Metadata = {
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
-import { Share2, Monitor, Search, BarChart3, ArrowRight } from "lucide-react";
+import { Share2, Monitor, Search, ArrowRight } from "lucide-react";
 import { ServiceDetails } from "@/components/sections/ServiceDetails";
+import { YouTubeEmbed } from "@/components/blog/YouTubeEmbed";
 
 export default function AdCreativePage() {
   const deliverables = [
@@ -137,9 +138,11 @@ export default function AdCreativePage() {
                 ))}
               </div>
             </div>
-            <div className="relative aspect-video rounded-3xl overflow-hidden bg-white/5 border border-white/10 flex items-center justify-center p-12">
-              <BarChart3 className="w-32 h-32 text-white/10" />
-              <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent" />
+            <div className="relative">
+              <YouTubeEmbed
+                videoId="l5pReVGFVqs"
+                title="These Actors Don’t Exist. This Entire Ad Was Made With AI | Articog"
+              />
             </div>
           </div>
         </Container>

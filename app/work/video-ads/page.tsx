@@ -10,6 +10,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
+import { YouTubeEmbed } from "@/components/blog/YouTubeEmbed";
 
 export default function VideoAdsGalleryPage() {
   const examples = [
@@ -32,11 +33,16 @@ export default function VideoAdsGalleryPage() {
               Explore our latest AI-generated video creative across industries and formats.
             </p>
 
+            <div className="mb-16 max-w-3xl">
+              <YouTubeEmbed
+                videoId="l5pReVGFVqs"
+                title="These Actors Don’t Exist. This Entire Ad Was Made With AI | Articog"
+              />
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {examples.map((item, idx) => (
                 <div key={idx} className="group">
-                  <div className="aspect-video bg-zinc-900 rounded-2xl border border-zinc-800 mb-4 overflow-hidden relative">
-                  </div>
                   <div className="flex justify-between items-start mb-2">
                     <h3 className="font-bold text-lg">{item.title}</h3>
                     <span className="text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-zinc-800 text-zinc-400">

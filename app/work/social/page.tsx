@@ -8,6 +8,7 @@ export const metadata: Metadata = {
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Instagram, Smartphone, Grid, Info } from "lucide-react";
+import { YouTubeEmbed } from "@/components/blog/YouTubeEmbed";
 
 export default function SocialWorkPage() {
   const formats = [
@@ -50,21 +51,26 @@ export default function SocialWorkPage() {
 
       <Section className="py-20 bg-white/[0.02]">
         <Container>
-          <div className="mb-12">
-            <h2 className="font-display text-3xl font-semibold text-white mb-4 text-center">Format Mockups</h2>
+          <div className="mb-12 max-w-3xl">
+            <h2 className="font-display text-3xl font-semibold text-white mb-4">A real example</h2>
             <p className="font-sans text-white/50 max-w-2xl mx-auto text-center">
               We deliver assets optimized for every platform's unique requirements and user behaviors.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="max-w-3xl mb-16">
+            <YouTubeEmbed
+              videoId="l5pReVGFVqs"
+              title="These Actors Don’t Exist. This Entire Ad Was Made With AI | Articog"
+            />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {formats.map((format) => (
               <div 
                 key={format.title} 
-                className="group relative flex flex-col items-center text-center"
+                className="group flex flex-col rounded-2xl border border-white/10 bg-white/5 p-6 text-center"
               >
-                <div className="w-full aspect-[4/5] rounded-3xl bg-white/5 border border-white/10 mb-6 flex items-center justify-center group-hover:bg-white/[0.08] transition-colors relative overflow-hidden">
-                  <format.icon className="w-16 h-16 text-white/10" />
-                  <div className="absolute bottom-4 left-4 right-4 h-12 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm" />
+                <div className="mb-5 flex h-12 w-12 items-center justify-center self-center rounded-xl border border-white/10 text-white/40">
+                  <format.icon className="h-6 w-6" />
                 </div>
                 <h3 className="font-display text-xl font-semibold text-white mb-2">{format.title}</h3>
                 <p className="font-sans text-sm text-white/50 leading-relaxed max-w-[240px]">{format.desc}</p>

@@ -43,30 +43,6 @@ export default function WorkPage() {
     },
   ];
 
-  const caseStudies = [
-    {
-      client: "E-Commerce Brand",
-      industry: "Retail",
-      service: "AI Video Ad Creations",
-      headline: "10× creative output with zero headcount increase",
-      metric: "10× Output volume",
-    },
-    {
-      client: "DTC Beauty Brand",
-      industry: "Beauty",
-      service: "UGC/Social Content",
-      headline: "Full campaign live 72 hours from brief",
-      metric: "72h Brief to launch",
-    },
-    {
-      client: "SaaS Startup",
-      industry: "Technology",
-      service: "ML Creations/Paid Social",
-      headline: "3.2× ROAS lift on paid social in 60 days",
-      metric: "3.2× ROAS improvement",
-    },
-  ];
-
   return (
     <div className="bg-black min-h-screen">
       <Section size="lg" className="pt-32 md:pt-40 pb-16">
@@ -104,40 +80,9 @@ export default function WorkPage() {
               </Link>
             ))}
           </div>
-        </Container>
-      </Section>
-
-      <Section size="md" className="pt-0 pb-32">
-        <Container>
-          <div className="grid gap-8 md:grid-cols-3 mb-24">
-            {caseStudies.map((study) => (
-              <div
-                key={study.headline}
-                className="group flex flex-col rounded-2xl p-8 border border-white/[0.08]"
-                style={{ background: "rgba(255,255,255,0.02)" }}
-              >
-                <div className="mb-6 font-display text-2xl font-bold text-accent">
-                  {study.metric}
-                </div>
-                <div className="mb-4 flex flex-wrap gap-2">
-                  {[study.client, study.industry, study.service].map((tag) => (
-                    <span 
-                      key={tag}
-                      className="px-2 py-0.5 rounded-full font-sans text-[10px] font-medium uppercase tracking-wider bg-white/[0.05] text-white/50 border border-white/[0.08]"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <h3 className="font-display text-lg font-semibold text-white leading-tight">
-                  {study.headline}
-                </h3>
-              </div>
-            ))}
-          </div>
 
           <div className="text-center pt-16 border-t border-white/10">
-            <p className="font-sans text-lg mb-8 text-white/60">Want outcomes like these for your brand?</p>
+            <p className="font-sans text-lg mb-8 text-white/60">Want work like this for your brand?</p>
             <Button asChild variant="primary" size="lg">
               <Link href="/book-a-demo">Talk to us</Link>
             </Button>

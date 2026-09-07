@@ -33,13 +33,7 @@ export default function ProductVisualsPage() {
       {/* Case Study Section */}
       <Section className="py-20 bg-white/[0.02]">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="aspect-video bg-white/5 rounded-2xl border border-white/10 flex items-center justify-center overflow-hidden group">
-               {/* Placeholder for case study visual */}
-               <div className="text-white/20 font-display text-lg group-hover:text-white/40 transition-colors">
-                 DTC Beauty Brand Case Study Visual
-               </div>
-            </div>
+          <div className="max-w-3xl">
             <div className="space-y-8">
               <div>
                 <div className="flex items-center gap-3 mb-4">
