@@ -13,8 +13,8 @@ import { ShieldCheck, ArrowRight, Zap, Users } from "lucide-react";
 
 export default function AIVideoProductionPage() {
   const deliverables = [
-    { title: "Brand Films", path: "/services/ai-video-production", desc: "High-concept films that tell your brand's story with cinematic quality." },
-    { title: "Product Commercials", path: "/services/ai-video-production", desc: "Dynamic commercial spots showcasing products in stunning environments." },
+    { title: "Brand Films", path: null, desc: "High-concept films that tell your brand's story with cinematic quality." },
+    { title: "Product Commercials", path: null, desc: "Dynamic commercial spots showcasing products in stunning environments." },
     { title: "Performance Ads", path: "/services/ad-creative", desc: "Data-driven creative optimized for conversion across paid social." },
     { title: "Social & Reels", path: "/services/social-creative", desc: "Fast-paced, native content designed for high engagement on vertical platforms." },
     { title: "UGC-Style Ads", path: "/services/ad-creative", desc: "Authentic-feeling content that builds trust and drives action." },
@@ -73,21 +73,32 @@ export default function AIVideoProductionPage() {
             <p className="font-sans text-white/50">Comprehensive video solutions for every stage of the customer journey.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {deliverables.map((item) => (
-              <Link 
-                key={item.title} 
-                href={item.path}
-                className="group p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/[0.08] hover:border-white/20 transition-all duration-300 flex flex-col justify-between"
-              >
-                <div>
-                  <h3 className="font-display text-xl font-semibold text-white mb-3 group-hover:text-white transition-colors">{item.title}</h3>
-                  <p className="font-sans text-sm text-white/50 leading-relaxed mb-6">{item.desc}</p>
+            {deliverables.map((item) => {
+              const card = (
+                <>
+                  <div>
+                    <h3 className="font-display text-xl font-semibold text-white mb-3 group-hover:text-white transition-colors">{item.title}</h3>
+                    <p className="font-sans text-sm text-white/50 leading-relaxed mb-6">{item.desc}</p>
+                  </div>
+                  {item.path && (
+                    <div className="flex items-center text-xs font-bold tracking-widest text-white/30 group-hover:text-white/60 transition-colors uppercase">
+                      Learn More <ArrowRight className="ml-2 w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  )}
+                </>
+              );
+              const className = "group p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/[0.08] hover:border-white/20 transition-all duration-300 flex flex-col justify-between";
+
+              return item.path ? (
+                <Link key={item.title} href={item.path} className={className}>
+                  {card}
+                </Link>
+              ) : (
+                <div key={item.title} className={className}>
+                  {card}
                 </div>
-                <div className="flex items-center text-xs font-bold tracking-widest text-white/30 group-hover:text-white/60 transition-colors uppercase">
-                  Learn More <ArrowRight className="ml-2 w-3 h-3 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </Link>
-            ))}
+              );
+            })}
           </div>
         </Container>
       </Section>
