@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { X } from "lucide-react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Container, Section, Heading } from "@/components/ui";
 
 const visuals = [
@@ -68,7 +68,12 @@ const depthLayers = [
 ] as const;
 
 export function HomeVisualShowcase() {
+  const [activeIndex, setActiveIndex] = useState(0);
   const [selectedVisual, setSelectedVisual] = useState<(typeof visuals)[number] | null>(null);
+
+  const moveActiveIndex = (direction: -1 | 1) => {
+    setActiveIndex((current) => (current + direction + visuals.length) % visuals.length);
+  };
 
   useEffect(() => {
     if (!selectedVisual) return;
@@ -116,9 +121,10 @@ export function HomeVisualShowcase() {
                   <button
                     key={visual.src}
                     type="button"
-                    className={visual.slot}
+                    className={`${visual.slot} ${visuals.indexOf(visual) === activeIndex ? "showcase-slot--active" : ""}`}
                     onClick={() => setSelectedVisual(visual)}
                     aria-label={`Open ${visual.alt}`}
+                    aria-current={visuals.indexOf(visual) === activeIndex ? "true" : undefined}
                   >
                     <img
                       src={visual.src}
@@ -133,6 +139,38 @@ export function HomeVisualShowcase() {
                 ))}
               </div>
             ))}
+          </div>
+
+          <div className="showcase-navigation" aria-label="Visual gallery navigation">
+            <div className="showcase-navigation__meta">
+              <span className="showcase-navigation__count" aria-live="polite">
+                {String(activeIndex + 1).padStart(2, "0")} / {String(visuals.length).padStart(2, "0")}
+              </span>
+              <div className="showcase-navigation__track" aria-hidden="true">
+                <span
+                  className="showcase-navigation__progress"
+                  style={{ width: `${((activeIndex + 1) / visuals.length) * 100}%` }}
+                />
+              </div>
+            </div>
+            <div className="showcase-navigation__buttons">
+              <button
+                type="button"
+                onClick={() => moveActiveIndex(-1)}
+                aria-label="Previous image"
+                className="showcase-navigation__button"
+              >
+                <ChevronLeft size={17} strokeWidth={1.5} />
+              </button>
+              <button
+                type="button"
+                onClick={() => moveActiveIndex(1)}
+                aria-label="Next image"
+                className="showcase-navigation__button"
+              >
+                <ChevronRight size={17} strokeWidth={1.5} />
+              </button>
+            </div>
           </div>
         </Container>
       </Section>
