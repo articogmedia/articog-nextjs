@@ -206,11 +206,7 @@ function DropdownPanel({
 
   return (
     <div
-      className={
-        isServices
-          ? "fixed left-1/2 top-16 z-[99999] -translate-x-1/2"
-          : "absolute left-0 top-full z-[99999]"
-      }
+      className="absolute left-0 top-full z-[99999]"
       style={{
         width: isServices ? "900px" : "260px",
         maxWidth: isServices ? "calc(100vw - 32px)" : undefined,
