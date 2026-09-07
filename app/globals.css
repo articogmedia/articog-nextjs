@@ -130,6 +130,10 @@
   animation: showcaseForegroundTravel 14s ease-in-out infinite;
 }
 
+.showcase-layer--active {
+  z-index: 4;
+}
+
 .showcase-slot {
   position: absolute;
   display: block;
@@ -176,7 +180,7 @@
 }
 
 .showcase-slot--active {
-  z-index: 20;
+  z-index: 30;
   border-color: rgba(255, 255, 255, 0.42);
   box-shadow: 0 30px 72px rgba(0, 0, 0, 0.58);
   transform: translateZ(24px) scale(1.018);

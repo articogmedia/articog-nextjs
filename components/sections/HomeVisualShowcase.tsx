@@ -55,25 +55,44 @@ const visuals = [
 const depthLayers = [
   {
     name: "background",
-    visuals: [visuals[0], visuals[1], visuals[2]],
+    slots: [0, 1, 2],
   },
   {
     name: "midground",
-    visuals: [visuals[3], visuals[4], visuals[5]],
+    slots: [3, 4, 5],
   },
   {
     name: "foreground",
-    visuals: [visuals[6], visuals[7], visuals[8]],
+    slots: [6, 7, 8],
   },
 ] as const;
 
+const slotClassNames = visuals.map((visual) => visual.slot);
+
 export function HomeVisualShowcase() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [cycleOffset, setCycleOffset] = useState(0);
   const [selectedVisual, setSelectedVisual] = useState<(typeof visuals)[number] | null>(null);
 
   const moveActiveIndex = (direction: -1 | 1) => {
-    setActiveIndex((current) => (current + direction + visuals.length) % visuals.length);
+    setActiveIndex((current) => {
+      const next = (current + direction + visuals.length) % visuals.length;
+      setCycleOffset(next);
+      return next;
+    });
   };
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (mediaQuery.matches) return;
+
+    const interval = window.setInterval(() => {
+      setCycleOffset((current) => (current + 1) % visuals.length);
+      setActiveIndex((current) => (current + 1) % visuals.length);
+    }, 6000);
+
+    return () => window.clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     if (!selectedVisual) return;
@@ -114,14 +133,17 @@ export function HomeVisualShowcase() {
             {depthLayers.map((layer) => (
               <div
                 key={layer.name}
-                className={`showcase-layer showcase-layer--${layer.name}`}
+                className={`showcase-layer showcase-layer--${layer.name} ${layer.slots.some((slotIndex) => (slotIndex + cycleOffset) % visuals.length === activeIndex) ? "showcase-layer--active" : ""}`}
                 aria-label={`${layer.name} visual layer`}
               >
-                {layer.visuals.map((visual, index) => (
+                {layer.slots.map((slotIndex, index) => {
+                  const visual = visuals[(slotIndex + cycleOffset) % visuals.length];
+
+                  return (
                   <button
-                    key={visual.src}
+                    key={slotIndex}
                     type="button"
-                    className={`${visual.slot} ${visuals.indexOf(visual) === activeIndex ? "showcase-slot--active" : ""}`}
+                    className={`${slotClassNames[slotIndex]} ${visuals.indexOf(visual) === activeIndex ? "showcase-slot--active" : ""}`}
                     onClick={() => setSelectedVisual(visual)}
                     aria-label={`Open ${visual.alt}`}
                     aria-current={visuals.indexOf(visual) === activeIndex ? "true" : undefined}
@@ -136,7 +158,8 @@ export function HomeVisualShowcase() {
                       sizes="(max-width: 640px) 43vw, (max-width: 1024px) 28vw, 24vw"
                     />
                   </button>
-                ))}
+                  );
+                })}
               </div>
             ))}
           </div>
