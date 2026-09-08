@@ -1,7 +1,7 @@
 "use client";
 
 import { type CSSProperties, useEffect, useRef, useState } from "react";
-import { X } from "lucide-react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import styles from "./CreativeDocument.module.css";
 
 type Artwork = {
@@ -39,6 +39,17 @@ export function CreativeDocument() {
   const sectionRef = useRef<HTMLElement>(null);
   const [progress, setProgress] = useState(0);
   const [selected, setSelected] = useState<Artwork | null>(null);
+
+  const moveToArtwork = (offset: number) => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const currentIndex = Math.round(progress);
+    const nextIndex = (currentIndex + offset + artworks.length) % artworks.length;
+    const travel = Math.max(section.offsetHeight - window.innerHeight, 1);
+    const top = window.scrollY + section.getBoundingClientRect().top + travel * nextIndex / (artworks.length - 1);
+    window.scrollTo({ top, behavior: "smooth" });
+  };
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -154,16 +165,24 @@ export function CreativeDocument() {
           </div>
           <div className={styles.footer}>
             <span className={styles.srOnly} aria-live="polite">Artwork {Math.round(progress) + 1} of {artworks.length}</span>
-            <div
-              className={styles.progressTrack}
-              role="progressbar"
-              aria-label="Work gallery progress"
-              aria-valuemin={1}
-              aria-valuemax={artworks.length}
-              aria-valuenow={Math.round(progress) + 1}
-              aria-valuetext={`Artwork ${Math.round(progress) + 1} of ${artworks.length}`}
-            >
-              <span style={{ width: `${((progress + 1) / artworks.length) * 100}%` }} />
+            <div className={styles.controls}>
+              <div
+                className={styles.progressTrack}
+                role="progressbar"
+                aria-label="Work gallery progress"
+                aria-valuemin={1}
+                aria-valuemax={artworks.length}
+                aria-valuenow={Math.round(progress) + 1}
+                aria-valuetext={`Artwork ${Math.round(progress) + 1} of ${artworks.length}`}
+              >
+                <span style={{ width: `${((progress + 1) / artworks.length) * 100}%` }} />
+              </div>
+              <button type="button" className={styles.arrow} onClick={() => moveToArtwork(-1)} aria-label="Previous artwork">
+                <ChevronLeft size={16} aria-hidden="true" />
+              </button>
+              <button type="button" className={styles.arrow} onClick={() => moveToArtwork(1)} aria-label="Next artwork">
+                <ChevronRight size={16} aria-hidden="true" />
+              </button>
             </div>
           </div>
         </div>
