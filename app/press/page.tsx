@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 
@@ -31,8 +29,6 @@ export default function PressPage() {
 
   return (
     <div className="min-h-screen bg-black text-white flex flex-col font-sans">
-      <Header />
-
       <main className="flex-grow pt-32 pb-20">
         <Container>
           <div className="max-w-4xl mx-auto">
@@ -120,8 +116,6 @@ export default function PressPage() {
           </div>
         </Container>
       </main>
-
-      <Footer />
     </div>
   );
 }
