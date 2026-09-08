@@ -133,39 +133,41 @@ export function HomeVisualShowcase() {
           </div>
 
           <div className="showcase-stage" aria-label="Selected Articog visual studies">
-            {depthLayers.map((layer) => (
-              <div
-                key={layer.name}
-                className={`showcase-layer showcase-layer--${layer.name} ${layer.slots.some((slotIndex) => (slotIndex + cycleOffset) % visuals.length === activeIndex) ? "showcase-layer--active" : ""}`}
-                aria-label={`${layer.name} visual layer`}
-              >
-                {layer.slots.map((slotIndex, index) => {
-                  const visual = visuals[(slotIndex + cycleOffset) % visuals.length];
+            <div className="showcase-collage">
+              {depthLayers.map((layer) => (
+                <div
+                  key={layer.name}
+                  className={`showcase-layer showcase-layer--${layer.name} ${layer.slots.some((slotIndex) => (slotIndex + cycleOffset) % visuals.length === activeIndex) ? "showcase-layer--active" : ""}`}
+                  aria-label={`${layer.name} visual layer`}
+                >
+                  {layer.slots.map((slotIndex, index) => {
+                    const visual = visuals[(slotIndex + cycleOffset) % visuals.length];
 
-                  return (
-                  <button
-                    key={slotIndex}
-                    type="button"
-                    className={`${slotClassNames[slotIndex]} ${visuals.indexOf(visual) === activeIndex ? "showcase-slot--active" : ""}`}
-                    onClick={() => setSelectedVisual(visual)}
-                    aria-label={`Open ${visual.alt}`}
-                    aria-current={visuals.indexOf(visual) === activeIndex ? "true" : undefined}
-                  >
-                    <img
-                      src={getCloudinaryUrl(visual.src, 700)}
-                      srcSet={`${getCloudinaryUrl(visual.src, 480)} 480w, ${getCloudinaryUrl(visual.src, 700)} 700w, ${getCloudinaryUrl(visual.src, 900)} 900w`}
-                      sizes="(max-width: 640px) 43vw, (max-width: 1024px) 28vw, 24vw"
-                      alt={visual.alt}
-                      width={900}
-                      height={1200}
-                      loading={layer.name === "background" && index > 0 ? "lazy" : "eager"}
-                      decoding="async"
-                    />
-                  </button>
-                  );
-                })}
+                    return (
+                    <button
+                      key={slotIndex}
+                      type="button"
+                      className={`${slotClassNames[slotIndex]} ${visuals.indexOf(visual) === activeIndex ? "showcase-slot--active" : ""}`}
+                      onClick={() => setSelectedVisual(visual)}
+                      aria-label={`Open ${visual.alt}`}
+                      aria-current={visuals.indexOf(visual) === activeIndex ? "true" : undefined}
+                    >
+                      <img
+                        src={getCloudinaryUrl(visual.src, 700)}
+                        srcSet={`${getCloudinaryUrl(visual.src, 480)} 480w, ${getCloudinaryUrl(visual.src, 700)} 700w, ${getCloudinaryUrl(visual.src, 900)} 900w`}
+                        sizes="(max-width: 640px) 43vw, (max-width: 1024px) 28vw, 24vw"
+                        alt={visual.alt}
+                        width={900}
+                        height={1200}
+                        loading={layer.name === "background" && index > 0 ? "lazy" : "eager"}
+                        decoding="async"
+                      />
+                    </button>
+                    );
+                  })}
+                </div>
+              ))}
               </div>
-            ))}
           </div>
 
           <div className="showcase-navigation" aria-label="Visual gallery navigation">
