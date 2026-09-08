@@ -1,8 +1,6 @@
 "use client";
 
 import { Link } from "@/components/ui/Link";
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
 import { Button } from '@/components/ui/Button';
 import { useState } from 'react';
 import { toast } from 'sonner';
@@ -22,8 +20,6 @@ export default function PrivacyRequestPage() {
 
   return (
     <div className="min-h-screen bg-black text-white flex flex-col font-sans">
-      <Header />
-      
       <main className="flex-grow pt-32 pb-20 px-4">
         <div className="max-w-2xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Data Rights Request</h1>
@@ -110,7 +106,6 @@ export default function PrivacyRequestPage() {
         </div>
       </main>
 
-      <Footer />
     </div>
   );
 }
