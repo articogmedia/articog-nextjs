@@ -93,7 +93,7 @@
 
 .showcase-stage {
   position: relative;
-  min-height: 46rem;
+  min-height: 30rem;
   perspective: 1400px;
   transform-style: preserve-3d;
 }
@@ -216,7 +216,7 @@
   justify-content: center;
   gap: 0;
   max-width: none;
-  margin: 1.5rem auto 0;
+  margin: 0.5rem auto 0;
 }
 
 .showcase-navigation__buttons {
@@ -311,7 +311,7 @@
     }
   }
 
-  .showcase-stage { min-height: 22rem; margin-inline: 0; perspective: 900px; }
+  .showcase-stage { min-height: 16rem; margin-inline: 0; perspective: 900px; }
   .showcase-layer--background {
     animation: showcaseMobileBack 28s ease-in-out infinite;
   }
@@ -389,7 +389,7 @@
   .showcase-slot:hover,
   .showcase-slot:focus-visible { transform: translate3d(0, -4px, 18px) rotate(0deg) !important; }
   .showcase-slot--active { transform: translateZ(18px); }
-  .showcase-navigation { max-width: none; margin-top: 1.25rem; gap: 0; }
+  .showcase-navigation { max-width: none; margin-top: 0.5rem; gap: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {

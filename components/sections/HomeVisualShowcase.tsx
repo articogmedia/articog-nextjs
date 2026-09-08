@@ -72,6 +72,13 @@ const slotClassNames = visuals.map((visual) => visual.slot);
 const getCloudinaryUrl = (src: string, width: number) =>
   src.replace("/image/upload/", `/image/upload/f_auto,q_auto,dpr_auto,w_${width},c_limit/`);
 
+const getModalImageUrl = (src: string) => getCloudinaryUrl(src, 1200);
+
+const preloadModalImage = (src: string) => {
+  const image = new Image();
+  image.src = getModalImageUrl(src);
+};
+
 export function HomeVisualShowcase() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [cycleOffset, setCycleOffset] = useState(0);
@@ -118,7 +125,7 @@ export function HomeVisualShowcase() {
     <>
       <Section className="overflow-hidden border-y border-white/[0.06] bg-[#080808] py-24 md:py-32">
         <Container>
-          <div className="mb-12 flex items-end justify-between gap-8 md:mb-16">
+          <div className="mb-6 flex items-end justify-between gap-8 md:mb-8">
             <div className="max-w-xl">
               <Heading as="h2" size="label" className="mb-4 text-white/45">
                 Selected visual studies
@@ -149,6 +156,8 @@ export function HomeVisualShowcase() {
                       type="button"
                       className={`${slotClassNames[slotIndex]} ${visuals.indexOf(visual) === activeIndex ? "showcase-slot--active" : ""}`}
                       onClick={() => setSelectedVisual(visual)}
+                      onPointerEnter={() => preloadModalImage(visual.src)}
+                      onFocus={() => preloadModalImage(visual.src)}
                       aria-label={`Open ${visual.alt}`}
                       aria-current={visuals.indexOf(visual) === activeIndex ? "true" : undefined}
                     >
@@ -210,7 +219,7 @@ export function HomeVisualShowcase() {
             <X size={20} />
           </button>
           <img
-            src={getCloudinaryUrl(selectedVisual.src, 1600)}
+            src={getModalImageUrl(selectedVisual.src)}
             alt={selectedVisual.alt}
             width={1600}
             height={2000}
