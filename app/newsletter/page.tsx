@@ -1,5 +1,3 @@
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
 import Script from "next/script";
@@ -7,8 +5,6 @@ import Script from "next/script";
 export default function NewsletterPage() {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col font-sans">
-      <Header />
-      
       <main className="flex-grow pt-32 pb-20">
         <Container>
           <div className="max-w-2xl mx-auto">
@@ -30,8 +26,6 @@ export default function NewsletterPage() {
           </div>
         </Container>
       </main>
-
-      <Footer />
     </div>
   );
 }
