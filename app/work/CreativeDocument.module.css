@@ -77,11 +77,13 @@
   display: block;
   padding: 0;
   overflow: hidden;
+  border-radius: 0.65rem;
   border: 1px solid rgba(255, 255, 255, 0.15);
   background: #111;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.5);
   cursor: zoom-in;
   transform-style: preserve-3d;
+  transform: translate3d(calc(-50% + var(--base-x) + var(--arc-x)), calc(-50% + var(--base-y) + var(--arc-y)), var(--card-depth)) scale(var(--card-scale)) rotateY(var(--arc-rotate-y)) rotate(var(--arc-rotate-z));
   transition: box-shadow 450ms ease, border-color 350ms ease;
   will-change: transform, opacity;
 }
@@ -101,9 +103,9 @@
   filter: saturate(0.88) contrast(1.04);
 }
 
-.portrait { width: min(31vw, 29rem); height: min(63vh, 39rem); }
-.landscape { width: min(47vw, 48rem); height: min(48vh, 30rem); }
-.square { width: min(38vw, 36rem); height: min(55vh, 35rem); }
+.portrait { width: min(26vw, 24rem); height: min(53vh, 32rem); }
+.landscape { width: min(40vw, 40rem); height: min(41vh, 25rem); }
+.square { width: min(32vw, 30rem); height: min(47vh, 29rem); }
 
 .footer {
   position: absolute;
@@ -118,9 +120,20 @@
 }
 
 .progressTrack {
-  width: min(15rem, 32vw);
+  width: min(26rem, 32vw);
   height: 1px;
   background: rgba(255, 255, 255, 0.18);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .progressTrack span {
@@ -170,9 +183,9 @@
   .document { height: 680vh; }
   .sticky { min-height: 38rem; perspective: 1050px; }
   .stage { inset-block: 20% 12%; }
-  .portrait { width: min(42vw, 26rem); height: min(58vh, 32rem); }
-  .landscape { width: min(60vw, 40rem); height: min(42vh, 24rem); }
-  .square { width: min(48vw, 31rem); height: min(48vh, 28rem); }
+  .portrait { width: min(35vw, 22rem); height: min(49vh, 27rem); }
+  .landscape { width: min(51vw, 34rem); height: min(36vh, 20rem); }
+  .square { width: min(41vw, 26rem); height: min(41vh, 23rem); }
 }
 
 @media (max-width: 640px) {
@@ -183,11 +196,12 @@
   .note { display: none; }
   .stage { inset: 22% 0 14%; }
   .rule { width: 76vw; height: 61vh; }
-  .portrait { width: min(68vw, 18rem); height: min(54vh, 25rem); }
-  .landscape { width: min(82vw, 21rem); height: min(35vh, 16rem); }
-  .square { width: min(74vw, 19rem); height: min(45vh, 20rem); }
+  .portrait { width: min(58vw, 15.5rem); height: min(47vh, 22rem); }
+  .landscape { width: min(70vw, 18.5rem); height: min(30vh, 14rem); }
+  .square { width: min(63vw, 16rem); height: min(38vh, 17rem); }
+  .artwork { transform: translate3d(calc(-50% + var(--base-x) + var(--arc-x-mobile)), calc(-50% + var(--base-y) + var(--arc-y-mobile)), var(--card-depth)) scale(var(--card-scale)) rotateY(var(--arc-rotate-y-mobile)) rotate(var(--arc-rotate-z-mobile)); }
   .footer { right: 1.25rem; bottom: 1.5rem; left: 1.25rem; }
-  .progressTrack { width: 40vw; }
+  .progressTrack { width: min(16rem, 66vw); }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { type CSSProperties, useEffect, useRef, useState } from "react";
 import { X } from "lucide-react";
 import styles from "./CreativeDocument.module.css";
 
@@ -31,6 +31,9 @@ const artworks: Artwork[] = [
 ];
 
 const clamp = (value: number, min: number, max: number) => Math.min(Math.max(value, min), max);
+
+const getCloudinaryUrl = (src: string, width: number) =>
+  src.replace("/image/upload/", `/image/upload/f_auto,q_auto,w_${width},c_limit/`);
 
 export function CreativeDocument() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -94,13 +97,16 @@ export function CreativeDocument() {
               const proximity = Math.abs(distance);
               const entering = clamp(distance, 0, 1);
               const leaving = clamp(-distance, 0, 1);
-              const x = artwork.entryX * entering + artwork.exitX * leaving;
-              const y = artwork.entryY * entering + artwork.exitY * leaving;
-              const z = 120 - proximity * 260;
+              const baseX = (artwork.entryX * entering + artwork.exitX * leaving) * 0.35;
+              const baseY = (artwork.entryY * entering + artwork.exitY * leaving) * 0.35;
+              const arcDistance = clamp(distance, -1.5, 1.5);
+              const arcDrop = proximity * proximity * 5;
+              const z = 120 - proximity * 260 - proximity * proximity * 24;
               const scale = 1.04 - proximity * 0.18;
               const opacity = clamp(1 - proximity * 0.72, 0, 1);
-              const rotation = artwork.rotate * (entering - leaving);
               const isInteractive = opacity > 0.04;
+              const activeIndex = Math.round(progress);
+              const shouldLoad = index >= activeIndex - 1 && index <= activeIndex + 2;
 
               return (
                 <button
@@ -111,21 +117,54 @@ export function CreativeDocument() {
                     opacity,
                     zIndex: Math.round(100 - proximity * 10),
                     pointerEvents: isInteractive ? "auto" : "none",
-                    transform: `translate3d(calc(-50% + ${x}%), calc(-50% + ${y}%), ${z}px) scale(${scale}) rotate(${rotation}deg)`,
-                  }}
+                    "--base-x": `${baseX}%`,
+                    "--base-y": `${baseY}%`,
+                    "--arc-x": `${arcDistance * 14}%`,
+                    "--arc-x-mobile": `${arcDistance * 8}%`,
+                    "--arc-y": `${arcDrop}%`,
+                    "--arc-y-mobile": `${arcDrop * 0.65}%`,
+                    "--card-depth": `${z}px`,
+                    "--card-scale": scale,
+                    "--arc-rotate-y": `${arcDistance * 7}deg`,
+                    "--arc-rotate-y-mobile": `${arcDistance * 4.5}deg`,
+                    "--arc-rotate-z": `${arcDistance * 2.5}deg`,
+                    "--arc-rotate-z-mobile": `${arcDistance * 1.5}deg`,
+                  } as CSSProperties}
                   onClick={() => setSelected(artwork)}
                   aria-label={`Open ${artwork.alt}`}
                   aria-current={proximity < 0.5 ? "true" : undefined}
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={artwork.src} alt={artwork.alt} width={1200} height={1500} loading={index < 3 ? "eager" : "lazy"} decoding="async" />
+                  {shouldLoad && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={getCloudinaryUrl(artwork.src, 900)}
+                      srcSet={`${getCloudinaryUrl(artwork.src, 700)} 700w, ${getCloudinaryUrl(artwork.src, 900)} 900w, ${getCloudinaryUrl(artwork.src, 1100)} 1100w`}
+                      sizes="(max-width: 640px) 82vw, (max-width: 1024px) 60vw, 47vw"
+                      alt={artwork.alt}
+                      width={1200}
+                      height={1500}
+                      loading={index <= activeIndex + 1 ? "eager" : "lazy"}
+                      fetchPriority={index === activeIndex ? "high" : "auto"}
+                      decoding="async"
+                    />
+                  )}
                 </button>
               );
             })}
           </div>
           <div className={styles.footer}>
-            <span aria-live="polite">{String(Math.round(progress) + 1).padStart(2, "0")} / {String(artworks.length).padStart(2, "0")}</span>
-            <div className={styles.progressTrack} aria-hidden="true"><span style={{ width: `${((progress + 1) / artworks.length) * 100}%` }} /></div>
+            <span className={styles.srOnly} aria-live="polite">Artwork {Math.round(progress) + 1} of {artworks.length}</span>
+            <div
+              className={styles.progressTrack}
+              role="progressbar"
+              aria-label="Work gallery progress"
+              aria-valuemin={1}
+              aria-valuemax={artworks.length}
+              aria-valuenow={Math.round(progress) + 1}
+              aria-valuetext={`Artwork ${Math.round(progress) + 1} of ${artworks.length}`}
+            >
+              <span style={{ width: `${((progress + 1) / artworks.length) * 100}%` }} />
+            </div>
           </div>
         </div>
       </section>
@@ -134,7 +173,7 @@ export function CreativeDocument() {
         <div className={styles.modal} role="dialog" aria-modal="true" aria-label={selected.alt} onClick={() => setSelected(null)}>
           <button type="button" className={styles.close} onClick={() => setSelected(null)} aria-label="Close visual preview"><X size={20} /></button>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={selected.src} alt={selected.alt} width={1800} height={2200} onClick={(event) => event.stopPropagation()} />
+          <img src={getCloudinaryUrl(selected.src, 1800)} alt={selected.alt} width={1800} height={2200} decoding="async" onClick={(event) => event.stopPropagation()} />
         </div>
       )}
     </>
