@@ -70,9 +70,9 @@ const depthLayers = [
 const slotClassNames = visuals.map((visual) => visual.slot);
 
 const getCloudinaryUrl = (src: string, width: number) =>
-  src.replace("/image/upload/", `/image/upload/f_auto,q_auto,dpr_auto,w_${width},c_limit/`);
+  src.replace("/image/upload/", `/image/upload/f_auto,q_auto:best,dpr_auto,w_${width},c_limit/`);
 
-const getModalImageUrl = (src: string) => getCloudinaryUrl(src, 1200);
+const getModalImageUrl = (src: string) => getCloudinaryUrl(src, 2400);
 
 const preloadModalImage = (src: string) => {
   const image = new Image();
@@ -162,12 +162,12 @@ export function HomeVisualShowcase() {
                       aria-current={visuals.indexOf(visual) === activeIndex ? "true" : undefined}
                     >
                       <img
-                        src={getCloudinaryUrl(visual.src, 700)}
-                        srcSet={`${getCloudinaryUrl(visual.src, 480)} 480w, ${getCloudinaryUrl(visual.src, 700)} 700w, ${getCloudinaryUrl(visual.src, 900)} 900w`}
+                        src={getCloudinaryUrl(visual.src, 1600)}
+                        srcSet={`${getCloudinaryUrl(visual.src, 640)} 640w, ${getCloudinaryUrl(visual.src, 960)} 960w, ${getCloudinaryUrl(visual.src, 1280)} 1280w, ${getCloudinaryUrl(visual.src, 1600)} 1600w`}
                         sizes="(max-width: 640px) 43vw, (max-width: 1024px) 28vw, 24vw"
                         alt={visual.alt}
-                        width={900}
-                        height={1200}
+                        width={1600}
+                        height={2133}
                         loading={layer.name === "background" && index > 0 ? "lazy" : "eager"}
                         decoding="async"
                       />
@@ -221,8 +221,8 @@ export function HomeVisualShowcase() {
           <img
             src={getModalImageUrl(selectedVisual.src)}
             alt={selectedVisual.alt}
-            width={1600}
-            height={2000}
+            width={2400}
+            height={3200}
             decoding="async"
             onClick={(event) => event.stopPropagation()}
           />
