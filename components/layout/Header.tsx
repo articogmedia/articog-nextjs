@@ -141,10 +141,6 @@ export const menuGroups = [
         href: "/how-it-works/ai-creative-pipeline",
       },
       {
-        label: "Quality Assurance",
-        href: "/how-it-works/ai-creative-pipeline",
-      },
-      {
         label: "Trust Center",
         href: "/trust",
       },

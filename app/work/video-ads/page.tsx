@@ -6,8 +6,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://articog.com/work/video-ads" },
 };
 import { Link } from "@/components/ui/Link";
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
 import { YouTubeEmbed } from "@/components/blog/YouTubeEmbed";
@@ -24,7 +22,6 @@ export default function VideoAdsGalleryPage() {
 
   return (
     <div className="min-h-screen bg-black text-white flex flex-col font-sans">
-      <Header />
       <main className="flex-grow pt-32 pb-20">
         <Container>
           <div className="max-w-6xl mx-auto">
@@ -67,7 +64,6 @@ export default function VideoAdsGalleryPage() {
           </div>
         </Container>
       </main>
-      <Footer />
     </div>
   );
 }
