@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { Link } from "@/components/ui/Link";
 import { Container, Section, Button } from "@/components/ui";
 import {
@@ -10,8 +11,8 @@ import {
 
 export default function ContactPage() {
   const [isLoading, setIsLoading] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -46,13 +47,7 @@ export default function ContactPage() {
         );
       }
 
-      setSubmitted(true);
-      form.reset();
-
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
+      router.push("/thank-you");
     } catch (err) {
       console.error("Contact form error:", err);
 
@@ -65,45 +60,6 @@ export default function ContactPage() {
       setIsLoading(false);
     }
   };
-
-  if (submitted) {
-    return (
-      <Section
-        size="lg"
-        className="pt-32 md:pt-40 min-h-screen flex items-center bg-black"
-      >
-        <Container>
-          <div className="mx-auto max-w-xl text-center">
-            <h1
-              className="font-display font-semibold text-white mb-6"
-              style={{
-                fontSize: "clamp(2rem, 5vw, 3rem)",
-                lineHeight: 1.1,
-                letterSpacing: "-0.03em",
-              }}
-            >
-              Message received.
-            </h1>
-
-            <p
-              className="mx-auto mb-10 max-w-md font-sans text-base md:text-lg"
-              style={{
-                color: "rgba(255,255,255,0.55)",
-                lineHeight: 1.65,
-              }}
-            >
-              Thank you for reaching out. We typically respond within 1
-              business day.
-            </p>
-
-            <Button asChild variant="secondary" size="lg">
-              <Link href="/">Back to Home</Link>
-            </Button>
-          </div>
-        </Container>
-      </Section>
-    );
-  }
 
   return (
     <Section

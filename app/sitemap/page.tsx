@@ -78,6 +78,8 @@ export default function SitemapPage() {
         { label: "Trust Center", href: "/trust" },
         { label: "AI & IP Ownership", href: "/trust/ai-and-ip" },
         { label: "Security & Data Protection", href: "/trust/security" },
+        { label: "Rights, Licensing & Ownership", href: "/trust/rights-licensing" },
+        { label: "Data Handling & Retention", href: "/trust/data-handling" },
         { label: "Pricing Hub", href: "/pricing" },
         { label: "Pricing FAQ", href: "/pricing/faq" },
       ]

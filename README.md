@@ -24,8 +24,15 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contact form configuration
+
+The contact form requires these server-side environment variables:
+
+- `GOOGLE_SHEETS_WEB_APP_URL` saves submissions to the existing Google Sheet.
+- `RESEND_API_KEY` enables confirmation and internal alert emails.
+- `CONTACT_FROM_EMAIL` is the verified sender address for those emails.
+- `CONTACT_INTERNAL_ALERT_EMAIL` receives an alert when saving to Google Sheets fails. It defaults to `articog.media.01@gmail.com` and can be overridden for deployment.
+
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
