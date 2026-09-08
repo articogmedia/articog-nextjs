@@ -7,11 +7,9 @@ export const metadata: Metadata = {
 };
 import { Container, Section, Button, Heading } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
+import { BreezyOpenings } from "@/components/careers/BreezyOpenings";
 
 export default function CareersPage() {
-  // Placeholder for when roles are added later
-  const roles: any[] = [];
-
   return (
     <div className="bg-black min-h-screen">
       <Section size="lg" className="pt-32 md:pt-40">
@@ -33,22 +31,9 @@ export default function CareersPage() {
 
           <div className="max-w-4xl mx-auto mb-24">
             <h2 className="text-2xl font-display font-semibold text-white mb-8">Open Roles</h2>
-            
-            {roles.length === 0 ? (
-              <div className="rounded-2xl p-12 border border-white/[0.08] bg-white/[0.01] text-center">
-                <p className="font-sans text-base text-white/60 mb-6">
-                  We are not currently hiring, but we are always interested in hearing from exceptional creative technologists and production specialists.
-                </p>
-                <Button asChild variant="secondary">
-                  <Link href="/contact">Introduce Yourself</Link>
-                </Button>
-              </div>
-            ) : (
-              <div className="grid gap-4">
-                {/* Roles will be mapped here: Title, Location/Remote, Type */}
-              </div>
-            )}
-            
+
+            <BreezyOpenings />
+
             <p className="mt-8 text-center font-sans text-[12px] text-white/30">
               Note: Candidate information is handled according to our <Link href="/privacy-policy" className="underline hover:text-white/50">Privacy Policy</Link>.
             </p>
