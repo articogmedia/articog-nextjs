@@ -72,16 +72,9 @@ const slotClassNames = visuals.map((visual) => visual.slot);
 const getCloudinaryUrl = (src: string, width: number) =>
   src.replace("/image/upload/", `/image/upload/f_auto,q_auto,dpr_auto,w_${width},c_limit/`);
 
-const getNeighborIndexes = (index: number) => [
-  index,
-  (index + 1) % visuals.length,
-  (index - 1 + visuals.length) % visuals.length,
-];
-
 export function HomeVisualShowcase() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [cycleOffset, setCycleOffset] = useState(0);
-  const [loadedIndexes, setLoadedIndexes] = useState(() => new Set(getNeighborIndexes(0)));
   const [selectedVisual, setSelectedVisual] = useState<(typeof visuals)[number] | null>(null);
 
   const moveActiveIndex = (direction: -1 | 1) => {
@@ -103,14 +96,6 @@ export function HomeVisualShowcase() {
 
     return () => window.clearInterval(interval);
   }, []);
-
-  useEffect(() => {
-    setLoadedIndexes((current) => {
-      const next = new Set(current);
-      getNeighborIndexes(activeIndex).forEach((index) => next.add(index));
-      return next;
-    });
-  }, [activeIndex]);
 
   useEffect(() => {
     if (!selectedVisual) return;
@@ -154,9 +139,8 @@ export function HomeVisualShowcase() {
                 className={`showcase-layer showcase-layer--${layer.name} ${layer.slots.some((slotIndex) => (slotIndex + cycleOffset) % visuals.length === activeIndex) ? "showcase-layer--active" : ""}`}
                 aria-label={`${layer.name} visual layer`}
               >
-                {layer.slots.map((slotIndex) => {
-                  const visualIndex = (slotIndex + cycleOffset) % visuals.length;
-                  const visual = visuals[visualIndex];
+                {layer.slots.map((slotIndex, index) => {
+                  const visual = visuals[(slotIndex + cycleOffset) % visuals.length];
 
                   return (
                   <button
@@ -167,19 +151,16 @@ export function HomeVisualShowcase() {
                     aria-label={`Open ${visual.alt}`}
                     aria-current={visuals.indexOf(visual) === activeIndex ? "true" : undefined}
                   >
-                    {loadedIndexes.has(visualIndex) && (
-                      <img
-                        src={getCloudinaryUrl(visual.src, 700)}
-                        srcSet={`${getCloudinaryUrl(visual.src, 480)} 480w, ${getCloudinaryUrl(visual.src, 700)} 700w, ${getCloudinaryUrl(visual.src, 900)} 900w`}
-                        sizes="(max-width: 640px) 43vw, (max-width: 1024px) 28vw, 24vw"
-                        alt={visual.alt}
-                        width={900}
-                        height={1200}
-                        loading={visualIndex === activeIndex ? "eager" : "lazy"}
-                        fetchPriority={visualIndex === activeIndex ? "high" : "auto"}
-                        decoding="async"
-                      />
-                    )}
+                    <img
+                      src={getCloudinaryUrl(visual.src, 700)}
+                      srcSet={`${getCloudinaryUrl(visual.src, 480)} 480w, ${getCloudinaryUrl(visual.src, 700)} 700w, ${getCloudinaryUrl(visual.src, 900)} 900w`}
+                      sizes="(max-width: 640px) 43vw, (max-width: 1024px) 28vw, 24vw"
+                      alt={visual.alt}
+                      width={900}
+                      height={1200}
+                      loading={layer.name === "background" && index > 0 ? "lazy" : "eager"}
+                      decoding="async"
+                    />
                   </button>
                   );
                 })}
