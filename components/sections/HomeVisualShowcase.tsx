@@ -169,14 +169,6 @@ export function HomeVisualShowcase() {
           </div>
 
           <div className="showcase-navigation" aria-label="Visual gallery navigation">
-            <div className="showcase-navigation__meta">
-              <div className="showcase-navigation__track" aria-hidden="true">
-                <span
-                  className="showcase-navigation__progress"
-                  style={{ width: `${((activeIndex + 1) / visuals.length) * 100}%` }}
-                />
-              </div>
-            </div>
             <div className="showcase-navigation__buttons">
               <button
                 type="button"
