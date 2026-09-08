@@ -1,6 +1,6 @@
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
-import Script from "next/script";
+import { BeehiivForm } from "@/components/newsletter/BeehiivForm";
 
 export default function NewsletterPage() {
   return (
@@ -15,12 +15,7 @@ export default function NewsletterPage() {
 
             <Section className="py-12 border-t border-zinc-900">
               <div className="space-y-6 bg-zinc-900/30 p-8 rounded-3xl border border-zinc-800">
-                <Script
-                  async
-                  src="https://subscribe-forms.beehiiv.com/v3/loader.js"
-                  data-beehiiv-form="69e2dfbd-7dbf-45b6-ac64-b1642145f9fe"
-                  strategy="afterInteractive"
-                />
+                <BeehiivForm />
               </div>
             </Section>
           </div>
