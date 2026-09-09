@@ -8,7 +8,6 @@ export const metadata: Metadata = {
 import { siteContent } from "@/lib/content";
 import {
   Hero,
-  Problems,
   Pipeline,
   Capabilities,
   Comparison,
@@ -110,7 +109,6 @@ export default function HomePage() {
       />
 
       <Hero content={homepage.hero} stats={homepage.proofStats} />
-      <Problems problems={homepage.problems} />
       <Capabilities capabilities={homepage.capabilities} />
       <HomeVisualShowcase />
       

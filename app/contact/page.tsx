@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Link } from "@/components/ui/Link";
 import { Container, Section, Button } from "@/components/ui";
+import { trackFormError, trackFormSubmit, trackFormSuccess } from "@/lib/analytics";
 import {
   ArrowRight,
   Mail,
@@ -30,6 +31,8 @@ export default function ContactPage() {
       message: formData.get("message")?.toString().trim() || "",
     };
 
+    trackFormSubmit("contact");
+
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -47,9 +50,11 @@ export default function ContactPage() {
         );
       }
 
+      trackFormSuccess("contact");
       router.push("/thank-you");
     } catch (err) {
       console.error("Contact form error:", err);
+      trackFormError("contact", "request_failed");
 
       setError(
         err instanceof Error
@@ -115,6 +120,11 @@ export default function ContactPage() {
               className="flex flex-col gap-8"
             >
               {/* Name + Email */}
+              <div className="absolute -left-[9999px] h-px w-px overflow-hidden" aria-hidden="true">
+                <label htmlFor="website">Website</label>
+                <input type="text" id="website" name="website" tabIndex={-1} autoComplete="off" />
+              </div>
+
               <div className="grid gap-8 sm:grid-cols-2">
                 {/* Name */}
                 <div className="flex flex-col gap-2.5">

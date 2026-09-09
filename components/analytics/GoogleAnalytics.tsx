@@ -4,7 +4,7 @@ import Script from "next/script";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-import { trackPageView } from "@/lib/analytics";
+import { trackCTAClick, trackPageView } from "@/lib/analytics";
 
 const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
@@ -12,9 +12,26 @@ export function GoogleAnalytics() {
   const pathname = usePathname();
 
   useEffect(() => {
-    if (measurementId) {
-      trackPageView(pathname);
-    }
+    if (!measurementId) return;
+
+    trackPageView(pathname);
+
+    const handleCtaClick = (event: MouseEvent) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+
+      const link = target.closest("a");
+      const destination = link?.getAttribute("href");
+      if (destination !== "/book-a-demo" && destination !== "/contact") return;
+
+      trackCTAClick(
+        link?.textContent?.trim() || destination,
+        destination
+      );
+    };
+
+    document.addEventListener("click", handleCtaClick);
+    return () => document.removeEventListener("click", handleCtaClick);
   }, [pathname]);
 
   if (!measurementId) return null;

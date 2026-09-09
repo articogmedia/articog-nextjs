@@ -8,6 +8,30 @@ type ContactData = {
 };
 
 const DEFAULT_INTERNAL_ALERT_EMAIL = "articog.media.01@gmail.com";
+const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
+const RATE_LIMIT_MAX_REQUESTS = 5;
+const requestHistory = new Map<string, number[]>();
+
+function isRateLimited(request: Request): boolean {
+  const forwardedFor = request.headers.get("x-forwarded-for");
+  const clientIp = forwardedFor?.split(",")[0]?.trim() || request.headers.get("x-real-ip");
+
+  if (!clientIp) return false;
+
+  const now = Date.now();
+  const recentRequests = (requestHistory.get(clientIp) ?? []).filter(
+    (timestamp) => now - timestamp < RATE_LIMIT_WINDOW_MS
+  );
+
+  if (recentRequests.length >= RATE_LIMIT_MAX_REQUESTS) {
+    requestHistory.set(clientIp, recentRequests);
+    return true;
+  }
+
+  recentRequests.push(now);
+  requestHistory.set(clientIp, recentRequests);
+  return false;
+}
 
 async function sendEmail(to: string, subject: string, text: string, replyTo?: string) {
   const apiKey = process.env.RESEND_API_KEY;
@@ -59,9 +83,20 @@ async function alertSheetFailure(data: ContactData, error: unknown) {
 
 export async function POST(request: Request) {
   try {
+    if (isRateLimited(request)) {
+      return NextResponse.json(
+        { success: false, error: "Too many requests. Please try again later." },
+        { status: 429 }
+      );
+    }
+
     const data = await request.json();
 
-    const { name, email, inquiryType, message } = data;
+    const { name, email, inquiryType, message, website } = data;
+
+    if (website) {
+      return NextResponse.json({ success: true, message: "Message submitted successfully." });
+    }
 
     if (!name || !email || !inquiryType || !message) {
       return NextResponse.json(
@@ -90,12 +125,16 @@ export async function POST(request: Request) {
       throw error;
     }
 
-    await sendEmail(
-      email,
-      "We received your message | Articog",
-      [`Hi ${name},`, "", "Thanks for reaching out to Articog. We received your message and will follow up within 1 business day.", "", "Best,", "The Articog team"].join("\n"),
-      email
-    );
+    try {
+      await sendEmail(
+        email,
+        "We received your message | Articog",
+        [`Hi ${name},`, "", "Thanks for reaching out to Articog. We received your message and will follow up within 1 business day.", "", "Best,", "The Articog team"].join("\n"),
+        email
+      );
+    } catch (emailError) {
+      console.error("Contact confirmation email failed after lead was saved:", emailError);
+    }
 
     return NextResponse.json({
       success: true,

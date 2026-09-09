@@ -9,11 +9,15 @@ import type { BlogEntry } from "@/lib/blog";
 export type BlogFilter = "all" | "articles" | "videos";
 
 function formatDate(dateString: string) {
-  return new Intl.DateTimeFormat("en-US", {
+  const formattedDate = new Intl.DateTimeFormat("en-US", {
     month: "short",
     day: "numeric",
     year: "numeric",
   }).format(new Date(dateString));
+
+  return new Date(dateString).getFullYear() < new Date().getFullYear()
+    ? `Archive · ${formattedDate}`
+    : formattedDate;
 }
 
 function BlogCard({ post }: { post: BlogEntry }) {

@@ -91,6 +91,13 @@
   }
 }
 
+@media (min-width: 768px) {
+  :root {
+    --text-sm: 0.9375rem;
+    --text-xs: 0.8125rem;
+  }
+}
+
 .showcase-stage {
   position: relative;
   min-height: 30rem;

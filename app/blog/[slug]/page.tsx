@@ -7,11 +7,15 @@ import { YouTubeEmbed } from "@/components/blog/YouTubeEmbed";
 import { getBlogPostBySlug, getNativeBlogPosts } from "@/lib/blog";
 
 function formatDate(dateString: string) {
-  return new Intl.DateTimeFormat("en-US", {
+  const formattedDate = new Intl.DateTimeFormat("en-US", {
     month: "long",
     day: "numeric",
     year: "numeric",
   }).format(new Date(dateString));
+
+  return new Date(dateString).getFullYear() < new Date().getFullYear()
+    ? `Archive · ${formattedDate}`
+    : formattedDate;
 }
 
 export function generateStaticParams() {

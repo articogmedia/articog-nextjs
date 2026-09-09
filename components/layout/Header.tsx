@@ -52,16 +52,8 @@ export const menuGroups = [
         href: "/solutions/performance-marketing",
       },
       {
-        label: "Creative Testing",
-        href: "/solutions/performance-marketing",
-      },
-      {
         label: "Enterprise Solutions",
         href: "/solutions/enterprise",
-      },
-      {
-        label: "Localization & Global",
-        href: "/solutions/product-launch",
       },
       {
         label: "Product Launch",
@@ -70,10 +62,6 @@ export const menuGroups = [
       {
         label: "Agency White-Label",
         href: "/solutions/creative-team-overflow",
-      },
-      {
-        label: "Creative Automation",
-        href: "/solutions/performance-marketing",
       },
     ],
   },
@@ -121,7 +109,6 @@ export const menuGroups = [
       { label: "Portfolio Overview", href: "/work" },
       { label: "Video Ads", href: "/work/video-ads" },
       { label: "Social & UGC", href: "/work/social" },
-      { label: "AI Ad Library", href: "/ai-ad-library" },
       { label: "Customer Stories", href: "/customers" },
     ],
   },
@@ -151,10 +138,6 @@ export const menuGroups = [
       {
         label: "Security & Data",
         href: "/trust/security",
-      },
-      {
-        label: "Subprocessors",
-        href: "/contact",
       },
     ],
   },

@@ -33,6 +33,10 @@ The contact form requires these server-side environment variables:
 - `CONTACT_FROM_EMAIL` is the verified sender address for those emails.
 - `CONTACT_INTERNAL_ALERT_EMAIL` receives an alert when saving to Google Sheets fails. It defaults to `articog.media.01@gmail.com` and can be overridden for deployment.
 
+The site-wide GA4 page-view and interaction tracking uses:
+
+- `NEXT_PUBLIC_GA_MEASUREMENT_ID` enables Google Analytics 4 and should be set in the deployment environment when analytics are required.
+
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
