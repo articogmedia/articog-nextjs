@@ -295,16 +295,6 @@ export default function ServicesPage() {
               Every creative format, delivered.
             </h1>
 
-            <p
-              className="mx-auto mt-6 max-w-2xl font-sans text-base md:text-lg"
-              style={{
-                color: "rgba(255,255,255,0.55)",
-                lineHeight: 1.65,
-              }}
-            >
-              One AI-native partner for every format, from brand films to
-              performance ads.
-            </p>
           </div>
         </Container>
       </Section>

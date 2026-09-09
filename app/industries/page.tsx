@@ -73,9 +73,6 @@ export default function IndustriesPage() {
             <Heading as="h1" size="hero" className="mb-6">
               Industries We Serve
             </Heading>
-            <p className="font-sans text-xl text-white/60 leading-relaxed mb-12">
-              Creative production tailored to each sector.
-            </p>
           </div>
 
           <div className="mx-auto mb-24 grid max-w-5xl gap-px overflow-hidden rounded-2xl border border-white/[0.1] bg-white/[0.1] text-left sm:grid-cols-2">

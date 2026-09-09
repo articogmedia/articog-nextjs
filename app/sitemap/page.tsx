@@ -111,9 +111,6 @@ export default function SitemapPage() {
         <Container>
           <div className="max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Sitemap</h1>
-            <p className="text-zinc-400 text-lg mb-16 max-w-2xl">
-              Navigate all pages across the Articog platform. Find resources, services, and legal documentation in one place.
-            </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
               {sitemapData.map((section) => (

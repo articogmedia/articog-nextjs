@@ -59,9 +59,6 @@ export default function WorkPage() {
             <Heading as="h1" size="hero" className="mb-6">
               Real outcomes. No composites.
             </Heading>
-            <p className="mx-auto max-w-2xl font-sans text-base md:text-lg leading-relaxed mb-12" style={{ color: "rgba(255,255,255,0.65)" }}>
-              Selected work across formats and industries.
-            </p>
           </div>
 
           <WorkVideoShowcase />
