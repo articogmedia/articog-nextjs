@@ -69,7 +69,6 @@ export default function AIVideoProductionPage() {
         <Container>
           <div className="mb-12">
             <h2 className="font-display text-3xl font-semibold text-white mb-4">What We Deliver</h2>
-            <p className="font-sans text-white/50">Comprehensive video solutions for every stage of the customer journey.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {deliverables.map((item) => {

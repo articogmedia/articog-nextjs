@@ -134,9 +134,6 @@ export function HomeVisualShowcase() {
                 Creative, without limits.
               </Heading>
             </div>
-            <p className="hidden max-w-[15rem] pb-1 text-right font-sans text-xs leading-relaxed text-white/35 md:block">
-              A living canvas for bold ideas, built to move between worlds.
-            </p>
           </div>
 
           <div className="showcase-stage" aria-label="Selected Articog visual studies">

@@ -58,9 +58,6 @@ export default function AudioPage() {
         <Container>
           <div className="mb-16">
             <h2 className="font-display text-3xl font-semibold text-white mb-4">What We Deliver</h2>
-            <p className="font-sans text-white/50 max-w-2xl">
-              Professional audio services designed to complement our visual production engine.
-            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {deliverables.map((item) => (

@@ -55,9 +55,6 @@ export default function CreativeStrategyPage() {
         <Container>
           <div className="mb-12">
             <h2 className="font-display text-3xl font-semibold text-white mb-4">What We Do</h2>
-            <p className="font-sans text-white/50 max-w-2xl">
-              We bridge the gap between high-level objectives and technical AI production through a rigorous strategic process.
-            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {capabilities.map((item) => (

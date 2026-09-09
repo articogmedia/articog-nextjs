@@ -55,9 +55,6 @@ export default function MonthlySubscriptionPage() {
         <Container>
           <div className="mb-12">
             <h2 className="font-display text-3xl font-semibold text-white mb-4">How It Works</h2>
-            <p className="font-sans text-white/50 max-w-2xl">
-              We provide an elastic creative engine that adapts to your campaign cycles and business objectives.
-            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {steps.map((item) => (

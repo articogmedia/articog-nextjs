@@ -271,9 +271,6 @@ export function ServiceDetails({ category }: { category: ServiceCategory }) {
           <h2 className="mb-4 font-display text-3xl font-semibold text-white">
             Capabilities
           </h2>
-          <p className="font-sans text-white/50">
-            The capabilities below are part of this service category and can be combined around your brief.
-          </p>
         </div>
         <div className="space-y-3">
           {serviceGroups[category].map((group) => (

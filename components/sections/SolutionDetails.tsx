@@ -102,9 +102,6 @@ export function SolutionDetails({ category }: { category: SolutionCategory }) {
           <h2 className="mb-4 font-display text-3xl font-semibold text-white">
             Capabilities
           </h2>
-          <p className="font-sans text-white/50">
-            Use these capabilities to shape the engagement around your campaign and operating model.
-          </p>
         </div>
         <div className="space-y-3">
           {detailGroups[category].map((group) => (

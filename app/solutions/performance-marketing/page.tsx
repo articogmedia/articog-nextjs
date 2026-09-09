@@ -55,9 +55,6 @@ export default function PerformanceMarketingPage() {
         <Container>
           <div className="mb-12">
             <h2 className="font-display text-3xl font-semibold text-white mb-4">How It Works</h2>
-            <p className="font-sans text-white/50 max-w-2xl">
-              Our systematic approach ensures your campaigns are always fueled by high-performing creative assets.
-            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {steps.map((item) => (

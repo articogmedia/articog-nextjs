@@ -63,9 +63,6 @@ export default function ProductLaunchSolutionPage() {
         <Container>
           <div className="mb-12">
             <h2 className="font-display text-3xl font-semibold text-white mb-4 text-center">How It Works</h2>
-            <p className="font-sans text-white/50 max-w-2xl mx-auto text-center">
-              Our integrated launch framework ensures no detail is missed during your most critical campaign.
-            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {howItWorks.map((item) => (

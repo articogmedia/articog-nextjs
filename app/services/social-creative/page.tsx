@@ -34,9 +34,6 @@ export default function SocialCreativePage() {
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <h2 className="font-display text-2xl font-semibold text-white mb-6">What We Deliver</h2>
-              <p className="text-white/60 leading-relaxed">
-                Social strategy needs volume and velocity. Our AI-native workflow keeps every platform active without overloading your team.
-              </p>
             </div>
             <div>
               <h2 className="font-display text-2xl font-semibold text-white mb-6">Applications</h2>

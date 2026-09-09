@@ -67,9 +67,6 @@ export default function AICreativePipelinePage() {
         <Container>
           <div className="mb-12">
             <h2 className="font-display text-3xl font-semibold text-white mb-4">Pipeline Stages</h2>
-            <p className="font-sans text-white/50 max-w-2xl">
-              A technical overview of our production engine, built for scale and precision.
-            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {stages.map((stage) => (
@@ -92,9 +89,6 @@ export default function AICreativePipelinePage() {
         <Container>
           <div className="mb-12">
             <h2 className="font-display text-3xl font-semibold text-white mb-4 text-center">Our QA Standards</h2>
-            <p className="font-sans text-white/50 max-w-2xl mx-auto text-center">
-              Our multi-stage verification process ensures error-free delivery at scale.
-            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {qaStandards.map(([title, description, Icon]) => (

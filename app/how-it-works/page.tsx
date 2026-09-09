@@ -100,9 +100,6 @@ export default function HowItWorksPage() {
         <Container>
           <div className="mb-10 text-center">
             <Heading as="h2" size="section" className="mb-4">Getting started and delivery</Heading>
-            <p className="mx-auto max-w-2xl font-sans text-white/50">
-              We ensure every technical and creative foundation is in place before production begins. Our structured review process ensures quality and speed, from initial feedback through to final coordinated delivery across all your channels.
-            </p>
           </div>
           <div className="mx-auto grid max-w-6xl gap-3 md:grid-cols-2">
             {[...onboardingSteps, ...deliverySteps].map(([title, description]) => (

@@ -62,9 +62,6 @@ export default function EnterpriseSolutionPage() {
         <Container>
           <div className="mb-12">
             <h2 className="font-display text-3xl font-semibold text-white mb-4 text-center">What's Included</h2>
-            <p className="font-sans text-white/50 max-w-2xl mx-auto text-center">
-              Our enterprise framework is designed for transparency, security, and seamless organizational integration.
-            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {whatIsIncluded.map((item) => (
