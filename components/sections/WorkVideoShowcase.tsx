@@ -1,5 +1,4 @@
 import { Play } from "lucide-react";
-import { YouTubeEmbed } from "@/components/blog/YouTubeEmbed";
 
 const videoCards = [
   {
@@ -22,17 +21,6 @@ export function WorkVideoShowcase() {
       <div className="grid gap-5 md:grid-cols-2">
         {videoCards.map((video) => {
           const videoId = video.url ? getYouTubeId(video.url) : null;
-          if (video.title === "Second video showcase" && video.url) {
-            return (
-              <YouTubeEmbed
-                key={video.title}
-                url={video.url}
-                title={video.title}
-                className="rounded-xl border-white/[0.08] bg-white/[0.03]"
-              />
-            );
-          }
-
           const card = (
             <div className="group relative aspect-video overflow-hidden rounded-xl border border-white/[0.08] bg-white/[0.03]">
               {videoId ? (
