@@ -171,28 +171,28 @@ export function Footer() {
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 md:col-start-2 md:row-start-1">
             <Link
               href="/legal/terms-of-service"
-              className="font-sans text-[10px] text-white/25 hover:text-white transition-colors uppercase tracking-[0.15em] md:text-xs md:text-white/55 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="font-sans text-[10px] text-white/25 hover:text-white transition-colors uppercase tracking-[0.15em] md:text-[11px] md:text-white/55 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Terms
             </Link>
 
             <Link
               href="/privacy-policy"
-              className="font-sans text-[10px] text-white/25 hover:text-white transition-colors uppercase tracking-[0.15em] md:text-xs md:text-white/55 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="font-sans text-[10px] text-white/25 hover:text-white transition-colors uppercase tracking-[0.15em] md:text-[11px] md:text-white/55 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Privacy
             </Link>
 
             <Link
               href="/legal/accessibility"
-              className="font-sans text-[10px] text-white/25 hover:text-white transition-colors uppercase tracking-[0.15em] md:text-xs md:text-white/55 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="font-sans text-[10px] text-white/25 hover:text-white transition-colors uppercase tracking-[0.15em] md:text-[11px] md:text-white/55 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Accessibility
             </Link>
 
             <Link
               href="/copyright"
-              className="font-sans text-[10px] text-white/25 hover:text-white transition-colors uppercase tracking-[0.15em] md:text-xs md:text-white/55 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="font-sans text-[10px] text-white/25 hover:text-white transition-colors uppercase tracking-[0.15em] md:text-[11px] md:text-white/55 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Copyright
             </Link>
