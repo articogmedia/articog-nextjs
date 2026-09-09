@@ -40,12 +40,6 @@ export const siteContent: SiteContent = {
       description:
         "Spend grows, but creative volume stays flat and audiences saturate.",
     },
-    {
-      number: "04",
-      title: "Quality drops at volume",
-      description:
-        "At volume, freelancers drift and brand consistency slips.",
-    },
   ],
 
   pipeline: [
@@ -87,12 +81,6 @@ export const siteContent: SiteContent = {
       icon: "film",
     },
     {
-      title: "Brand Storytelling",
-      useCase: "Origin stories, mission narratives, documentary-style content",
-      outcome: "Consistent brand voice across formats and channels",
-      icon: "book-open",
-    },
-    {
       title: "Commercials and Advertisements",
       useCase: "TV, pre-roll, OOH, performance video ads",
       outcome: "Broadcast-ready ads without a full production crew",
@@ -105,28 +93,10 @@ export const siteContent: SiteContent = {
       icon: "image",
     },
     {
-      title: "Audio Ads",
-      useCase: "Podcast, radio, streaming audio, brand voice production",
-      outcome: "Studio-quality audio in hours, not weeks",
-      icon: "mic",
-    },
-    {
       title: "AI UGC and Social Content",
       useCase: "Instagram, TikTok, YouTube Shorts, organic feeds",
       outcome: "Platform-native social content without influencer budgets",
       icon: "trending-up",
-    },
-    {
-      title: "ML Ad Creations",
-      useCase: "Paid social, display, search creative testing",
-      outcome: "Hundreds of on-brand variants guided by performance signals",
-      icon: "zap",
-    },
-    {
-      title: "Creative Automations",
-      useCase: "Brief-to-delivery workflow integration",
-      outcome: "80% fewer manual steps. Plugs into your existing stack.",
-      icon: "cpu",
     },
   ],
 

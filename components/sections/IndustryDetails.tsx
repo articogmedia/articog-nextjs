@@ -149,7 +149,7 @@ const industryDetails: IndustryDetail[] = [
 
 export function IndustryDetails() {
   return (
-    <Section className="border-t border-white/10 py-28 text-left md:py-36">
+    <Section className="border-t border-white/10 py-20 text-left md:py-24">
       <Container>
         <div className="mb-12 max-w-2xl md:mb-16">
           <p className="mb-3 font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-white/40">Explore by industry</p>
@@ -158,7 +158,7 @@ export function IndustryDetails() {
         <div className="grid gap-4 lg:grid-cols-2">
           {industryDetails.map((industry) => (
             <details key={industry.id} id={industry.id} className="group self-start scroll-mt-24 overflow-hidden rounded-2xl border border-white/[0.1] bg-white/[0.02] transition-colors open:border-white/[0.2]">
-              <summary className="flex min-h-64 cursor-pointer list-none flex-col justify-between gap-8 p-6 marker:hidden md:min-h-72 md:p-8">
+              <summary className="flex min-h-52 cursor-pointer list-none flex-col justify-between gap-6 p-6 marker:hidden md:min-h-56 md:p-8">
                 <div className="flex items-start justify-between gap-6">
                   <div className="min-w-0">
                     <h3 className="font-display text-xl font-semibold text-white md:text-2xl">{industry.title}</h3>
@@ -181,7 +181,7 @@ export function IndustryDetails() {
               <div className="border-t border-white/[0.08] px-6 pb-6 pt-6 md:px-8 md:pb-8">
                 <p className="mb-4 font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-white/35">Additional details</p>
                 <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-                  {industry.considerations.map((item) => (
+                  {industry.considerations.slice(0, 3).map((item) => (
                     <div key={item.title} className="rounded-xl border border-white/[0.08] bg-black/10 p-4">
                       <h4 className="mb-2 font-display text-sm font-semibold text-white">{item.title}</h4>
                       <p className="font-sans text-xs leading-relaxed text-white/50">{item.description}</p>

@@ -76,26 +76,6 @@ export default function HelpCenterPage() {
       ]
     },
     {
-      title: "Working with AI",
-      links: [{ label: "Our Responsible AI Principles", href: "/trust/ai-and-ip" }],
-      faqs: [
-        {
-          q: "How is AI used responsibly at Articog?",
-          a: "We adhere to strict principles including human-in-the-loop review for all assets, no deceptive impersonation, and ensuring proper authorization for any likeness used in production."
-        }
-      ]
-    },
-    {
-      title: "Revisions",
-      links: [{ label: "Revision Policy", href: "/how-it-works" }],
-      faqs: [
-        {
-          q: "What is your revision policy?",
-          a: "We include defined feedback windows for each project phase. Our version control and revision workflows are designed to integrate seamlessly with your internal approval processes."
-        }
-      ]
-    },
-    {
       title: "File Formats",
       links: [],
       faqs: [
@@ -119,16 +99,6 @@ export default function HelpCenterPage() {
       link: "/why-articog/production-economics",
     },
     {
-      term: "Creative Variant Testing",
-      definition: "The systematic generation and deployment of multiple ad iterations to identify high-performing creative elements. AI enables the production of hundreds of specific variants tailored to different audience segments in minutes.",
-      link: "/solutions/performance-marketing",
-    },
-    {
-      term: "UGC-Style Content",
-      definition: "User-Generated Content (UGC) style assets that are produced using AI to mimic the authentic, low-fidelity aesthetic favored on social platforms like TikTok and Reels, while maintaining professional brand standards.",
-      link: "/work/social",
-    },
-    {
       term: "Post-Production",
       definition: "The final technical stage of content creation, including motion graphics, color grading, upscaling, and audio mastering. Our AI-driven post-production delivers studio-quality finishes at a fraction of traditional timelines.",
       link: "/services/post-production",
@@ -137,11 +107,6 @@ export default function HelpCenterPage() {
       term: "Localization",
       definition: "Adapting creative content for different geographic markets through language translation, cultural nuance adjustment, and visual element swapping, ensuring global relevance while maintaining core brand messaging.",
       link: "/solutions/product-launch",
-    },
-    {
-      term: "Performance Creative",
-      definition: "Advertising assets designed specifically to drive measurable actions, such as clicks or conversions. These are optimized through data-driven AI generation based on real-time campaign performance metrics.",
-      link: "/services/ad-creative",
     },
     {
       term: "Key Visual",
@@ -220,7 +185,7 @@ export default function HelpCenterPage() {
               If you couldn't find what you were looking for, our team is ready to assist you with any specific questions.
             </p>
             <Button asChild variant="primary" size="lg">
-              <Link href="/contact">Still Need Help?</Link>
+                    <Link href="/contact">Contact Us</Link>
             </Button>
           </div>
         </Container>

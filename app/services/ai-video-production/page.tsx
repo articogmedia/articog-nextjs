@@ -8,7 +8,6 @@ export const metadata: Metadata = {
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ServiceDetails } from "@/components/sections/ServiceDetails";
 import { ShieldCheck, ArrowRight, Zap, Users } from "lucide-react";
 
 export default function AIVideoProductionPage() {
@@ -136,8 +135,6 @@ export default function AIVideoProductionPage() {
           </div>
         </Container>
       </Section>
-
-      <ServiceDetails category="ai-video" />
 
       {/* FAQ Section */}
       <Section className="py-20 bg-white/[0.02]">

@@ -324,7 +324,7 @@ export default function ServicesPage() {
               </h2>
 
               <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                {group.items.map((service) => (
+                {group.items.filter((service, index, items) => items.findIndex((item) => item.href === service.href) === index).map((service) => (
                   <Link
                     key={service.href}
                     href={service.href}

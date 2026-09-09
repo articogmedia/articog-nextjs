@@ -53,9 +53,6 @@ export default function SocialWorkPage() {
         <Container>
           <div className="mb-12 max-w-3xl">
             <h2 className="font-display text-3xl font-semibold text-white mb-4">A real example</h2>
-            <p className="font-sans text-white/50 max-w-2xl mx-auto text-center">
-              We deliver assets optimized for every platform's unique requirements and user behaviors.
-            </p>
           </div>
           <div className="max-w-3xl mb-16">
             <YouTubeEmbed

@@ -269,7 +269,7 @@ export function ServiceDetails({ category }: { category: ServiceCategory }) {
       <Container>
         <div className="mb-12 max-w-3xl">
           <h2 className="mb-4 font-display text-3xl font-semibold text-white">
-            More ways we can help
+            Capabilities
           </h2>
           <p className="font-sans text-white/50">
             The capabilities below are part of this service category and can be combined around your brief.

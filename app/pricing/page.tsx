@@ -22,11 +22,8 @@ export default function PricingPage() {
 
   const faqs = [
     ["How is pricing structured?", "We offer project-based, subscription, or enterprise models depending on your specific volume and creative needs. See our main Pricing page for a high-level overview of these categories."],
-    ["How does the monthly model work?", "You get a steady stream of creative production on a predictable cadence, without additional hiring."],
     ["Is there a minimum commitment?", "Commitment varies by plan. While our monthly subscriptions are designed for long-term partnership, pilot projects are available for a lower-commitment exploratory start."],
     ["What's included in a project?", "Each project typically includes creative concepting, high-fidelity production using our AI engine, and a pre-agreed number of revision rounds to ensure the final asset meets your standards."],
-    ["How does billing work?", "Specific billing terms and cycles (e.g., net-30, up-front for pilots) will be confirmed and detailed during your initial onboarding call based on your chosen plan."],
-    ["Can I change plans later?", "Yes, your creative engine can scale up or down as your business objectives evolve. Plan adjustments are handled directly with your account team and discussed during onboarding."],
   ];
 
   return (
