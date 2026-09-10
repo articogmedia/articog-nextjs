@@ -54,14 +54,9 @@ const visuals = [
 ];
 
 const getCloudinaryUrl = (src: string, width: number) =>
-  src.replace("/image/upload/", `/image/upload/f_auto,q_auto:best,dpr_auto,w_${width},c_limit/`);
+  src.replace("/image/upload/", `/image/upload/f_auto,q_auto:good,dpr_auto,w_${width},c_limit/`);
 
 const getModalImageUrl = (src: string) => getCloudinaryUrl(src, 2400);
-
-const preloadModalImage = (src: string) => {
-  const image = new Image();
-  image.src = getModalImageUrl(src);
-};
 
 const getRelativePosition = (index: number, activeIndex: number) => {
   const total = visuals.length;
@@ -135,8 +130,6 @@ export function HomeVisualShowcase() {
                       visibility: absoluteOffset > 3 ? "hidden" : "visible",
                     }}
                     onClick={() => setSelectedVisual(visual)}
-                    onPointerEnter={() => preloadModalImage(visual.src)}
-                    onFocus={() => preloadModalImage(visual.src)}
                     aria-label={`Open ${visual.alt}`}
                     aria-current={isActive ? "true" : undefined}
                   >
@@ -146,6 +139,8 @@ export function HomeVisualShowcase() {
                       alt={visual.alt}
                       width={1600}
                       height={2133}
+                      priority={index === 0}
+                      quality={75}
                       loading={index === 0 ? "eager" : "lazy"}
                       decoding="async"
                     />
@@ -199,6 +194,9 @@ export function HomeVisualShowcase() {
             alt={selectedVisual.alt}
             width={2400}
             height={3200}
+            sizes="(max-width: 768px) 90vw, 70vw"
+            quality={80}
+            loading="lazy"
             decoding="async"
             onClick={(event) => event.stopPropagation()}
           />

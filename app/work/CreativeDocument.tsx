@@ -66,7 +66,7 @@ const projects: PortfolioProject[] = [
 ];
 
 const getCloudinaryUrl = (src: string, width: number) =>
-  src.replace("/image/upload/", `/image/upload/f_auto,q_auto,w_${width},c_limit/`);
+  src.replace("/image/upload/", `/image/upload/f_auto,q_auto:good,dpr_auto,w_${width},c_limit/`);
 
 export function CreativeDocument() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -154,6 +154,7 @@ export function CreativeDocument() {
                   fill
                   sizes="(max-width: 640px) 88vw, (max-width: 1024px) 72vw, 58vw"
                   priority={isActive}
+                  quality={75}
                   className={styles.image}
                 />
               </button>
@@ -192,7 +193,9 @@ export function CreativeDocument() {
               src={getCloudinaryUrl(selectedProject.src, 1800)}
               alt={selectedProject.alt}
               fill
-              sizes="min(90vw, 70rem)"
+              sizes="(max-width: 768px) 90vw, 70vw"
+              quality={80}
+              loading="lazy"
               className={styles.modalImage}
               onClick={(event) => event.stopPropagation()}
             />
