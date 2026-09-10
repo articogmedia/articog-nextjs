@@ -1,6 +1,5 @@
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
-import { BeehiivForm } from "@/components/newsletter/BeehiivForm";
 
 export default function NewsletterPage() {
   return (
@@ -14,8 +13,13 @@ export default function NewsletterPage() {
             </p>
 
             <Section className="py-12 border-t border-zinc-900">
-              <div className="space-y-6 bg-zinc-900/30 p-8 rounded-3xl border border-zinc-800">
-                <BeehiivForm />
+              <div className="rounded-3xl border border-zinc-800 bg-zinc-900/30 p-8 text-center">
+                <p className="text-[11px] font-sans font-semibold uppercase tracking-[0.2em] text-white/45">
+                  Newsletter
+                </p>
+                <p className="mt-4 font-display text-3xl md:text-4xl text-white">
+                  Coming soon
+                </p>
               </div>
             </Section>
           </div>
