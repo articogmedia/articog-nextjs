@@ -164,16 +164,35 @@ export const blogPosts: BlogEntry[] = [
 
   {
     type: "medium",
-    slug: "medium-brand-velocity-and-the-ai-production-stack",
-    title: "Brand velocity and the AI production stack",
-    excerpt:
-      "A look at how AI production systems reduce creative bottlenecks while keeping brand quality and consistency intact.",
-    publishedAt: "2025-01-22",
-    featuredImage:
-      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
+    slug: "articog-and-creative-ai-why-the-future-of-brand-films-ai-ads-and-ugc-video-starts-here",
+    title: "Articog and Creative AI: Why the Future of Brand Films, AI Ads, and UGC Video Starts Here",
+    excerpt: "",
+    publishedAt: "2025-05-02",
     sourceLabel: "Medium",
     sourceUrl:
-      "https://medium.com/@articog.com/brand-velocity-and-the-ai-production-stack",
+      "https://medium.com/@articog.com/articog-and-creative-ai-why-the-future-of-brand-films-ai-ads-and-ugc-video-starts-here-531c88a1a5c2",
+    actionLabel: "Read on Medium",
+  },
+  {
+    type: "medium",
+    slug: "how-articog-is-redefining-creative-ai-video-for-the-us-market",
+    title: "How Articog Is Redefining Creative AI Video for the US Market",
+    excerpt: "",
+    publishedAt: "2025-04-30",
+    sourceLabel: "Medium",
+    sourceUrl:
+      "https://medium.com/@articog.com/how-articog-is-redefining-creative-ai-video-for-the-us-market-9d6666958ec6",
+    actionLabel: "Read on Medium",
+  },
+  {
+    type: "medium",
+    slug: "from-scroll-to-sale-how-ugc-videos-drive-revenue-for-startups",
+    title: "From Scroll to Sale: How UGC Videos Drive Revenue for Startups",
+    excerpt: "",
+    publishedAt: "2025-04-28",
+    sourceLabel: "Medium",
+    sourceUrl:
+      "https://medium.com/@articog.com/from-scroll-to-sale-how-ugc-videos-drive-revenue-for-startups-deb10eb7461c",
     actionLabel: "Read on Medium",
   },
 

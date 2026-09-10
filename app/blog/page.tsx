@@ -16,11 +16,8 @@ export default function BlogPage() {
       <Section size="lg" className="pt-32 md:pt-40">
         <Container>
           <div className="mx-auto mb-16 max-w-3xl text-center">
-            <span className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-white/40">
-              OUR BLOG
-            </span>
-            <Heading as="h1" size="hero" className="mb-6">
-              Insights & Perspectives
+            <Heading as="h1" size="hero" className="mb-0">
+              Blog
             </Heading>
           </div>
 

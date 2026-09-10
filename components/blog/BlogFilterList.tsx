@@ -52,10 +52,6 @@ function BlogCard({ post }: { post: BlogEntry }) {
               {post.title}
             </Heading>
 
-            <p className="mb-5 font-sans text-sm leading-7 text-white/60">
-              {post.excerpt}
-            </p>
-
             <div className="flex items-center justify-between border-t border-white/[0.08] pt-4">
               <span className="font-sans text-xs uppercase tracking-[0.18em] text-white/35">
                 {post.readTime}
@@ -101,10 +97,6 @@ function BlogCard({ post }: { post: BlogEntry }) {
         <Heading as="h2" size="card" className="mb-4 text-white">
           {post.title}
         </Heading>
-
-        <p className="mb-6 font-sans text-sm leading-7 text-white/60">
-          {post.excerpt}
-        </p>
 
         <Link
           href={post.sourceUrl}
