@@ -152,7 +152,7 @@ export default function AdLibraryPage() {
               Build your AI creative roadmap
             </Heading>
             <Button asChild variant="primary" size="lg">
-              <Link href="/book-a-demo">Start Your Project</Link>
+              <Link href="/book-a-demo">Book a Demo</Link>
             </Button>
           </div>
         </Container>

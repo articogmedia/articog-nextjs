@@ -91,7 +91,7 @@ export default function DataHandlingPage() {
               Review our practices
             </Heading>
             <Button asChild variant="primary" size="lg">
-              <Link href="/book-a-demo">Review Our Data Practices</Link>
+              <Link href="/book-a-demo">Book a Demo</Link>
             </Button>
           </div>
         </Container>

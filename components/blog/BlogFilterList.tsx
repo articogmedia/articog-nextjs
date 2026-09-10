@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Image from "next/image";
 
 import { Link } from "@/components/ui/Link";
 import { Heading } from "@/components/ui";
@@ -27,11 +28,13 @@ function BlogCard({ post }: { post: BlogEntry }) {
     return (
       <article className="group overflow-hidden rounded-3xl border border-white/[0.08] bg-white/[0.02] transition-colors hover:border-white/[0.14]">
         <Link href={`/blog/${post.slug}`} className="block">
-          <div className="overflow-hidden border-b border-white/[0.08]">
-            <img
+          <div className="relative h-56 overflow-hidden border-b border-white/[0.08]">
+            <Image
               src={post.featuredImage}
               alt={post.title}
-              className="h-56 w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
             />
           </div>
 
@@ -69,12 +72,14 @@ function BlogCard({ post }: { post: BlogEntry }) {
 
   return (
     <article className="group overflow-hidden rounded-3xl border border-white/[0.08] bg-white/[0.02] transition-colors hover:border-white/[0.14]">
-      <div className="overflow-hidden border-b border-white/[0.08]">
+      <div className="relative h-56 overflow-hidden border-b border-white/[0.08]">
         {post.featuredImage ? (
-          <img
+          <Image
             src={post.featuredImage}
             alt={post.title}
-            className="h-56 w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
           />
         ) : (
           <div className="flex h-56 items-center justify-center bg-white/[0.03] font-sans text-xs uppercase tracking-[0.2em] text-white/30">

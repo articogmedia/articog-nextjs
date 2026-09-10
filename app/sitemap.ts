@@ -9,6 +9,8 @@ const REDIRECTED_ROUTES = new Set([
   "/accessibility",
   "/privacy",
   "/legal/privacy-policy",
+  "/work/industries",
+  "/pricing/faq",
 ]);
 const EXCLUDED_ROUTES = new Set(["/thank-you/demo"]);
 

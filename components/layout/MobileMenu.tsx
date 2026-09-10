@@ -18,9 +18,10 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     return () => { document.body.style.overflow = ""; };
   }, [isOpen]);
 
-  useEffect(() => {
-    if (!isOpen) setOpenGroups([]);
-  }, [isOpen]);
+  const handleClose = () => {
+    setOpenGroups([]);
+    onClose();
+  };
 
   const toggleGroup = (label: string) => {
     setOpenGroups(prev => 
@@ -36,7 +37,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       <div
         className="fixed inset-0 z-40"
         style={{ background: "rgba(0,0,0,0.85)", backdropFilter: "blur(8px)" }}
-        onClick={onClose}
+        onClick={handleClose}
       />
 
       {/* Drawer */}
@@ -48,7 +49,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         <div className="flex items-center justify-between px-6 pt-6 pb-4 shrink-0">
           <span className="font-display text-base font-semibold text-white">Articog</span>
           <button
-            onClick={onClose}
+            onClick={handleClose}
             className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/[0.10] text-white/45 hover:text-white/90 transition-colors"
             aria-label="Close menu"
           >
@@ -80,7 +81,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                       <Link
                         key={link.href}
                         href={link.href}
-                        onClick={onClose}
+                        onClick={handleClose}
                         className="font-sans text-[13px] px-3 py-2 rounded-lg text-white/50 hover:text-white/85 transition-colors"
                       >
                         {link.label}
@@ -105,10 +106,10 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             </button>
             {openGroups.includes("Pricing") && (
               <div className="flex flex-col gap-1 pb-4 pl-3">
-                <Link href="/pricing" onClick={onClose} className="font-sans text-[13px] px-3 py-2 rounded-lg text-white/50 hover:text-white/85 transition-colors">Pricing Overview</Link>
-                <Link href="/pricing#monthly-plans" onClick={onClose} className="font-sans text-[13px] px-3 py-2 rounded-lg text-white/50 hover:text-white/85 transition-colors">Monthly Plans</Link>
-                <Link href="/pricing#pilot" onClick={onClose} className="font-sans text-[13px] px-3 py-2 rounded-lg text-white/50 hover:text-white/85 transition-colors">Pilot Project</Link>
-                <Link href="/pricing/faq" onClick={onClose} className="font-sans text-[13px] px-3 py-2 rounded-lg text-white/50 hover:text-white/85 transition-colors">Pricing FAQ</Link>
+                <Link href="/pricing" onClick={handleClose} className="font-sans text-[13px] px-3 py-2 rounded-lg text-white/50 hover:text-white/85 transition-colors">Pricing Overview</Link>
+                <Link href="/pricing#monthly-plans" onClick={handleClose} className="font-sans text-[13px] px-3 py-2 rounded-lg text-white/50 hover:text-white/85 transition-colors">Monthly Plans</Link>
+                <Link href="/pricing#pilot" onClick={handleClose} className="font-sans text-[13px] px-3 py-2 rounded-lg text-white/50 hover:text-white/85 transition-colors">Pilot Project</Link>
+                <Link href="/pricing/faq" onClick={handleClose} className="font-sans text-[13px] px-3 py-2 rounded-lg text-white/50 hover:text-white/85 transition-colors">Pricing FAQ</Link>
               </div>
             )}
           </div>
@@ -117,7 +118,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         {/* CTA */}
         <div className="px-6 pb-8 pt-6 shrink-0 bg-[#060606]">
           <Button asChild variant="primary" size="lg" className="w-full">
-            <Link href="/book-a-demo" onClick={onClose}>Book a Demo</Link>
+            <Link href="/book-a-demo" onClick={handleClose}>Book a Demo</Link>
           </Button>
         </div>
       </div>

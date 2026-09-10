@@ -122,7 +122,7 @@ export default function PricingPage() {
                   <ul className="mb-10 flex-1 space-y-4">
                     {plan.features.map((feature) => <li key={feature} className="flex items-start gap-3 text-sm"><Check size={16} className="mt-0.5 shrink-0 text-accent" /><span className="text-white/60">{feature}</span></li>)}
                   </ul>
-                  <Button asChild variant={plan.popular ? "primary" : "secondary"} size="lg" className="w-full"><Link href="/book-a-demo">Choose a Plan</Link></Button>
+                  <Button asChild variant={plan.popular ? "primary" : "secondary"} size="lg" className="w-full"><Link href="/book-a-demo">Book a Demo</Link></Button>
                 </div>
               ))}
             </div>
@@ -134,7 +134,7 @@ export default function PricingPage() {
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {pilotSteps.map(([title, description]) => <div key={title} className="rounded-2xl border border-white/[0.08] p-8" style={{ background: "rgba(255,255,255,0.02)" }}><div className="mb-6 flex h-10 w-10 items-center justify-center rounded-full bg-accent/10"><Check size={20} className="text-accent" /></div><h3 className="mb-4 font-display text-xl font-semibold text-white">{title}</h3><p className="font-sans text-sm leading-relaxed text-white/50">{description}</p></div>)}
             </div>
-            <div className="mt-10 text-center"><Button asChild variant="primary" size="lg"><Link href="/book-a-demo">Start a Pilot</Link></Button></div>
+            <div className="mt-10 text-center"><Button asChild variant="primary" size="lg"><Link href="/book-a-demo">Book a Demo</Link></Button></div>
           </div>
         </Container>
       </Section>

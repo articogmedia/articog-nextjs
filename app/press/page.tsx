@@ -29,7 +29,7 @@ export default function PressPage() {
 
   return (
     <div className="min-h-screen bg-black text-white flex flex-col font-sans">
-      <main className="flex-grow pt-32 pb-20">
+      <div className="flex-grow pt-32 pb-20">
         <Container>
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight text-white">
@@ -115,7 +115,7 @@ export default function PressPage() {
 
           </div>
         </Container>
-      </main>
+      </div>
     </div>
   );
 }

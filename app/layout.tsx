@@ -1,5 +1,5 @@
 // app/layout.tsx
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { Inter, Sora } from "next/font/google";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
@@ -21,6 +21,35 @@ export const metadata: Metadata = {
   title: "Articog | Creative AI Production Company | AI Brand Films & Ad Creations",
   description:
     "Articog is a Creative AI Production Company. We produce AI brand films, commercials, ad creations, UGC, AI social content, and audio ads for growth-stage brands. Brief to delivery in days, not weeks.",
+  metadataBase: new URL("https://articog.com"),
+  manifest: "/manifest.webmanifest",
+  openGraph: {
+    type: "website",
+    siteName: "Articog",
+    title: "Articog | Creative AI Production Company | AI Brand Films & Ad Creations",
+    description:
+      "Articog is a Creative AI Production Company. We produce AI brand films, commercials, ad creations, UGC, AI social content, and audio ads for growth-stage brands. Brief to delivery in days, not weeks.",
+    url: "https://articog.com",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 2400,
+        height: 1260,
+        alt: "Articog creative AI production",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Articog | Creative AI Production Company",
+    description:
+      "AI creative production for growth-stage brands. Brief to delivery in days, not weeks.",
+    images: ["/og-image.png"],
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#000000",
 };
 
 export default function RootLayout({

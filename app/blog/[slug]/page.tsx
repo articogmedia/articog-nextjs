@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 
 import { Link } from "@/components/ui/Link";
 import { Container, Section, Heading } from "@/components/ui";
@@ -103,9 +104,11 @@ export default async function BlogArticlePage({
           </div>
 
           <div className="mb-12 overflow-hidden rounded-3xl border border-white/[0.08] bg-white/[0.02]">
-            <img
+            <Image
               src={post.featuredImage}
               alt={post.title}
+              width={1200}
+              height={630}
               className="h-[360px] w-full object-cover md:h-[480px]"
             />
           </div>

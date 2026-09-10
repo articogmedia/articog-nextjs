@@ -104,7 +104,7 @@ export function Comparison({ rows }: ComparisonProps) {
           </div>
         </div>
 
-        <p className="mt-5 text-center font-sans text-xs text-white/30">
+        <p className="mt-5 text-center font-sans text-xs text-muted-safe">
           Based on Articog client engagements.
         </p>
       </Container>

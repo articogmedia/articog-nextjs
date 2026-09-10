@@ -143,7 +143,7 @@ export function Footer() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="font-sans text-sm text-white/40 hover:text-white/80 transition-colors w-fit"
+                    className="font-sans text-sm text-muted-safe hover:text-white/80 transition-colors w-fit"
                   >
                     {item.label}
                   </Link>

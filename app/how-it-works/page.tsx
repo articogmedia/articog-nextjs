@@ -132,7 +132,7 @@ export default function HowItWorksPage() {
               Ready to accelerate your production?
             </Heading>
             <Button asChild variant="primary" size="lg">
-              <Link href="/book-a-demo">Talk to us</Link>
+              <Link href="/book-a-demo">Book a Demo</Link>
             </Button>
           </div>
         </Container>

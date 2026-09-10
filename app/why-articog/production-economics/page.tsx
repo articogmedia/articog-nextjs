@@ -73,7 +73,7 @@ export default function ProductionEconomicsPage() {
               Ready to model your ROI?
             </Heading>
             <Button asChild variant="primary" size="lg">
-              <Link href="/book-a-demo">Model Your Needs</Link>
+              <Link href="/book-a-demo">Book a Demo</Link>
             </Button>
           </div>
         </Container>

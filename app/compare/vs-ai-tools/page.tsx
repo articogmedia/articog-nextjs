@@ -84,7 +84,7 @@ export default function CompareAIToolsPage() {
             <table className="w-full border-collapse">
               <thead>
                 <tr className="border-b border-white/10">
-                  <th className="py-6 px-4 text-left font-display text-sm font-semibold text-white/30 uppercase tracking-widest w-1/4">Metric</th>
+                  <th className="py-6 px-4 text-left font-display text-sm font-semibold text-muted-safe uppercase tracking-widest w-1/4">Metric</th>
                   <th className="py-6 px-8 text-left font-display text-lg font-semibold text-white/60 w-3/8">DIY With AI Tools</th>
                   <th className="py-6 px-8 text-left font-display text-lg font-semibold text-white w-3/8">Articog Engine</th>
                 </tr>

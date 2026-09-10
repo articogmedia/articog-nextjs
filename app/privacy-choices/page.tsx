@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyChoicesPage() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black text-white">
       <Section size="lg" className="pt-32 md:pt-40">
         <Container>
           <div className="mx-auto max-w-3xl">
@@ -91,6 +91,6 @@ export default function PrivacyChoicesPage() {
           </div>
         </Container>
       </Section>
-    </main>
+    </div>
   );
 }

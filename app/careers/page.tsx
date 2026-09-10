@@ -34,7 +34,7 @@ export default function CareersPage() {
 
             <BreezyOpenings />
 
-            <p className="mt-8 text-center font-sans text-[12px] text-white/30">
+            <p className="mt-8 text-center font-sans text-[12px] text-muted-safe">
               Note: Candidate information is handled according to our <Link href="/privacy-policy" className="underline hover:text-white/50">Privacy Policy</Link>.
             </p>
           </div>

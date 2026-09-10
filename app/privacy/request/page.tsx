@@ -20,7 +20,7 @@ export default function PrivacyRequestPage() {
 
   return (
     <div className="min-h-screen bg-black text-white flex flex-col font-sans">
-      <main className="flex-grow pt-32 pb-20 px-4">
+      <div className="flex-grow pt-32 pb-20 px-4">
         <div className="max-w-2xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Data Rights Request</h1>
           <p className="text-zinc-400 text-lg mb-10">
@@ -104,7 +104,7 @@ export default function PrivacyRequestPage() {
             </div>
           </div>
         </div>
-      </main>
+      </div>
 
     </div>
   );

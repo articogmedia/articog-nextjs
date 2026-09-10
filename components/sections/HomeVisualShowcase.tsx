@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import NextImage from "next/image";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Container, Section, Heading } from "@/components/ui";
 
@@ -158,9 +159,8 @@ export function HomeVisualShowcase() {
                       aria-label={`Open ${visual.alt}`}
                       aria-current={visuals.indexOf(visual) === activeIndex ? "true" : undefined}
                     >
-                      <img
+                      <NextImage
                         src={getCloudinaryUrl(visual.src, 1600)}
-                        srcSet={`${getCloudinaryUrl(visual.src, 640)} 640w, ${getCloudinaryUrl(visual.src, 960)} 960w, ${getCloudinaryUrl(visual.src, 1280)} 1280w, ${getCloudinaryUrl(visual.src, 1600)} 1600w`}
                         sizes="(max-width: 640px) 43vw, (max-width: 1024px) 28vw, 24vw"
                         alt={visual.alt}
                         width={1600}
@@ -215,7 +215,7 @@ export function HomeVisualShowcase() {
           >
             <X size={20} />
           </button>
-          <img
+          <NextImage
             src={getModalImageUrl(selectedVisual.src)}
             alt={selectedVisual.alt}
             width={2400}

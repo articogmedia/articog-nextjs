@@ -4,7 +4,7 @@ import { Section } from '@/components/ui/Section';
 export default function CopyrightPage() {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col font-sans">
-      <main className="flex-grow pt-32 pb-20">
+      <div className="flex-grow pt-32 pb-20">
         <Container>
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight text-white">Copyright / DMCA</h1>
@@ -44,7 +44,7 @@ export default function CopyrightPage() {
             </Section>
           </div>
         </Container>
-      </main>
+      </div>
 
     </div>
   );

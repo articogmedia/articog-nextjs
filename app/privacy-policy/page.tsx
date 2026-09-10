@@ -432,7 +432,7 @@ const sections: PolicySection[] = [
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-black text-white">
+    <div className="min-h-screen overflow-x-hidden bg-black text-white">
       <section className="pt-32 md:pt-40">
         <div className="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-12">
           <div className="mx-auto w-full max-w-[1060px]">
@@ -641,6 +641,6 @@ export default function PrivacyPolicyPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

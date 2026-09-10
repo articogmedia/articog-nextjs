@@ -1,4 +1,5 @@
 import { Play } from "lucide-react";
+import Image from "next/image";
 
 const videoCards = [
   {
@@ -24,10 +25,11 @@ export function WorkVideoShowcase() {
           const card = (
             <div className="group relative aspect-video overflow-hidden rounded-xl border border-white/[0.08] bg-white/[0.03]">
               {videoId ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
+                <Image
                   src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`}
                   alt=""
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   loading="lazy"
                   decoding="async"
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03] group-hover:brightness-110"

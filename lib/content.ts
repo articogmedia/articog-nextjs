@@ -9,7 +9,7 @@ export const siteContent: SiteContent = {
     eyebrow: "AI Creative Production",
     headline: "Your creative engine, accelerated by AI.",
     ctaLabel: "Book a Demo",
-    ctaHref: "/contact",
+    ctaHref: "/book-a-demo",
     secondaryCtaLabel: "See How It Works",
     secondaryCtaHref: "/#pipeline",
   },
@@ -177,6 +177,6 @@ export const siteContent: SiteContent = {
   cta: {
     headline: "Your next campaign.\nDelivered in days.",
     ctaLabel: "Book a Demo",
-    ctaHref: "/contact",
+    ctaHref: "/book-a-demo",
   },
 };

@@ -130,7 +130,7 @@ export function CaseStudies({ caseStudies }: CaseStudiesProps) {
                   {cs.metric}
                 </p>
 
-                <p className="mt-1 font-sans text-xs uppercase tracking-wider text-white/35">
+                <p className="mt-1 font-sans text-xs uppercase tracking-wider text-muted-safe">
                   {cs.metricLabel}
                 </p>
               </div>
@@ -149,7 +149,7 @@ export function CaseStudies({ caseStudies }: CaseStudiesProps) {
                       {cs.client}
                     </p>
 
-                    <p className="font-sans text-xs text-white/35">
+                    <p className="font-sans text-xs text-muted-safe">
                       {cs.industry}
                     </p>
                   </div>

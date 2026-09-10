@@ -2,6 +2,7 @@
 
 import { type CSSProperties, useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import Image from "next/image";
 import styles from "./CreativeDocument.module.css";
 
 type Artwork = {
@@ -146,10 +147,8 @@ export function CreativeDocument() {
                   aria-current={proximity < 0.5 ? "true" : undefined}
                 >
                   {shouldLoad && (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
+                    <Image
                       src={getCloudinaryUrl(artwork.src, 900)}
-                      srcSet={`${getCloudinaryUrl(artwork.src, 700)} 700w, ${getCloudinaryUrl(artwork.src, 900)} 900w, ${getCloudinaryUrl(artwork.src, 1100)} 1100w`}
                       sizes="(max-width: 640px) 82vw, (max-width: 1024px) 60vw, 47vw"
                       alt={artwork.alt}
                       width={1200}
@@ -191,8 +190,7 @@ export function CreativeDocument() {
       {selected && (
         <div className={styles.modal} role="dialog" aria-modal="true" aria-label={selected.alt} onClick={() => setSelected(null)}>
           <button type="button" className={styles.close} onClick={() => setSelected(null)} aria-label="Close visual preview"><X size={20} /></button>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={getCloudinaryUrl(selected.src, 1800)} alt={selected.alt} width={1800} height={2200} decoding="async" onClick={(event) => event.stopPropagation()} />
+          <Image src={getCloudinaryUrl(selected.src, 1800)} alt={selected.alt} width={1800} height={2200} decoding="async" onClick={(event) => event.stopPropagation()} />
         </div>
       )}
     </>

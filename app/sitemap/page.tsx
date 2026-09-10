@@ -107,7 +107,7 @@ export default function SitemapPage() {
     <div className="min-h-screen bg-black text-white flex flex-col font-sans">
       <Header />
       
-      <main className="flex-grow pt-32 pb-20">
+      <div className="flex-grow pt-32 pb-20">
         <Container>
           <div className="max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Sitemap</h1>
@@ -135,7 +135,7 @@ export default function SitemapPage() {
             </div>
           </div>
         </Container>
-      </main>
+      </div>
 
       <Footer />
     </div>

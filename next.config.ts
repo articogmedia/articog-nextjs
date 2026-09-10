@@ -2,6 +2,44 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   allowedDevOrigins: ["192.168.56.1"],
+  images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "res.cloudinary.com" },
+      { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "img.youtube.com" },
+      { protocol: "https", hostname: "i.ytimg.com" },
+    ],
+  },
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "Content-Security-Policy",
+            value: [
+              "default-src 'self'",
+              "base-uri 'self'",
+              "frame-ancestors 'self'",
+              "object-src 'none'",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://assets.calendly.com https://articog.breezy.hr https://subscribe-forms.beehiiv.com",
+              "style-src 'self' 'unsafe-inline' https://assets.calendly.com",
+              "font-src 'self' data:",
+              "img-src 'self' data: blob: https://res.cloudinary.com https://images.unsplash.com https://img.youtube.com",
+              "media-src 'self' https://res.cloudinary.com",
+              "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://api.resend.com https://*.googleapis.com",
+              "frame-src 'self' https://calendly.com https://*.calendly.com https://www.youtube.com https://www.youtube-nocookie.com",
+              "form-action 'self'",
+            ].join("; "),
+          },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "Strict-Transport-Security", value: "max-age=31536000; includeSubDomains" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
+        ],
+      },
+    ];
+  },
   async redirects() {
     return [
       { source: "/services/ai-video-production/automotive", destination: "/services/ai-video-production", statusCode: 301 },
