@@ -64,6 +64,7 @@ const footerNavSections = [
   {
     title: "Services",
     links: [
+      { label: "Services", href: "/services" },
       { label: "AI Video Production", href: "/services/ai-video-production" },
       { label: "Ad Creative", href: "/services/ad-creative" },
       { label: "Social Creative", href: "/services/social-creative" },
@@ -71,18 +72,21 @@ const footerNavSections = [
       { label: "Audio & Sound", href: "/services/audio" },
       { label: "Creative Strategy", href: "/services/creative-strategy" },
       { label: "Post-Production", href: "/services/post-production" },
-      { label: "Services", href: "/services" },
     ],
   },
   {
     title: "Resources",
     links: [
+      { label: "Solutions", href: "/solutions" },
+      { label: "Industries", href: "/industries" },
+      { label: "Work", href: "/work" },
       { label: "Blog", href: "/blog" },
       { label: "AI Ad Library", href: "/ai-ad-library" },
       { label: "Help Center", href: "/help" },
       { label: "Why Articog", href: "/why-articog" },
       { label: "How It Works", href: "/how-it-works" },
       { label: "Trust Center", href: "/trust" },
+      { label: "Customer Stories", href: "/customers" },
     ],
   },
   {
@@ -91,8 +95,9 @@ const footerNavSections = [
       { label: "About Us", href: "/about" },
       { label: "Careers", href: "/careers" },
       { label: "Press & Media", href: "/press" },
-      { label: "Customer Stories", href: "/customers" },
-      { label: "Trust Center", href: "/trust" },
+      { label: "Pricing", href: "/pricing" },
+      { label: "Book a Demo", href: "/book-a-demo" },
+      { label: "Newsletter", href: "/newsletter" },
       { label: "Contact", href: "/contact" },
       { label: "Sitemap", href: "/sitemap" },
     ],
