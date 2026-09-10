@@ -162,15 +162,6 @@ export function CreativeDocument() {
         })}
       </div>
 
-      <div className={styles.metaRow}>
-        <div className={styles.projectInfo}>
-          <span className={styles.category}>{activeProject.category}</span>
-          <h3>{activeProject.title}</h3>
-          <p>{activeProject.description}</p>
-          <a href="/work" className={styles.viewProject}>View Project</a>
-        </div>
-      </div>
-
       <div className={styles.controlsWrap}>
         <div className={styles.controls}>
           <button type="button" onClick={() => moveProject(-1)} className={styles.arrow} aria-label="Previous portfolio project">
@@ -179,6 +170,15 @@ export function CreativeDocument() {
           <button type="button" onClick={() => moveProject(1)} className={styles.arrow} aria-label="Next portfolio project">
             <ArrowRight size={16} aria-hidden="true" />
           </button>
+        </div>
+      </div>
+
+      <div className={styles.metaRow}>
+        <div className={styles.projectInfo}>
+          <span className={styles.category}>{activeProject.category}</span>
+          <h3>{activeProject.title}</h3>
+          <p>{activeProject.description}</p>
+          <a href="/work" className={styles.viewProject}>View Project</a>
         </div>
       </div>
 

@@ -144,7 +144,7 @@
 .controlsWrap {
   display: flex;
   justify-content: center;
-  margin-top: 1.25rem;
+  margin-top: 1.15rem;
   padding: 0 clamp(0.25rem, 1.5vw, 1rem);
 }
 
