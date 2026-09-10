@@ -98,7 +98,7 @@ export function Pipeline({ steps }: PipelineProps) {
         {/* Header */}
         <div className="mb-16 max-w-lg">
           <Heading
-            as="h2"
+            as="p"
             size="label"
             className="mb-4"
             style={{

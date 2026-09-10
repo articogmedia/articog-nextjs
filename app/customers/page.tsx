@@ -62,9 +62,9 @@ export default function CustomersPage() {
                 {/* Content Body */}
                 <div className="flex flex-col flex-1 p-8 gap-6">
                   <div className="space-y-4">
-                    <h3 className="font-display text-lg font-semibold text-white leading-snug">
+                    <h2 className="type-h3 text-white">
                       {cs.outcome}
-                    </h3>
+                    </h2>
                     <div className="space-y-3 pt-2">
                       <div className="flex flex-col gap-1">
                         <span className="text-[10px] uppercase tracking-wider text-white/20 font-bold">Challenge</span>

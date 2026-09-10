@@ -40,7 +40,7 @@ export default function AboutPage() {
         <Container>
           <div className="mx-auto grid max-w-4xl gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
             <div className="space-y-3">
-              <Heading as="h2" size="label">Why We Exist</Heading>
+              <Heading as="p" size="label">Why We Exist</Heading>
               <Heading as="p" size="section">
                 Why creative production is broken
               </Heading>

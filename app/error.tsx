@@ -14,7 +14,7 @@ export default function Error({
         <p className="mb-6 font-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-white/40">
           ERROR
         </p>
-        <h1 className="mb-5 font-display text-4xl font-semibold tracking-tight text-white md:text-5xl">
+        <h1 className="type-h1 mb-5 text-white">
           Something went wrong. Please try again.
         </h1>
         <p className="mb-10 font-sans text-base leading-relaxed text-white/50">

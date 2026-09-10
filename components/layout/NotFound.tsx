@@ -20,10 +20,7 @@ export function NotFound() {
         </p>
 
         <div className="space-y-4">
-          <h1
-            className="font-display font-semibold text-white"
-            style={{ fontSize: "clamp(2rem, 4vw, 3rem)", letterSpacing: "-0.025em" }}
-          >
+          <h1 className="type-h1 text-white">
             Looks like this page didn't make the cut
           </h1>
           <p className="font-sans text-lg" style={{ color: "rgba(255,255,255,0.42)" }}>

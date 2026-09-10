@@ -14,7 +14,7 @@ export function Problems({ problems }: ProblemsProps) {
           {/* Left label */}
           <div className="lg:col-span-4">
             <div className="lg:sticky lg:top-28 space-y-3">
-              <Heading as="h2" size="label">The Problem</Heading>
+              <Heading as="p" size="label">The Problem</Heading>
               <Heading as="p" size="section">
                 Why creative production is broken
               </Heading>

@@ -32,7 +32,7 @@ export default function PressPage() {
       <div className="flex-grow pt-32 pb-20">
         <Container>
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight text-white">
+            <h1 className="type-h1 mb-6 text-white">
               Press & Media Kit
             </h1>
 
@@ -42,7 +42,7 @@ export default function PressPage() {
             </p>
 
             <Section className="py-12 border-t border-zinc-900">
-              <h2 className="text-2xl font-bold mb-8 text-white">
+              <h2 className="type-h2 mb-8 text-white">
                 Media Kit
               </h2>
 
@@ -52,7 +52,7 @@ export default function PressPage() {
                     key={asset.title}
                     className="bg-zinc-900/50 p-6 rounded-2xl border border-zinc-800 flex flex-col h-full"
                   >
-                    <h3 className="text-lg font-bold mb-3 text-white">
+                    <h3 className="type-h3 mb-3 text-white">
                       {asset.title}
                     </h3>
 
@@ -68,7 +68,7 @@ export default function PressPage() {
             <Section className="py-12 border-t border-zinc-900">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div>
-                  <h2 className="text-2xl font-bold mb-6 text-white">
+                  <h2 className="type-h2 mb-6 text-white">
                     Company Boilerplate
                   </h2>
 

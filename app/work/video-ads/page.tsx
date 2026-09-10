@@ -25,7 +25,7 @@ export default function VideoAdsGalleryPage() {
       <div className="flex-grow pt-32 pb-20">
         <Container>
           <div className="max-w-6xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Video Ad Gallery</h1>
+            <h1 className="type-h1 mb-6 text-white">Video Ad Gallery</h1>
             <p className="text-zinc-400 text-xl mb-16 max-w-2xl leading-relaxed">
               Explore our latest AI-generated video creative across industries and formats.
             </p>
@@ -41,7 +41,7 @@ export default function VideoAdsGalleryPage() {
               {examples.map((item, idx) => (
                 <div key={idx} className="group">
                   <div className="flex justify-between items-start mb-2">
-                    <h3 className="font-bold text-lg">{item.title}</h3>
+                    <h2 className="type-h3">{item.title}</h2>
                     <span className="text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-zinc-800 text-zinc-400">
                       {item.type}
                     </span>

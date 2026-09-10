@@ -128,7 +128,7 @@ export function HomeVisualShowcase() {
         <Container>
           <div className="mb-6 flex items-end justify-between gap-8 md:mb-8">
             <div className="max-w-xl">
-              <Heading as="h2" size="label" className="mb-4 text-white/45">
+              <Heading as="p" size="label" className="mb-4 text-white/45">
                 Selected visual studies
               </Heading>
               <Heading as="h2" size="section" className="mb-0 text-white">

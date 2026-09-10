@@ -63,7 +63,7 @@ export default function SolutionsPage() {
                 style={{ background: "rgba(255,255,255,0.01)" }}
               >
                 <div>
-                  <h3 className="font-display text-base font-semibold text-white">{card.title}</h3>
+                    <h2 className="type-h3 text-white">{card.title}</h2>
                   <p className="mt-1 font-sans text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.50)" }}>
                     {card.description}
                   </p>

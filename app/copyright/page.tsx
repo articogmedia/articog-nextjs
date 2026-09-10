@@ -14,7 +14,7 @@ export default function CopyrightPage() {
       <div className="flex-grow pt-32 pb-20">
         <Container>
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight text-white">Copyright / DMCA</h1>
+            <h1 className="type-h1 mb-6 text-white">Copyright / DMCA</h1>
             <p className="text-zinc-400 text-xl mb-12 max-w-2xl leading-relaxed">
               Articog respects the intellectual property rights of others and expects its users to do the same.
             </p>
@@ -22,7 +22,7 @@ export default function CopyrightPage() {
             <Section className="py-12 border-t border-zinc-900">
               <div className="prose prose-invert max-w-none space-y-8">
                 <div>
-                  <h2 className="text-2xl font-bold mb-4 text-white">Reporting Infringement</h2>
+                  <h2 className="type-h2 mb-4 text-white">Reporting Infringement</h2>
                   <p className="text-zinc-400 text-lg leading-relaxed">
                     If you believe that your work has been copied in a way that constitutes copyright infringement, please provide our copyright team with the following information:
                   </p>
@@ -36,7 +36,7 @@ export default function CopyrightPage() {
                 </div>
 
                 <div className="bg-zinc-900/50 p-8 rounded-2xl border border-zinc-800">
-                  <h3 className="text-xl font-bold mb-2 text-white">Contact Our Copyright Team</h3>
+                    <h3 className="type-h3 mb-2 text-white">Contact Our Copyright Team</h3>
                   <p className="text-zinc-400">
                     Submit your request via email to: <a href="mailto:info@articog.com" className="text-white hover:underline">info@articog.com</a>
                   </p>

@@ -9,9 +9,9 @@ interface TextProps {
 }
 
 const sizeMap = {
-  sm: "text-sm leading-relaxed",
-  base: "text-base leading-relaxed",
-  lg: "text-lg leading-relaxed",
+  sm: "type-small",
+  base: "type-body",
+  lg: "type-body-lg",
 };
 
 export function Text({

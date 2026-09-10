@@ -30,14 +30,7 @@ export function FinalCTA({ content }: FinalCTAProps) {
             </span>
           </div>
 
-          <h2
-            className="font-display font-semibold text-white mb-5"
-            style={{
-              fontSize: "clamp(1.8rem, 4vw, 2.6rem)",
-              lineHeight: 1.15,
-              letterSpacing: "-0.028em",
-            }}
-          >
+          <h2 className="type-h2 mb-5 text-white">
             {content.headline.split("\n").map((line, i) => (
               <span key={i} className="block">{line}</span>
             ))}

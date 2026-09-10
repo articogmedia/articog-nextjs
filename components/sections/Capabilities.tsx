@@ -33,7 +33,7 @@ export function Capabilities({ capabilities }: CapabilitiesProps) {
     <Section id="capabilities" className="relative overflow-hidden bg-[#0a0a0a]">
       <Container className="relative z-20">
         <div className="max-w-lg mb-16">
-          <Heading as="h2" size="label" className="mb-4 text-white/50">Services</Heading>
+          <Heading as="p" size="label" className="mb-4 text-white/50">Services</Heading>
           <Heading as="h2" size="section" className="mb-0 text-white">Creative formats, delivered.</Heading>
         </div>
 
@@ -51,7 +51,7 @@ export function Capabilities({ capabilities }: CapabilitiesProps) {
                   <div className="flex h-10 w-10 lg:h-9 lg:w-9 shrink-0 items-center justify-center rounded-xl border border-white/[0.08] text-white/40 group-hover:text-white/70 transition-colors duration-200">
                     <Icon size={17} />
                   </div>
-                  <h3 className="font-display text-base lg:text-sm font-semibold text-white leading-snug">
+                  <h3 className="type-h3 text-white">
                     {cap.title}
                   </h3>
                 </div>

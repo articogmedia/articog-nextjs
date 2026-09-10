@@ -110,7 +110,7 @@ export default function SitemapPage() {
       <div className="flex-grow pt-32 pb-20">
         <Container>
           <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Sitemap</h1>
+            <h1 className="type-h1 mb-6 text-white">Sitemap</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
               {sitemapData.map((section) => (

@@ -102,7 +102,7 @@ export function CaseStudies({ caseStudies }: CaseStudiesProps) {
 
       <Container className="relative z-20">
         <div className="mb-16 max-w-lg">
-          <Heading as="h2" size="label" className="mb-4">
+          <Heading as="p" size="label" className="mb-4">
             Proof
           </Heading>
 
@@ -138,7 +138,7 @@ export function CaseStudies({ caseStudies }: CaseStudiesProps) {
               {/* Body */}
               <div className="flex flex-1 flex-col gap-5 p-6">
                 <div className="flex-1">
-                  <h3 className="font-display text-sm font-semibold leading-snug text-white">
+                  <h3 className="type-h3 text-white">
                     {cs.outcome}
                   </h3>
                 </div>

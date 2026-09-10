@@ -19,7 +19,7 @@ export default function SocialCreativePage() {
             <span className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-white/40">
               SERVICES
             </span>
-            <h1 className="font-display text-4xl md:text-6xl font-semibold text-white mb-6 tracking-tight">
+            <h1 className="type-h1 mb-6 text-white">
               Social Creative
             </h1>
             <p className="text-xl text-white/60 leading-relaxed max-w-2xl">
@@ -33,10 +33,10 @@ export default function SocialCreativePage() {
         <Container>
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="font-display text-2xl font-semibold text-white mb-6">What We Deliver</h2>
+              <h2 className="type-h2 mb-6 text-white">What We Deliver</h2>
             </div>
             <div>
-              <h2 className="font-display text-2xl font-semibold text-white mb-6">Applications</h2>
+              <h2 className="type-h2 mb-6 text-white">Applications</h2>
               <ul className="space-y-4">
                 {[
                   "Organic social short-form video",

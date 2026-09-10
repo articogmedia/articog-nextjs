@@ -87,7 +87,7 @@ export default function IndustriesPage() {
                   <ArrowRight size={15} className="text-white/30 transition-transform group-hover:translate-x-0.5 group-hover:text-white/70" />
                 </div>
                 <div className="mt-8">
-                  <h3 className="font-display text-base font-semibold text-white">{industry.title}</h3>
+                    <h2 className="type-h3 text-white">{industry.title}</h2>
                   <p className="mt-2 max-w-sm font-sans text-xs leading-relaxed text-white/50">{industry.description}</p>
                 </div>
               </Link>

@@ -73,10 +73,10 @@ export default function WorkPage() {
                 className="group rounded-2xl p-8 border border-white/[0.08] transition-all hover:border-white/20 hover:bg-white/[0.02]"
                 style={{ background: "rgba(255,255,255,0.01)" }}
               >
-                <h3 className="mb-2 font-display text-xl font-semibold text-white flex items-center justify-between">
+                <h2 className="type-h3 mb-2 text-white flex items-center justify-between">
                   {cat.title}
                   <ArrowRight size={20} className="opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0" />
-                </h3>
+                </h2>
                 <p className="font-sans text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.50)" }}>
                   {cat.description}
                 </p>

@@ -284,14 +284,7 @@ export default function ServicesPage() {
               Services
             </span>
 
-            <h1
-              className="font-display font-semibold text-white"
-              style={{
-                fontSize: "clamp(2.4rem, 6vw, 4.2rem)",
-                lineHeight: 1.1,
-                letterSpacing: "-0.03em",
-              }}
-            >
+            <h1 className="type-h1 text-white">
               Every creative format, delivered.
             </h1>
 
@@ -304,12 +297,7 @@ export default function ServicesPage() {
         {serviceGroups.map((group) => (
           <Section key={group.category} size="md" className="py-12">
             <Container>
-              <h2
-                className="mb-10 font-display text-2xl font-semibold text-white"
-                style={{
-                  letterSpacing: "-0.02em",
-                }}
-              >
+              <h2 className="type-h2 mb-10 text-white">
                 {group.category}
               </h2>
 
@@ -324,12 +312,7 @@ export default function ServicesPage() {
                       border: "1px solid rgba(255,255,255,0.08)",
                     }}
                   >
-                    <h3
-                      className="font-display text-base font-semibold text-white transition-colors duration-200 group-hover:text-white/90"
-                      style={{
-                        letterSpacing: "-0.01em",
-                      }}
-                    >
+                    <h3 className="type-h3 text-white transition-colors duration-200 group-hover:text-white/90">
                       {service.title}
                     </h3>
                     <ArrowRight
@@ -348,14 +331,7 @@ export default function ServicesPage() {
       <Section size="lg" className="border-t border-white/[0.05]">
         <Container>
           <div className="mx-auto max-w-xl text-center">
-            <h2
-              className="mb-6 font-display font-semibold text-white"
-              style={{
-                fontSize: "clamp(1.8rem, 4vw, 2.6rem)",
-                lineHeight: 1.15,
-                letterSpacing: "-0.028em",
-              }}
-            >
+            <h2 className="type-h2 mb-6 text-white">
               Not sure where to start?
             </h2>
 

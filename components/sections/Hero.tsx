@@ -107,12 +107,7 @@ export function Hero({ content }: HeroProps) {
 
           {/* Headline */}
           <h1
-            className="font-display font-semibold text-white"
-            style={{
-              fontSize: "var(--text-hero)",
-              lineHeight: "var(--text-hero--line-height)",
-              letterSpacing: "var(--text-hero--letter-spacing)",
-            }}
+            className="type-h1 text-white"
           >
             {lines.map((line, i) => (
               <span key={i} className="block">

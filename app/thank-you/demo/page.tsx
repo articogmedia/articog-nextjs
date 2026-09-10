@@ -22,14 +22,7 @@ export default function ThankYouDemoPage() {
               <CheckCircle2 size={32} />
             </div>
           </div>
-          <h1
-            className="font-display font-semibold text-white mb-6"
-            style={{
-              fontSize: "clamp(2rem, 5vw, 3.2rem)",
-              lineHeight: 1.1,
-              letterSpacing: "-0.03em",
-            }}
-          >
+          <h1 className="type-h1 mb-6 text-white">
             Thanks we&apos;ve got your request
           </h1>
           <p

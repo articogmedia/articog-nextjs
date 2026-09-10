@@ -84,14 +84,7 @@ export default function ContactPage() {
               CONTACT
             </span>
 
-            <h1
-              className="font-display font-semibold text-white mb-6"
-              style={{
-                fontSize: "clamp(2.4rem, 6vw, 4.2rem)",
-                lineHeight: 1.1,
-                letterSpacing: "-0.03em",
-              }}
-            >
+            <h1 className="type-h1 mb-6 text-white">
               Contact Us
             </h1>
 

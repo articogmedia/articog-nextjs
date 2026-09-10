@@ -23,7 +23,7 @@ export default function EmailPreferencesPage() {
     <div className="min-h-screen bg-black text-white flex flex-col font-sans">
       <div className="flex-grow pt-32 pb-20 px-4">
         <div className="max-w-2xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Email Preferences</h1>
+          <h1 className="type-h1 mb-6 text-white">Email Preferences</h1>
           <p className="text-zinc-400 text-lg mb-10">
             Manage what emails you receive from us.
           </p>

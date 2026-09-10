@@ -268,7 +268,7 @@ export function ServiceDetails({ category }: { category: ServiceCategory }) {
     <Section className="border-t border-white/5 py-20">
       <Container>
         <div className="mb-12 max-w-3xl">
-          <h2 className="mb-4 font-display text-3xl font-semibold text-white">
+          <h2 className="type-h2 mb-4 text-white">
             Capabilities
           </h2>
         </div>
@@ -277,7 +277,7 @@ export function ServiceDetails({ category }: { category: ServiceCategory }) {
             <details key={group.title} className="group rounded-2xl border border-white/10 bg-white/[0.02]">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-6 p-5 marker:hidden md:p-6">
                 <div className="max-w-3xl">
-                  <h3 className="font-display text-xl font-semibold text-white">{group.title}</h3>
+                  <h3 className="type-h3 text-white">{group.title}</h3>
                   <p className="mt-2 font-sans text-sm leading-relaxed text-white/50">{group.description}</p>
                 </div>
                 <span className="shrink-0 font-sans text-2xl font-light text-white/40 transition-transform group-open:rotate-45">+</span>

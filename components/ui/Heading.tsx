@@ -12,10 +12,10 @@ interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement | HTMLPar
 }
 
 const sizeMap: Record<NonNullable<HeadingProps["size"]>, string> = {
-  hero: "font-display text-hero font-semibold tracking-tight",
-  section: "font-display text-section font-semibold tracking-tight",
-  card: "font-display text-xl font-semibold tracking-tight",
-  label: "font-sans text-xs font-semibold uppercase tracking-[0.14em] text-white/35",
+  hero: "type-h1",
+  section: "type-h2",
+  card: "type-h3",
+  label: "type-label text-white/35",
 };
 
 export function Heading({

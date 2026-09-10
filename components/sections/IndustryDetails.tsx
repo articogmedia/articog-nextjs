@@ -153,7 +153,7 @@ export function IndustryDetails() {
       <Container>
         <div className="mb-12 max-w-2xl md:mb-16">
           <p className="mb-3 font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-white/40">Explore by industry</p>
-          <h2 className="font-display text-3xl font-semibold tracking-tight text-white md:text-4xl">Creative production by industry</h2>
+          <h2 className="type-h2 text-white">Creative production by industry</h2>
         </div>
         <div className="grid gap-4 lg:grid-cols-2">
           {industryDetails.map((industry) => (
@@ -161,7 +161,7 @@ export function IndustryDetails() {
               <summary className="flex min-h-52 cursor-pointer list-none flex-col justify-between gap-6 p-6 marker:hidden md:min-h-56 md:p-8">
                 <div className="flex items-start justify-between gap-6">
                   <div className="min-w-0">
-                    <h3 className="font-display text-xl font-semibold text-white md:text-2xl">{industry.title}</h3>
+                    <h3 className="type-h3 text-white">{industry.title}</h3>
                     <p className="mt-4 max-w-xl font-sans text-sm leading-relaxed text-white/60">{industry.positioning}</p>
                   </div>
                   <span className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 text-lg font-light leading-none text-white/50 transition-transform group-open:rotate-45">+</span>

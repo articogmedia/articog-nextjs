@@ -19,10 +19,10 @@ const buttonVariants = cva(
           "border border-accent/40 text-accent hover:border-accent hover:bg-accent-muted active:scale-[0.98]",
       },
       size: {
-        sm: "h-8 px-3 text-sm",
-        md: "h-10 px-5 text-sm",
-        lg: "h-12 px-7 text-base",
-        xl: "h-14 px-9 text-base",
+        sm: "h-8 px-3 type-small",
+        md: "h-10 px-5 type-small",
+        lg: "h-12 px-7 type-body",
+        xl: "h-14 px-9 type-body",
       },
     },
     defaultVariants: {

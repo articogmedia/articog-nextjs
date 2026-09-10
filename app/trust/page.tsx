@@ -56,9 +56,9 @@ export default function TrustPage() {
                 className="group flex items-center justify-between rounded-xl p-5 border border-white/[0.08] transition-colors hover:border-white/20 hover:bg-white/[0.02]"
                 style={{ background: "rgba(255,255,255,0.01)" }}
               >
-                <h3 className="font-display text-base font-semibold text-white">
+                <h2 className="type-h3 text-white">
                   {card.title}
-                </h3>
+                </h2>
                 <ArrowRight size={18} className="ml-4 shrink-0 text-white/35 transition-transform group-hover:translate-x-0.5 group-hover:text-white/70" />
               </Link>
             ))}
