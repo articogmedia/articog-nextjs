@@ -115,7 +115,7 @@ export default function SitemapPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
               {sitemapData.map((section) => (
                 <div key={section.title} className="space-y-6">
-                  <h2 className="text-sm font-bold text-zinc-500 uppercase tracking-widest border-b border-zinc-900 pb-2">
+                  <h2 className="type-label border-b border-zinc-900 pb-2 text-zinc-500">
                     {section.title}
                   </h2>
                   <ul className="space-y-3">

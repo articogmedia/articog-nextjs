@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Link } from "@/components/ui/Link";
-import { Container, Section, Button } from "@/components/ui";
+import { Container, Section, Button, Input, Checkbox, Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui";
 import { ArrowRight } from "lucide-react";
 
 const CALENDLY_URL = "https://calendly.com/articog-media-01/articog-demo-call";
@@ -112,13 +112,13 @@ export default function BookADemoPage() {
                     First Name <span className="text-accent">*</span>
                   </label>
 
-                  <input
+                  <Input
                     type="text"
                     id="firstName"
                     name="firstName"
                     required
                     placeholder="Jane"
-                    className="h-12 w-full rounded-lg px-4 font-sans text-sm outline-none transition-all duration-200"
+                    className="h-12 rounded-lg px-4"
                     style={{
                       background: "rgba(255,255,255,0.04)",
                       border: "1px solid rgba(255,255,255,0.08)",
@@ -135,13 +135,13 @@ export default function BookADemoPage() {
                     Last Name <span className="text-accent">*</span>
                   </label>
 
-                  <input
+                  <Input
                     type="text"
                     id="lastName"
                     name="lastName"
                     required
                     placeholder="Doe"
-                    className="h-12 w-full rounded-lg px-4 font-sans text-sm outline-none transition-all duration-200"
+                    className="h-12 rounded-lg px-4"
                     style={{
                       background: "rgba(255,255,255,0.04)",
                       border: "1px solid rgba(255,255,255,0.08)",
@@ -161,13 +161,13 @@ export default function BookADemoPage() {
                     Work Email <span className="text-accent">*</span>
                   </label>
 
-                  <input
+                  <Input
                     type="email"
                     id="email"
                     name="email"
                     required
                     placeholder="jane@company.com"
-                    className="h-12 w-full rounded-lg px-4 font-sans text-sm outline-none transition-all duration-200"
+                    className="h-12 rounded-lg px-4"
                     style={{
                       background: "rgba(255,255,255,0.04)",
                       border: "1px solid rgba(255,255,255,0.08)",
@@ -184,13 +184,13 @@ export default function BookADemoPage() {
                     Company Name <span className="text-accent">*</span>
                   </label>
 
-                  <input
+                  <Input
                     type="text"
                     id="company"
                     name="company"
                     required
                     placeholder="Acme Corp"
-                    className="h-12 w-full rounded-lg px-4 font-sans text-sm outline-none transition-all duration-200"
+                    className="h-12 rounded-lg px-4"
                     style={{
                       background: "rgba(255,255,255,0.04)",
                       border: "1px solid rgba(255,255,255,0.08)",
@@ -209,12 +209,12 @@ export default function BookADemoPage() {
                   Your Role
                 </label>
 
-                <input
+                <Input
                   type="text"
                   id="role"
                   name="role"
                   placeholder="Creative Director"
-                  className="h-12 w-full rounded-lg px-4 font-sans text-sm outline-none transition-all duration-200"
+                  className="h-12 rounded-lg px-4"
                   style={{
                     background: "rgba(255,255,255,0.04)",
                     border: "1px solid rgba(255,255,255,0.08)",
@@ -243,30 +243,11 @@ export default function BookADemoPage() {
                       className="group flex cursor-pointer items-center gap-3"
                     >
                       <div className="relative flex items-center justify-center">
-                        <input
-                          type="checkbox"
+                        <Checkbox
                           name="service-interest"
                           value={option}
-                          className="peer h-5 w-5 appearance-none rounded border border-white/10 bg-white/5 transition-all duration-200 checked:border-accent checked:bg-accent"
+                          className="h-5 w-5 rounded border-white/10 bg-white/5"
                         />
-
-                        <div className="pointer-events-none absolute text-white opacity-0 peer-checked:opacity-100">
-                          <svg
-                            width="10"
-                            height="8"
-                            viewBox="0 0 10 8"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M1 4L3.5 6.5L9 1"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                        </div>
                       </div>
 
                       <span className="font-sans text-sm text-white/60 transition-colors group-hover:text-white">
@@ -287,31 +268,15 @@ export default function BookADemoPage() {
                     Budget Range
                   </label>
 
-                  <div className="relative">
-                    <select
-                      id="budget"
-                      name="budget"
-                      defaultValue=""
-                      className="h-12 w-full appearance-none rounded-lg px-4 font-sans text-sm outline-none transition-all duration-200"
-                      style={{
-                        border: "1px solid rgba(255,255,255,0.08)",
-                        color: "white",
-                        backgroundColor: "#0A0A0A",
-                      }}
-                    >
-                      <option value="" disabled>
-                        Select budget
-                      </option>
-                      <option value="Under $5k">Under $5k</option>
-                      <option value="$5k $15k">$5k $15k</option>
-                      <option value="$15k $50k">$15k $50k</option>
-                      <option value="$50k+">$50k+</option>
-                    </select>
-
-                    <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-white/30">
-                      <ChevronDownIcon />
-                    </div>
-                  </div>
+                  <Select name="budget" defaultValue="">
+                    <SelectTrigger id="budget" className="h-12 rounded-lg px-4"><SelectValue placeholder="Select budget" /></SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="Under $5k">Under $5k</SelectItem>
+                      <SelectItem value="$5k $15k">$5k $15k</SelectItem>
+                      <SelectItem value="$15k $50k">$15k $50k</SelectItem>
+                      <SelectItem value="$50k+">$50k+</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
 
                 <div className="flex flex-col gap-2.5">
@@ -322,35 +287,15 @@ export default function BookADemoPage() {
                     Timeline
                   </label>
 
-                  <div className="relative">
-                    <select
-                      id="timeline"
-                      name="timeline"
-                      defaultValue=""
-                      className="h-12 w-full appearance-none rounded-lg px-4 font-sans text-sm outline-none transition-all duration-200"
-                      style={{
-                        border: "1px solid rgba(255,255,255,0.08)",
-                        color: "white",
-                        backgroundColor: "#0A0A0A",
-                      }}
-                    >
-                      <option value="" disabled>
-                        Select timeline
-                      </option>
-                      <option value="Immediately">Immediately</option>
-                      <option value="Within 1 month">
-                        Within 1 month
-                      </option>
-                      <option value="1-3 months">1-3 months</option>
-                      <option value="Planning for future">
-                        Planning for future
-                      </option>
-                    </select>
-
-                    <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-white/30">
-                      <ChevronDownIcon />
-                    </div>
-                  </div>
+                  <Select name="timeline" defaultValue="">
+                    <SelectTrigger id="timeline" className="h-12 rounded-lg px-4"><SelectValue placeholder="Select timeline" /></SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="Immediately">Immediately</SelectItem>
+                      <SelectItem value="Within 1 month">Within 1 month</SelectItem>
+                      <SelectItem value="1-3 months">1-3 months</SelectItem>
+                      <SelectItem value="Planning for future">Planning for future</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
               </div>
 
@@ -389,25 +334,5 @@ export default function BookADemoPage() {
         </div>
       </Container>
     </Section>
-  );
-}
-
-function ChevronDownIcon() {
-  return (
-    <svg
-      width="10"
-      height="6"
-      viewBox="0 0 10 6"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M1 1L5 5L9 1"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
   );
 }

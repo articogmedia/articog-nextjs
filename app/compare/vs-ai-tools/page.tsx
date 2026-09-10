@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: "A comparison of Articog's managed creative engine versus doing it yourself with raw AI tools. Why expertise and consistency matter.",
   alternates: { canonical: "https://articog.com/compare/vs-ai-tools" },
 };
-import { Container, Section, Heading, Button } from "@/components/ui";
+import { Container, Section, Heading, Button, Table, TableHeader, TableBody, TableHead, TableRow, TableCell } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 
 export default function CompareAIToolsPage() {
@@ -81,32 +81,32 @@ export default function CompareAIToolsPage() {
       <Section className="py-20 bg-white/[0.02]">
         <Container>
           <div className="overflow-x-auto">
-            <table className="w-full border-collapse">
-              <thead>
-                <tr className="border-b border-white/10">
-                  <th className="py-6 px-4 text-left font-display text-sm font-semibold text-muted-safe uppercase tracking-widest w-1/4">Metric</th>
-                  <th className="py-6 px-8 text-left font-display text-lg font-semibold text-white/60 w-3/8">DIY With AI Tools</th>
-                  <th className="py-6 px-8 text-left font-display text-lg font-semibold text-white w-3/8">Articog Engine</th>
-                </tr>
-              </thead>
-              <tbody>
+            <Table className="border-collapse">
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="w-1/4 py-6 px-4">Metric</TableHead>
+                  <TableHead className="w-3/8 py-6 px-8 type-h4 text-white/60">DIY With AI Tools</TableHead>
+                  <TableHead className="w-3/8 py-6 px-8 type-h4 text-white">Articog Engine</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
                 {comparisonData.map((row, index) => (
-                  <tr key={index} className="border-b border-white/5 group hover:bg-white/[0.01] transition-colors">
-                    <td className="py-10 px-4 align-top">
+                  <TableRow key={index} className="group hover:bg-white/[0.01]">
+                    <TableCell className="py-10 px-4 align-top">
                       <span className="font-display text-lg font-medium text-white">{row.metric}</span>
-                    </td>
-                    <td className="py-10 px-8 align-top">
+                    </TableCell>
+                    <TableCell className="py-10 px-8 align-top">
                       <div className="text-white/60 font-display text-xl mb-3">{row.diy.value}</div>
                       <p className="text-white/40 font-sans text-sm leading-relaxed">{row.diy.desc}</p>
-                    </td>
-                    <td className="py-10 px-8 align-top bg-white/[0.02]">
+                    </TableCell>
+                    <TableCell className="py-10 px-8 align-top bg-white/[0.02]">
                       <div className="text-white font-display text-xl mb-3">{row.articog.value}</div>
                       <p className="text-white/60 font-sans text-sm leading-relaxed">{row.articog.desc}</p>
-                    </td>
-                  </tr>
+                    </TableCell>
+                  </TableRow>
                 ))}
-              </tbody>
-            </table>
+              </TableBody>
+            </Table>
           </div>
         </Container>
       </Section>
@@ -115,7 +115,7 @@ export default function CompareAIToolsPage() {
       <Section className="py-24 border-t border-white/5">
         <Container>
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="font-display text-4xl font-semibold text-white mb-8">Get brand-quality AI creative without the learning curve</h2>
+            <h2 className="type-h2 mb-8 text-white">Get brand-quality AI creative without the learning curve</h2>
             <Link href="/book-a-demo">
               <Button size="lg" className="rounded-full px-8 h-14 text-lg">
                 Book a Demo

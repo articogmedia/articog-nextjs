@@ -54,7 +54,7 @@ export default function CreativeStrategyPage() {
       <Section className="py-20 bg-white/[0.02]">
         <Container>
           <div className="mb-12">
-            <h2 className="font-display text-3xl font-semibold text-white mb-4">What We Do</h2>
+            <h2 className="type-h2 mb-4 text-white">What We Do</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {capabilities.map((item) => (
@@ -94,7 +94,7 @@ export default function CreativeStrategyPage() {
       <Section className="py-24 bg-white/[0.02]">
         <Container>
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="font-display text-4xl font-semibold text-white mb-8">Ready to build your creative foundation?</h2>
+            <h2 className="type-h2 mb-8 text-white">Ready to build your creative foundation?</h2>
             <Link href="/book-a-demo">
               <Button size="lg" className="rounded-full px-8 h-14 text-lg">
                 Start with Strategy

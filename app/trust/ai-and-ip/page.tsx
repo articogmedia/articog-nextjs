@@ -110,7 +110,7 @@ export default function AIIPPage() {
       <Section className="py-20 bg-white/[0.02]">
         <Container>
           <div className="mb-12 max-w-3xl">
-            <h2 className="font-display text-3xl font-semibold text-white mb-4">Responsible AI Principles</h2>
+            <h2 className="type-h2 mb-4 text-white">Responsible AI Principles</h2>
             <p className="font-sans text-white/50 leading-relaxed">
               The principles and ethical guardrails that guide how we use AI to build the future of creative production.
             </p>
@@ -127,7 +127,7 @@ export default function AIIPPage() {
             ))}
           </div>
           <div className="text-center pt-16 mt-16 border-t border-white/10">
-            <h2 className="font-display text-3xl font-semibold text-white mb-6">Commitment to Transparency</h2>
+            <h2 className="type-h2 mb-6 text-white">Commitment to Transparency</h2>
             <p className="mx-auto max-w-xl font-sans text-base text-white/60">
               Our approach to AI is built on the foundation of trust. We work closely with brand legal and creative teams to ensure every project aligns with both industry standards and company-specific values.
             </p>
@@ -139,7 +139,7 @@ export default function AIIPPage() {
       <Section className="py-24 bg-white/[0.02]">
         <Container>
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="font-display text-4xl font-semibold text-white mb-8">Ready to build with confidence?</h2>
+            <h2 className="type-h2 mb-8 text-white">Ready to build with confidence?</h2>
             <Link href="/book-a-demo">
               <Button size="lg" className="rounded-full px-8 h-14 text-lg">
                 Book a Demo

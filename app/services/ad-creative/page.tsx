@@ -73,7 +73,7 @@ export default function AdCreativePage() {
       <Section className="py-20 bg-white/[0.02]">
         <Container>
           <div className="mb-12">
-            <h2 className="font-display text-3xl font-semibold text-white mb-4">What We Deliver</h2>
+              <h2 className="type-h2 mb-4 text-white">What We Deliver</h2>
             <p className="font-sans text-white/50 max-w-2xl">
               From social feeds to global display, we build assets for each channel.
             </p>
@@ -131,7 +131,7 @@ export default function AdCreativePage() {
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="font-display text-4xl font-semibold text-white mb-6">Built to Test</h2>
+              <h2 className="type-h2 mb-6 text-white">Built to Test</h2>
               <p className="font-sans text-lg text-white/60 leading-relaxed mb-6">
                 Stop relying on "best guesses." We deliver hundreds of on-brand variants optimized by performance signals.
               </p>
@@ -163,7 +163,7 @@ export default function AdCreativePage() {
       <Section className="py-24 bg-white/[0.02]">
         <Container>
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="font-display text-4xl font-semibold text-white mb-8">Ready to scale your performance?</h2>
+            <h2 className="type-h2 mb-8 text-white">Ready to scale your performance?</h2>
             <Link href="/book-a-demo">
               <Button size="lg" className="rounded-full px-8 h-14 text-lg">
                 Scale Your Ad Creative

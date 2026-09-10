@@ -82,7 +82,7 @@ export default function PressPage() {
                 </div>
 
                 <div>
-                  <h2 className="text-2xl font-bold mb-6 text-white">
+                  <h2 className="type-h2 mb-6 text-white">
                     Media Contact
                   </h2>
 
@@ -102,7 +102,7 @@ export default function PressPage() {
             </Section>
 
             <Section className="py-12 border-t border-zinc-900">
-              <h2 className="text-2xl font-bold mb-4 text-white">
+                  <h2 className="type-h2 mb-4 text-white">
                 Usage Guidelines
               </h2>
 

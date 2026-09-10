@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "@/components/ui/Link";
-import { Button } from '@/components/ui/Button';
+import { Button, Input, Textarea, Label, Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui';
 import { useState } from 'react';
 import { toast } from 'sonner';
 
@@ -29,47 +29,45 @@ export default function PrivacyRequestPage() {
 
           <form onSubmit={handleSubmit} className="space-y-8 bg-zinc-900/50 p-8 rounded-2xl border border-zinc-800">
             <div className="space-y-2">
-              <label htmlFor="name" className="text-sm font-medium text-zinc-300">Full Name</label>
-              <input 
+              <Label htmlFor="name" className="text-zinc-300">Full Name</Label>
+              <Input
                 id="name" 
                 placeholder="John Doe" 
                 required 
-                className="w-full bg-black border border-zinc-700 rounded-lg px-4 py-3 text-white placeholder:text-zinc-600 focus:outline-none focus:border-white transition-colors" 
+                className="rounded-lg bg-black px-4 py-3 text-white placeholder:text-zinc-600 focus:border-white"
               />
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="email" className="text-sm font-medium text-zinc-300">Email Address</label>
-              <input 
+              <Label htmlFor="email" className="text-zinc-300">Email Address</Label>
+              <Input
                 id="email" 
                 type="email" 
                 placeholder="john@example.com" 
                 required 
-                className="w-full bg-black border border-zinc-700 rounded-lg px-4 py-3 text-white placeholder:text-zinc-600 focus:outline-none focus:border-white transition-colors" 
+                className="rounded-lg bg-black px-4 py-3 text-white placeholder:text-zinc-600 focus:border-white"
               />
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="type" className="text-sm font-medium text-zinc-300">Request Type</label>
-              <select 
-                id="type"
-                required 
-                className="w-full bg-black border border-zinc-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-white transition-colors appearance-none cursor-pointer"
-              >
-                <option value="" disabled selected>Select request type</option>
-                <option value="know">Right to Know</option>
-                <option value="delete">Right to Delete</option>
-                <option value="correct">Right to Correct</option>
-                <option value="opt-out">Opt-Out of Sale/Sharing</option>
-              </select>
+              <Label htmlFor="type" className="text-zinc-300">Request Type</Label>
+              <Select name="type" defaultValue="">
+                <SelectTrigger id="type" className="rounded-lg bg-black px-4 py-3 text-white focus:border-white"><SelectValue placeholder="Select request type" /></SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="know">Right to Know</SelectItem>
+                  <SelectItem value="delete">Right to Delete</SelectItem>
+                  <SelectItem value="correct">Right to Correct</SelectItem>
+                  <SelectItem value="opt-out">Opt-Out of Sale/Sharing</SelectItem>
+                </SelectContent>
+              </Select>
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="details" className="text-sm font-medium text-zinc-300">Details / Message</label>
-              <textarea 
+              <Label htmlFor="details" className="text-zinc-300">Details / Message</Label>
+              <Textarea
                 id="details" 
                 placeholder="Please provide any additional context for your request..." 
-                className="w-full min-h-[120px] bg-black border border-zinc-700 rounded-lg px-4 py-3 text-white placeholder:text-zinc-600 focus:outline-none focus:border-white transition-colors resize-none" 
+                className="min-h-[120px] resize-none rounded-lg bg-black px-4 py-3 text-white placeholder:text-zinc-600 focus:border-white"
               />
             </div>
 
@@ -85,7 +83,7 @@ export default function PrivacyRequestPage() {
 
           <div className="mt-12 space-y-6">
             <div className="p-8 rounded-2xl bg-zinc-900/30 border border-zinc-800/50">
-              <h2 className="text-xl font-bold mb-2">Alternate Contact Method</h2>
+              <h2 className="type-h3 mb-2">Alternate Contact Method</h2>
               <p className="text-zinc-400">
                 You can also reach us at{' '}
                 <a href="mailto:info@articog.com" className="text-white hover:underline underline-offset-4 decoration-zinc-700">

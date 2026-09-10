@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Link } from "@/components/ui/Link";
-import { Container, Section, Button, Heading } from "@/components/ui";
+import { Container, Section, Button, Heading, PricingCard } from "@/components/ui";
 import { Check, ChevronDown, ChevronUp } from "lucide-react";
 
 export default function PricingPage() {
@@ -66,7 +66,7 @@ export default function PricingPage() {
 
           <div className="grid gap-6 md:grid-cols-3 mb-16">
             {/* Project-Based */}
-            <PricingCard
+            <PlanCard
               title="Project-Based"
               price="Custom quote"
               description="For one-off campaigns and high-impact launches"
@@ -81,7 +81,7 @@ export default function PricingPage() {
             />
 
             {/* Monthly Subscription */}
-            <PricingCard
+            <PlanCard
               title="Monthly Subscription"
               price="Custom quote"
               description="For ongoing content and recurring creative needs"
@@ -97,7 +97,7 @@ export default function PricingPage() {
             />
 
             {/* Enterprise */}
-            <PricingCard
+            <PlanCard
               title="Enterprise"
               price="Custom quote"
               description="For high-volume teams and multi-brand portfolios"
@@ -166,7 +166,7 @@ export default function PricingPage() {
   );
 }
 
-function PricingCard({
+function PlanCard({
   title,
   price,
   description,
@@ -184,54 +184,24 @@ function PricingCard({
   popular?: boolean;
 }) {
   return (
-    <div
-      className={`relative flex flex-col rounded-2xl p-8 transition-all duration-300 ${
-        popular ? "scale-105 z-10" : ""
-      }`}
-      style={{
-        background: "rgba(255,255,255,0.03)",
-        border: popular
-          ? "1px solid rgba(102, 51, 238, 0.4)"
-          : "1px solid rgba(255,255,255,0.08)",
-        boxShadow: popular
-          ? "0 20px 40px rgba(102, 51, 238, 0.1)"
-          : "none",
-      }}
-    >
+    <PricingCard.Card className={popular ? "z-10 scale-105 border-accent/40 shadow-lg shadow-accent/10" : ""}>
       {popular && (
-        <span
-          className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full px-3 py-1 font-sans text-[10px] font-bold uppercase tracking-wider text-white"
-          style={{ background: "#6633EE" }}
-        >
+        <PricingCard.Badge className="absolute -top-3 left-1/2 -translate-x-1/2">
           Most Popular
-        </span>
+        </PricingCard.Badge>
       )}
 
-      <h3 className="font-display text-2xl font-semibold text-white mb-2">
-        {title}
-      </h3>
+      <PricingCard.Header>
+        <PricingCard.Plan><PricingCard.PlanName>{title}</PricingCard.PlanName></PricingCard.Plan>
+        <PricingCard.Price><PricingCard.MainPrice>{price}</PricingCard.MainPrice></PricingCard.Price>
+      </PricingCard.Header>
 
-      <div className="mb-4 font-sans text-lg font-medium text-accent">
-        {price}
-      </div>
-
-      <p
-        className="font-sans text-sm mb-8"
-        style={{ color: "rgba(255,255,255,0.50)" }}
-      >
-        {description}
-      </p>
-
-      <ul className="mb-10 space-y-4 flex-1">
-        {features.map((feature) => (
-          <li key={feature} className="flex items-start gap-3 text-sm">
-            <Check size={16} className="mt-0.5 shrink-0 text-accent" />
-            <span style={{ color: "rgba(255,255,255,0.60)" }}>
-              {feature}
-            </span>
-          </li>
-        ))}
-      </ul>
+      <PricingCard.Body>
+        <PricingCard.Description>{description}</PricingCard.Description>
+        <PricingCard.List className="mb-10">
+          {features.map((feature) => <PricingCard.ListItem key={feature}>{feature}</PricingCard.ListItem>)}
+        </PricingCard.List>
+      </PricingCard.Body>
 
       <Button
         asChild
@@ -241,7 +211,7 @@ function PricingCard({
       >
         <Link href={href}>{buttonText}</Link>
       </Button>
-    </div>
+    </PricingCard.Card>
   );
 }
 

@@ -52,7 +52,7 @@ export default function SocialWorkPage() {
       <Section className="py-20 bg-white/[0.02]">
         <Container>
           <div className="mb-12 max-w-3xl">
-            <h2 className="font-display text-3xl font-semibold text-white mb-4">A real example</h2>
+            <h2 className="type-h2 mb-4 text-white">A real example</h2>
           </div>
           <div className="max-w-3xl mb-16">
             <YouTubeEmbed
@@ -92,7 +92,7 @@ export default function SocialWorkPage() {
       <Section className="py-24">
         <Container>
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="font-display text-4xl font-semibold text-white mb-8">Ready to fuel your social engine?</h2>
+            <h2 className="type-h2 mb-8 text-white">Ready to fuel your social engine?</h2>
             <Link href="/book-a-demo">
               <Button size="lg" className="rounded-full px-8 h-14 text-lg">
                 Build Your Monthly Content

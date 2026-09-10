@@ -39,7 +39,7 @@ export default function ProductVisualsPage() {
                 <div className="flex items-center gap-3 mb-4">
                   <span className="text-xs font-bold tracking-widest text-white/40 uppercase">Beauty / UGC / Social Content</span>
                 </div>
-                <h2 className="font-display text-3xl font-semibold text-white mb-4">
+                <h2 className="type-h2 mb-4 text-white">
                   Full campaign live 72 hours from brief
                 </h2>
                 <p className="font-sans text-lg text-white/60">
@@ -66,7 +66,7 @@ export default function ProductVisualsPage() {
       <Section className="py-24">
         <Container>
           <div className="max-w-2xl mb-16">
-            <h2 className="font-display text-3xl font-semibold text-white mb-6">Visual Production at Scale</h2>
+            <h2 className="type-h2 mb-6 text-white">Visual Production at Scale</h2>
             <p className="font-sans text-lg text-white/60">
               We provide a comprehensive suite of visual assets that maintain consistent brand standards across every touchpoint.
             </p>
@@ -92,7 +92,7 @@ export default function ProductVisualsPage() {
       <Section className="py-24 border-t border-white/5">
         <Container>
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="font-display text-4xl font-semibold text-white mb-8">Ready to elevate your visuals?</h2>
+            <h2 className="type-h2 mb-8 text-white">Ready to elevate your visuals?</h2>
             <Link href="/book-a-demo">
               <Button size="lg" className="rounded-full px-8 h-14 text-lg">
                 Start Your Project

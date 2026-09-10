@@ -96,14 +96,16 @@ const footerNavSections = [
 
 export function Footer() {
   return (
+    /* Adapted from Tailark's Footer component published on 21st.dev:
+       https://21st.dev/@meschacirung/components/footer */
     <footer
       style={{ background: "#000000" }}
       className="border-t border-white/5 pt-16"
     >
       <Container className="py-14">
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-12 sm:grid-cols-2 md:grid-cols-5">
           {/* Brand */}
-          <div className="space-y-4 lg:col-span-2">
+          <div className="space-y-4 md:col-span-2">
             <Link
               href="/"
               className="font-display text-base font-semibold text-white/90 hover:text-white transition-colors"

@@ -545,7 +545,7 @@ export default function PrivacyPolicyPage() {
                           ) : (
                             <div key={i}>
                               {block.title && (
-                                <h3 className="mb-3 font-sans text-[13px] font-semibold uppercase tracking-[0.14em] text-white/45">
+                                <h3 className="type-label mb-3 text-white/45">
                                   {block.title}
                                 </h3>
                               )}

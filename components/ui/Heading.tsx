@@ -5,7 +5,7 @@ type HeadingTag = "h1" | "h2" | "h3" | "h4" | "p";
 interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement | HTMLParagraphElement> {
   children: React.ReactNode;
   as?: HeadingTag;
-  size?: "hero" | "section" | "card" | "label";
+  size?: "hero" | "section" | "card" | "subsection" | "label";
   className?: string;
   gradient?: boolean;
   id?: string;
@@ -15,6 +15,7 @@ const sizeMap: Record<NonNullable<HeadingProps["size"]>, string> = {
   hero: "type-h1",
   section: "type-h2",
   card: "type-h3",
+  subsection: "type-h4",
   label: "type-label text-white/35",
 };
 

@@ -68,7 +68,7 @@ export default function AIVideoProductionPage() {
       <Section className="py-20 bg-white/[0.02]">
         <Container>
           <div className="mb-12">
-            <h2 className="font-display text-3xl font-semibold text-white mb-4">What We Deliver</h2>
+              <h2 className="type-h2 mb-4 text-white">What We Deliver</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {deliverables.map((item) => {
@@ -109,7 +109,7 @@ export default function AIVideoProductionPage() {
               <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
                 <Zap className="w-6 h-6 text-white" />
               </div>
-              <h2 className="font-display text-3xl font-semibold text-white">How It Works</h2>
+              <h2 className="type-h2 text-white">How It Works</h2>
               <p className="font-sans text-lg text-white/60 leading-relaxed">
                 Our pipeline is designed for speed without compromising on creative integrity. From brief submission to final delivery, our process is streamlined to get your content live faster.
               </p>
@@ -122,7 +122,7 @@ export default function AIVideoProductionPage() {
               <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
                 <ShieldCheck className="w-6 h-6 text-white" />
               </div>
-              <h2 className="font-display text-3xl font-semibold text-white">Human Oversight & Quality</h2>
+              <h2 className="type-h2 text-white">Human Oversight & Quality</h2>
               <p className="font-sans text-lg text-white/60 leading-relaxed">
                 We don't just "hit generate." Every single asset produced by Articog goes through a rigorous human review process. Our creative directors ensure brand guidelines are met, quality is consistent, and the final output is ready for prime time.
               </p>
@@ -139,7 +139,7 @@ export default function AIVideoProductionPage() {
       <Section className="py-20 bg-white/[0.02]">
         <Container>
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-display text-3xl font-semibold text-white mb-12 text-center">Frequently Asked Questions</h2>
+              <h2 className="type-h2 mb-12 text-center text-white">Frequently Asked Questions</h2>
             <Accordion type="single" collapsible className="w-full space-y-4">
               {faqs.map((faq, index) => (
                 <AccordionItem key={index} value={`item-${index}`} className="border border-white/10 bg-black/40 rounded-xl px-6">
@@ -160,7 +160,7 @@ export default function AIVideoProductionPage() {
       <Section className="py-24">
         <Container>
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="font-display text-4xl font-semibold text-white mb-8">Ready to transform your production?</h2>
+            <h2 className="type-h2 mb-8 text-white">Ready to transform your production?</h2>
             <Link href="/book-a-demo">
               <Button size="lg" className="rounded-full px-8 h-14 text-lg">
                 Book a Demo

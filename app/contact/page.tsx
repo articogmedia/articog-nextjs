@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Link } from "@/components/ui/Link";
-import { Container, Section, Button } from "@/components/ui";
+import { Container, Section, Button, Input, Textarea, Alert, Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui";
 import { trackFormError, trackFormSubmit, trackFormSuccess } from "@/lib/analytics";
 import {
   ArrowRight,
@@ -128,13 +128,13 @@ export default function ContactPage() {
                     Name <span className="text-accent">*</span>
                   </label>
 
-                  <input
+                  <Input
                     type="text"
                     id="name"
                     name="name"
                     required
                     placeholder="Jane Doe"
-                    className="h-12 w-full rounded-lg px-4 font-sans text-sm outline-none transition-all duration-200"
+                    className="h-12 rounded-lg px-4"
                     style={{
                       border: "1px solid rgba(255,255,255,0.08)",
                       color: "white",
@@ -152,13 +152,13 @@ export default function ContactPage() {
                     Email <span className="text-accent">*</span>
                   </label>
 
-                  <input
+                  <Input
                     type="email"
                     id="email"
                     name="email"
                     required
                     placeholder="jane@company.com"
-                    className="h-12 w-full rounded-lg px-4 font-sans text-sm outline-none transition-all duration-200"
+                    className="h-12 rounded-lg px-4"
                     style={{
                       border: "1px solid rgba(255,255,255,0.08)",
                       color: "white",
@@ -177,33 +177,15 @@ export default function ContactPage() {
                   Inquiry Type <span className="text-accent">*</span>
                 </label>
 
-                <div className="relative">
-                  <select
-                    id="inquiryType"
-                    name="inquiryType"
-                    required
-                    defaultValue=""
-                    className="h-12 w-full appearance-none rounded-lg px-4 font-sans text-sm outline-none transition-all duration-200"
-                    style={{
-                      border: "1px solid rgba(255,255,255,0.08)",
-                      color: "white",
-                      backgroundColor: "#0A0A0A",
-                    }}
-                  >
-                    <option value="" disabled>
-                      Select an option
-                    </option>
-
-                    <option value="Sales">Sales</option>
-                    <option value="Partnerships">Partnerships</option>
-                    <option value="Press">Press</option>
-                    <option value="Other">Other</option>
-                  </select>
-
-                  <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-white/30">
-                    <ChevronDownIcon />
-                  </div>
-                </div>
+                <Select name="inquiryType" defaultValue="">
+                  <SelectTrigger id="inquiryType" className="h-12 rounded-lg px-4"><SelectValue placeholder="Select an option" /></SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="Sales">Sales</SelectItem>
+                    <SelectItem value="Partnerships">Partnerships</SelectItem>
+                    <SelectItem value="Press">Press</SelectItem>
+                    <SelectItem value="Other">Other</SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
 
               {/* Message */}
@@ -215,12 +197,12 @@ export default function ContactPage() {
                   Message <span className="text-accent">*</span>
                 </label>
 
-                <textarea
+                <Textarea
                   id="message"
                   name="message"
                   required
                   placeholder="Tell us about your inquiry..."
-                  className="min-h-[160px] w-full resize-none rounded-lg p-4 font-sans text-sm outline-none transition-all duration-200"
+                  className="min-h-[160px] resize-none rounded-lg p-4"
                   style={{
                     border: "1px solid rgba(255,255,255,0.08)",
                     color: "white",
@@ -231,16 +213,9 @@ export default function ContactPage() {
 
               {/* Error Message */}
               {error && (
-                <div
-                  className="rounded-lg px-4 py-3 text-sm"
-                  style={{
-                    color: "#ff8a8a",
-                    backgroundColor: "rgba(255,80,80,0.08)",
-                    border: "1px solid rgba(255,80,80,0.18)",
-                  }}
-                >
+                <Alert variant="destructive" className="rounded-lg px-4 py-3 text-sm">
                   {error}
-                </div>
+                </Alert>
               )}
 
               {/* Submit Button */}
@@ -307,25 +282,5 @@ export default function ContactPage() {
         </div>
       </Container>
     </Section>
-  );
-}
-
-function ChevronDownIcon() {
-  return (
-    <svg
-      width="10"
-      height="6"
-      viewBox="0 0 10 6"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M1 1L5 5L9 1"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
   );
 }

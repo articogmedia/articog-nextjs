@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "Built for enterprise confidence. Everything procurement, legal, and security teams need to evaluate Articog.",
 };
 import { ArrowRight } from "lucide-react";
-import { Container, Section, Button, Heading } from "@/components/ui";
+import { Container, Section, Button, Heading, Card, CardContent } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
 
 export default function TrustPage() {
@@ -53,13 +53,14 @@ export default function TrustPage() {
               <Link
                 key={card.title}
                 href={card.href}
-                className="group flex items-center justify-between rounded-xl p-5 border border-white/[0.08] transition-colors hover:border-white/20 hover:bg-white/[0.02]"
-                style={{ background: "rgba(255,255,255,0.01)" }}
+                className="group block"
               >
-                <h2 className="type-h3 text-white">
-                  {card.title}
-                </h2>
-                <ArrowRight size={18} className="ml-4 shrink-0 text-white/35 transition-transform group-hover:translate-x-0.5 group-hover:text-white/70" />
+                <Card className="flex-row items-center justify-between rounded-xl border-white/[0.08] bg-white/[0.01] p-0 transition-colors group-hover:border-white/20 group-hover:bg-white/[0.02]">
+                  <CardContent className="flex w-full items-center justify-between p-5">
+                    <h2 className="type-h3 text-white">{card.title}</h2>
+                    <ArrowRight size={18} className="ml-4 shrink-0 text-white/35 transition-transform group-hover:translate-x-0.5 group-hover:text-white/70" />
+                  </CardContent>
+                </Card>
               </Link>
             ))}
           </div>

@@ -382,7 +382,7 @@ function ServicesContent({
             </div>
 
             <div>
-              <h4 className="mb-1 text-[14px] font-bold tracking-tight text-white">
+                      <h4 className="type-h4 mb-1 text-white">
                 {item.title}
               </h4>
 
