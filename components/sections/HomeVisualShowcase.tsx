@@ -53,23 +53,6 @@ const visuals = [
   },
 ];
 
-const depthLayers = [
-  {
-    name: "background",
-    slots: [0, 1, 2],
-  },
-  {
-    name: "midground",
-    slots: [3, 4, 5],
-  },
-  {
-    name: "foreground",
-    slots: [6, 7, 8],
-  },
-] as const;
-
-const slotClassNames = visuals.map((visual) => visual.slot);
-
 const getCloudinaryUrl = (src: string, width: number) =>
   src.replace("/image/upload/", `/image/upload/f_auto,q_auto:best,dpr_auto,w_${width},c_limit/`);
 
@@ -80,30 +63,19 @@ const preloadModalImage = (src: string) => {
   image.src = getModalImageUrl(src);
 };
 
+const getRelativePosition = (index: number, activeIndex: number) => {
+  const total = visuals.length;
+  const delta = (index - activeIndex + total) % total;
+  return delta > total / 2 ? delta - total : delta;
+};
+
 export function HomeVisualShowcase() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [cycleOffset, setCycleOffset] = useState(0);
   const [selectedVisual, setSelectedVisual] = useState<(typeof visuals)[number] | null>(null);
 
   const moveActiveIndex = (direction: -1 | 1) => {
-    setActiveIndex((current) => {
-      const next = (current + direction + visuals.length) % visuals.length;
-      setCycleOffset(next);
-      return next;
-    });
+    setActiveIndex((current) => (current + direction + visuals.length) % visuals.length);
   };
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (mediaQuery.matches) return;
-
-    const interval = window.setInterval(() => {
-      setCycleOffset((current) => (current + 1) % visuals.length);
-      setActiveIndex((current) => (current + 1) % visuals.length);
-    }, 6000);
-
-    return () => window.clearInterval(interval);
-  }, []);
 
   useEffect(() => {
     if (!selectedVisual) return;
@@ -138,42 +110,49 @@ export function HomeVisualShowcase() {
           </div>
 
           <div className="showcase-stage" aria-label="Selected Articog visual studies">
-            <div className="showcase-collage">
-              {depthLayers.map((layer) => (
-                <div
-                  key={layer.name}
-                  className={`showcase-layer showcase-layer--${layer.name} ${layer.slots.some((slotIndex) => (slotIndex + cycleOffset) % visuals.length === activeIndex) ? "showcase-layer--active" : ""}`}
-                  aria-label={`${layer.name} visual layer`}
-                >
-                  {layer.slots.map((slotIndex, index) => {
-                    const visual = visuals[(slotIndex + cycleOffset) % visuals.length];
+            <div className="showcase-coverflow" aria-live="polite">
+              {visuals.map((visual, index) => {
+                const relativePosition = getRelativePosition(index, activeIndex);
+                const absoluteOffset = Math.abs(relativePosition);
+                const isActive = index === activeIndex;
+                const depth = isActive ? 180 : -absoluteOffset * 120;
+                const translateX = relativePosition * 200;
+                const rotateY = isActive ? 0 : relativePosition > 0 ? -28 : 28;
+                const scale = isActive ? 1 : 1 - absoluteOffset * 0.12;
+                const opacity = isActive ? 1 : Math.max(0.18, 1 - absoluteOffset * 0.2);
 
-                    return (
-                    <button
-                      key={slotIndex}
-                      type="button"
-                      className={`${slotClassNames[slotIndex]} ${visuals.indexOf(visual) === activeIndex ? "showcase-slot--active" : ""}`}
-                      onClick={() => setSelectedVisual(visual)}
-                      onPointerEnter={() => preloadModalImage(visual.src)}
-                      onFocus={() => preloadModalImage(visual.src)}
-                      aria-label={`Open ${visual.alt}`}
-                      aria-current={visuals.indexOf(visual) === activeIndex ? "true" : undefined}
-                    >
-                      <NextImage
-                        src={getCloudinaryUrl(visual.src, 1600)}
-                        sizes="(max-width: 640px) 43vw, (max-width: 1024px) 28vw, 24vw"
-                        alt={visual.alt}
-                        width={1600}
-                        height={2133}
-                        loading={layer.name === "background" && index > 0 ? "lazy" : "eager"}
-                        decoding="async"
-                      />
-                    </button>
-                    );
-                  })}
-                </div>
-              ))}
-              </div>
+                return (
+                  <button
+                    key={visual.alt}
+                    type="button"
+                    className={`showcase-coverflow__item ${isActive ? "showcase-coverflow__item--active" : ""}`}
+                    style={{
+                      transform: isActive
+                        ? "translate3d(-50%, -50%, 180px) rotateY(0deg) scale(1)"
+                        : `translate3d(calc(-50% + ${translateX}px), -50%, ${depth}px) rotateY(${rotateY}deg) scale(${scale})`,
+                      opacity,
+                      zIndex: 100 - absoluteOffset,
+                      visibility: absoluteOffset > 3 ? "hidden" : "visible",
+                    }}
+                    onClick={() => setSelectedVisual(visual)}
+                    onPointerEnter={() => preloadModalImage(visual.src)}
+                    onFocus={() => preloadModalImage(visual.src)}
+                    aria-label={`Open ${visual.alt}`}
+                    aria-current={isActive ? "true" : undefined}
+                  >
+                    <NextImage
+                      src={getCloudinaryUrl(visual.src, 1600)}
+                      sizes="(max-width: 640px) 68vw, (max-width: 1024px) 36vw, 25vw"
+                      alt={visual.alt}
+                      width={1600}
+                      height={2133}
+                      loading={index === 0 ? "eager" : "lazy"}
+                      decoding="async"
+                    />
+                  </button>
+                );
+              })}
+            </div>
           </div>
 
           <div className="showcase-navigation" aria-label="Visual gallery navigation">
