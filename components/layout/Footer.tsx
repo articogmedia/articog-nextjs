@@ -35,22 +35,22 @@ function MediumIcon({ size = 16 }: { size?: number }) {
 const socialLinks = [
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/company/articog/",
+    href: "https://www.linkedin.com/company/articog/",
     Icon: Linkedin,
   },
   {
     label: "YouTube",
-    href: "https://youtube.com/@articogcom",
+    href: "https://www.youtube.com/@articogcom",
     Icon: Youtube,
   },
   {
     label: "X",
-    href: "https://twitter.com/articogcom",
+    href: "https://x.com/articogcom",
     Icon: XIcon,
   },
   {
     label: "Instagram",
-    href: "https://instagram.com/articogcom",
+    href: "https://www.instagram.com/articogcom/",
     Icon: Instagram,
   },
   {
@@ -107,7 +107,7 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4 md:col-span-2">
             <Link
-              href="/"
+              href="https://articog.com"
               className="font-display text-base font-semibold text-white/90 hover:text-white transition-colors"
             >
               Articog

@@ -541,7 +541,7 @@ export function Header() {
           {/* Logo */}
 
           <Link
-            href="/"
+            href="https://articog.com"
             className="font-display text-base font-semibold text-white transition-colors hover:text-white/75"
             onClick={closeDropdown}
           >
