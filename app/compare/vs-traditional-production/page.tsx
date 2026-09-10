@@ -70,9 +70,6 @@ export default function ComparisonPage() {
             <Heading as="h1" size="hero" className="mb-6 text-white">
               Articog vs Traditional Production
             </Heading>
-            <p className="font-sans text-xl text-white/60 leading-relaxed">
-              Traditional agencies do great work, but the model has real constraints at modern scale and speed. Here is how Articog's engine compares to the legacy approach.
-            </p>
           </div>
         </Container>
       </Section>

@@ -22,9 +22,6 @@ export default function SocialCreativePage() {
             <h1 className="type-h1 mb-6 text-white">
               Social Creative
             </h1>
-            <p className="text-xl text-white/60 leading-relaxed max-w-2xl">
-              Always-on social content designed to keep your brand consistent, relevant, and moving.
-            </p>
           </div>
         </Container>
       </Section>

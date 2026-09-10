@@ -43,9 +43,6 @@ export default function CreativeStrategyPage() {
             <Heading as="h1" size="hero" className="mb-6">
               Creative Strategy & Concepting
             </Heading>
-            <p className="font-sans text-xl text-white/60 leading-relaxed">
-              The strategic foundation behind every production where we translate your business goals into sharp creative direction before a single frame is generated.
-            </p>
           </div>
         </Container>
       </Section>

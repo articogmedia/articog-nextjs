@@ -42,9 +42,6 @@ export default function SecurityPage() {
             <Heading as="h1" size="hero" className="mb-6">
               Security & Confidentiality
             </Heading>
-            <p className="font-sans text-xl text-white/60 leading-relaxed">
-              Protecting your briefs, assets, and data throughout the production cycle is our highest priority. We build security into every step of our creative pipeline.
-            </p>
           </div>
         </Container>
       </Section>

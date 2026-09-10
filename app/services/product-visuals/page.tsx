@@ -22,9 +22,6 @@ export default function ProductVisualsPage() {
             <h1 className="type-h1 mb-6 text-white">
               Product Visual Content
             </h1>
-            <p className="text-xl text-white/60 leading-relaxed max-w-2xl">
-              Premium product visuals created faster with AI-native production.
-            </p>
           </div>
         </Container>
       </Section>

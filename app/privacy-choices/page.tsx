@@ -20,11 +20,6 @@ export default function PrivacyChoicesPage() {
             <Heading as="h1" size="hero" className="mb-6">
               Your Privacy Choices
             </Heading>
-            <p className="mb-12 font-sans text-base leading-relaxed text-white/60 md:text-lg">
-              Articog respects your privacy. Depending on where you live and
-              which laws apply, you may have rights regarding your personal
-              information.
-            </p>
 
             <div className="space-y-12 font-sans text-sm leading-relaxed text-white/60">
               <section>

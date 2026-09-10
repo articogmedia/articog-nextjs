@@ -64,9 +64,6 @@ export default function PostProductionPage() {
             <Heading as="h1" size="hero" className="mb-6">
               Post-Production
             </Heading>
-            <p className="font-sans text-xl text-white/60 leading-relaxed">
-              Finishing work editing, compositing, color, audio and cleanup for footage and assets whether they came from us or elsewhere.
-            </p>
           </div>
         </Container>
       </Section>

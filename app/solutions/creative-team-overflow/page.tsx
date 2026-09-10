@@ -43,9 +43,6 @@ export default function CreativeOverflowPage() {
             <Heading as="h1" size="hero" className="mb-6">
               In-House Creative Overflow
             </Heading>
-            <p className="font-sans text-xl text-white/60 leading-relaxed">
-              Extend your existing creative team's capacity during peak demand without hiring or outsourcing to a slow agency.
-            </p>
           </div>
         </Container>
       </Section>

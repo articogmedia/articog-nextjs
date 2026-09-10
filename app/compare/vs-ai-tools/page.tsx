@@ -70,9 +70,6 @@ export default function CompareAIToolsPage() {
             <Heading as="h1" size="hero" className="mb-6 text-white">
               Articog vs AI Tools Only
             </Heading>
-            <p className="font-sans text-xl text-white/60 leading-relaxed">
-              AI tools are powerful, but using them well for brand-quality creative at scale takes expertise most teams don't have the time to build in-house.
-            </p>
           </div>
         </Container>
       </Section>

@@ -55,9 +55,6 @@ export default function AICreativePipelinePage() {
             <Heading as="h1" size="hero" className="mb-6">
               The AI Creative Pipeline
             </Heading>
-            <p className="font-sans text-xl text-white/60 leading-relaxed">
-              A deep look at what happens between your brief and the final delivery. Our pipeline combines state-of-the-art AI with expert human oversight.
-            </p>
           </div>
         </Container>
       </Section>

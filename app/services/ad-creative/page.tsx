@@ -62,9 +62,6 @@ export default function AdCreativePage() {
             <Heading as="h1" size="hero" className="mb-6">
               Ad Creative
             </Heading>
-            <p className="font-sans text-xl text-white/60 leading-relaxed">
-              Static and display ad creative built for continuous performance testing. We bridge the gap between brand fidelity and performance-led iteration.
-            </p>
           </div>
         </Container>
       </Section>

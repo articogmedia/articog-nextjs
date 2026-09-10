@@ -47,9 +47,6 @@ export default function AudioPage() {
             <Heading as="h1" size="hero" className="mb-6">
               Audio & Sound
             </Heading>
-            <p className="font-sans text-xl text-white/60 leading-relaxed">
-              Complete audio production for high-impact creative. From cinematic scores to localized voiceovers, we build the sound of your brand.
-            </p>
           </div>
         </Container>
       </Section>

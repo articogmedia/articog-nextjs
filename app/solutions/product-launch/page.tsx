@@ -52,9 +52,6 @@ export default function ProductLaunchSolutionPage() {
             <Heading as="h1" size="hero" className="mb-6">
               Product Launch Campaigns
             </Heading>
-            <p className="font-sans text-xl text-white/60 leading-relaxed">
-              Full creative support for your product launch. We handle everything from the initial production timeline to the delivery of every channel-specific asset.
-            </p>
           </div>
         </Container>
       </Section>

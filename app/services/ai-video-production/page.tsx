@@ -57,9 +57,6 @@ export default function AIVideoProductionPage() {
             <Heading as="h1" size="hero" className="mb-6">
               AI Video Production
             </Heading>
-            <p className="font-sans text-xl text-white/60 leading-relaxed">
-              Our flagship service: end-to-end video combining generative AI with senior creative direction.
-            </p>
           </div>
         </Container>
       </Section>

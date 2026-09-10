@@ -43,9 +43,6 @@ export default function PerformanceMarketingPage() {
             <Heading as="h1" size="hero" className="mb-6">
               Performance Marketing Creative
             </Heading>
-            <p className="font-sans text-xl text-white/60 leading-relaxed">
-              An ongoing creative engine built for continuous ad testing and scaling not a one-off batch of assets. Designed for teams that need to stay ahead of the curve.
-            </p>
           </div>
         </Container>
       </Section>

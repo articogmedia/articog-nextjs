@@ -445,12 +445,6 @@ export default function PrivacyPolicyPage() {
                 Privacy Policy
               </Heading>
 
-              <p className="max-w-3xl font-sans text-base leading-relaxed text-white/55 md:text-lg">
-                Your privacy matters to us. This Privacy Policy explains how
-                Articog collects, uses, shares, retains, and protects personal
-                information when you use our website and services.
-              </p>
-
               <dl className="mt-10 grid gap-8 border-t border-white/[0.08] pt-8 sm:grid-cols-2 sm:gap-16">
                 <div className="min-w-0">
                   <dt className="font-sans text-[11px] font-semibold uppercase tracking-[0.16em] text-white/35">

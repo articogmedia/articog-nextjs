@@ -51,9 +51,6 @@ export default function EnterpriseSolutionPage() {
             <Heading as="h1" size="hero" className="mb-6">
               Enterprise AI Production
             </Heading>
-            <p className="font-sans text-xl text-white/60 leading-relaxed">
-              Creative production built for large organizations with procurement, security and governance requirements. We scale with you while maintaining full compliance.
-            </p>
           </div>
         </Container>
       </Section>

@@ -43,9 +43,6 @@ export default function MonthlySubscriptionPage() {
             <Heading as="h1" size="hero" className="mb-6">
               Monthly Creative Subscription
             </Heading>
-            <p className="font-sans text-xl text-white/60 leading-relaxed">
-              A predictable monthly stream of video, social, and visual creative without a full in-house team or agency retainer.
-            </p>
           </div>
         </Container>
       </Section>

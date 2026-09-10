@@ -43,9 +43,6 @@ export default function RightsLicensingPage() {
             <Heading as="h1" size="hero" className="mb-6">
               Rights, Licensing & Ownership
             </Heading>
-            <p className="font-sans text-xl text-white/60 leading-relaxed">
-              Clarifying usage rights on every piece of creative we deliver. We believe in providing the legal foundation your brand needs to scale with confidence.
-            </p>
           </div>
         </Container>
       </Section>

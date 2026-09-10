@@ -23,9 +23,6 @@ export default function ProductVisualsPage() {
             <Heading as="h1" size="hero" className="mb-6">
               Product Visual Content
             </Heading>
-            <p className="font-sans text-xl text-white/60 leading-relaxed">
-              Scale your brand's visual identity with high-fidelity, on-brand product visuals. From photography to print-ready assets, delivered at the speed of AI.
-            </p>
           </div>
         </Container>
       </Section>

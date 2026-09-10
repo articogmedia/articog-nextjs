@@ -66,9 +66,6 @@ export default function AIIPPage() {
             <Heading as="h1" size="hero" className="mb-6">
               AI & Intellectual Property
             </Heading>
-            <p className="font-sans text-xl text-white/60 leading-relaxed">
-              Addressing a common question directly: who owns the creative we deliver? We believe in clarity and security for every brand we partner with.
-            </p>
           </div>
         </Container>
       </Section>

@@ -22,9 +22,6 @@ export default function BlogPage() {
             <Heading as="h1" size="hero" className="mb-6">
               Insights & Perspectives
             </Heading>
-            <p className="mx-auto max-w-2xl font-sans text-base leading-relaxed text-white/65 md:text-lg">
-              Practical ideas and strategic thinking on AI-native creative production, campaign velocity, and high-performance marketing.
-            </p>
           </div>
 
           <BlogFilterList posts={blogPosts} />

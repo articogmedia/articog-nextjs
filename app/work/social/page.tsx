@@ -42,9 +42,6 @@ export default function SocialWorkPage() {
             <Heading as="h1" size="hero" className="mb-6">
               Social Creative Work
             </Heading>
-            <p className="font-sans text-xl text-white/60 leading-relaxed">
-              Platform-native content built for organic and paid social. We design for the thumb-stop and the click.
-            </p>
           </div>
         </Container>
       </Section>
