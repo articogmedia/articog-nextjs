@@ -62,22 +62,22 @@ const socialLinks = [
 
 const footerNavSections = [
   {
-    title: "Services",
+    title: "Explore",
     links: [
-      { label: "AI Video Production", href: "/services/ai-video-production" },
-      { label: "Ad Creative", href: "/services/ad-creative" },
-      { label: "Social Creative", href: "/services/social-creative" },
-      { label: "Product Visuals", href: "/services/product-visuals" },
-      { label: "Audio & Sound", href: "/services/audio" },
-      { label: "Creative Strategy", href: "/services/creative-strategy" },
-      { label: "Post-Production", href: "/services/post-production" },
+      { label: "Services", href: "/services" },
+      { label: "Solutions", href: "/solutions" },
+      { label: "Industries", href: "/industries" },
+      { label: "Work", href: "/work" },
+      { label: "AI Ad Library", href: "/ai-ad-library" },
     ],
   },
   {
-    title: "Resources",
+    title: "Learn",
     links: [
       { label: "Blog", href: "/blog" },
-      { label: "AI Ad Library", href: "/ai-ad-library" },
+      { label: "Why Articog", href: "/why-articog" },
+      { label: "How It Works", href: "/how-it-works" },
+      { label: "Trust Center", href: "/trust" },
       { label: "Help Center", href: "/help" },
     ],
   },
@@ -87,9 +87,19 @@ const footerNavSections = [
       { label: "About Us", href: "/about" },
       { label: "Careers", href: "/careers" },
       { label: "Press & Media", href: "/press" },
-      { label: "Trust Center", href: "/trust" },
+      { label: "Newsletter", href: "/newsletter" },
       { label: "Contact", href: "/contact" },
       { label: "Sitemap", href: "/sitemap" },
+    ],
+  },
+  {
+    title: "More",
+    links: [
+      { label: "Customer Stories", href: "/customers" },
+      { label: "Book a Demo", href: "/book-a-demo" },
+      { label: "Privacy Policy", href: "/privacy-policy" },
+      { label: "Terms of Service", href: "/legal/terms-of-service" },
+      { label: "Accessibility", href: "/legal/accessibility" },
     ],
   },
 ];
@@ -103,6 +113,26 @@ export function Footer() {
       className="border-t border-white/5 pt-16"
     >
       <Container className="py-14">
+        <div className="mb-12 rounded-2xl border border-white/8 bg-white/[0.02] p-5 sm:p-6">
+          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+            <div>
+              <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-white/45">
+                Join the Articog mailing list
+              </p>
+              <p className="mt-2 max-w-xl text-sm text-white/55">
+                Get creative insights, production ideas, and launch updates from the Articog team.
+              </p>
+            </div>
+
+            <Link
+              href="/newsletter"
+              className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 py-2.5 font-sans text-sm font-medium text-white transition-colors hover:border-white/20 hover:bg-white/10"
+            >
+              Subscribe
+            </Link>
+          </div>
+        </div>
+
         <div className="grid gap-12 sm:grid-cols-2 md:grid-cols-5">
           {/* Brand */}
           <div className="space-y-4 md:col-span-2">
