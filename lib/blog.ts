@@ -41,7 +41,7 @@ export const blogPosts: BlogEntry[] = [
     category: "Creative Operations",
     publishedAt: "2025-02-12",
     excerpt:
-      "When creative volume spikes, the real bottleneck is not generation—it is decision quality, brand calibration, and feedback loops.",
+      "When creative volume spikes, the real bottleneck is not generation, it is decision quality, brand calibration, and feedback loops.",
     featuredImage:
       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=80",
     author: "Articog Editorial",
