@@ -8,6 +8,7 @@ type ContactData = {
 };
 
 const DEFAULT_INTERNAL_ALERT_EMAIL = "articog.media.01@gmail.com";
+const CONTACT_NOTIFICATION_EMAIL = "info@articog.com";
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
 const RATE_LIMIT_MAX_REQUESTS = 5;
 const requestHistory = new Map<string, number[]>();
@@ -123,6 +124,26 @@ export async function POST(request: Request) {
     } catch (error) {
       await alertSheetFailure({ name, email, inquiryType, message }, error);
       throw error;
+    }
+
+    try {
+      await sendEmail(
+        CONTACT_NOTIFICATION_EMAIL,
+        "New contact form submission | Articog",
+        [
+          "New contact form submission received.",
+          "",
+          `Name: ${name}`,
+          `Email: ${email}`,
+          `Inquiry type: ${inquiryType}`,
+          "",
+          "Message:",
+          message,
+        ].join("\n"),
+        email
+      );
+    } catch (emailError) {
+      console.error("Contact notification email failed after lead was saved:", emailError);
     }
 
     try {

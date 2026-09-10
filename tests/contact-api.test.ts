@@ -10,7 +10,7 @@ describe("POST /api/contact", () => {
     vi.restoreAllMocks();
   });
 
-  it("saves the lead and sends confirmation without exposing form data to analytics", async () => {
+  it("saves the lead and sends the internal notification to info@articog.com without exposing form data to analytics", async () => {
     const fetchMock = vi
       .spyOn(globalThis, "fetch")
       .mockResolvedValue(new Response(null, { status: 200 }));
@@ -30,7 +30,20 @@ describe("POST /api/contact", () => {
 
     expect(response.status).toBe(200);
     await expect(response.json()).resolves.toMatchObject({ success: true });
-    expect(fetchMock).toHaveBeenCalledTimes(2);
+    expect(fetchMock).toHaveBeenCalledTimes(3);
+
+    const payloads = fetchMock.mock.calls.map(([input, init]) => ({
+      input,
+      init,
+    }));
+
+    const emailPayload = payloads.find((entry) =>
+      typeof entry.input === "string" && entry.input === "https://api.resend.com/emails"
+    );
+
+    expect(emailPayload).toBeDefined();
+    const body = JSON.parse(String(emailPayload?.init?.body));
+    expect(body.to).toContain("info@articog.com");
   });
 
   it("short-circuits honeypot submissions successfully without saving or emailing", async () => {
