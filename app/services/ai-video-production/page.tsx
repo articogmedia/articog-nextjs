@@ -48,7 +48,7 @@ export default function AIVideoProductionPage() {
       {/* Hero Section */}
       <Section size="lg" className="pt-32 md:pt-40">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl">
             <div className="inline-flex items-center rounded-full bg-white/5 px-3 py-1 mb-6 border border-white/10">
               <span className="font-sans text-[10px] font-bold tracking-[0.2em] text-white/50 uppercase">
                 Services

@@ -53,7 +53,7 @@ export default function AudioPage() {
 
       <Section className="py-20 bg-white/[0.02]">
         <Container>
-          <div className="mb-16">
+          <div>
             <h2 className="type-h2 mb-4 text-white">What We Deliver</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
