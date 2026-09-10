@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 
 import { Link } from "@/components/ui/Link";
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
 import { Container } from '@/components/ui/Container';
 
 export const metadata: Metadata = {
@@ -102,40 +100,34 @@ export default function SitemapPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col font-sans">
-      <Header />
-      
-      <div className="flex-grow pt-32 pb-20">
-        <Container>
-          <div className="max-w-4xl">
-            <h1 className="type-h1 mb-6 text-white">Sitemap</h1>
+    <div className="flex-grow pt-32 pb-20">
+      <Container>
+        <div className="max-w-4xl">
+          <h1 className="type-h1 mb-6 text-white">Sitemap</h1>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
-              {sitemapData.map((section) => (
-                <div key={section.title} className="space-y-6">
-                  <h2 className="type-label border-b border-zinc-900 pb-2 text-zinc-500">
-                    {section.title}
-                  </h2>
-                  <ul className="space-y-3">
-                    {section.links.map((link) => (
-                      <li key={link.href}>
-                        <Link 
-                          to={link.href} 
-                          className="text-zinc-300 hover:text-white transition-colors text-[17px] font-medium block w-fit"
-                        >
-                          {link.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+            {sitemapData.map((section) => (
+              <div key={section.title} className="space-y-6">
+                <h2 className="type-label border-b border-zinc-900 pb-2 text-zinc-500">
+                  {section.title}
+                </h2>
+                <ul className="space-y-3">
+                  {section.links.map((link) => (
+                    <li key={link.href}>
+                      <Link 
+                        to={link.href} 
+                        className="text-zinc-300 hover:text-white transition-colors text-[17px] font-medium block w-fit"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
-        </Container>
-      </div>
-
-      <Footer />
+        </div>
+      </Container>
     </div>
   );
 }
