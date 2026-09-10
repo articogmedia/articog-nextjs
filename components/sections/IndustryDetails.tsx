@@ -180,7 +180,7 @@ export function IndustryDetails() {
               </summary>
               <div className="border-t border-white/[0.08] px-6 pb-6 pt-6 md:px-8 md:pb-8">
                 <p className="mb-4 font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-white/35">Additional details</p>
-                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="grid gap-3 md:grid-cols-3">
                   {industry.considerations.slice(0, 3).map((item) => (
                     <div key={item.title} className="rounded-xl border border-white/[0.08] bg-black/10 p-4">
                       <h4 className="mb-2 font-display text-sm font-semibold text-white">{item.title}</h4>
