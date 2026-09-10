@@ -43,16 +43,6 @@ export default function HelpCenterPage() {
       ]
     },
     {
-      title: "Pricing",
-      links: [{ label: "View Pricing FAQ", href: "/pricing#faq" }],
-      faqs: [
-        {
-          q: "How is production priced?",
-          a: "We offer flexible models ranging from fixed-scope pilot projects to monthly recurring capacity (Growth and Scale plans). This ensures you have predictable costs while scaling creative volume."
-        }
-      ]
-    },
-    {
       title: "Workflow",
       links: [{ label: "Explore how it works", href: "/how-it-works" }],
       faqs: [

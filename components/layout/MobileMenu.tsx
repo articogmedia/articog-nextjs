@@ -93,26 +93,6 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             );
           })}
 
-          <div className="border-b border-white/[0.04]">
-            <button
-              onClick={() => toggleGroup("Pricing")}
-              className="w-full flex items-center justify-between px-3 py-4 font-sans text-[14px] font-medium text-white/70 hover:text-white transition-colors"
-            >
-              <span>Pricing</span>
-              <ChevronDown
-                size={14}
-                className={`opacity-40 transition-transform duration-200 ${openGroups.includes("Pricing") ? "rotate-180" : ""}`}
-              />
-            </button>
-            {openGroups.includes("Pricing") && (
-              <div className="flex flex-col gap-1 pb-4 pl-3">
-                <Link href="/pricing" onClick={handleClose} className="font-sans text-[13px] px-3 py-2 rounded-lg text-white/50 hover:text-white/85 transition-colors">Pricing Overview</Link>
-                <Link href="/pricing#monthly-plans" onClick={handleClose} className="font-sans text-[13px] px-3 py-2 rounded-lg text-white/50 hover:text-white/85 transition-colors">Monthly Plans</Link>
-                <Link href="/pricing#pilot" onClick={handleClose} className="font-sans text-[13px] px-3 py-2 rounded-lg text-white/50 hover:text-white/85 transition-colors">Pilot Project</Link>
-                <Link href="/pricing/faq" onClick={handleClose} className="font-sans text-[13px] px-3 py-2 rounded-lg text-white/50 hover:text-white/85 transition-colors">Pricing FAQ</Link>
-              </div>
-            )}
-          </div>
         </nav>
 
         {/* CTA */}

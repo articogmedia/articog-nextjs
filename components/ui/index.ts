@@ -12,4 +12,3 @@ export { Label } from "./label";
 export { Checkbox } from "./checkbox";
 export { Select, SelectGroup, SelectValue, SelectTrigger, SelectContent, SelectItem, SelectLabel } from "./select";
 export { Table, TableHeader, TableBody, TableFooter, TableHead, TableRow, TableCell, TableCaption } from "./table";
-export * as PricingCard from "./pricing-card";

@@ -80,8 +80,6 @@ export default function SitemapPage() {
         { label: "Security & Data Protection", href: "/trust/security" },
         { label: "Rights, Licensing & Ownership", href: "/trust/rights-licensing" },
         { label: "Data Handling & Retention", href: "/trust/data-handling" },
-        { label: "Pricing Hub", href: "/pricing" },
-        { label: "Pricing FAQ", href: "/pricing/faq" },
       ]
     },
     {

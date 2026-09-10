@@ -40,7 +40,7 @@ export default function ComparisonPage() {
       },
       articog: {
         value: "Scales with Volume",
-        desc: "Predictable pricing model that aligns with your actual creative output needs, eliminating wasteful overhead.",
+        desc: "Predictable cost structure that aligns with your actual creative output needs, eliminating wasteful overhead.",
       },
     },
     {

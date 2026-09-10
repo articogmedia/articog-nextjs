@@ -72,16 +72,16 @@ export default function MonthlySubscriptionPage() {
 
       <SolutionDetails category="monthly" />
 
-      {/* Pricing Link Section */}
+      {/* CTA Section */}
       <Section className="py-20 border-t border-white/5">
         <Container>
           <Link 
-            href="/pricing#monthly-plans"
+            href="/book-a-demo"
             className="group flex items-center justify-between p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300 max-w-2xl"
           >
             <div>
-              <h3 className="font-display text-xl font-semibold text-white mb-2">View Subscription Tiers</h3>
-              <p className="font-sans text-white/50">Explore our flexible plans designed for teams of all sizes.</p>
+              <h3 className="font-display text-xl font-semibold text-white mb-2">Plan your next creative cycle</h3>
+              <p className="font-sans text-white/50">Talk with our team about the scope, speed, and delivery model that fits your goals.</p>
             </div>
             <ArrowRight className="w-6 h-6 text-white group-hover:translate-x-1 transition-transform" />
           </Link>
