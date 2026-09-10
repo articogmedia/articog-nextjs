@@ -81,6 +81,25 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Articog",
+              url: "https://articog.com",
+              logo: "https://articog.com/icon.svg",
+              sameAs: [
+                "https://linkedin.com/company/articog/",
+                "https://youtube.com/@articogcom",
+                "https://twitter.com/articogcom",
+                "https://instagram.com/articogcom",
+                "https://medium.com/@articog.com",
+              ],
+            }),
+          }}
+        />
         <Script
           src="https://assets.calendly.com/assets/external/widget.js"
           strategy="afterInteractive"

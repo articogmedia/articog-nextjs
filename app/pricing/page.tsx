@@ -25,9 +25,19 @@ export default function PricingPage() {
     ["Is there a minimum commitment?", "Commitment varies by plan. While our monthly subscriptions are designed for long-term partnership, pilot projects are available for a lower-commitment exploratory start."],
     ["What's included in a project?", "Each project typically includes creative concepting, high-fidelity production using our AI engine, and a pre-agreed number of revision rounds to ensure the final asset meets your standards."],
   ];
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map(([question, answer]) => ({
+      "@type": "Question",
+      name: question,
+      acceptedAnswer: { "@type": "Answer", text: answer },
+    })),
+  };
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Section size="lg" className="pt-32 md:pt-40">
         <Container>
           <div className="mx-auto max-w-3xl text-center mb-16">

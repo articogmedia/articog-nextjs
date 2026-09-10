@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
+
+export const metadata: Metadata = {
+  title: "Copyright Policy | Articog",
+  description: "Articog's copyright policy: ownership of creative assets, usage rights, and how to report a copyright concern.",
+  alternates: { canonical: "https://articog.com/copyright" },
+};
 
 export default function CopyrightPage() {
   return (
