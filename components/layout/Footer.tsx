@@ -62,23 +62,37 @@ const socialLinks = [
 
 const footerNavSections = [
   {
-    title: "Explore",
+    title: "Services",
     links: [
-      { label: "Services", href: "/services" },
-      { label: "Solutions", href: "/solutions" },
-      { label: "Industries", href: "/industries" },
-      { label: "Work", href: "/work" },
-      { label: "AI Ad Library", href: "/ai-ad-library" },
+      { label: "AI Video Production", href: "/services/ai-video-production" },
+      { label: "Ad Creative", href: "/services/ad-creative" },
+      { label: "Social Creative", href: "/services/social-creative" },
+      { label: "Product Visuals", href: "/services/product-visuals" },
+      { label: "Audio", href: "/services/audio" },
+      { label: "Creative Strategy", href: "/services/creative-strategy" },
+      { label: "Post-Production", href: "/services/post-production" },
+    ],
+  },
+  {
+    title: "Solutions",
+    links: [
+      { label: "Overview", href: "/solutions" },
+      { label: "Monthly Subscription", href: "/solutions/monthly-creative-subscription" },
+      { label: "Performance Marketing", href: "/solutions/performance-marketing" },
+      { label: "Enterprise", href: "/solutions/enterprise" },
+      { label: "Product Launch", href: "/solutions/product-launch" },
+      { label: "Creative Team Overflow", href: "/solutions/creative-team-overflow" },
     ],
   },
   {
     title: "Learn",
     links: [
       { label: "Blog", href: "/blog" },
+      { label: "AI Ad Library", href: "/ai-ad-library" },
+      { label: "Help Center", href: "/help" },
       { label: "Why Articog", href: "/why-articog" },
       { label: "How It Works", href: "/how-it-works" },
       { label: "Trust Center", href: "/trust" },
-      { label: "Help Center", href: "/help" },
     ],
   },
   {
@@ -86,6 +100,7 @@ const footerNavSections = [
     links: [
       { label: "About Us", href: "/about" },
       { label: "Careers", href: "/careers" },
+      { label: "Customers", href: "/customers" },
       { label: "Press & Media", href: "/press" },
       { label: "Newsletter", href: "/newsletter" },
       { label: "Contact", href: "/contact" },
@@ -93,89 +108,71 @@ const footerNavSections = [
     ],
   },
   {
-    title: "More",
+    title: "Legal",
     links: [
-      { label: "Customer Stories", href: "/customers" },
-      { label: "Book a Demo", href: "/book-a-demo" },
       { label: "Privacy Policy", href: "/privacy-policy" },
       { label: "Terms of Service", href: "/legal/terms-of-service" },
+      { label: "Cookie Policy", href: "/legal/cookie-policy" },
       { label: "Accessibility", href: "/legal/accessibility" },
+      { label: "Copyright", href: "/copyright" },
+      { label: "California Privacy", href: "/privacy/california" },
     ],
   },
 ];
 
 export function Footer() {
   return (
-    /* Adapted from Tailark's Footer component published on 21st.dev:
-       https://21st.dev/@meschacirung/components/footer */
     <footer
       style={{ background: "#000000" }}
-      className="border-t border-white/5 pt-16"
+      className="border-t border-white/10"
     >
-      <Container className="py-14">
-        <div className="mb-12 rounded-2xl border border-white/8 bg-white/[0.02] p-5 sm:p-6">
-          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-            <div>
-              <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-white/45">
-                Join the Articog mailing list
-              </p>
-              <p className="mt-2 max-w-xl text-sm text-white/55">
-                Get creative insights, production ideas, and launch updates from the Articog team.
-              </p>
-            </div>
-
+      <Container className="py-10 md:py-12">
+        <div className="mb-9 pb-6 md:mb-10 md:pb-8" style={{ borderBottom: `1px solid ${border}` }}>
+          <div className="grid items-center gap-4 md:grid-cols-[1fr_auto_1.2fr]">
             <Link
-              href="/newsletter"
-              className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 py-2.5 font-sans text-sm font-medium text-white transition-colors hover:border-white/20 hover:bg-white/10"
+              href="/"
+              className="inline-flex items-center gap-2 text-left font-display text-sm font-semibold tracking-[0.02em] text-white/90 hover:text-white"
             >
-              Subscribe
-            </Link>
-          </div>
-        </div>
-
-        <div className="grid gap-12 sm:grid-cols-2 md:grid-cols-5">
-          {/* Brand */}
-          <div className="space-y-4 md:col-span-2">
-            <Link
-              href="https://articog.com"
-              className="font-display text-base font-semibold text-white/90 hover:text-white transition-colors"
-            >
+              <span className="grid h-3.5 w-3.5 place-items-center rounded-[2px] border border-white/20 bg-white/10 text-[8px] text-white/70">
+                A
+              </span>
               Articog
             </Link>
 
-            <p className="font-sans text-sm leading-relaxed max-w-xs text-white/40">
-              AI creative production for growth-stage brands.
+            <p className="text-center font-sans text-[11px] font-medium uppercase tracking-[0.16em] text-white/55 md:text-[10px]">
+              Join the Articog mailing list
             </p>
 
-            <div className="flex items-center gap-3.5 pt-4">
-              {socialLinks.map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={s.label}
-                  className="text-white/35 hover:text-white/75 transition-colors"
-                >
-                  <s.Icon size={16} />
-                </a>
-              ))}
-            </div>
+            <form className="ml-auto flex w-full max-w-[360px] items-center overflow-hidden rounded-full border border-white/10 bg-white/[0.03]">
+              <input
+                type="email"
+                aria-label="Email address"
+                placeholder="email@example.com"
+                className="w-full bg-transparent px-4 py-2.5 text-sm text-white placeholder:text-white/35 focus:outline-none"
+              />
+              <button
+                type="button"
+                className="border-l border-white/10 bg-white/6 px-4 py-2.5 font-sans text-[11px] font-medium uppercase tracking-[0.12em] text-white/75 transition-colors hover:bg-white/10"
+              >
+                Subscribe
+              </button>
+            </form>
           </div>
+        </div>
 
-          {/* Dynamic Nav Sections */}
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-[1.2fr_repeat(4,minmax(0,1fr))_1.2fr]">
           {footerNavSections.map((section) => (
-            <div key={section.title} className="space-y-4">
-              <p className="font-display text-xs font-semibold uppercase tracking-widest text-white/28">
+            <div key={section.title} className="space-y-3">
+              <p className="font-sans text-[10px] font-semibold uppercase tracking-[0.18em] text-white/40">
                 {section.title}
               </p>
 
-              <nav className="flex flex-col gap-2">
+              <nav className="flex flex-col gap-1.5">
                 {section.links.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="font-sans text-sm text-muted-safe hover:text-white/80 transition-colors w-fit"
+                    className="font-sans text-sm text-white/60 transition-colors hover:text-white"
                   >
                     {item.label}
                   </Link>
@@ -183,53 +180,72 @@ export function Footer() {
               </nav>
             </div>
           ))}
+
+          <div className="space-y-3 lg:justify-self-end">
+            <p className="font-sans text-[10px] font-semibold uppercase tracking-[0.18em] text-white/40">
+              Social
+            </p>
+            <div className="flex items-center gap-2.5">
+              {socialLinks.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
+                  className="grid h-8 w-8 place-items-center rounded-md border border-white/10 bg-white/[0.02] text-white/60 transition-colors hover:border-white/20 hover:text-white"
+                >
+                  <s.Icon size={14} />
+                </a>
+              ))}
+            </div>
+
+            <div className="pt-5 space-y-2">
+              <p className="font-sans text-[10px] font-semibold uppercase tracking-[0.18em] text-white/40">
+                Contact
+              </p>
+              <p className="font-sans text-sm text-white/60">info@articog.com</p>
+              <Link
+                href="/contact"
+                className="mt-2 inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-3 py-2 font-sans text-[11px] font-medium uppercase tracking-[0.12em] text-white/80 transition-colors hover:border-white/20 hover:bg-white/10"
+              >
+                Get in touch
+              </Link>
+            </div>
+          </div>
         </div>
 
-        {/* Bottom */}
         <div
-          className="mt-20 grid gap-6 pt-8 text-center md:grid-cols-[minmax(0,1fr)_auto_minmax(10rem,1fr)] md:items-center md:text-left"
+          className="mt-10 grid items-center gap-3 border-t pt-5 text-center md:grid-cols-[auto_1fr_auto] md:text-left"
           style={{ borderTop: `1px solid ${border}` }}
         >
-          <div className="flex flex-col gap-1">
-            <p className="font-sans text-xs text-white/25">
-              &copy; {new Date().getFullYear()} Articog. All rights reserved.
-            </p>
-
-            <p className="font-sans text-[10px] text-white/20 uppercase tracking-widest">
-              Creative AI Production for Modern Marketing
-            </p>
+          <div className="flex items-center justify-center gap-2 md:justify-start">
+            <span className="grid h-4 w-4 place-items-center rounded-[2px] border border-white/20 bg-white/10 text-[7px] text-white/70">
+              A
+            </span>
+            <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-white/45">
+              Articog
+            </span>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 md:col-start-2 md:row-start-1">
-            <Link
-              href="/legal/terms-of-service"
-              className="font-sans text-[10px] text-white/25 hover:text-white transition-colors uppercase tracking-[0.15em] md:text-[11px] md:text-white/55 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-            >
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 md:justify-center">
+            <Link href="/legal/terms-of-service" className="font-sans text-[10px] uppercase tracking-[0.14em] text-white/45 hover:text-white">
               Terms
             </Link>
-
-            <Link
-              href="/privacy-policy"
-              className="font-sans text-[10px] text-white/25 hover:text-white transition-colors uppercase tracking-[0.15em] md:text-[11px] md:text-white/55 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-            >
+            <Link href="/privacy-policy" className="font-sans text-[10px] uppercase tracking-[0.14em] text-white/45 hover:text-white">
               Privacy
             </Link>
-
-            <Link
-              href="/legal/accessibility"
-              className="font-sans text-[10px] text-white/25 hover:text-white transition-colors uppercase tracking-[0.15em] md:text-[11px] md:text-white/55 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-            >
+            <Link href="/legal/accessibility" className="font-sans text-[10px] uppercase tracking-[0.14em] text-white/45 hover:text-white">
               Accessibility
             </Link>
-
-            <Link
-              href="/copyright"
-              className="font-sans text-[10px] text-white/25 hover:text-white transition-colors uppercase tracking-[0.15em] md:text-[11px] md:text-white/55 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-            >
+            <Link href="/copyright" className="font-sans text-[10px] uppercase tracking-[0.14em] text-white/45 hover:text-white">
               Copyright
             </Link>
-
           </div>
+
+          <p className="font-sans text-[10px] uppercase tracking-[0.14em] text-white/35 md:text-right">
+            &copy; {new Date().getFullYear()} Articog
+          </p>
         </div>
       </Container>
     </footer>
