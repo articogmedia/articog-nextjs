@@ -1,198 +1,221 @@
 "use client";
 
-import { type CSSProperties, useEffect, useRef, useState } from "react";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { ArrowLeft, ArrowRight, X } from "lucide-react";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import styles from "./CreativeDocument.module.css";
 
-type Artwork = {
+type PortfolioProject = {
+  title: string;
+  category: string;
+  description: string;
+  number: string;
   src: string;
   alt: string;
-  entryX: number;
-  entryY: number;
-  exitX: number;
-  exitY: number;
-  rotate: number;
-  tone: string;
 };
 
-const artworks: Artwork[] = [
-  { src: "https://res.cloudinary.com/hmy5ctzy/image/upload/v1788795062/hf_20260821_063718_d5d2aeb0-64d1-4655-ac8a-ba9e4f5e6c02.png", alt: "Articog creative visual study 01", entryX: 0, entryY: 8, exitX: -8, exitY: -6, rotate: -1.2, tone: "portrait" },
-  { src: "https://res.cloudinary.com/hmy5ctzy/image/upload/v1788795062/hf_20260821_055524_1a0e7292-1148-46c0-a291-3d9e153b9bb0.png", alt: "Articog creative visual study 02", entryX: -22, entryY: 10, exitX: 9, exitY: -10, rotate: 1.4, tone: "landscape" },
-  { src: "https://res.cloudinary.com/hmy5ctzy/image/upload/v1788795060/hf_20260821_075104_3836aa7f-4399-4256-9bc3-022992543e67.png", alt: "Articog creative visual study 03", entryX: 18, entryY: -6, exitX: -10, exitY: 9, rotate: -1.6, tone: "portrait" },
-  { src: "https://res.cloudinary.com/hmy5ctzy/image/upload/v1788795060/hf_20260821_083052_c34ee14c-6e9a-4c17-8f3b-34e90869a8c4.png", alt: "Articog creative visual study 04", entryX: -13, entryY: -14, exitX: 13, exitY: 7, rotate: 1, tone: "square" },
-  { src: "https://res.cloudinary.com/hmy5ctzy/image/upload/v1788795060/hf_20260821_081708_9bf57f26-425b-47f7-b199-bad796e7f256.png", alt: "Articog creative visual study 05", entryX: 21, entryY: 8, exitX: -11, exitY: -8, rotate: -1.1, tone: "portrait" },
-  { src: "https://res.cloudinary.com/hmy5ctzy/image/upload/v1788795059/hf_20260821_083339_49c07db6-34ef-4c24-9479-eba4ece0cc6f.png", alt: "Articog creative visual study 06", entryX: -17, entryY: 12, exitX: 10, exitY: -7, rotate: 1.5, tone: "landscape" },
-  { src: "https://res.cloudinary.com/hmy5ctzy/image/upload/v1788795058/hf_20260821_090327_a7cb6c2d-ed73-4de2-a1ff-498adbad1cf5.png", alt: "Articog creative visual study 07", entryX: 15, entryY: -12, exitX: -8, exitY: 10, rotate: -1.3, tone: "portrait" },
-  { src: "https://res.cloudinary.com/hmy5ctzy/image/upload/v1788795057/hf_20260821_092645_5e7fd9e3-dbed-4783-a813-5309a0a4cb0a.png", alt: "Articog creative visual study 08", entryX: -20, entryY: -5, exitX: 12, exitY: 8, rotate: 1.2, tone: "square" },
-  { src: "https://res.cloudinary.com/hmy5ctzy/image/upload/v1788795056/hf_20260821_135812_fb53b3fc-1e01-4b1d-8063-a4d2d359d0c9.png", alt: "Articog creative visual study 09", entryX: 18, entryY: 10, exitX: -12, exitY: -8, rotate: -1.5, tone: "landscape" },
-  { src: "https://res.cloudinary.com/hmy5ctzy/image/upload/v1788795055/hf_20260821_144739_70fad7b6-95c9-410e-8789-ee50cd71d712.png", alt: "Articog creative visual study 10", entryX: -14, entryY: -10, exitX: 10, exitY: 9, rotate: 1.3, tone: "portrait" },
-  { src: "https://res.cloudinary.com/hmy5ctzy/image/upload/v1788795054/hf_20260824_080045_a18b6dc0-0128-44b9-a8e9-def371a3a33c.png", alt: "Articog creative visual study 11", entryX: 20, entryY: 7, exitX: -9, exitY: -9, rotate: -1, tone: "square" },
-  { src: "https://res.cloudinary.com/hmy5ctzy/image/upload/v1788795054/hf_20260824_073044_5f2bbec3-d0c2-4043-b247-43bc1c3ed11c.png", alt: "Articog creative visual study 12", entryX: -18, entryY: 11, exitX: 8, exitY: -7, rotate: 1.4, tone: "landscape" },
+const projects: PortfolioProject[] = [
+  {
+    title: "Creative Visual 01",
+    category: "Campaign Artwork",
+    description: "Luxury launch storytelling built for premium positioning and performance-led creative.",
+    number: "01",
+    src: "https://res.cloudinary.com/hmy5ctzy/image/upload/v1788795062/hf_20260821_063718_d5d2aeb0-64d1-4655-ac8a-ba9e4f5e6c02.png",
+    alt: "Articog creative visual study 01",
+  },
+  {
+    title: "Creative Visual 02",
+    category: "Brand System",
+    description: "Editorial visual language refined for motion-first marketing and multi-format distribution.",
+    number: "02",
+    src: "https://res.cloudinary.com/hmy5ctzy/image/upload/v1788795062/hf_20260821_055524_1a0e7292-1148-46c0-a291-3d9e153b9bb0.png",
+    alt: "Articog creative visual study 02",
+  },
+  {
+    title: "Creative Visual 03",
+    category: "Launch Assets",
+    description: "High-contrast campaign imagery designed to hold attention across digital channels.",
+    number: "03",
+    src: "https://res.cloudinary.com/hmy5ctzy/image/upload/v1788795060/hf_20260821_075104_3836aa7f-4399-4256-9bc3-022992543e67.png",
+    alt: "Articog creative visual study 03",
+  },
+  {
+    title: "Creative Visual 04",
+    category: "Product Storytelling",
+    description: "Cinematic product presentation balancing sharp detail, atmosphere, and conversion intent.",
+    number: "04",
+    src: "https://res.cloudinary.com/hmy5ctzy/image/upload/v1788795060/hf_20260821_083052_c34ee14c-6e9a-4c17-8f3b-34e90869a8c4.png",
+    alt: "Articog creative visual study 04",
+  },
+  {
+    title: "Creative Visual 05",
+    category: "Social Creative",
+    description: "Platform-native motion concepts designed to feel premium while remaining instantly readable.",
+    number: "05",
+    src: "https://res.cloudinary.com/hmy5ctzy/image/upload/v1788795060/hf_20260821_081708_9bf57f26-425b-47f7-b199-bad796e7f256.png",
+    alt: "Articog creative visual study 05",
+  },
+  {
+    title: "Creative Visual 06",
+    category: "Creative Direction",
+    description: "Refined art direction and visual depth applied to campaign work for modern brands.",
+    number: "06",
+    src: "https://res.cloudinary.com/hmy5ctzy/image/upload/v1788795059/hf_20260821_083339_49c07db6-34ef-4c24-9479-eba4ece0cc6f.png",
+    alt: "Articog creative visual study 06",
+  },
 ];
-
-const clamp = (value: number, min: number, max: number) => Math.min(Math.max(value, min), max);
 
 const getCloudinaryUrl = (src: string, width: number) =>
   src.replace("/image/upload/", `/image/upload/f_auto,q_auto,w_${width},c_limit/`);
 
 export function CreativeDocument() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const [progress, setProgress] = useState(0);
-  const [selected, setSelected] = useState<Artwork | null>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [selectedProject, setSelectedProject] = useState<PortfolioProject | null>(null);
 
-  const moveToArtwork = (offset: number) => {
-    const section = sectionRef.current;
-    if (!section) return;
+  const activeProject = projects[activeIndex];
 
-    const currentIndex = Math.round(progress);
-    const nextIndex = (currentIndex + offset + artworks.length) % artworks.length;
-    const travel = Math.max(section.offsetHeight - window.innerHeight, 1);
-    const top = window.scrollY + section.getBoundingClientRect().top + travel * nextIndex / (artworks.length - 1);
-    window.scrollTo({ top, behavior: "smooth" });
+  const moveProject = (direction: number) => {
+    setActiveIndex((current) => (current + direction + projects.length) % projects.length);
   };
 
   useEffect(() => {
-    const section = sectionRef.current;
-    if (!section) return;
-
-    let frame = 0;
-    const updateProgress = () => {
-      frame = 0;
-      const bounds = section.getBoundingClientRect();
-      const travel = Math.max(section.offsetHeight - window.innerHeight, 1);
-      setProgress(clamp(-bounds.top / travel * (artworks.length - 1), 0, artworks.length - 1));
-    };
-    const onScroll = () => {
-      if (!frame) frame = window.requestAnimationFrame(updateProgress);
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "ArrowRight") {
+        moveProject(1);
+      }
+      if (event.key === "ArrowLeft") {
+        moveProject(-1);
+      }
+      if (event.key === "Escape") {
+        setSelectedProject(null);
+      }
     };
 
-    updateProgress();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-      if (frame) window.cancelAnimationFrame(frame);
-    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
   useEffect(() => {
-    if (!selected) return;
-    const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setSelected(null);
-    };
+    if (!selectedProject) return;
+
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-    document.addEventListener("keydown", onKeyDown);
+
     return () => {
       document.body.style.overflow = previousOverflow;
-      document.removeEventListener("keydown", onKeyDown);
     };
-  }, [selected]);
+  }, [selectedProject]);
 
   return (
-    <>
-      <section ref={sectionRef} className={styles.document} aria-label="Selected Articog work">
-        <div className={styles.sticky}>
-          <div className={styles.header}>
-            <div>
-              <p className={styles.kicker}>A visual document</p>
-              <h2>Creative work in motion.</h2>
-            </div>
-            <p className={styles.note}>Scroll to move through the work</p>
-          </div>
-          <div className={styles.stage}>
-            <div className={styles.rule} aria-hidden="true" />
-            {artworks.map((artwork, index) => {
-              const distance = index - progress;
-              const proximity = Math.abs(distance);
-              const entering = clamp(distance, 0, 1);
-              const leaving = clamp(-distance, 0, 1);
-              const baseX = (artwork.entryX * entering + artwork.exitX * leaving) * 0.35;
-              const baseY = (artwork.entryY * entering + artwork.exitY * leaving) * 0.35;
-              const arcDistance = clamp(distance, -1.5, 1.5);
-              const arcDrop = proximity * proximity * 5;
-              const z = 120 - proximity * 260 - proximity * proximity * 24;
-              const scale = 1.04 - proximity * 0.18;
-              const opacity = clamp(1 - proximity * 0.72, 0, 1);
-              const isInteractive = opacity > 0.04;
-              const activeIndex = Math.round(progress);
-              const shouldLoad = index >= activeIndex - 1 && index <= activeIndex + 2;
+    <section className={styles.showcase} aria-label="Portfolio showcase">
+      <div className={styles.headerRow}>
+        <div>
+          <p className={styles.kicker}>Selected work</p>
+          <h2>Creative work built to feel premium on every screen.</h2>
+        </div>
 
-              return (
-                <button
-                  key={artwork.src}
-                  type="button"
-                  className={`${styles.artwork} ${styles[artwork.tone]}`}
-                  style={{
-                    opacity,
-                    zIndex: Math.round(100 - proximity * 10),
-                    pointerEvents: isInteractive ? "auto" : "none",
-                    "--base-x": `${baseX}%`,
-                    "--base-y": `${baseY}%`,
-                    "--arc-x": `${arcDistance * 14}%`,
-                    "--arc-x-mobile": `${arcDistance * 8}%`,
-                    "--arc-y": `${arcDrop}%`,
-                    "--arc-y-mobile": `${arcDrop * 0.65}%`,
-                    "--card-depth": `${z}px`,
-                    "--card-scale": scale,
-                    "--arc-rotate-y": `${arcDistance * 7}deg`,
-                    "--arc-rotate-y-mobile": `${arcDistance * 4.5}deg`,
-                    "--arc-rotate-z": `${arcDistance * 2.5}deg`,
-                    "--arc-rotate-z-mobile": `${arcDistance * 1.5}deg`,
-                  } as CSSProperties}
-                  onClick={() => setSelected(artwork)}
-                  aria-label={`Open ${artwork.alt}`}
-                  aria-current={proximity < 0.5 ? "true" : undefined}
-                >
-                  {shouldLoad && (
-                    <Image
-                      src={getCloudinaryUrl(artwork.src, 900)}
-                      sizes="(max-width: 640px) 82vw, (max-width: 1024px) 60vw, 47vw"
-                      alt={artwork.alt}
-                      width={1200}
-                      height={1500}
-                      loading={index <= activeIndex + 1 ? "eager" : "lazy"}
-                      fetchPriority={index === activeIndex ? "high" : "auto"}
-                      decoding="async"
-                    />
-                  )}
-                </button>
-              );
-            })}
-          </div>
-          <div className={styles.footer}>
-            <span className={styles.srOnly} aria-live="polite">Artwork {Math.round(progress) + 1} of {artworks.length}</span>
-            <div className={styles.controls}>
-              <div
-                className={styles.progressTrack}
-                role="progressbar"
-                aria-label="Work gallery progress"
-                aria-valuemin={1}
-                aria-valuemax={artworks.length}
-                aria-valuenow={Math.round(progress) + 1}
-                aria-valuetext={`Artwork ${Math.round(progress) + 1} of ${artworks.length}`}
+        <div className={styles.counter} aria-live="polite">
+          <span>{activeProject.number}</span>
+          <span className={styles.slash}>/</span>
+          <span>{String(projects.length).padStart(2, "0")}</span>
+        </div>
+      </div>
+
+      <div className={styles.gallery} aria-live="polite">
+        {projects.map((project, index) => {
+          const offset = ((index - activeIndex + projects.length) % projects.length);
+          const normalizedOffset = offset > projects.length / 2 ? offset - projects.length : offset;
+          const isActive = normalizedOffset === 0;
+          const isNeighbor = Math.abs(normalizedOffset) === 1;
+          const isHidden = Math.abs(normalizedOffset) > 1;
+
+          const translateX = normalizedOffset * 260;
+          const translateY = normalizedOffset * 26;
+          const rotateY = normalizedOffset === 0 ? 0 : normalizedOffset * -18;
+          const rotateZ = normalizedOffset === 0 ? 0 : normalizedOffset * 5;
+          const scale = isActive ? 1 : isNeighbor ? 0.84 : 0.72;
+          const opacity = isHidden ? 0 : isActive ? 1 : 0.78;
+          const depth = isActive ? 70 : isNeighbor ? 10 : -30;
+
+          return (
+            <article
+              key={project.title}
+              className={`${styles.projectCard} ${isActive ? styles.active : ""} ${isNeighbor ? styles.neighbor : ""}`}
+              style={{
+                transform: `translate3d(calc(-50% + ${translateX}px), calc(-50% + ${translateY}px), ${depth}px) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg) scale(${scale})`,
+                opacity,
+                zIndex: isActive ? 30 : isNeighbor ? 22 : 10,
+              }}
+              aria-current={isActive ? "true" : undefined}
+            >
+              <button
+                type="button"
+                className={styles.imageButton}
+                onClick={() => setSelectedProject(project)}
+                aria-label={`Open ${project.alt} in a larger preview`}
               >
-                <span style={{ width: `${((progress + 1) / artworks.length) * 100}%` }} />
-              </div>
-              <button type="button" className={styles.arrow} onClick={() => moveToArtwork(-1)} aria-label="Previous artwork">
-                <ChevronLeft size={16} aria-hidden="true" />
+                <Image
+                  src={getCloudinaryUrl(project.src, 1200)}
+                  alt={project.alt}
+                  fill
+                  sizes="(max-width: 640px) 88vw, (max-width: 1024px) 72vw, 58vw"
+                  priority={isActive}
+                  className={styles.image}
+                />
               </button>
-              <button type="button" className={styles.arrow} onClick={() => moveToArtwork(1)} aria-label="Next artwork">
-                <ChevronRight size={16} aria-hidden="true" />
-              </button>
-            </div>
+            </article>
+          );
+        })}
+      </div>
+
+      <div className={styles.metaRow}>
+        <div className={styles.projectInfo}>
+          <span className={styles.category}>{activeProject.category}</span>
+          <h3>{activeProject.title}</h3>
+          <p>{activeProject.description}</p>
+        </div>
+
+        <div className={styles.controlsWrap}>
+          <div
+            className={styles.progressTrack}
+            role="progressbar"
+            aria-label="Portfolio project progress"
+            aria-valuemin={1}
+            aria-valuemax={projects.length}
+            aria-valuenow={activeIndex + 1}
+            aria-valuetext={`Project ${activeIndex + 1} of ${projects.length}`}
+          >
+            <span style={{ width: `${((activeIndex + 1) / projects.length) * 100}%` }} />
+          </div>
+
+          <div className={styles.controls}>
+            <button type="button" onClick={() => moveProject(-1)} className={styles.arrow} aria-label="Previous portfolio project">
+              <ArrowLeft size={16} aria-hidden="true" />
+            </button>
+            <button type="button" onClick={() => moveProject(1)} className={styles.arrow} aria-label="Next portfolio project">
+              <ArrowRight size={16} aria-hidden="true" />
+            </button>
           </div>
         </div>
-      </section>
+      </div>
 
-      {selected && (
-        <div className={styles.modal} role="dialog" aria-modal="true" aria-label={selected.alt} onClick={() => setSelected(null)}>
-          <button type="button" className={styles.close} onClick={() => setSelected(null)} aria-label="Close visual preview"><X size={20} /></button>
-          <Image src={getCloudinaryUrl(selected.src, 1800)} alt={selected.alt} width={1800} height={2200} decoding="async" onClick={(event) => event.stopPropagation()} />
+      {selectedProject && (
+        <div className={styles.modal} role="dialog" aria-modal="true" aria-label={selectedProject.alt} onClick={() => setSelectedProject(null)}>
+          <button type="button" className={styles.close} onClick={() => setSelectedProject(null)} aria-label="Close portfolio preview">
+            <X size={20} aria-hidden="true" />
+          </button>
+          <div className={styles.modalFrame}>
+            <Image
+              src={getCloudinaryUrl(selectedProject.src, 1800)}
+              alt={selectedProject.alt}
+              fill
+              sizes="min(90vw, 70rem)"
+              className={styles.modalImage}
+              onClick={(event) => event.stopPropagation()}
+            />
+          </div>
         </div>
       )}
-    </>
+    </section>
   );
 }
