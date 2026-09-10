@@ -31,21 +31,6 @@
   letter-spacing: -0.05em;
 }
 
-.counter {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0.5rem;
-  margin-bottom: 0.7rem;
-  color: rgba(255, 255, 255, 0.75);
-  font: 600 0.78rem/1 var(--font-sans);
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-.slash {
-  color: rgba(255, 255, 255, 0.3);
-}
-
 .gallery {
   position: relative;
   height: clamp(22rem, 50vh, 34rem);
@@ -110,7 +95,7 @@
   position: relative;
   z-index: 2;
   align-items: end;
-  margin-top: 1.25rem;
+  margin-top: 1.5rem;
   padding: 0 clamp(0.25rem, 1.5vw, 1rem);
 }
 
@@ -146,30 +131,27 @@
   font: 400 0.96rem/1.7 var(--font-sans);
 }
 
+.viewProject {
+  display: inline-flex;
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  font: 600 0.72rem/1 var(--font-sans);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
 .controlsWrap {
   display: flex;
-  flex-direction: column;
-  align-items: end;
-  gap: 1rem;
-  min-width: min(100%, 22rem);
-}
-
-.progressTrack {
-  width: min(18rem, 38vw);
-  height: 1px;
-  background: rgba(255, 255, 255, 0.12);
-}
-
-.progressTrack span {
-  display: block;
-  height: 100%;
-  background: linear-gradient(90deg, rgba(169, 140, 255, 0.9), rgba(255, 255, 255, 0.85));
-  transition: width 300ms ease;
+  justify-content: center;
+  margin-top: 1.25rem;
+  padding: 0 clamp(0.25rem, 1.5vw, 1rem);
 }
 
 .controls {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.7rem;
 }
 
@@ -244,10 +226,6 @@
     display: block;
   }
 
-  .counter {
-    margin-top: 1.25rem;
-  }
-
   .gallery {
     height: clamp(20rem, 39vh, 29rem);
     margin-top: 1.75rem;
@@ -258,18 +236,8 @@
   }
 
   .controlsWrap {
-    margin-top: 1.5rem;
-    align-items: flex-start;
-  }
-
-  .progressTrack {
-    width: min(15rem, 58vw);
-  }
-}
-
-@media (max-width: 640px) {
-  .showcase {
-    margin-bottom: 3rem;
+    margin-top: 1.25rem;
+    justify-content: flex-start;
   }
 
   .gallery {
@@ -306,8 +274,7 @@
 @media (prefers-reduced-motion: reduce) {
   .projectCard,
   .image,
-  .arrow,
-  .progressTrack span {
+  .arrow {
     transition: none;
   }
 

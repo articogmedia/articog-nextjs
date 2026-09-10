@@ -113,12 +113,6 @@ export function CreativeDocument() {
           <p className={styles.kicker}>Selected work</p>
           <h2>Creative work built to feel premium on every screen.</h2>
         </div>
-
-        <div className={styles.counter} aria-live="polite">
-          <span>{activeProject.number}</span>
-          <span className={styles.slash}>/</span>
-          <span>{String(projects.length).padStart(2, "0")}</span>
-        </div>
       </div>
 
       <div className={styles.gallery} aria-live="polite">
@@ -173,29 +167,18 @@ export function CreativeDocument() {
           <span className={styles.category}>{activeProject.category}</span>
           <h3>{activeProject.title}</h3>
           <p>{activeProject.description}</p>
+          <a href="/work" className={styles.viewProject}>View Project</a>
         </div>
+      </div>
 
-        <div className={styles.controlsWrap}>
-          <div
-            className={styles.progressTrack}
-            role="progressbar"
-            aria-label="Portfolio project progress"
-            aria-valuemin={1}
-            aria-valuemax={projects.length}
-            aria-valuenow={activeIndex + 1}
-            aria-valuetext={`Project ${activeIndex + 1} of ${projects.length}`}
-          >
-            <span style={{ width: `${((activeIndex + 1) / projects.length) * 100}%` }} />
-          </div>
-
-          <div className={styles.controls}>
-            <button type="button" onClick={() => moveProject(-1)} className={styles.arrow} aria-label="Previous portfolio project">
-              <ArrowLeft size={16} aria-hidden="true" />
-            </button>
-            <button type="button" onClick={() => moveProject(1)} className={styles.arrow} aria-label="Next portfolio project">
-              <ArrowRight size={16} aria-hidden="true" />
-            </button>
-          </div>
+      <div className={styles.controlsWrap}>
+        <div className={styles.controls}>
+          <button type="button" onClick={() => moveProject(-1)} className={styles.arrow} aria-label="Previous portfolio project">
+            <ArrowLeft size={16} aria-hidden="true" />
+          </button>
+          <button type="button" onClick={() => moveProject(1)} className={styles.arrow} aria-label="Next portfolio project">
+            <ArrowRight size={16} aria-hidden="true" />
+          </button>
         </div>
       </div>
 
