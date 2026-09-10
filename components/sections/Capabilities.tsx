@@ -30,25 +30,23 @@ interface CapabilitiesProps {
 
 export function Capabilities({ capabilities }: CapabilitiesProps) {
   return (
-    <Section id="capabilities" className="relative overflow-hidden bg-[#0a0a0a]">
+    <Section id="capabilities" className="relative overflow-hidden bg-[#0a0a0a] pb-24 pt-10 md:pt-20">
       <Container className="relative z-20">
-        <div className="max-w-lg mb-16">
-          <Heading as="p" size="label" className="mb-4 text-white/50">Services</Heading>
-          <Heading as="h2" size="section" className="mb-0 text-white">Creative formats, delivered.</Heading>
+        <div className="mb-8 max-w-lg md:mb-12">
+          <Heading as="p" size="label" className="mb-4 uppercase tracking-[0.18em] text-white/45">Services</Heading>
+          <Heading as="h2" size="section" className="mb-0 text-white">Every creative format,<br />delivered.</Heading>
         </div>
 
-        <div className="rounded-2xl overflow-hidden border border-white/[0.08] bg-black">
-
+        <div className="overflow-hidden rounded-[18px] border border-white/[0.08] bg-black">
           {capabilities.map((cap) => {
             const Icon = iconMap[cap.icon] ?? Zap;
             return (
               <div
                 key={cap.title}
-                className="group grid grid-cols-1 lg:grid-cols-12 border-b border-white/[0.08] last:border-b-0 hover:bg-white/[0.025] transition-colors duration-200"
+                className="group grid grid-cols-1 border-b border-white/[0.08] last:border-b-0 transition-colors duration-200 hover:bg-white/[0.025] lg:grid-cols-12"
               >
-                {/* Icon + Title */}
-                <div className="lg:col-span-3 flex items-center gap-4 px-5 py-5 lg:p-6 border-b lg:border-b-0 lg:border-r border-white/[0.08] lg:bg-transparent">
-                  <div className="flex h-10 w-10 lg:h-9 lg:w-9 shrink-0 items-center justify-center rounded-xl border border-white/[0.08] text-white/40 group-hover:text-white/70 transition-colors duration-200">
+                <div className="flex items-center gap-4 border-b border-white/[0.08] px-5 py-5 lg:col-span-3 lg:border-b-0 lg:border-r lg:p-6">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-white/[0.08] text-white/40 transition-colors duration-200 group-hover:text-white/70 lg:h-9 lg:w-9">
                     <Icon size={17} />
                   </div>
                   <h3 className="type-h3 text-white">
@@ -56,22 +54,20 @@ export function Capabilities({ capabilities }: CapabilitiesProps) {
                   </h3>
                 </div>
 
-                {/* Use case */}
-                <div className="lg:col-span-4 flex flex-col justify-center px-5 py-4 lg:p-6 border-b lg:border-b-0 lg:border-r border-white/[0.08]">
-                  <p className="font-sans text-[10px] font-semibold uppercase tracking-wider mb-1.5 text-white/30">
+                <div className="flex flex-col justify-center border-b border-white/[0.08] px-5 py-4 lg:col-span-4 lg:border-b-0 lg:border-r lg:p-6">
+                  <p className="mb-1.5 font-sans text-[10px] font-semibold uppercase tracking-[0.16em] text-white/30">
                     Use case
                   </p>
-                  <p className="font-sans text-sm leading-relaxed text-white/52">
+                  <p className="font-sans text-[15px] leading-relaxed text-white/60">
                     {cap.useCase}
                   </p>
                 </div>
 
-                {/* Outcome */}
-                <div className="lg:col-span-5 flex flex-col justify-center px-5 py-4 lg:p-6">
-                  <p className="font-sans text-[10px] font-semibold uppercase tracking-wider mb-1.5 text-[#6633EE]/55">
+                <div className="flex flex-col justify-center px-5 py-4 lg:col-span-5 lg:p-6">
+                  <p className="mb-1.5 font-sans text-[10px] font-semibold uppercase tracking-[0.16em] text-[#6633EE]/70">
                     Outcome
                   </p>
-                  <p className="font-sans text-sm leading-relaxed text-white/75">
+                  <p className="font-sans text-[15px] leading-relaxed text-white/80">
                     {cap.outcome}
                   </p>
                 </div>
