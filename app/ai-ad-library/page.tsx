@@ -97,10 +97,14 @@ export default function AdLibraryPage() {
 
           </div>
 
-          <div className="mb-16 max-w-3xl">
+          <div className="mb-16 grid gap-6 md:grid-cols-2">
             <YouTubeEmbed
               videoId="l5pReVGFVqs"
               title="These Actors Don’t Exist. This Entire Ad Was Made With AI | Articog"
+            />
+            <YouTubeEmbed
+              url="https://www.youtube.com/watch?v=_0z-6bfJ0zI"
+              title="Articog YouTube video"
             />
           </div>
 
