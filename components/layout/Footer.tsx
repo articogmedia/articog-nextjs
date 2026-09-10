@@ -117,7 +117,7 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4 md:col-span-2">
             <Link
-              href="https://articog.com"
+              href="/"
               className="font-display text-base font-semibold text-white/90 hover:text-white transition-colors"
             >
               Articog
