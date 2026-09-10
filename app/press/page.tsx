@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 
@@ -13,17 +14,20 @@ export default function PressPage() {
     {
       title: "Logo Pack",
       description:
-        "Official brand marks in various formats and colorways.",
+        "Official Articog logo asset for editorial and press use.",
+      actionLabel: "Download Logo",
+      href: "/icon.svg",
+      asset: "/icon.svg",
     },
     {
       title: "Product Screenshots",
       description:
-        "High-resolution captures of the Articog platform in action.",
+        "Approved product and site screenshots are available on request for press use.",
     },
     {
       title: "Company Boilerplate",
       description:
-        "Standard company description for press and editorial use.",
+        "AI-native film and creative production for growth-stage brands.",
     },
   ];
 
@@ -56,10 +60,31 @@ export default function PressPage() {
                       {asset.title}
                     </h3>
 
+                    {asset.asset ? (
+                      <div className="mb-4 flex items-center justify-center rounded-xl border border-zinc-800 bg-black p-6">
+                        <Image
+                          src={asset.asset}
+                          alt="Articog logo"
+                          width={160}
+                          height={80}
+                          className="h-auto max-h-20 w-auto object-contain"
+                        />
+                      </div>
+                    ) : null}
+
                     <p className="text-zinc-400 text-sm leading-relaxed mb-6 flex-grow">
                       {asset.description}
                     </p>
 
+                    {asset.href ? (
+                      <a
+                        href={asset.href}
+                        download
+                        className="mt-auto inline-flex items-center justify-center rounded-lg border border-zinc-700 bg-zinc-800 px-4 py-2 text-sm font-medium text-white transition-colors hover:border-zinc-500 hover:bg-zinc-700"
+                      >
+                        {asset.actionLabel}
+                      </a>
+                    ) : null}
                   </div>
                 ))}
               </div>
@@ -72,12 +97,12 @@ export default function PressPage() {
                     Company Boilerplate
                   </h2>
 
-                  <div className="bg-zinc-900/30 p-6 rounded-2xl border border-zinc-800 italic text-zinc-400 text-sm leading-relaxed">
-                    Articog is a next-generation AI creative production
-                    studio. We partner with leading brands and agencies to
-                    produce high-fidelity cinematic video, product
-                    commercials, and social content at unprecedented speed and
-                    scale, powered by advanced generative AI workflows.
+                  <div className="bg-zinc-900/30 p-6 rounded-2xl border border-zinc-800 text-zinc-300 text-sm leading-relaxed">
+                    Articog is an AI-native film and creative production company.
+                    We deliver AI-native film and creative production for
+                    growth-stage brands, helping teams create brand films,
+                    commercials, social content, and performance creative from
+                    brief to delivery in days.
                   </div>
                 </div>
 
