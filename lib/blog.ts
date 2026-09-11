@@ -197,21 +197,6 @@ export const blogPosts: BlogEntry[] = [
   },
 
   {
-    type: "substack",
-    slug: "substack-what-great-ai-brand-content-really-looks-like",
-    title: "What great AI brand content really looks like",
-    excerpt:
-      "A grounded framework for evaluating AI-generated creative across brand fit, emotional response, and production efficiency.",
-    publishedAt: "2025-01-07",
-    featuredImage:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
-    sourceLabel: "Substack",
-    sourceUrl:
-      "https://articog.substack.com/p/what-great-ai-brand-content-really-looks-like",
-    actionLabel: "Read on Substack",
-  },
-
-  {
     type: "youtube",
     slug: "these-actors-dont-exist-this-entire-ad-was-made-with-ai",
     title: "These Actors Don’t Exist. This Entire Ad Was Made With AI | Articog",
