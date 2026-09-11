@@ -27,7 +27,7 @@ const nextConfig: NextConfig = {
               "font-src 'self' data:",
               "img-src 'self' data: blob: https://res.cloudinary.com https://images.unsplash.com https://img.youtube.com",
               "media-src 'self' https://res.cloudinary.com",
-              "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://api.resend.com https://*.googleapis.com",
+              "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://api.resend.com https://*.googleapis.com https://articog.breezy.hr",
               "frame-src 'self' https://calendly.com https://*.calendly.com https://www.youtube.com https://www.youtube-nocookie.com",
               "form-action 'self'",
             ].join("; "),
