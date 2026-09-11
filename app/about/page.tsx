@@ -66,7 +66,7 @@ export default function AboutPage() {
 
       <Section size="md" className="border-t border-white/[0.05]">
         <Container>
-          <div className="mx-auto grid max-w-4xl gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+          <div className="mx-auto grid max-w-6xl gap-x-12 gap-y-8 lg:grid-cols-[0.9fr_1.8fr] lg:items-center">
             <div className="space-y-3">
               <Heading as="p" size="label">
                 OUR FOUNDATION
