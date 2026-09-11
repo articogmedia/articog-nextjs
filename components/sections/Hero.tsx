@@ -68,7 +68,7 @@ export function Hero({ content }: HeroProps) {
           preload="auto"
           src="https://res.cloudinary.com/hmy5ctzy/video/upload/f_mp4,vc_h264,q_auto:good,w_1280,dpr_auto,c_limit/v1786961383/Web_3.mp4"
           poster="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:good,f_auto,w_1280,so_0/v1786961383/Web_3.jpg"
-          className="h-full w-full object-cover opacity-60"
+          className="h-full w-full object-cover opacity-85"
           aria-hidden="true"
         />
 
@@ -77,7 +77,7 @@ export function Hero({ content }: HeroProps) {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 100%)",
+              "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.35) 100%)",
             backgroundColor: "transparent",
           }}
         />
