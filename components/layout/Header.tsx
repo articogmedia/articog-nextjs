@@ -167,6 +167,7 @@ function DropdownPanel({
   group,
   onClose,
   isOpen,
+  anchorElement,
 }: {
   group:
     | (typeof menuGroups)[0]
@@ -176,6 +177,7 @@ function DropdownPanel({
       };
   onClose: () => void;
   isOpen: boolean;
+  anchorElement?: HTMLElement | null;
 }) {
   const isServices = group.label === "Services";
 
@@ -183,17 +185,51 @@ function DropdownPanel({
     return null;
   }
 
+  const servicePanelStyle = {
+    left: "50%",
+    top: "72px",
+    transform: "translateX(-50%)",
+    width: "min(100vw - 64px, 1120px)",
+    maxWidth: "1120px",
+    paddingTop: "12px",
+  } as const;
+
+  const simplePanelStyle = (() => {
+    if (typeof window === "undefined") {
+      return {
+        position: "fixed" as const,
+        left: "16px",
+        top: "72px",
+        width: "320px",
+        maxWidth: "calc(100vw - 32px)",
+        paddingTop: "12px",
+      };
+    }
+
+    const rect = anchorElement?.getBoundingClientRect();
+    const panelWidth = Math.min(window.innerWidth - 32, 320);
+    const left = rect
+      ? Math.min(
+          Math.max(rect.left, 16),
+          window.innerWidth - panelWidth - 16,
+        )
+      : 16;
+    const top = rect ? rect.bottom + 12 : 72;
+
+    return {
+      position: "fixed" as const,
+      left: `${left}px`,
+      top: `${top}px`,
+      width: `${panelWidth}px`,
+      maxWidth: "calc(100vw - 32px)",
+      paddingTop: "0px",
+    };
+  })();
+
   return (
     <div
-      className="fixed z-[99999]"
-      style={{
-        left: "50%",
-        top: "72px",
-        transform: "translateX(-50%)",
-        width: isServices ? "min(100vw - 64px, 1120px)" : "min(100vw - 40px, 360px)",
-        maxWidth: isServices ? "1120px" : "360px",
-        paddingTop: "12px",
-      }}
+      className="z-[99999]"
+      style={isServices ? { ...servicePanelStyle, position: "fixed" } : simplePanelStyle}
       onClick={(e) => e.stopPropagation()}
       onMouseEnter={clearTimeoutOnMouseEnter}
     >
@@ -439,6 +475,7 @@ export function Header() {
   const [activeGroup, setActiveGroup] = useState<string | null>(null);
 
   const headerRef = useRef<HTMLElement | null>(null);
+  const navGroupRefs = useRef<Record<string, HTMLDivElement | null>>({});
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
@@ -558,6 +595,9 @@ export function Header() {
             {menuGroups.map((group) => (
               <div
                 key={group.label}
+                ref={(node) => {
+                  navGroupRefs.current[group.label] = node;
+                }}
                 className="relative nav-group-container"
                 onMouseEnter={() => openGroup(group.label)}
                 onMouseLeave={scheduleClose}
@@ -608,6 +648,7 @@ export function Header() {
                   isOpen={
                     activeGroup === group.label
                   }
+                  anchorElement={navGroupRefs.current[group.label] ?? null}
                 />
               </div>
             ))}
