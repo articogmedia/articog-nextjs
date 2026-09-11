@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Video Ad Creative Articog",
-  description: "High-volume, performance-tested video ads for every platform. Scale your creative output without increasing headcount.",
+  description: "High volume, performance tested video ads for every platform. Scale your creative output without increasing headcount.",
   alternates: { canonical: "https://articog.com/work/video-ads" },
 };
 import { Link } from "@/components/ui/Link";
@@ -27,7 +27,7 @@ export default function VideoAdsGalleryPage() {
           <div className="max-w-6xl mx-auto">
             <h1 className="type-h1 mb-6 text-white">Video Ad Gallery</h1>
             <p className="text-zinc-400 type-h3 mb-16 max-w-2xl leading-relaxed">
-              Explore our latest AI-generated video creative across industries and formats.
+              Explore our latest AI generated video creative across industries and formats.
             </p>
 
             <div className="mb-16 max-w-3xl">

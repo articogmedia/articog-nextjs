@@ -31,7 +31,7 @@ export default function CustomersPage() {
               className="mx-auto max-w-2xl type-body-lg md:text-xl leading-relaxed"
               style={{ color: "rgba(255,255,255,0.65)" }}
             >
-              See how modern marketing teams are using AI-native production to break through creative bottlenecks and scale their brand.
+              See how modern marketing teams are using AI native production to break through creative bottlenecks and scale their brand.
             </p>
           </div>
         </Container>
@@ -75,7 +75,7 @@ export default function CustomersPage() {
                       <div className="flex flex-col gap-1">
                         <span className="text-[10px] uppercase tracking-wider text-white/20 font-bold">Approach</span>
                         <p className="text-sm text-white/50 leading-relaxed">
-                          Implemented Articog's AI-native pipeline for high-fidelity asset generation and variant testing.
+                          Implemented Articog's AI native pipeline for high fidelity asset generation and variant testing.
                         </p>
                       </div>
                     </div>

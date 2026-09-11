@@ -71,7 +71,7 @@ const footerNavSections = [
       { label: "Product Visuals", href: "/services/product-visuals" },
       { label: "Audio & Sound", href: "/services/audio" },
       { label: "Creative Strategy", href: "/services/creative-strategy" },
-      { label: "Post-Production", href: "/services/post-production" },
+      { label: "Post Production", href: "/services/post-production" },
     ],
   },
   {
@@ -124,7 +124,7 @@ export function Footer() {
             </Link>
 
             <p className="type-small leading-relaxed max-w-xs text-white/40">
-              AI creative production for growth-stage brands.
+              AI creative production for growth stage brands.
             </p>
 
             <div className="flex items-center gap-3.5 pt-4">

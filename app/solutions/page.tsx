@@ -18,7 +18,7 @@ export default function SolutionsPage() {
     },
     {
       title: "Performance Marketing Creative",
-      description: "For growth teams that need high-volume, performance-focused ad variants.",
+      description: "For growth teams that need high volume, performance focused ad variants.",
       href: "/solutions/performance-marketing",
     },
     {

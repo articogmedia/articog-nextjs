@@ -95,25 +95,25 @@ export const siteContent: SiteContent = {
     {
       title: "AI Posters and Visual Content",
       useCase: "Campaign posters, banners, OOH creative, print-ready assets",
-      outcome: "On-brand visuals at any scale with consistent brand fidelity",
+      outcome: "On brand visuals at any scale with consistent brand fidelity",
       icon: "image",
     },
     {
       title: "Audio Ads",
       useCase: "Podcast, radio, streaming audio, brand voice production",
-      outcome: "Studio-quality audio creative in hours, not weeks",
+      outcome: "Studio quality audio creative in hours, not weeks",
       icon: "mic",
     },
     {
       title: "AI UGC and Social Content",
       useCase: "Instagram, TikTok, YouTube Shorts, organic feeds",
-      outcome: "Platform-native content that performs without influencer budgets",
+      outcome: "Platform native content that performs without influencer budgets",
       icon: "trending-up",
     },
     {
       title: "ML Ad Creations",
       useCase: "Paid social, display, search creative testing",
-      outcome: "Hundreds of on-brand variants, continuously optimised on performance signals",
+      outcome: "Hundreds of on brand variants, continuously optimised on performance signals",
       icon: "zap",
     },
     {

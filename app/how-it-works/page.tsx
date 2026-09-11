@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "How It Works Articog",
-  description: "Our human-directed, AI-accelerated creative production process.",
+  description: "Our human directed, AI accelerated creative production process.",
   alternates: { canonical: "https://articog.com/how-it-works" },
 };
 import { Link } from "@/components/ui/Link";
@@ -21,20 +21,20 @@ export default function HowItWorksPage() {
     {
       step: 2,
       title: "Generate",
-      description: "Our brand-calibrated AI pipeline explores creative directions and delivers first outputs within hours.",
-      tag: "Day 1-2",
+      description: "Our brand calibrated AI pipeline explores creative directions and delivers first outputs within hours.",
+      tag: "Day 1 to 2",
     },
     {
       step: 3,
       title: "Refine",
       description: "Review a curated selection. Creative directors refine each asset through fast feedback cycles.",
-      tag: "Day 2-3",
+      tag: "Day 2 to 3",
     },
     {
       step: 4,
       title: "Deliver",
       description: "Receive production-ready assets in the formats, aspect ratios, and language variants your campaign needs.",
-      tag: "Day 3-4",
+      tag: "Day 3 to 4",
     },
   ];
 

@@ -14,7 +14,7 @@ export default function IndustriesPage() {
   const industries = [
     {
       title: "DTC & Ecommerce",
-      description: "Performance-driven creative for brands that need to convert.",
+      description: "Performance driven creative for brands that need to convert.",
       href: "/industries#dtc-ecommerce",
       icon: ShoppingBag,
     },

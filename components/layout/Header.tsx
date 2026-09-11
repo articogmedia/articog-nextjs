@@ -34,7 +34,7 @@ export const menuGroups = [
         href: "/services/creative-strategy",
       },
       {
-        label: "Post-Production",
+        label: "Post Production",
         href: "/services/post-production",
       },
     ],
@@ -241,19 +241,19 @@ function ServicesContent({
   const featured = [
     {
       title: "Brand Films & Commercials",
-      desc: "Story-led films and broadcast-ready ads, produced from brief in days.",
+      desc: "Story led films and broadcast ready ads, produced from brief in days.",
       href: "/services/ai-video-production",
       icon: <Film size={14} />,
     },
     {
       title: "AI Social & UGC",
-      desc: "Platform-native creations for Instagram, TikTok, YouTube and LinkedIn at scale.",
+      desc: "Platform native creations for Instagram, TikTok, YouTube and LinkedIn at scale.",
       href: "/work/social",
       icon: <Smartphone size={14} />,
     },
     {
       title: "ML Ad Creations",
-      desc: "Hundreds of on-brand variants, continuously optimised on performance signals.",
+      desc: "Hundreds of on brand variants, continuously optimised on performance signals.",
       href: "/services/ad-creative",
       icon: <TestTube2 size={14} />,
     },

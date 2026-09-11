@@ -34,7 +34,7 @@ export default function ProductLaunchSolutionPage() {
     },
     {
       title: "Channel Coverage",
-      desc: "Assets delivered ready-to-post for paid media, organic social, and owned channels.",
+      desc: "Assets delivered ready to post for paid media, organic social, and owned channels.",
       icon: Share2,
     },
   ];

@@ -11,7 +11,7 @@ type DetailGroup = {
 const detailGroups: Record<SolutionCategory, DetailGroup[]> = {
   monthly: [
     {
-      title: "Always-On Content",
+      title: "Always On Content",
       description: "Continuous cross-channel production for brands that need a steady flow of organic and paid content without more headcount.",
       items: [
         { title: "Continuous Production", description: "An ongoing content engine that keeps video, social, and visual channels active across campaign cycles." },
@@ -32,20 +32,20 @@ const detailGroups: Record<SolutionCategory, DetailGroup[]> = {
     },
     {
       title: "Performance Formats",
-      description: "High-volume creative for paid social and performance teams that need constant refreshes.",
+      description: "High volume creative for paid social and performance teams that need constant refreshes.",
       items: [
-        { title: "Paid Social Scale", description: "High-volume production, iterative testing, platform optimization, and regular creative refreshes." },
-        { title: "Dynamic Creative", description: "Modular creative layers and audience-driven variants optimized for Meta, TikTok, and YouTube." },
-        { title: "UGC-Style Content", description: "Creator-style aesthetics, production without a shoot, rapid trend response, and conversion-focused hooks." },
+        { title: "Paid Social Scale", description: "High volume production, iterative testing, platform optimization, and regular creative refreshes." },
+        { title: "Dynamic Creative", description: "Modular creative layers and audience driven variants optimized for Meta, TikTok, and YouTube." },
+        { title: "UGC Style Content", description: "Creator style aesthetics, production without a shoot, rapid trend response, and conversion focused hooks." },
       ],
     },
     {
       title: "Workflow & Automation",
-      description: "Production systems designed to connect high-volume creative with existing marketing workflows.",
+      description: "Production systems designed to connect high volume creative with existing marketing workflows.",
       items: [
-        { title: "Creative Automation", description: "API-first workflows, mass variation, and rule-based branding for repeatable production." },
-        { title: "Workflow Integration", description: "DAM and product-feed integrations can connect brief-to-delivery production to existing systems." },
-        { title: "Rapid Iteration", description: "Performance signals guide visual iteration and data-led optimization across the testing matrix." },
+        { title: "Creative Automation", description: "API first workflows, mass variation, and rule based branding for repeatable production." },
+        { title: "Workflow Integration", description: "DAM and product feed integrations can connect brief to delivery production to existing systems." },
+        { title: "Rapid Iteration", description: "Performance signals guide visual iteration and data led optimization across the testing matrix." },
       ],
     },
   ],

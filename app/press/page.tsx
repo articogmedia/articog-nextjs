@@ -27,7 +27,7 @@ export default function PressPage() {
     {
       title: "Company Boilerplate",
       description:
-        "AI-native film and creative production for growth-stage brands.",
+        "AI native film and creative production for growth stage brands.",
     },
   ];
 
@@ -98,9 +98,9 @@ export default function PressPage() {
                   </h2>
 
                   <div className="bg-zinc-900/30 p-6 rounded-2xl border border-zinc-800 text-zinc-300 text-sm leading-relaxed">
-                    Articog is an AI-native film and creative production company.
-                    We deliver AI-native film and creative production for
-                    growth-stage brands, helping teams create brand films,
+                    Articog is an AI native film and creative production company.
+                    We deliver AI native film and creative production for
+                    growth stage brands, helping teams create brand films,
                     commercials, social content, and performance creative from
                     brief to delivery in days.
                   </div>

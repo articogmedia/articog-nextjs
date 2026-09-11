@@ -62,7 +62,7 @@ export default function PostProductionPage() {
               </span>
             </div>
             <Heading as="h1" size="hero" className="mb-6">
-              Post-Production
+              Post Production
             </Heading>
           </div>
         </Container>

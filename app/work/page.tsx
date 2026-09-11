@@ -20,7 +20,7 @@ export default function WorkPage() {
     },
     {
       title: "Social & UGC",
-      description: "Platform-native social creations and UGC-style content.",
+      description: "Platform native social creations and UGC style content.",
       href: "/work/social",
     },
     {

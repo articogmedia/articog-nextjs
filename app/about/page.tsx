@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   alternates: { canonical: "https://articog.com/about" },
   title: "About Articog | Creative AI Production Company",
-  description: "Articog is a Creative AI Production Company. We produce AI brand films, commercials, ad creations, UGC, AI social content and audio ads for growth-stage brands.",
+  description: "Articog is a Creative AI Production Company. We produce AI brand films, commercials, ad creations, UGC, AI social content and audio ads for growth stage brands.",
 };
 import { Link } from "@/components/ui/Link";
 import { Container, Section, Button, Heading, Text } from "@/components/ui";
@@ -25,7 +25,7 @@ export default function AboutPage() {
               About Articog
             </Heading>
             <Text as="p" size="lg" className="mx-auto max-w-2xl leading-relaxed text-white/65">
-              Articog produces brand films, commercials, ad creations, UGC, social content, and audio ads for growth-stage brands, from brief to delivery in days.
+              Articog produces brand films, commercials, ad creations, UGC, social content, and audio ads for growth stage brands, from brief to delivery in days.
             </Text>
           </div>
         </Container>
@@ -65,7 +65,7 @@ export default function AboutPage() {
           
           <div className="grid gap-10 md:grid-cols-3">
             <ApproachItem
-              title="AI-Native Production"
+              title="AI Native Production"
               description="Our pipeline uses calibrated models to produce high-fidelity assets at scale."
             />
             <ApproachItem

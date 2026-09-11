@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   alternates: { canonical: "https://articog.com/" },
   title: "Articog | Creative AI Production Company | AI Brand Films & Ad Creations",
-  description: "Articog is a Creative AI Production Company. We produce AI brand films, commercials, ad creations, UGC, AI social content, and audio ads for growth-stage brands. Brief to delivery in days, not weeks.",
+  description: "Articog is a Creative AI Production Company. We produce AI brand films, commercials, ad creations, UGC, AI social content, and audio ads for growth stage brands. Brief to delivery in days, not weeks.",
 };
 import { siteContent } from "@/lib/content";
 import {
@@ -32,7 +32,7 @@ const serviceSchema = {
   },
   serviceType: "Creative Production",
   description:
-    "Articog produces brand films, commercials, AI ad creations, social content, audio ads, and AI visual content for growth-stage brands.",
+    "Articog produces brand films, commercials, AI ad creations, social content, audio ads, and AI visual content for growth stage brands.",
   areaServed: { "@type": "Place", name: "Worldwide" },
   audience: {
     "@type": "Audience",
@@ -88,7 +88,7 @@ const webPageSchema = {
   isPartOf: { "@id": "https://articog.com/#website" },
   about: { "@id": "https://articog.com/#organization" },
   description:
-    "AI creative production for growth-stage brands. Brand films, commercials, ad creations, and social content produced in days.",
+    "AI creative production for growth stage brands. Brand films, commercials, ad creations, and social content produced in days.",
   inLanguage: "en-US",
 };
 

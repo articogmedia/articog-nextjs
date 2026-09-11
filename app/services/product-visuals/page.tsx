@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   alternates: { canonical: "https://articog.com/services/product-visuals" },
   title: "Product Visual Content Articog",
-  description: "On-brand product visuals at any scale. Campaign posters, banners, OOH creative, and print-ready assets with consistent brand fidelity.",
+  description: "On brand product visuals at any scale. Campaign posters, banners, OOH creative, and print ready assets with consistent brand fidelity.",
 };
 import { Link } from "@/components/ui/Link";
 import { Container, Section, Button } from "@/components/ui";
@@ -32,7 +32,7 @@ export default function ProductVisualsPage() {
             <div>
               <h2 className="type-h2 mb-6 text-white">What We Deliver</h2>
               <p className="text-white/60 leading-relaxed">
-                Elevate your product presence without studio logistics. We combine precise rendering with AI-native environments for scalable visual content.
+                Elevate your product presence without studio logistics. We combine precise rendering with AI environments for scalable visual content.
               </p>
             </div>
             <div>

@@ -86,7 +86,7 @@ export default function WhyArticogPage() {
                 <ArrowRight size={20} className="opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0" />
               </h3>
               <p className="type-small leading-relaxed" style={{ color: "rgba(255,255,255,0.50)" }}>
-                A side-by-side look at how AI-native workflows beat conventional agency timelines.
+                A side by side look at how AI native workflows beat conventional agency timelines.
               </p>
             </Link>
             <Link

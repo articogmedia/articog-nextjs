@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   alternates: { canonical: "https://articog.com/services/ad-creative" },
   title: "Ad Creative Articog",
-  description: "Static and display ad creative built for continuous performance testing. Scale your brand with high-volume, performance-optimized creative.",
+  description: "Static and display ad creative built for continuous performance testing. Scale your brand with high volume, performance optimized creative.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
@@ -34,7 +34,7 @@ export default function AdCreativePage() {
     {
       title: "Static Ad Creative",
       href: null,
-      description: "High-volume static creative for paid social and display networks.",
+      description: "High volume static creative for paid social and display networks.",
     },
     {
       title: "Testing & Variants",
@@ -130,14 +130,14 @@ export default function AdCreativePage() {
             <div>
               <h2 className="type-h2 mb-6 text-white">Built to Test</h2>
               <p className="type-body-lg text-white/60 leading-relaxed mb-6">
-                Stop relying on "best guesses." We deliver hundreds of on-brand variants optimized by performance signals.
+                Stop relying on "best guesses." We deliver hundreds of on brand variants optimized by performance signals.
               </p>
               <div className="space-y-4">
                 {[
                   "Dynamic multivariate testing",
-                  "Performance-driven iteration",
+                  "Performance driven iteration",
                   "Rapid creative refreshes",
-                  "Brand-safe experimentation"
+                  "Brand safe experimentation"
                 ].map((feature) => (
                   <div key={feature} className="flex items-center gap-3 text-white/70">
                     <div className="w-1.5 h-1.5 rounded-full bg-white/30" />

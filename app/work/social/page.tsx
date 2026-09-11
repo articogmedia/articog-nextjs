@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Social Creative Work Articog",
-  description: "Platform-native content built for organic and paid social.",
+  description: "Platform native content built for organic and paid social.",
   alternates: { canonical: "https://articog.com/work/social" },
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
@@ -14,7 +14,7 @@ export default function SocialWorkPage() {
   const formats = [
     {
       title: "Feed Post",
-      desc: "High-impact square and 4:5 assets built for the main feed.",
+      desc: "High impact square and 4:5 assets built for the main feed.",
       icon: Grid,
     },
     {
@@ -78,7 +78,7 @@ export default function SocialWorkPage() {
               <div>
                 <h4 className="type-h3 text-white mb-2">Organized for Scale</h4>
                 <p className="type-body text-white/60 leading-relaxed">
-                  All content is intelligently grouped into thematic series to ensure cross-channel consistency. Every asset is meticulously organized by campaign and format, making reference and implementation seamless for your team.
+                  All content is intelligently grouped into thematic series to ensure cross channel consistency. Every asset is meticulously organized by campaign and format, making reference and implementation seamless for your team.
                 </p>
               </div>
             </div>

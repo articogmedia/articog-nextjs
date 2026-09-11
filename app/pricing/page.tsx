@@ -6,8 +6,8 @@ import { Container, Section, Button, Heading } from "@/components/ui";
 export default function PricingPage() {
   const engagementOptions = [
     {
-      title: "Project-based work",
-      description: "For launches, campaigns, and one-off creative needs with a clear scope and delivery timeline.",
+      title: "Project based work",
+      description: "For launches, campaigns, and one off creative needs with a clear scope and delivery timeline.",
     },
     {
       title: "Ongoing creative support",
@@ -15,7 +15,7 @@ export default function PricingPage() {
     },
     {
       title: "Strategic partnership",
-      description: "For multi-brand or high-volume creative programs that need hands-on planning and platform support.",
+      description: "For multi brand or high volume creative programs that need hands on planning and platform support.",
     },
   ];
 

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   alternates: { canonical: "https://articog.com/why-articog/production-economics" },
   title: "Production Cost & ROI Guide Articog",
-  description: "Understand the economics of AI-native creative production and how it compares to traditional models.",
+  description: "Understand the economics of AI native creative production and how it compares to traditional models.",
 };
 import { Container, Section, Button, Heading } from "@/components/ui";
 import { Link } from "@/components/ui/Link";
@@ -19,7 +19,7 @@ export default function ProductionEconomicsPage() {
     {
       title: "Volume Economics",
       icon: <Zap className="w-6 h-6 text-white/40" />,
-      description: "With an AI-native pipeline, the relationship between volume and cost changes. As we build your brand's custom AI models and asset libraries, the cost per deliverable typically decreases, allowing for massive scaling without proportional budget increases.",
+      description: "With an AI native pipeline, the relationship between volume and cost changes. As we build your brand's custom AI models and asset libraries, the cost per deliverable typically decreases, allowing for massive scaling without proportional budget increases.",
     },
     {
       title: "Time-to-Market Value",
@@ -43,7 +43,7 @@ export default function ProductionEconomicsPage() {
               Production Cost & ROI Guide
             </Heading>
             <p className="mx-auto max-w-2xl type-body md:text-lg leading-relaxed mb-12" style={{ color: "rgba(255,255,255,0.65)" }}>
-              Understanding the potential cost and time savings of AI-native production. These figures are framed as ranges based on typical engagements.
+              Understanding the potential cost and time savings of AI native production. These figures are framed as ranges based on typical engagements.
             </p>
           </div>
 

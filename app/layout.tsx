@@ -20,7 +20,7 @@ const sora = Sora({
 export const metadata: Metadata = {
   title: "Articog | Creative AI Production Company | AI Brand Films & Ad Creations",
   description:
-    "Articog is a Creative AI Production Company. We produce AI brand films, commercials, ad creations, UGC, AI social content, and audio ads for growth-stage brands. Brief to delivery in days, not weeks.",
+    "Articog is a Creative AI Production Company. We produce AI brand films, commercials, ad creations, UGC, AI social content, and audio ads for growth stage brands. Brief to delivery in days, not weeks.",
   metadataBase: new URL("https://articog.com"),
   manifest: "/manifest.webmanifest",
   openGraph: {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: "Articog",
     title: "Articog | Creative AI Production Company | AI Brand Films & Ad Creations",
     description:
-      "Articog is a Creative AI Production Company. We produce AI brand films, commercials, ad creations, UGC, AI social content, and audio ads for growth-stage brands. Brief to delivery in days, not weeks.",
+      "Articog is a Creative AI Production Company. We produce AI brand films, commercials, ad creations, UGC, AI social content, and audio ads for growth stage brands. Brief to delivery in days, not weeks.",
     url: "https://articog.com",
     images: [
       {
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Articog | Creative AI Production Company",
     description:
-      "AI creative production for growth-stage brands. Brief to delivery in days, not weeks.",
+      "AI creative production for growth stage brands. Brief to delivery in days, not weeks.",
     images: ["/og-image.png"],
   },
 };

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Product Visual Content Articog",
-  description: "On-brand product visuals at scale. Product photography, campaign posters, and print-ready assets delivered in days.",
+  description: "On brand product visuals at scale. Product photography, campaign posters, and print ready assets delivered in days.",
   alternates: { canonical: "https://articog.com/work/product-visuals" },
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
@@ -71,10 +71,10 @@ export default function ProductVisualsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { title: "Product Photography", desc: "Studio-quality product shots with perfect lighting and composition." },
-              { title: "Campaign Posters", desc: "High-impact visual statements for digital and physical placements." },
+              { title: "Product Photography", desc: "Studio quality product shots with perfect lighting and composition." },
+              { title: "Campaign Posters", desc: "High impact visual statements for digital and physical placements." },
               { title: "Digital Banners", desc: "Optimized display assets for web, mobile, and social platforms." },
-              { title: "Print-Ready Assets", desc: "High-resolution files ready for any physical production needs." }
+              { title: "Print Ready Assets", desc: "High resolution files ready for any physical production needs." }
             ].map((item) => (
               <div key={item.title} className="p-8 rounded-2xl bg-white/5 border border-white/10">
                 <h3 className="type-h4 text-white mb-3">{item.title}</h3>

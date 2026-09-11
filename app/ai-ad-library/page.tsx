@@ -73,7 +73,7 @@ export default function AdLibraryPage() {
               AI Ad Library
             </Heading>
             <p className="mx-auto max-w-2xl type-body md:text-lg leading-relaxed" style={{ color: "rgba(255,255,255,0.65)" }}>
-              A curated collection of AI-native creative examples across industries and formats.
+              A curated collection of AI native creative examples across industries and formats.
             </p>
           </div>
 

@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://articog.com/services" },
   title: "Services Articog",
   description:
-    "Articog's AI-native creative services: AI video production, ad creative, social creative, product visuals, creative strategy, and post-production.",
+    "Articog's AI native creative services: AI video production, ad creative, social creative, product visuals, creative strategy, and post production.",
 };
 
 import { Link } from "@/components/ui/Link";
@@ -37,7 +37,7 @@ const serviceGroups = [
         title: "Performance Ads",
         href: "/services/ad-creative",
         description:
-          "Direct-response video creative for cross-channel ROI.",
+          "Direct response video creative for cross channel ROI.",
       },
       {
         title: "Social & Reel Production",
@@ -130,7 +130,7 @@ const serviceGroups = [
         title: "Custom Image Libraries",
         href: "/services/product-visuals",
         description:
-          "Build large, consistent libraries of on-brand product images.",
+          "Build large, consistent libraries of on brand product images.",
       },
       {
         title: "E-commerce Visuals",
@@ -176,7 +176,7 @@ const serviceGroups = [
         title: "Campaign Strategy",
         href: "/services/creative-strategy",
         description:
-          "Planning full campaign systems for cross-channel impact.",
+          "Planning full campaign systems for cross channel impact.",
       },
       {
         title: "Concept Development",
@@ -193,7 +193,7 @@ const serviceGroups = [
     ],
   },
   {
-    category: "Post-Production",
+    category: "Post Production",
     items: [
       {
         title: "AI Post-Production",

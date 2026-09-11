@@ -14,7 +14,7 @@ const industryDetails: IndustryDetail[] = [
   {
     id: "dtc-ecommerce",
     title: "DTC & Ecommerce",
-    positioning: "Performance-driven creative for brands that need to convert across crowded digital storefronts.",
+    positioning: "Performance driven creative for brands that need to convert across crowded digital storefronts.",
     considerations: [
       { title: "Creative Fatigue", description: "Keep fresh variants moving through the funnel so audiences do not see the same creative for too long." },
       { title: "Production Pressure", description: "Scale output without letting production costs and studio logistics constrain campaign velocity." },
@@ -99,7 +99,7 @@ const industryDetails: IndustryDetail[] = [
       { label: "AI Video Production", href: "/services/ai-video-production" },
     ],
     faqs: [
-      { question: "Can seasonal campaigns be produced quickly?", answer: "The AI-native workflow supports faster seasonal and promotional iteration while preserving product consistency." },
+      { question: "Can seasonal campaigns be produced quickly?", answer: "The AI native workflow supports faster seasonal and promotional iteration while preserving product consistency." },
       { question: "How is packaging accuracy handled?", answer: "Actual product references are used to maintain accurate packaging, product identity, and SKU representation." },
     ],
   },
@@ -118,7 +118,7 @@ const industryDetails: IndustryDetail[] = [
       { label: "Product Visuals", href: "/services/product-visuals" },
     ],
     faqs: [
-      { question: "Can content be adapted for social platforms?", answer: "Yes. Campaign visuals can be translated into platform-specific social formats, including short-form video and cutdowns." },
+      { question: "Can content be adapted for social platforms?", answer: "Yes. Campaign visuals can be translated into platform specific social formats, including short form video and cutdowns." },
       { question: "How is brand consistency maintained?", answer: "Creative direction, product references, and visual systems are carried through each concept and delivery format." },
     ],
   },

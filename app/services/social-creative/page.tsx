@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   alternates: { canonical: "https://articog.com/services/social-creative" },
   title: "Social Creative Articog",
-  description: "Platform-native graphic content for organic and paid social. Elevate your presence with feed posts, stories, carousels, and more.",
+  description: "Platform native graphic content for organic and paid social. Elevate your presence with feed posts, stories, carousels, and more.",
 };
 import { Link } from "@/components/ui/Link";
 import { Container, Section, Button } from "@/components/ui";
@@ -36,10 +36,10 @@ export default function SocialCreativePage() {
               <h2 className="type-h2 mb-6 text-white">Applications</h2>
               <ul className="space-y-4">
                 {[
-                  "Organic social short-form video",
+                  "Organic social short form video",
                   "Reels & TikTok content series",
                   "Brand campaign social cutdowns",
-                  "Always-on social content calendars",
+                  "Always on social content calendars",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-white/60">
                     <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />
