@@ -189,8 +189,8 @@ function DropdownPanel({
       style={{
         left: isServices ? "50%" : "0",
         transform: isServices ? "translateX(-50%)" : "none",
-        width: isServices ? "min(100vw - 64px, 1100px)" : "min(100vw - 32px, 320px)",
-        maxWidth: "calc(100vw - 64px)",
+        width: isServices ? "min(100vw - 80px, 1080px)" : "min(100vw - 32px, 320px)",
+        maxWidth: isServices ? "calc(100vw - 80px)" : "calc(100vw - 32px)",
         paddingTop: "12px",
       }}
       onClick={(e) => e.stopPropagation()}
