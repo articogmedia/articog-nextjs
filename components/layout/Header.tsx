@@ -187,8 +187,8 @@ function DropdownPanel({
     <div
       className="absolute left-0 top-full z-[99999]"
       style={{
-        width: isServices ? "min(100vw - 32px, 1080px)" : "min(100vw - 32px, 320px)",
-        maxWidth: "calc(100vw - 32px)",
+        width: isServices ? "min(100vw - 24px, 1080px)" : "min(100vw - 24px, 320px)",
+        maxWidth: "calc(100vw - 24px)",
         paddingTop: "12px",
       }}
       onClick={(e) => e.stopPropagation()}
@@ -204,6 +204,7 @@ function DropdownPanel({
           backdropFilter: "blur(28px)",
           WebkitBackdropFilter: "blur(28px)",
           padding: isServices ? "28px" : "12px",
+          overflow: "hidden",
         }}
       >
         {isServices ? (
@@ -398,10 +399,10 @@ function ServicesContent({
       <div className="mb-8 h-px w-full bg-white/[0.06]" />
 
       {/* Service Categories */}
-      <div className="grid grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4 xl:gap-8">
         {columns.map((col) => (
-          <div key={col.title}>
-            <h5 className="mb-4 text-[11px] font-bold uppercase tracking-widest text-zinc-500">
+          <div key={col.title} className="min-w-0">
+            <h5 className="mb-4 text-[10px] font-bold uppercase tracking-widest text-zinc-500 sm:text-[11px]">
               {col.title}
             </h5>
 
