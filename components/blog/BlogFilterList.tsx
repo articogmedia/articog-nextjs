@@ -98,14 +98,14 @@ function BlogCard({ post }: { post: BlogEntry }) {
           {post.title}
         </Heading>
 
-        <Link
+        <a
           href={post.sourceUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 rounded-lg border border-white/[0.08] bg-white/[0.02] px-4 py-2.5 type-small text-white/80 transition-colors hover:border-white/[0.14] hover:text-white"
         >
           {post.actionLabel}
-        </Link>
+        </a>
       </div>
     </article>
   );
