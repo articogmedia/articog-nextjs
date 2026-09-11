@@ -185,12 +185,13 @@ function DropdownPanel({
 
   return (
     <div
-      className="absolute top-full z-[99999]"
+      className="fixed z-[99999]"
       style={{
-        left: isServices ? "50%" : "0",
-        transform: isServices ? "translateX(-50%)" : "none",
-        width: isServices ? "min(100vw - 80px, 1080px)" : "min(100vw - 32px, 320px)",
-        maxWidth: isServices ? "calc(100vw - 80px)" : "calc(100vw - 32px)",
+        left: "50%",
+        top: "72px",
+        transform: "translateX(-50%)",
+        width: isServices ? "min(100vw - 64px, 1120px)" : "min(100vw - 40px, 360px)",
+        maxWidth: isServices ? "1120px" : "360px",
         paddingTop: "12px",
       }}
       onClick={(e) => e.stopPropagation()}
@@ -205,7 +206,7 @@ function DropdownPanel({
             "0 20px 60px rgba(0,0,0,0.85), 0 0 0 1px rgba(255,255,255,0.05)",
           backdropFilter: "blur(28px)",
           WebkitBackdropFilter: "blur(28px)",
-          padding: isServices ? "28px" : "12px",
+          padding: isServices ? "28px 28px 24px" : "12px",
           overflow: "hidden",
         }}
       >
@@ -366,7 +367,7 @@ function ServicesContent({
   return (
     <>
       {/* Featured Services */}
-      <div className="mb-8 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4 xl:gap-5">
+      <div className="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4 xl:gap-5">
         {featured.map((item) => (
           <Link
             key={item.title}
@@ -375,7 +376,7 @@ function ServicesContent({
               e.stopPropagation();
               onClose();
             }}
-            className="group flex min-w-0 flex-col gap-3 rounded-xl border border-white/[0.08] bg-white/[0.02] p-4 transition-colors hover:bg-white/[0.04]"
+            className="group flex min-w-0 flex-col gap-3 rounded-xl border border-white/10 bg-white/[0.02] p-5 transition-colors hover:bg-white/[0.04]"
           >
             <div className="flex items-center justify-between">
               <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/[0.06] bg-white/[0.03] text-zinc-400 transition-colors group-hover:text-white">
