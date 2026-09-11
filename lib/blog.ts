@@ -164,6 +164,17 @@ export const blogPosts: BlogEntry[] = [
 
   {
     type: "medium",
+    slug: "afin-ai-film-india-network",
+    title: "AFIN — AI Film India Network",
+    excerpt: "",
+    publishedAt: "2025-05-02",
+    sourceLabel: "Medium",
+    sourceUrl:
+      "https://medium.com/@articog.com/afin-ai-film-india-network-186630001f83",
+    actionLabel: "Read on Medium",
+  },
+  {
+    type: "medium",
     slug: "articog-and-creative-ai-why-the-future-of-brand-films-ai-ads-and-ugc-video-starts-here",
     title: "Articog and Creative AI: Why the Future of Brand Films, AI Ads, and UGC Video Starts Here",
     excerpt: "",
