@@ -68,16 +68,16 @@ export function Hero({ content }: HeroProps) {
           preload="auto"
           src="https://res.cloudinary.com/hmy5ctzy/video/upload/f_mp4,vc_h264,q_auto:good,w_1280,dpr_auto,c_limit/v1786961383/Web_3.mp4"
           poster="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:good,f_auto,w_1280,so_0/v1786961383/Web_3.jpg"
-          className="h-full w-full object-cover opacity-85"
+          className="h-full w-full object-cover"
           aria-hidden="true"
         />
 
-        {/* Dark overlay for text readability */}
+        {/* Light vignette for text readability without washing out the video */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.35) 100%)",
+              "linear-gradient(to bottom, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.18) 100%)",
             backgroundColor: "transparent",
           }}
         />

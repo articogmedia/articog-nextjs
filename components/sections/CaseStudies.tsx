@@ -95,7 +95,7 @@ export function CaseStudies({ caseStudies }: CaseStudiesProps) {
         <div
           className="absolute inset-0 z-10"
           style={{
-            backgroundColor: "rgba(0, 0, 0, 0.22)",
+            backgroundColor: "rgba(0, 0, 0, 0.16)",
           }}
         />
       </div>

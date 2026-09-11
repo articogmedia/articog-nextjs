@@ -91,7 +91,7 @@ export function Pipeline({ steps }: PipelineProps) {
         />
 
         {/* Subtle base overlay */}
-        <div className="absolute inset-0 z-10 bg-black/8" />
+        <div className="absolute inset-0 z-10 bg-black/6" />
       </div>
 
       <Container className="relative z-20 py-16 md:py-24">

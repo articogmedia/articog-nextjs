@@ -247,7 +247,7 @@ export default function ServicesPage() {
             controls={false}
             preload="metadata"
             poster="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:good,f_auto,w_1600,so_0/v1786976270/web_1_1_1_1.jpg"
-            className="h-full w-full object-cover opacity-80"
+            className="h-full w-full object-cover"
             aria-hidden="true"
           >
             {/* Desktop */}
@@ -264,11 +264,11 @@ export default function ServicesPage() {
             />
           </video>
 
-          {/* Dark Overlay */}
+          {/* Lightened overlay to preserve brightness while keeping text readable */}
           <div
             className="absolute inset-0 z-10"
             style={{
-              backgroundColor: "rgba(0, 0, 0, 0.22)",
+              backgroundColor: "rgba(0, 0, 0, 0.14)",
             }}
           />
         </div>

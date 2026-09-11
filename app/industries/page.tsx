@@ -103,7 +103,7 @@ export default function IndustriesPage() {
               controls={false}
               preload="metadata"
               poster="https://res.cloudinary.com/hmy5ctzy/video/upload/q_auto:good,f_auto,w_1600,so_0/v1786974706/Web_2.jpg"
-              className="absolute inset-0 h-full w-full object-cover opacity-85"
+              className="absolute inset-0 h-full w-full object-cover"
               aria-hidden="true"
             >
               <source
@@ -111,7 +111,7 @@ export default function IndustriesPage() {
                 type="video/mp4"
               />
             </video>
-            <div className="absolute inset-0 bg-black/20" />
+            <div className="absolute inset-0 bg-black/12" />
             <div className="relative flex min-h-[18rem] items-end p-6 md:p-8">
               <p className="type-label uppercase tracking-[0.2em] text-white/60">
                 Selected work
