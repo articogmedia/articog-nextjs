@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "images.unsplash.com" },
       { protocol: "https", hostname: "img.youtube.com" },
       { protocol: "https", hostname: "i.ytimg.com" },
+      { protocol: "https", hostname: "miro.medium.com" },
     ],
   },
   async headers() {
@@ -25,7 +26,7 @@ const nextConfig: NextConfig = {
               "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://assets.calendly.com https://articog.breezy.hr https://subscribe-forms.beehiiv.com",
               "style-src 'self' 'unsafe-inline' https://assets.calendly.com",
               "font-src 'self' data:",
-              "img-src 'self' data: blob: https://res.cloudinary.com https://images.unsplash.com https://img.youtube.com",
+              "img-src 'self' data: blob: https://res.cloudinary.com https://images.unsplash.com https://img.youtube.com https://miro.medium.com",
               "media-src 'self' https://res.cloudinary.com",
               "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://api.resend.com https://*.googleapis.com https://articog.breezy.hr",
               "frame-src 'self' https://calendly.com https://*.calendly.com https://www.youtube.com https://www.youtube-nocookie.com",

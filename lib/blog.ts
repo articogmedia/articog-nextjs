@@ -168,6 +168,8 @@ export const blogPosts: BlogEntry[] = [
     title: "AFIN — AI Film India Network",
     excerpt: "",
     publishedAt: "2025-05-02",
+    featuredImage:
+      "https://miro.medium.com/v2/resize:fill:320:214/1*lfoc_k91bH_WF66Xwh3G-w.png",
     sourceLabel: "Medium",
     sourceUrl:
       "https://medium.com/@articog.com/afin-ai-film-india-network-186630001f83",
@@ -179,6 +181,8 @@ export const blogPosts: BlogEntry[] = [
     title: "Articog and Creative AI: Why the Future of Brand Films, AI Ads, and UGC Video Starts Here",
     excerpt: "",
     publishedAt: "2025-05-02",
+    featuredImage:
+      "https://miro.medium.com/v2/resize:fill:320:214/1*PKpohrAlzWckjL6iG5_Wug.png",
     sourceLabel: "Medium",
     sourceUrl:
       "https://medium.com/@articog.com/articog-and-creative-ai-why-the-future-of-brand-films-ai-ads-and-ugc-video-starts-here-531c88a1a5c2",
@@ -190,6 +194,8 @@ export const blogPosts: BlogEntry[] = [
     title: "How Articog Is Redefining Creative AI Video for the US Market",
     excerpt: "",
     publishedAt: "2025-04-30",
+    featuredImage:
+      "https://miro.medium.com/v2/resize:fill:320:214/1*8kP7rNw8HNSddrlWWpWZEw.png",
     sourceLabel: "Medium",
     sourceUrl:
       "https://medium.com/@articog.com/how-articog-is-redefining-creative-ai-video-for-the-us-market-9d6666958ec6",
@@ -201,6 +207,8 @@ export const blogPosts: BlogEntry[] = [
     title: "From Scroll to Sale: How UGC Videos Drive Revenue for Startups",
     excerpt: "",
     publishedAt: "2025-04-28",
+    featuredImage:
+      "https://miro.medium.com/v2/resize:fill:320:214/1*Hexg7XaB3XWqPoUTZeSPOg.png",
     sourceLabel: "Medium",
     sourceUrl:
       "https://medium.com/@articog.com/from-scroll-to-sale-how-ugc-videos-drive-revenue-for-startups-deb10eb7461c",
