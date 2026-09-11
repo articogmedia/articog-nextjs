@@ -124,7 +124,7 @@ export function Footer() {
             </Link>
 
             <p className="type-small leading-relaxed max-w-xs text-white/40">
-              AI creative production for growth stage brands.
+              AI native film and creative production for growth stage brands.
             </p>
 
             <div className="flex items-center gap-3.5 pt-4">
@@ -176,7 +176,7 @@ export function Footer() {
             </p>
 
             <p className="font-sans text-[10px] text-white/20 uppercase tracking-widest">
-              Creative AI Production for Modern Marketing
+              AI Native Film & Creative Production for Growth-Stage Brands
             </p>
           </div>
 

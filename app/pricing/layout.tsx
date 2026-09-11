@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Project Enquiries | Articog",
-  description: "Start a conversation about your creative production goals, timeline, and next project with Articog.",
+  title: "Creative Production Pricing | Articog",
+  description: "Learn about Articog's project based, ongoing, and strategic creative production engagement models.",
   alternates: { canonical: "https://articog.com/pricing" },
 };
 

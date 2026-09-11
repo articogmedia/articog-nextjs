@@ -4,6 +4,8 @@ import { Link } from "@/components/ui/Link";
 import { Container } from '@/components/ui/Container';
 
 export const metadata: Metadata = {
+  title: "Sitemap | Articog",
+  description: "Explore Articog's company, service, trust, and creative production pages.",
   alternates: { canonical: "https://articog.com/sitemap" },
 };
 

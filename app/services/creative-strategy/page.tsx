@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://articog.com/services/creative-strategy" },
-  title: "Creative Strategy & Concepting Articog",
-  description: "The strategic foundation behind every production. Concept development, brand direction, and campaign architecture for AI powered creative.",
+  title: "Creative Strategy & Concepting | Articog",
+  description: "Creative strategy and concepting for growth stage brands that need sharper positioning, stronger ideas, and campaign clarity.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";

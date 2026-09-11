@@ -18,32 +18,32 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
-  title: "Articog | Creative AI Production Company | AI Brand Films & Ad Creations",
+  title: "Articog | AI Native Film & Production Company",
   description:
-    "Articog is a Creative AI Production Company. We produce AI brand films, commercials, ad creations, UGC, AI social content, and audio ads for growth stage brands. Brief to delivery in days, not weeks.",
+    "Articog is an AI native film and creative production company for growth stage brands, creating campaigns, films, social content, and product visuals with speed and precision.",
   metadataBase: new URL("https://articog.com"),
   manifest: "/manifest.webmanifest",
   openGraph: {
     type: "website",
     siteName: "Articog",
-    title: "Articog | Creative AI Production Company | AI Brand Films & Ad Creations",
+    title: "Articog | AI Native Film & Production Company",
     description:
-      "Articog is a Creative AI Production Company. We produce AI brand films, commercials, ad creations, UGC, AI social content, and audio ads for growth stage brands. Brief to delivery in days, not weeks.",
+      "Articog is an AI native film and creative production company for growth stage brands, creating campaigns, films, social content, and product visuals with speed and precision.",
     url: "https://articog.com",
     images: [
       {
         url: "/og-image.png",
         width: 2400,
         height: 1260,
-        alt: "Articog creative AI production",
+        alt: "Articog AI native film and creative production",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Articog | Creative AI Production Company",
+    title: "Articog | AI Native Film & Production Company",
     description:
-      "AI creative production for growth stage brands. Brief to delivery in days, not weeks.",
+      "AI native film and creative production for growth stage brands.",
     images: ["/og-image.png"],
   },
 };

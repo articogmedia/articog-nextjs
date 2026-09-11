@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "AI Ad Library | Articog",
-  description: "A curated collection of AI native creative examples across industries and formats.",
+  description: "Browse AI native ad concepts, campaign creative, and product visuals from Articog's production work.",
   alternates: { canonical: "https://articog.com/ai-ad-library" },
 };
 

@@ -5,7 +5,7 @@ import { Section } from "@/components/ui/Section";
 
 export const metadata: Metadata = {
   title: "Press & Media Kit | Articog",
-  description: "Resources and information for journalists and media covering Articog's mission to transform creative production with AI.",
+  description: "Press resources, branding assets, and company information for Articog's AI native film and creative production work.",
   alternates: { canonical: "https://articog.com/press" },
 };
 

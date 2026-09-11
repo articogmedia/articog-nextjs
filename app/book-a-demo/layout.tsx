@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Book a Demo | Articog | AI Creative Production",
-  description: "Book a demo with Articog and see how our AI creative pipeline turns a brief into finished ad creative, video, and social content in days.",
+  title: "Book a Demo | Articog",
+  description: "Book a demo to discuss your campaign, production needs, and AI native creative workflow with Articog.",
   alternates: { canonical: "https://articog.com/book-a-demo" },
 };
 

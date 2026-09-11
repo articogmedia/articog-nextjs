@@ -6,7 +6,7 @@ import type { SiteContent } from "@/types";
 
 export const siteContent: SiteContent = {
   hero: {
-    eyebrow: "AI Creative Production",
+    eyebrow: "AI Native Film & Creative Production",
     headline: "Your creative engine, accelerated by AI.",
     ctaLabel: "Book a Demo",
     ctaHref: "/book-a-demo",

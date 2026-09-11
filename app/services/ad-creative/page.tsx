@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://articog.com/services/ad-creative" },
-  title: "Ad Creative Articog",
-  description: "Static and display ad creative built for continuous performance testing. Scale your brand with high volume, performance optimized creative.",
+  title: "Ad Creative Production | Articog",
+  description: "Ad creative built for paid social, display, search, and campaign testing across channels and growth stages.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";

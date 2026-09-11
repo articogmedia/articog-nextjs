@@ -6,8 +6,8 @@ import { blogPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://articog.com/blog" },
-  title: "Articog Blog",
-  description: "Insights on AI native creative production, campaign strategy, and brand growth.",
+  title: "AI Native Production Insights | Articog",
+  description: "Insights on AI native production, creative strategy, brand storytelling, and growth marketing for modern teams.",
 };
 
 export default function BlogPage() {

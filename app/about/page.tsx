@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://articog.com/about" },
   title: "About Articog | AI Native Film & Production Company",
   description:
-    "Articog is an AI Native Film & Production Company creating brand films, commercials, product films, UGC, social content, and campaign visuals through human directed AI production.",
+    "Articog is an AI native film and creative production company building brand films, campaigns, product visuals, and social content for growth stage brands through human directed production.",
 };
 import { Link } from "@/components/ui/Link";
 import { Container, Section, Button, Heading, Text } from "@/components/ui";

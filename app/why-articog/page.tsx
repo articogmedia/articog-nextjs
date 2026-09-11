@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://articog.com/why-articog" },
-  title: "Why Articog Articog",
-  description: "How Articog compares to traditional agencies and in-house teams.",
+  title: "Why Articog | AI Native Film & Production Company",
+  description: "See how Articog combines AI native production, creative direction, and faster delivery for growth stage brands.",
 };
 import { ArrowRight } from "lucide-react";
 import { Container, Section, Button, Heading } from "@/components/ui";

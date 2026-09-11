@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://articog.com/why-articog/production-economics" },
-  title: "Production Cost & ROI Guide Articog",
-  description: "Understand the economics of AI native creative production and how it compares to traditional models.",
+  title: "Production Economics | Articog",
+  description: "Understand the economics of AI native creative production and how it compares to traditional models for growth stage brands.",
 };
 import { Container, Section, Button, Heading } from "@/components/ui";
 import { Link } from "@/components/ui/Link";

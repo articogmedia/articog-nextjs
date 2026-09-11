@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Industries We Serve Articog",
-  description: "Creative production tailored to the specific needs of DTC, SaaS, electronics, beauty, automotive, food, fashion, real estate, and more.",
+  title: "Industries We Serve | Articog",
+  description: "Creative production for DTC, SaaS, beauty, automotive, real estate, fashion, and other growth stage businesses.",
   alternates: { canonical: "https://articog.com/industries" },
 };
 import { Container, Section, Heading, Button } from "@/components/ui";

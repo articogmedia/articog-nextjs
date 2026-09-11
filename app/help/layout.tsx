@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title: "Help Center | Articog",
+  description: "Find answers about services, workflows, rights, and creative production with Articog.",
   alternates: { canonical: "https://articog.com/help" },
 };
 

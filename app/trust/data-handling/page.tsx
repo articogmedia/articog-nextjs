@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://articog.com/trust/data-handling" },
-  title: "Data Handling & Retention Articog",
+  title: "Data Handling & Retention | Articog",
   description: "Learn how Articog manages, stores, and protects client data throughout the creative production process.",
 };
 import { Container, Section, Button, Heading } from "@/components/ui";

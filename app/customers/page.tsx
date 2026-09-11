@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Customer Success Stories | Articog",
-  description: "See how leading brands use Articog's Creative AI Production to scale creative output and drive performance.",
+  title: "Customer Stories | Articog",
+  description: "See how brands use AI native film and creative production to scale campaigns, launch faster, and improve performance.",
   alternates: { canonical: "https://articog.com/customers" },
 };
 import { Container, Section, Heading } from "@/components/ui";

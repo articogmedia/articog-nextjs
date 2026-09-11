@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "How It Works Articog",
-  description: "Our human directed, AI accelerated creative production process.",
+  title: "How AI Native Production Works | Articog",
+  description: "See how AI native production combines creative direction, rapid generation, review, and final delivery for growth stage brands.",
   alternates: { canonical: "https://articog.com/how-it-works" },
 };
 import { Link } from "@/components/ui/Link";

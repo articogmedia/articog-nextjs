@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://articog.com/services/social-creative" },
-  title: "Social Creative Articog",
-  description: "Platform native graphic content for organic and paid social. Elevate your presence with feed posts, stories, carousels, and more.",
+  title: "Social Creative Production | Articog",
+  description: "Social creative for organic and paid campaigns, designed for brand consistency and fast iteration across platforms.",
 };
 import { Link } from "@/components/ui/Link";
 import { Container, Section, Button } from "@/components/ui";

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://articog.com/services/post-production" },
-  title: "AI Post Production Articog",
+  title: "Post Production | Articog",
+  description: "Post production for video, motion, sound, and finishing, helping brands polish creative for launch and performance.",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";

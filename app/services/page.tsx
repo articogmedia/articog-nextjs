@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://articog.com/services" },
-  title: "Services Articog",
+  title: "Creative Services | Articog",
   description:
-    "Articog's AI native creative services: AI video production, ad creative, social creative, product visuals, creative strategy, and post production.",
+    "AI video production, ad creative, social creative, product visuals, creative strategy, and post production for growth stage brands.",
 };
 
 import { Link } from "@/components/ui/Link";

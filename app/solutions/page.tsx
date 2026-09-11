@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://articog.com/solutions" },
-  title: "Solutions Articog",
-  description: "Find your use case. Whatever your creative bottleneck, there's a model built to solve it.",
+  title: "Creative Solutions for Growth Stage Brands | Articog",
+  description: "Flexible creative solutions for launches, performance marketing, subscriptions, and scalable production without the overhead of a large agency.",
 };
 import { ArrowRight } from "lucide-react";
 import { Container, Section, Button, Heading } from "@/components/ui";

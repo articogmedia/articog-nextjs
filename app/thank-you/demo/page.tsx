@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Thank You Articog",
-  description: "Thank you for booking a demo with Articog.",
+  title: "Thank You | Articog",
+  description: "Thanks for booking a demo with Articog. We will be in touch soon.",
   robots: {
     index: false,
     follow: false,

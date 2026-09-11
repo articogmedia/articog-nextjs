@@ -4,8 +4,8 @@ import { Container, Section, Button } from "@/components/ui";
 import { CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Thank You Articog",
-  description: "Thank you for contacting Articog.",
+  title: "Thank You | Articog",
+  description: "Thanks for contacting Articog. We will be in touch soon.",
   robots: { index: false, follow: false },
 };
 

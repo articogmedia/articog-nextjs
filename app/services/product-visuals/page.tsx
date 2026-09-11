@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://articog.com/services/product-visuals" },
-  title: "Product Visual Content Articog",
-  description: "On brand product visuals at any scale. Campaign posters, banners, OOH creative, and print ready assets with consistent brand fidelity.",
+  title: "Product Visual Content | Articog",
+  description: "Product visual content for ecommerce, launch campaigns, and performance marketing created with speed and brand precision.",
 };
 import { Link } from "@/components/ui/Link";
 import { Container, Section, Button } from "@/components/ui";
