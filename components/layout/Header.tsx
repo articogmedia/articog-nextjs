@@ -185,10 +185,12 @@ function DropdownPanel({
 
   return (
     <div
-      className="absolute left-0 top-full z-[99999]"
+      className="absolute top-full z-[99999]"
       style={{
-        width: isServices ? "min(100vw - 24px, 1080px)" : "min(100vw - 24px, 320px)",
-        maxWidth: "calc(100vw - 24px)",
+        left: isServices ? "50%" : "0",
+        transform: isServices ? "translateX(-50%)" : "none",
+        width: isServices ? "min(100vw - 64px, 1100px)" : "min(100vw - 32px, 320px)",
+        maxWidth: "calc(100vw - 64px)",
         paddingTop: "12px",
       }}
       onClick={(e) => e.stopPropagation()}
@@ -364,7 +366,7 @@ function ServicesContent({
   return (
     <>
       {/* Featured Services */}
-      <div className="mb-8 grid grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-4 xl:gap-5">
+      <div className="mb-8 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4 xl:gap-5">
         {featured.map((item) => (
           <Link
             key={item.title}
@@ -373,7 +375,7 @@ function ServicesContent({
               e.stopPropagation();
               onClose();
             }}
-            className="group flex flex-col gap-3 rounded-xl border border-white/[0.08] bg-white/[0.02] p-4 transition-colors hover:bg-white/[0.04]"
+            className="group flex min-w-0 flex-col gap-3 rounded-xl border border-white/[0.08] bg-white/[0.02] p-4 transition-colors hover:bg-white/[0.04]"
           >
             <div className="flex items-center justify-between">
               <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/[0.06] bg-white/[0.03] text-zinc-400 transition-colors group-hover:text-white">
