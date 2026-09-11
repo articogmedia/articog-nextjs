@@ -473,9 +473,9 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeGroup, setActiveGroup] = useState<string | null>(null);
+  const [dropdownAnchor, setDropdownAnchor] = useState<HTMLElement | null>(null);
 
   const headerRef = useRef<HTMLElement | null>(null);
-  const navGroupRefs = useRef<Record<string, HTMLDivElement | null>>({});
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
@@ -529,8 +529,9 @@ export function Header() {
     }
   };
 
-  const openGroup = (label: string) => {
+  const openGroup = (label: string, element?: HTMLElement | null) => {
     clearCloseTimer();
+    setDropdownAnchor(element ?? null);
     setActiveGroup(label);
   };
 
@@ -539,11 +540,13 @@ export function Header() {
 
     closeTimer.current = setTimeout(() => {
       setActiveGroup(null);
+      setDropdownAnchor(null);
     }, 250);
   };
 
-  const toggleGroup = (label: string) => {
+  const toggleGroup = (label: string, element?: HTMLElement | null) => {
     clearCloseTimer();
+    setDropdownAnchor(element ?? null);
 
     setActiveGroup((current) =>
       current === label ? null : label
@@ -553,6 +556,7 @@ export function Header() {
   const closeDropdown = () => {
     clearCloseTimer();
     setActiveGroup(null);
+    setDropdownAnchor(null);
   };
 
   return (
@@ -595,11 +599,8 @@ export function Header() {
             {menuGroups.map((group) => (
               <div
                 key={group.label}
-                ref={(node) => {
-                  navGroupRefs.current[group.label] = node;
-                }}
                 className="relative nav-group-container"
-                onMouseEnter={() => openGroup(group.label)}
+                onMouseEnter={(event) => openGroup(group.label, event.currentTarget as HTMLElement)}
                 onMouseLeave={scheduleClose}
                 onClick={(e) => e.stopPropagation()}
                 style={{
@@ -612,13 +613,13 @@ export function Header() {
                 <button
                   type="button"
                   aria-haspopup="true"
-                  onMouseEnter={() => openGroup(group.label)}
+                  onMouseEnter={(event) => openGroup(group.label, event.currentTarget.parentElement ?? event.currentTarget)}
                   aria-expanded={
                     activeGroup === group.label
                   }
                   onClick={(e) => {
                     e.stopPropagation();
-                    toggleGroup(group.label);
+                    toggleGroup(group.label, e.currentTarget.parentElement ?? e.currentTarget);
                   }}
                   className="inline-flex items-center gap-1 rounded-lg px-2 py-2 type-nav transition-colors duration-150 xl:px-3"
                   style={{
@@ -648,7 +649,7 @@ export function Header() {
                   isOpen={
                     activeGroup === group.label
                   }
-                  anchorElement={navGroupRefs.current[group.label] ?? null}
+                  anchorElement={dropdownAnchor}
                 />
               </div>
             ))}
