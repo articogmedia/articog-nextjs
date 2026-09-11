@@ -62,8 +62,8 @@ export default function MonthlySubscriptionPage() {
                 <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white mb-6">
                   <item.icon className="w-5 h-5" />
                 </div>
-                <h3 className="font-display text-lg font-semibold text-white mb-2">{item.title}</h3>
-                <p className="font-sans text-sm text-white/50 leading-relaxed">{item.desc}</p>
+                <h3 className="type-h4 text-white mb-2">{item.title}</h3>
+                <p className="type-small text-white/50 leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -80,7 +80,7 @@ export default function MonthlySubscriptionPage() {
             className="group flex items-center justify-between p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300 max-w-2xl"
           >
             <div>
-              <h3 className="font-display text-xl font-semibold text-white mb-2">Plan your next creative cycle</h3>
+              <h3 className="type-h3 text-white mb-2">Plan your next creative cycle</h3>
               <p className="font-sans text-white/50">Talk with our team about the scope, speed, and delivery model that fits your goals.</p>
             </div>
             <ArrowRight className="w-6 h-6 text-white group-hover:translate-x-1 transition-transform" />

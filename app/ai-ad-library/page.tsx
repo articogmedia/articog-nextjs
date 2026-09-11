@@ -64,7 +64,7 @@ export default function AdLibraryPage() {
         <Container>
           <div className="mx-auto max-w-3xl text-center mb-16">
             <span
-              className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em]"
+              className="mb-5 inline-block type-label uppercase tracking-[0.18em]"
               style={{ color: "rgba(255,255,255,0.40)" }}
             >
               SHOWCASE
@@ -72,7 +72,7 @@ export default function AdLibraryPage() {
             <Heading as="h1" size="hero" className="mb-6">
               AI Ad Library
             </Heading>
-            <p className="mx-auto max-w-2xl font-sans text-base md:text-lg leading-relaxed" style={{ color: "rgba(255,255,255,0.65)" }}>
+            <p className="mx-auto max-w-2xl type-body md:text-lg leading-relaxed" style={{ color: "rgba(255,255,255,0.65)" }}>
               A curated collection of AI-native creative examples across industries and formats.
             </p>
           </div>

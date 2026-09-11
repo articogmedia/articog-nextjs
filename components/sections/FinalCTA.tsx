@@ -23,7 +23,7 @@ export function FinalCTA({ content }: FinalCTAProps) {
               style={{ background: "#34d399" }}
             />
             <span
-              className="font-sans text-xs font-medium"
+              className="type-label"
               style={{ color: "rgba(255,255,255,0.55)" }}
             >
               Accepting new projects

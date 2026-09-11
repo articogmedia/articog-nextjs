@@ -53,10 +53,10 @@ function BlogCard({ post }: { post: BlogEntry }) {
             </Heading>
 
             <div className="flex items-center justify-between border-t border-white/[0.08] pt-4">
-              <span className="font-sans text-xs uppercase tracking-[0.18em] text-white/35">
+              <span className="type-label uppercase tracking-[0.18em] text-white/35">
                 {post.readTime}
               </span>
-              <span className="font-sans text-sm text-white/70 group-hover:text-white">
+              <span className="type-small text-white/70 group-hover:text-white">
                 Read article →
               </span>
             </div>
@@ -102,7 +102,7 @@ function BlogCard({ post }: { post: BlogEntry }) {
           href={post.sourceUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-lg border border-white/[0.08] bg-white/[0.02] px-4 py-2.5 font-sans text-sm text-white/80 transition-colors hover:border-white/[0.14] hover:text-white"
+          className="inline-flex items-center gap-2 rounded-lg border border-white/[0.08] bg-white/[0.02] px-4 py-2.5 type-small text-white/80 transition-colors hover:border-white/[0.14] hover:text-white"
         >
           {post.actionLabel}
         </Link>

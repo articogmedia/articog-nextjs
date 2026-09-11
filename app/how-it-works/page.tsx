@@ -60,7 +60,7 @@ export default function HowItWorksPage() {
         <Container>
           <div className="mx-auto max-w-3xl text-center mb-16">
             <span
-              className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em]"
+              className="mb-5 inline-block type-label uppercase tracking-[0.18em]"
               style={{ color: "rgba(255,255,255,0.40)" }}
             >
               HOW IT WORKS
@@ -68,7 +68,7 @@ export default function HowItWorksPage() {
             <Heading as="h1" size="hero" className="mb-6">
               From brief to live in days
             </Heading>
-            <p className="mx-auto max-w-2xl font-sans text-base md:text-lg leading-relaxed mb-12" style={{ color: "rgba(255,255,255,0.65)" }}>
+            <p className="mx-auto max-w-2xl type-body md:text-lg leading-relaxed mb-12" style={{ color: "rgba(255,255,255,0.65)" }}>
               We replace rigid timelines and overhead with a high-velocity engine powered by AI and directed by humans.
             </p>
           </div>
@@ -85,11 +85,11 @@ export default function HowItWorksPage() {
             className="group mx-auto block max-w-2xl rounded-2xl border border-white/[0.08] p-6 text-center transition-all hover:border-white/20 hover:bg-white/[0.02]"
             style={{ background: "rgba(255,255,255,0.01)" }}
           >
-            <h3 className="mb-2 flex items-center justify-center gap-2 font-display text-xl font-semibold text-white">
+            <h3 className="mb-2 flex items-center justify-center gap-2 type-h3 text-white">
               AI Creative Pipeline
               <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
             </h3>
-            <p className="font-sans text-sm" style={{ color: "rgba(255,255,255,0.50)" }}>
+            <p className="type-small" style={{ color: "rgba(255,255,255,0.50)" }}>
               Take a deeper technical look at our internal creative engine.
             </p>
           </Link>
@@ -104,8 +104,8 @@ export default function HowItWorksPage() {
           <div className="mx-auto grid max-w-6xl gap-3 md:grid-cols-2">
             {[...onboardingSteps, ...deliverySteps].map(([title, description]) => (
               <div key={title} className="rounded-xl border border-white/10 bg-white/[0.02] p-5">
-                <h3 className="mb-2 font-display text-base font-semibold text-white">{title}</h3>
-                <p className="font-sans text-sm leading-relaxed text-white/50">{description}</p>
+                <h3 className="mb-2 type-h4 text-white">{title}</h3>
+                <p className="type-small leading-relaxed text-white/50">{description}</p>
               </div>
             ))}
           </div>
@@ -118,7 +118,7 @@ export default function HowItWorksPage() {
             <Heading as="h2" size="section" className="mb-6">
               Human oversight, every step
             </Heading>
-            <p className="font-sans text-base leading-relaxed mb-8" style={{ color: "rgba(255,255,255,0.60)" }}>
+            <p className="type-body leading-relaxed mb-8" style={{ color: "rgba(255,255,255,0.60)" }}>
               A Creative Director reviews every project for brand safety, legal compliance, and quality.
             </p>
           </div>

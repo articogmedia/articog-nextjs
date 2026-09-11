@@ -51,7 +51,7 @@ export default function WorkPage() {
         <Container>
           <div className="mx-auto max-w-3xl text-center mb-16">
             <span
-              className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em]"
+              className="mb-5 inline-block type-label uppercase tracking-[0.18em]"
               style={{ color: "rgba(255,255,255,0.40)" }}
             >
               OUR WORK
@@ -77,7 +77,7 @@ export default function WorkPage() {
                   {cat.title}
                   <ArrowRight size={20} className="opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0" />
                 </h2>
-                <p className="font-sans text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.50)" }}>
+                <p className="type-small leading-relaxed" style={{ color: "rgba(255,255,255,0.50)" }}>
                   {cat.description}
                 </p>
               </Link>
@@ -85,7 +85,7 @@ export default function WorkPage() {
           </div>
 
           <div className="text-center pt-16 border-t border-white/10">
-            <p className="font-sans text-lg mb-8 text-white/60">Want work like this for your brand?</p>
+            <p className="type-body-lg mb-8 text-white/60">Want work like this for your brand?</p>
             <Button asChild variant="primary" size="lg">
               <Link href="/book-a-demo">Book a Demo</Link>
             </Button>

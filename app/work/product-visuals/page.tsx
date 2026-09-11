@@ -39,7 +39,7 @@ export default function ProductVisualsPage() {
                 <h2 className="type-h2 mb-4 text-white">
                   Full campaign live 72 hours from brief
                 </h2>
-                <p className="font-sans text-lg text-white/60">
+                <p className="type-body-lg text-white/60">
                   How a breakout DTC beauty brand leveraged Articog to go from initial concept to a multi-platform launch in just three days.
                 </p>
               </div>
@@ -64,7 +64,7 @@ export default function ProductVisualsPage() {
         <Container>
           <div className="max-w-2xl mb-16">
             <h2 className="type-h2 mb-6 text-white">Visual Production at Scale</h2>
-            <p className="font-sans text-lg text-white/60">
+            <p className="type-body-lg text-white/60">
               We provide a comprehensive suite of visual assets that maintain consistent brand standards across every touchpoint.
             </p>
           </div>
@@ -77,8 +77,8 @@ export default function ProductVisualsPage() {
               { title: "Print-Ready Assets", desc: "High-resolution files ready for any physical production needs." }
             ].map((item) => (
               <div key={item.title} className="p-8 rounded-2xl bg-white/5 border border-white/10">
-                <h3 className="font-display text-lg font-semibold text-white mb-3">{item.title}</h3>
-                <p className="font-sans text-sm text-white/50 leading-relaxed">{item.desc}</p>
+                <h3 className="type-h4 text-white mb-3">{item.title}</h3>
+                <p className="type-small text-white/50 leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>

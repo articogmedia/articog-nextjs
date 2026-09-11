@@ -8,7 +8,7 @@ export default function NewsletterPage() {
         <Container>
           <div className="max-w-2xl mx-auto">
             <h1 className="type-h1 mb-6 text-white">Newsletter</h1>
-            <p className="text-zinc-400 text-xl mb-12 leading-relaxed">
+            <p className="text-zinc-400 type-h3 mb-12 leading-relaxed">
               Stay updated on the latest AI creative production insights, industry benchmarks, and Articog product updates.
             </p>
 

@@ -69,7 +69,7 @@ export function Comparison({ rows }: ComparisonProps) {
                     }`}
                   >
                     <p
-                      className={`font-display text-sm font-semibold ${
+                      className={`type-h4 ${
                         col.highlight ? "text-[#6633EE]" : "text-white/40"
                       }`}
                     >
@@ -86,17 +86,17 @@ export function Comparison({ rows }: ComparisonProps) {
                   className={`grid grid-cols-4 ${i < rows.length - 1 ? "border-b border-white/[0.08]" : ""}`}
                 >
                   <div className="flex items-center p-5">
-                    <p className="font-sans text-sm text-white/55">{row.attribute}</p>
+                    <p className="type-small text-white/55">{row.attribute}</p>
                   </div>
                   <div className="flex items-center justify-center p-5 border-l border-white/[0.08]">
-                    <p className="font-sans text-sm text-center text-white/38">{row.agency}</p>
+                    <p className="type-small text-center text-white/38">{row.agency}</p>
                   </div>
                   <div className="flex items-center justify-center p-5 border-l border-white/[0.08]">
-                    <p className="font-sans text-sm text-center text-white/38">{row.inhouse}</p>
+                    <p className="type-small text-center text-white/38">{row.inhouse}</p>
                   </div>
                   <div className="flex items-center justify-center gap-2 p-5 border-l border-[#6633EE]/20 bg-[#6633EE]/[0.04]">
                     <Check size={12} strokeWidth={2.5} className="text-[#6633EE] shrink-0" />
-                    <p className="font-sans text-sm font-medium text-white text-center">{row.articog}</p>
+                    <p className="type-small text-white text-center">{row.articog}</p>
                   </div>
                 </div>
               ))}

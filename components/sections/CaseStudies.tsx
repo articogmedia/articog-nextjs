@@ -145,7 +145,7 @@ export function CaseStudies({ caseStudies }: CaseStudiesProps) {
 
                 <div className="flex items-end justify-between border-t border-white/[0.08] pt-4">
                   <div>
-                    <p className="font-display text-sm font-semibold text-white/65">
+                    <p className="type-h4 text-white/65">
                       {cs.client}
                     </p>
 

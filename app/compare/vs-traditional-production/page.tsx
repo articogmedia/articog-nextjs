@@ -90,15 +90,15 @@ export default function ComparisonPage() {
                 {comparisonData.map((row, index) => (
                   <TableRow key={index} className="group hover:bg-white/[0.01]">
                     <TableCell className="py-10 px-4 align-top">
-                      <span className="font-display text-lg font-medium text-white">{row.metric}</span>
+                      <span className="type-h4 text-white">{row.metric}</span>
                     </TableCell>
                     <TableCell className="py-10 px-8 align-top">
                       <div className="text-white/60 font-display text-xl mb-3">{row.traditional.value}</div>
-                      <p className="text-white/40 font-sans text-sm leading-relaxed">{row.traditional.desc}</p>
+                      <p className="text-white/40 type-small leading-relaxed">{row.traditional.desc}</p>
                     </TableCell>
                     <TableCell className="py-10 px-8 align-top bg-white/[0.02]">
                       <div className="text-white font-display text-xl mb-3">{row.articog.value}</div>
-                      <p className="text-white/60 font-sans text-sm leading-relaxed">{row.articog.desc}</p>
+                      <p className="text-white/60 type-small leading-relaxed">{row.articog.desc}</p>
                     </TableCell>
                   </TableRow>
                 ))}
@@ -107,7 +107,7 @@ export default function ComparisonPage() {
           </div>
           
           <div className="mt-12 text-center">
-            <p className="text-muted-safe font-sans text-sm italic">
+            <p className="text-muted-safe type-small italic">
               Based on observed outcomes across Articog client engagements.
             </p>
           </div>

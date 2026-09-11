@@ -56,7 +56,7 @@ export default function WhyArticogPage() {
         <Container>
           <div className="mx-auto max-w-3xl text-center mb-16">
             <span
-              className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em]"
+              className="mb-5 inline-block type-label uppercase tracking-[0.18em]"
               style={{ color: "rgba(255,255,255,0.40)" }}
             >
               WHY ARTICOG
@@ -64,7 +64,7 @@ export default function WhyArticogPage() {
             <Heading as="h1" size="hero" className="mb-6">
               Not a replacement. An upgrade.
             </Heading>
-            <p className="mx-auto max-w-2xl font-sans text-base md:text-lg leading-relaxed mb-12" style={{ color: "rgba(255,255,255,0.65)" }}>
+            <p className="mx-auto max-w-2xl type-body md:text-lg leading-relaxed mb-12" style={{ color: "rgba(255,255,255,0.65)" }}>
               Traditional production models weren't built for the speed of digital commerce. We've redesigned creative production from the ground up.
             </p>
           </div>
@@ -81,11 +81,11 @@ export default function WhyArticogPage() {
               className="group rounded-2xl p-10 border border-white/[0.08] transition-all hover:border-white/20 hover:bg-white/[0.02]"
               style={{ background: "rgba(255,255,255,0.01)" }}
             >
-              <h3 className="mb-4 font-display text-xl font-semibold text-white flex items-center justify-between">
+              <h3 className="mb-4 type-h3 text-white flex items-center justify-between">
                 Articog vs Traditional Production
                 <ArrowRight size={20} className="opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0" />
               </h3>
-              <p className="font-sans text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.50)" }}>
+              <p className="type-small leading-relaxed" style={{ color: "rgba(255,255,255,0.50)" }}>
                 A side-by-side look at how AI-native workflows beat conventional agency timelines.
               </p>
             </Link>
@@ -94,11 +94,11 @@ export default function WhyArticogPage() {
               className="group rounded-2xl p-10 border border-white/[0.08] transition-all hover:border-white/20 hover:bg-white/[0.02]"
               style={{ background: "rgba(255,255,255,0.01)" }}
             >
-              <h3 className="mb-4 font-display text-xl font-semibold text-white flex items-center justify-between">
+              <h3 className="mb-4 type-h3 text-white flex items-center justify-between">
                 Articog vs AI Tools Only
                 <ArrowRight size={20} className="opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0" />
               </h3>
-              <p className="font-sans text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.50)" }}>
+              <p className="type-small leading-relaxed" style={{ color: "rgba(255,255,255,0.50)" }}>
                 Why software alone isn't enough for enterprise-grade brand creative.
               </p>
             </Link>

@@ -26,7 +26,7 @@ export default function ThankYouDemoPage() {
             Thanks we&apos;ve got your request
           </h1>
           <p
-            className="mx-auto mb-10 max-w-md font-sans text-base md:text-lg"
+            className="mx-auto mb-10 max-w-md type-body md:text-lg"
             style={{ color: "rgba(255,255,255,0.55)", lineHeight: 1.65 }}
           >
             Our team will follow up within 1 business day to schedule your demo.

@@ -58,7 +58,7 @@ export function Capabilities({ capabilities }: CapabilitiesProps) {
                   <p className="mb-1.5 font-sans text-[10px] font-semibold uppercase tracking-[0.16em] text-white/30">
                     Use case
                   </p>
-                  <p className="font-sans text-[15px] leading-relaxed text-white/60">
+                  <p className="type-body leading-relaxed text-white/60">
                     {cap.useCase}
                   </p>
                 </div>
@@ -67,7 +67,7 @@ export function Capabilities({ capabilities }: CapabilitiesProps) {
                   <p className="mb-1.5 font-sans text-[10px] font-semibold uppercase tracking-[0.16em] text-[#6633EE]/70">
                     Outcome
                   </p>
-                  <p className="font-sans text-[15px] leading-relaxed text-white/80">
+                  <p className="type-body leading-relaxed text-white/80">
                     {cap.outcome}
                   </p>
                 </div>

@@ -116,7 +116,7 @@ export default function SitemapPage() {
                     <li key={link.href}>
                       <Link 
                         to={link.href} 
-                        className="text-zinc-300 hover:text-white transition-colors text-[17px] font-medium block w-fit"
+                        className="text-zinc-300 hover:text-white transition-colors type-body block w-fit"
                       >
                         {link.label}
                       </Link>

@@ -171,7 +171,7 @@ export function Pipeline({ steps }: PipelineProps) {
                 </h3>
 
                 <p
-                  className="font-sans text-sm font-medium leading-relaxed"
+                  className="type-small leading-relaxed"
                   style={{
                     color: "#FFFFFF",
                     textShadow: "0 2px 8px rgba(0,0,0,0.9)",

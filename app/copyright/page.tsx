@@ -15,7 +15,7 @@ export default function CopyrightPage() {
         <Container>
           <div className="max-w-4xl mx-auto">
             <h1 className="type-h1 mb-6 text-white">Copyright / DMCA</h1>
-            <p className="text-zinc-400 text-xl mb-12 max-w-2xl leading-relaxed">
+            <p className="text-zinc-400 type-h3 mb-12 max-w-2xl leading-relaxed">
               Articog respects the intellectual property rights of others and expects its users to do the same.
             </p>
 
@@ -23,7 +23,7 @@ export default function CopyrightPage() {
               <div className="prose prose-invert max-w-none space-y-8">
                 <div>
                   <h2 className="type-h2 mb-4 text-white">Reporting Infringement</h2>
-                  <p className="text-zinc-400 text-lg leading-relaxed">
+                  <p className="text-zinc-400 type-body-lg leading-relaxed">
                     If you believe that your work has been copied in a way that constitutes copyright infringement, please provide our copyright team with the following information:
                   </p>
                   <ul className="list-disc pl-6 mt-4 space-y-2 text-zinc-400">
@@ -43,7 +43,7 @@ export default function CopyrightPage() {
                 </div>
 
                 <div>
-                  <p className="text-zinc-500 text-sm leading-relaxed">
+                  <p className="text-zinc-500 type-small leading-relaxed">
                     We respond to legitimate copyright concerns promptly. Please note that this process is for reporting copyright infringement only; other inquiries (such as support requests) will not receive a response through this channel.
                   </p>
                 </div>

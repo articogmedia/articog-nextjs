@@ -20,7 +20,7 @@ export default function CaliforniaPrivacyPage() {
         <Container>
           <div className="mx-auto max-w-3xl">
             <span
-              className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em]"
+              className="mb-5 inline-block type-label uppercase tracking-[0.18em]"
               style={{ color: "rgba(255,255,255,0.40)" }}
             >
               SUPPLEMENTAL NOTICE
@@ -28,14 +28,14 @@ export default function CaliforniaPrivacyPage() {
             <Heading as="h1" size="hero" className="mb-6">
               California Privacy Notice
             </Heading>
-            <p className="mb-12 font-sans text-xs uppercase tracking-widest text-white/30">
+            <p className="mb-12 type-label uppercase tracking-widest text-white/30">
               Last updated: {today}
             </p>
 
             <div className="space-y-12">
               <section>
                 <h2 className="text-xl font-display font-semibold text-white mb-4">Applicability</h2>
-                <div className="font-sans text-sm leading-relaxed text-white/60">
+                <div className="type-small leading-relaxed text-white/60">
                   <p>
                     This California Privacy Notice ("Notice") applies as required under the California Consumer Privacy Act (CCPA) and the California Privacy Rights Act (CPRA). 
                   </p>
@@ -47,7 +47,7 @@ export default function CaliforniaPrivacyPage() {
 
               <section>
                 <h2 className="text-xl font-display font-semibold text-white mb-4">Categories of Personal Information Collected</h2>
-                <div className="font-sans text-sm leading-relaxed text-white/60 space-y-4">
+                <div className="type-small leading-relaxed text-white/60 space-y-4">
                   <p>In the past 12 months, we may have collected the following categories of personal information:</p>
                   <ul className="list-disc pl-5 space-y-2">
                     <li><strong>Identifiers:</strong> Such as contact information (name, email address).</li>
@@ -59,7 +59,7 @@ export default function CaliforniaPrivacyPage() {
 
               <section>
                 <h2 className="text-xl font-display font-semibold text-white mb-4">Purposes of Collection</h2>
-                <div className="font-sans text-sm leading-relaxed text-white/60 space-y-4">
+                <div className="type-small leading-relaxed text-white/60 space-y-4">
                   <p>We collect this personal information for the following business purposes:</p>
                   <ul className="list-disc pl-5 space-y-2">
                     <li>Responding to your inquiries and providing customer support.</li>
@@ -71,7 +71,7 @@ export default function CaliforniaPrivacyPage() {
 
               <section>
                 <h2 className="text-xl font-display font-semibold text-white mb-4">Your California Rights</h2>
-                <div className="font-sans text-sm leading-relaxed text-white/60 space-y-4">
+                <div className="type-small leading-relaxed text-white/60 space-y-4">
                   <p>As a California resident, you have the following rights:</p>
                   <ul className="list-disc pl-5 space-y-2">
                     <li><strong>Right to Know:</strong> Right to request details about the personal information we collect and share.</li>
@@ -85,7 +85,7 @@ export default function CaliforniaPrivacyPage() {
 
               <section>
                 <h2 className="text-xl font-display font-semibold text-white mb-4">How to Exercise Your Rights</h2>
-                <div className="font-sans text-sm leading-relaxed text-white/60">
+                <div className="type-small leading-relaxed text-white/60">
                   <p>
                     To exercise your rights, please visit our <a href="/privacy-choices" className="text-white underline underline-offset-4 hover:text-white/80 transition-colors">Privacy Choices</a> page or submit a request via our specialized intake form.
                   </p>

@@ -44,7 +44,7 @@ export default function SolutionsPage() {
         <Container>
           <div className="mx-auto max-w-3xl text-center mb-16">
             <span
-              className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em]"
+              className="mb-5 inline-block type-label uppercase tracking-[0.18em]"
               style={{ color: "rgba(255,255,255,0.40)" }}
             >
               SOLUTIONS
@@ -64,7 +64,7 @@ export default function SolutionsPage() {
               >
                 <div>
                     <h2 className="type-h3 text-white">{card.title}</h2>
-                  <p className="mt-1 font-sans text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.50)" }}>
+                  <p className="mt-1 type-small leading-relaxed" style={{ color: "rgba(255,255,255,0.50)" }}>
                     {card.description}
                   </p>
                 </div>
@@ -74,7 +74,7 @@ export default function SolutionsPage() {
           </div>
 
           <div className="text-center pt-12 border-t border-white/10">
-            <p className="font-sans text-base mb-6 text-white/60">Not sure which fits?</p>
+            <p className="type-body mb-6 text-white/60">Not sure which fits?</p>
             <Button asChild variant="secondary" size="lg">
               <Link href="/book-a-demo">Book a Demo</Link>
             </Button>

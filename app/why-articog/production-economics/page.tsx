@@ -34,7 +34,7 @@ export default function ProductionEconomicsPage() {
         <Container>
           <div className="mx-auto max-w-3xl text-center mb-20">
             <span
-              className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em]"
+              className="mb-5 inline-block type-label uppercase tracking-[0.18em]"
               style={{ color: "rgba(255,255,255,0.40)" }}
             >
               ECONOMICS
@@ -42,7 +42,7 @@ export default function ProductionEconomicsPage() {
             <Heading as="h1" size="hero" className="mb-6">
               Production Cost & ROI Guide
             </Heading>
-            <p className="mx-auto max-w-2xl font-sans text-base md:text-lg leading-relaxed mb-12" style={{ color: "rgba(255,255,255,0.65)" }}>
+            <p className="mx-auto max-w-2xl type-body md:text-lg leading-relaxed mb-12" style={{ color: "rgba(255,255,255,0.65)" }}>
               Understanding the potential cost and time savings of AI-native production. These figures are framed as ranges based on typical engagements.
             </p>
           </div>
@@ -54,7 +54,7 @@ export default function ProductionEconomicsPage() {
                   {section.icon}
                 </div>
                 <h3 className="text-xl font-display font-semibold text-white mb-4">{section.title}</h3>
-                <p className="font-sans text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.50)" }}>
+                <p className="type-small leading-relaxed" style={{ color: "rgba(255,255,255,0.50)" }}>
                   {section.description}
                 </p>
               </div>
@@ -63,7 +63,7 @@ export default function ProductionEconomicsPage() {
 
           <div className="max-w-4xl mx-auto p-10 rounded-2xl border border-white/[0.08] bg-white/[0.01] mb-24">
             <h3 className="text-lg font-display font-semibold text-white mb-4 italic">A Note on Performance</h3>
-            <p className="font-sans text-sm leading-relaxed mb-0" style={{ color: "rgba(255,255,255,0.40)" }}>
+            <p className="type-small leading-relaxed mb-0" style={{ color: "rgba(255,255,255,0.40)" }}>
               Disclaimer: Results vary significantly by project scope, complexity, and brand requirements. No specific savings percentage is guaranteed. Actual economic models and potential ROI should be discussed based on your specific use case and historical production benchmarks.
             </p>
           </div>

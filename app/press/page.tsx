@@ -40,7 +40,7 @@ export default function PressPage() {
               Press & Media Kit
             </h1>
 
-            <p className="text-zinc-400 text-xl mb-12 max-w-2xl leading-relaxed">
+            <p className="text-zinc-400 type-h3 mb-12 max-w-2xl leading-relaxed">
               Resources and information for journalists and media covering
               Articog&apos;s mission to transform creative production with AI.
             </p>
@@ -72,7 +72,7 @@ export default function PressPage() {
                       </div>
                     ) : null}
 
-                    <p className="text-zinc-400 text-sm leading-relaxed mb-6 flex-grow">
+                    <p className="text-zinc-400 type-small leading-relaxed mb-6 flex-grow">
                       {asset.description}
                     </p>
 
@@ -131,7 +131,7 @@ export default function PressPage() {
                 Usage Guidelines
               </h2>
 
-              <p className="text-zinc-400 text-sm leading-relaxed max-w-2xl">
+              <p className="text-zinc-400 type-small leading-relaxed max-w-2xl">
                 Articog logos and media materials may be used for editorial
                 coverage according to our brand guidelines. For any other
                 usage or specific permission questions, please contact us.

@@ -58,8 +58,8 @@ export default function SecurityPage() {
                 <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white mb-6">
                   <section.icon className="w-5 h-5" />
                 </div>
-                <h3 className="font-display text-xl font-semibold text-white mb-4">{section.title}</h3>
-                <p className="font-sans text-sm text-white/50 leading-relaxed">{section.desc}</p>
+                <h3 className="type-h3 text-white mb-4">{section.title}</h3>
+                <p className="type-small text-white/50 leading-relaxed">{section.desc}</p>
               </div>
             ))}
           </div>

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "Articog is a Creative AI Production Company. We produce AI brand films, commercials, ad creations, UGC, AI social content and audio ads for growth-stage brands.",
 };
 import { Link } from "@/components/ui/Link";
-import { Container, Section, Button, Heading } from "@/components/ui";
+import { Container, Section, Button, Heading, Text } from "@/components/ui";
 import { ArrowRight } from "lucide-react";
 
 export default function AboutPage() {
@@ -17,20 +17,16 @@ export default function AboutPage() {
         <Container>
           <div className="mx-auto max-w-3xl text-center mb-16">
             <span
-              className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em]"
-              style={{ color: "rgba(255,255,255,0.40)" }}
+              className="mb-5 inline-block type-label text-white/40 uppercase tracking-[0.18em]"
             >
               ABOUT ARTICOG
             </span>
             <Heading as="h1" size="hero" className="mb-6">
               About Articog
             </Heading>
-            <p
-              className="mx-auto max-w-2xl font-sans text-lg md:text-xl leading-relaxed"
-              style={{ color: "rgba(255,255,255,0.65)" }}
-            >
+            <Text as="p" size="lg" className="mx-auto max-w-2xl leading-relaxed text-white/65">
               Articog produces brand films, commercials, ad creations, UGC, social content, and audio ads for growth-stage brands, from brief to delivery in days.
-            </p>
+            </Text>
           </div>
         </Container>
       </Section>
@@ -45,7 +41,7 @@ export default function AboutPage() {
                 Why creative production is broken
               </Heading>
             </div>
-            <p className="font-sans text-lg leading-relaxed text-white/60">
+            <p className="type-body-lg leading-relaxed text-white/60">
               Content demand scales, but headcount doesn&apos;t. Campaigns slip and assets get recycled. Spend grows, but creative volume stays flat and audiences saturate.
             </p>
           </div>
@@ -60,7 +56,7 @@ export default function AboutPage() {
               How We Work
             </Heading>
             <p
-              className="font-sans text-base md:text-lg leading-relaxed"
+              className="type-body md:text-lg leading-relaxed"
               style={{ color: "rgba(255,255,255,0.65)" }}
             >
               AI accelerates production; creative directors set direction and review every deliverable for brand alignment, quality, and compliance.
@@ -110,11 +106,11 @@ export default function AboutPage() {
 function ApproachItem({ title, description }: { title: string; description: string }) {
   return (
     <div className="space-y-4 p-6 rounded-xl border border-white/[0.05] bg-white/[0.02]">
-      <h3 className="font-display text-xl font-semibold text-white">
+      <h3 className="type-h3 text-white">
         {title}
       </h3>
       <p
-        className="font-sans text-sm leading-relaxed"
+        className="type-small leading-relaxed"
         style={{ color: "rgba(255,255,255,0.50)" }}
       >
         {description}

@@ -62,8 +62,8 @@ export default function CreativeStrategyPage() {
                 <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white mb-6">
                   <item.icon className="w-5 h-5" />
                 </div>
-                <h3 className="font-display text-lg font-semibold text-white mb-2">{item.title}</h3>
-                <p className="font-sans text-sm text-white/50 leading-relaxed">{item.desc}</p>
+                <h3 className="type-h4 text-white mb-2">{item.title}</h3>
+                <p className="type-small text-white/50 leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -76,9 +76,9 @@ export default function CreativeStrategyPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/70 mb-8 mx-auto">
               <MessageSquare className="w-4 h-4 text-white/40" />
-              <span className="font-sans text-xs font-medium">Strategic Engagement</span>
+              <span className="type-label">Strategic Engagement</span>
             </div>
-            <p className="font-sans text-2xl text-white/70 leading-relaxed italic">
+            <p className="type-h2 text-white/70 leading-relaxed italic">
               "Strategy sessions typically kick off any larger engagement at Articog, whether it's a single flagship film or an ongoing, high-volume content program."
             </p>
           </div>

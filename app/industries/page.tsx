@@ -113,7 +113,7 @@ export default function IndustriesPage() {
             </video>
             <div className="absolute inset-0 bg-black/45" />
             <div className="relative flex min-h-[18rem] items-end p-6 md:p-8">
-              <p className="font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-white/60">
+              <p className="type-label uppercase tracking-[0.2em] text-white/60">
                 Selected work
               </p>
             </div>
@@ -122,7 +122,7 @@ export default function IndustriesPage() {
           <IndustryDetails />
 
           <div className="text-center pt-12 border-t border-white/10">
-            <p className="font-sans text-base mb-6 text-white/60">Ready to build for your industry?</p>
+            <p className="type-body mb-6 text-white/60">Ready to build for your industry?</p>
             <Link href="/book-a-demo">
               <Button size="lg" className="rounded-full px-8 h-14 text-lg">
                 Book a Demo

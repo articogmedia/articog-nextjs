@@ -437,7 +437,7 @@ export default function PrivacyPolicyPage() {
         <div className="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-12">
           <div className="mx-auto w-full max-w-[1060px]">
             <header className="mb-14 md:mb-20">
-              <span className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-white/40">
+              <span className="mb-5 inline-block type-label uppercase tracking-[0.18em] text-white/40">
                 Legal
               </span>
 
@@ -451,7 +451,7 @@ export default function PrivacyPolicyPage() {
                     Effective Date
                   </dt>
 
-                  <dd className="mt-2 font-sans text-sm text-white/70">
+                  <dd className="mt-2 type-small text-white/70">
                     {EFFECTIVE_DATE}
                   </dd>
                 </div>
@@ -461,7 +461,7 @@ export default function PrivacyPolicyPage() {
                     Last Updated
                   </dt>
 
-                  <dd className="mt-2 font-sans text-sm text-white/70">
+                  <dd className="mt-2 type-small text-white/70">
                     {LAST_UPDATED}
                   </dd>
                 </div>
@@ -475,7 +475,7 @@ export default function PrivacyPolicyPage() {
               >
                 <div className="min-w-0">
                   <div className="min-w-0">
-                    <h2 className="mb-5 font-display text-xl font-semibold text-white md:text-2xl">
+                    <h2 className="mb-5 type-h3 text-white md:text-2xl">
                       Introduction
                     </h2>
 
@@ -485,7 +485,7 @@ export default function PrivacyPolicyPage() {
                         .map((block, i) => (
                         <p
                           key={i}
-                          className="max-w-[68ch] font-sans text-[15px] leading-[1.75] text-white/60 md:text-base"
+                          className="max-w-[68ch] type-body leading-[1.75] text-white/60 md:text-base"
                         >
                           {block.text}
                         </p>
@@ -504,12 +504,12 @@ export default function PrivacyPolicyPage() {
                   <summary className="flex cursor-pointer list-none items-center gap-4 py-7 marker:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent md:py-8 [&::-webkit-details-marker]:hidden">
                     <span
                       aria-hidden="true"
-                      className="font-display text-sm font-semibold tabular-nums text-accent"
+                      className="type-h4 tabular-nums text-accent"
                     >
                       {(index + 1).toString().padStart(2, "0")}
                     </span>
 
-                    <h2 className="min-w-0 flex-1 font-display text-xl font-semibold text-white md:text-2xl">
+                    <h2 className="min-w-0 flex-1 type-h3 text-white md:text-2xl">
                       {section.title}
                     </h2>
 
@@ -532,7 +532,7 @@ export default function PrivacyPolicyPage() {
                           block.kind === "p" ? (
                             <p
                               key={i}
-                              className="max-w-[68ch] font-sans text-[15px] leading-[1.75] text-white/60 md:text-base"
+                              className="max-w-[68ch] type-body leading-[1.75] text-white/60 md:text-base"
                             >
                               {block.text}
                             </p>
@@ -548,7 +548,7 @@ export default function PrivacyPolicyPage() {
                                 {block.items.map((item) => (
                                   <li
                                     key={item}
-                                    className="flex min-w-0 items-start gap-3 font-sans text-[15px] leading-[1.6] text-white/60"
+                                    className="flex min-w-0 items-start gap-3 type-body leading-[1.6] text-white/60"
                                   >
                                     <span
                                       aria-hidden="true"
@@ -575,12 +575,12 @@ export default function PrivacyPolicyPage() {
                 <summary className="flex cursor-pointer list-none items-center gap-4 py-7 marker:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent md:py-8 [&::-webkit-details-marker]:hidden">
                   <span
                     aria-hidden="true"
-                    className="font-display text-sm font-semibold tabular-nums text-accent"
+                    className="type-h4 tabular-nums text-accent"
                   >
                     16
                   </span>
 
-                  <h2 className="min-w-0 flex-1 font-display text-xl font-semibold text-white md:text-2xl">
+                  <h2 className="min-w-0 flex-1 type-h3 text-white md:text-2xl">
                     Contact Us
                   </h2>
 
@@ -599,26 +599,26 @@ export default function PrivacyPolicyPage() {
 
                   <div className="min-w-0">
 
-                    <p className="mb-8 max-w-[68ch] font-sans text-[15px] leading-[1.75] text-white/60 md:text-base">
+                    <p className="mb-8 max-w-[68ch] type-body leading-[1.75] text-white/60 md:text-base">
                       If you have questions about this Privacy Policy, want to
                       exercise an applicable privacy right, or have a privacy
                       grievance, please contact us.
                     </p>
 
                     <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 md:p-8">
-                      <h3 className="font-display text-base font-semibold text-white">
+                      <h3 className="type-h4 text-white">
                         Privacy Questions
                       </h3>
 
-                      <p className="mt-2 font-sans text-sm text-white/50">
+                      <p className="mt-2 type-small text-white/50">
                         Articog Tech LLP
                       </p>
 
-                      <p className="mt-1 font-sans text-sm text-white/50">
+                      <p className="mt-1 type-small text-white/50">
                         Hyderabad, Telangana, India
                       </p>
 
-                      <p className="mt-4 min-w-0 break-words font-sans text-sm text-white/60">
+                      <p className="mt-4 min-w-0 break-words type-small text-white/60">
                         Email:{" "}
                         <a
                           href={`mailto:${PRIVACY_EMAIL}`}

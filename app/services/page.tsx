@@ -276,7 +276,7 @@ export default function ServicesPage() {
         <Container className="relative z-20">
           <div className="mx-auto max-w-3xl text-center">
             <span
-              className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em]"
+              className="mb-5 inline-block type-label uppercase tracking-[0.18em]"
               style={{
                 color: "rgba(255,255,255,0.40)",
               }}

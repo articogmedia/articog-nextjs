@@ -14,11 +14,11 @@ function AccordionItem({ title, children }: { title: string; children: React.Rea
         className="w-full flex items-center justify-between py-5 text-left transition-colors hover:text-white"
         style={{ color: isOpen ? "rgba(255,255,255,1)" : "rgba(255,255,255,0.6)" }}
       >
-        <span className="font-sans text-[15px] font-medium leading-relaxed">{title}</span>
+        <span className="type-body font-medium leading-relaxed">{title}</span>
         {isOpen ? <ChevronUp size={18} className="text-white/40" /> : <ChevronDown size={18} className="text-white/40" />}
       </button>
       {isOpen && (
-        <div className="pb-6 font-sans text-sm leading-relaxed text-white/50 animate-in fade-in slide-in-from-top-1 duration-200">
+        <div className="pb-6 type-small leading-relaxed text-white/50 animate-in fade-in slide-in-from-top-1 duration-200">
           {children}
         </div>
       )}
@@ -121,7 +121,7 @@ export default function HelpCenterPage() {
         <Container>
           <div className="mx-auto max-w-3xl text-center mb-12">
             <span
-              className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em]"
+              className="mb-5 inline-block type-label uppercase tracking-[0.18em]"
               style={{ color: "rgba(255,255,255,0.40)" }}
             >
               SUPPORT
@@ -136,7 +136,7 @@ export default function HelpCenterPage() {
             {sections.map((section, idx) => (
               <div key={idx} className="scroll-mt-32" id={section.title.toLowerCase().replace(/\s+/g, '-')}>
                 <div className="flex items-end justify-between mb-6 border-b border-white/[0.1] pb-4">
-                  <h2 className="font-display text-2xl font-semibold text-white">{section.title}</h2>
+                  <h2 className="type-h2 text-white">{section.title}</h2>
                   <div className="flex gap-4">
                     {section.links.map((link, lIdx) => (
                       <Link 
@@ -161,13 +161,13 @@ export default function HelpCenterPage() {
 
             <section id="glossary" className="scroll-mt-32">
               <div className="mb-6 border-b border-white/[0.1] pb-4">
-                <h2 className="font-display text-2xl font-semibold text-white">Glossary</h2>
+                <h2 className="type-h2 text-white">Glossary</h2>
               </div>
               <div className="grid gap-8 md:grid-cols-2">
                 {glossaryTerms.map((item) => (
                   <div key={item.term}>
-                    <h3 className="mb-2 font-display text-lg font-semibold text-white">{item.term}</h3>
-                    <p className="mb-3 font-sans text-sm leading-relaxed text-white/50">{item.definition}</p>
+                    <h3 className="mb-2 type-h4 text-white">{item.term}</h3>
+                    <p className="mb-3 type-small leading-relaxed text-white/50">{item.definition}</p>
                     <Link href={item.link} className="text-[11px] font-sans font-bold uppercase tracking-widest text-white/40 hover:text-white transition-colors">
                       Related Service →
                     </Link>

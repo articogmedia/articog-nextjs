@@ -35,7 +35,7 @@ export default function AccessibilityPage() {
               Accessibility Statement
             </Heading>
             <p
-              className="font-sans text-sm mb-16"
+              className="type-small mb-16"
               style={{ color: "rgba(255,255,255,0.40)" }}
             >
               Last updated: August 19, 2026
@@ -44,11 +44,11 @@ export default function AccessibilityPage() {
             <div className="space-y-12">
               {sections.map((section) => (
                 <div key={section.title}>
-                  <h2 className="font-display text-xl font-semibold text-white mb-4">
+                  <h2 className="type-h3 text-white mb-4">
                     {section.title}
                   </h2>
                   <p
-                    className="font-sans text-base leading-relaxed"
+                    className="type-body leading-relaxed"
                     style={{ color: "rgba(255,255,255,0.65)" }}
                   >
                     {section.content}

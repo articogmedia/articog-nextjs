@@ -22,7 +22,7 @@ export default function ContactThankYouPage() {
           <h1 className="type-h1 mb-6 text-white">
             Message received
           </h1>
-          <p className="mx-auto mb-10 max-w-md font-sans text-base md:text-lg" style={{ color: "rgba(255,255,255,0.55)", lineHeight: 1.65 }}>
+          <p className="mx-auto mb-10 max-w-md type-body md:text-lg" style={{ color: "rgba(255,255,255,0.55)", lineHeight: 1.65 }}>
             Thanks for reaching out. We&apos;ll follow up within 1 business day.
           </p>
           <Button asChild variant="primary" size="lg">

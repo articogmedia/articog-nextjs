@@ -76,7 +76,7 @@ export default function ContactPage() {
           {/* Header */}
           <div className="text-center mb-16">
             <span
-              className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em]"
+              className="mb-5 inline-block type-label uppercase tracking-[0.18em]"
               style={{
                 color: "rgba(255,255,255,0.40)",
               }}
@@ -89,7 +89,7 @@ export default function ContactPage() {
             </h1>
 
             <p
-              className="mx-auto max-w-lg font-sans text-base md:text-lg"
+              className="mx-auto max-w-lg type-body md:text-lg"
               style={{
                 color: "rgba(255,255,255,0.55)",
                 lineHeight: 1.65,
@@ -123,7 +123,7 @@ export default function ContactPage() {
                 <div className="flex flex-col gap-2.5">
                   <label
                     htmlFor="name"
-                    className="font-sans text-[13px] font-medium text-white/70"
+                    className="type-nav text-white/70"
                   >
                     Name <span className="text-accent">*</span>
                   </label>
@@ -147,7 +147,7 @@ export default function ContactPage() {
                 <div className="flex flex-col gap-2.5">
                   <label
                     htmlFor="email"
-                    className="font-sans text-[13px] font-medium text-white/70"
+                    className="type-nav text-white/70"
                   >
                     Email <span className="text-accent">*</span>
                   </label>
@@ -172,7 +172,7 @@ export default function ContactPage() {
               <div className="flex flex-col gap-2.5">
                 <label
                   htmlFor="inquiryType"
-                  className="font-sans text-[13px] font-medium text-white/70"
+                  className="type-nav text-white/70"
                 >
                   Inquiry Type <span className="text-accent">*</span>
                 </label>
@@ -192,7 +192,7 @@ export default function ContactPage() {
               <div className="flex flex-col gap-2.5">
                 <label
                   htmlFor="message"
-                  className="font-sans text-[13px] font-medium text-white/70"
+                  className="type-nav text-white/70"
                 >
                   Message <span className="text-accent">*</span>
                 </label>
@@ -268,7 +268,7 @@ export default function ContactPage() {
                   className="group-hover:scale-110 transition-transform"
                 />
 
-                <span className="font-sans text-sm">
+                <span className="type-small">
                   info@articog.com
                 </span>
               </a>

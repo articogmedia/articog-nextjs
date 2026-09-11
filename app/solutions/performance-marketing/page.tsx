@@ -62,8 +62,8 @@ export default function PerformanceMarketingPage() {
                 <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white mb-6">
                   <item.icon className="w-5 h-5" />
                 </div>
-                <h3 className="font-display text-lg font-semibold text-white mb-2">{item.title}</h3>
-                <p className="font-sans text-sm text-white/50 leading-relaxed">{item.desc}</p>
+                <h3 className="type-h4 text-white mb-2">{item.title}</h3>
+                <p className="type-small text-white/50 leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -84,7 +84,7 @@ export default function PerformanceMarketingPage() {
               className="group p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300"
             >
               <div className="flex justify-between items-start mb-4">
-                <h3 className="font-display text-xl font-semibold text-white">Performance Video Ads</h3>
+                <h3 className="type-h3 text-white">Performance Video Ads</h3>
                 <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
               </div>
               <p className="font-sans text-white/50">High-converting video creative optimized for social and digital channels.</p>
@@ -95,7 +95,7 @@ export default function PerformanceMarketingPage() {
               className="group p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300"
             >
               <div className="flex justify-between items-start mb-4">
-                <h3 className="font-display text-xl font-semibold text-white">Static & Display Creative</h3>
+                <h3 className="type-h3 text-white">Static & Display Creative</h3>
                 <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
               </div>
               <p className="font-sans text-white/50">Static assets and display banners built for continuous testing.</p>

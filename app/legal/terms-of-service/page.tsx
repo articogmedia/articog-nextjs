@@ -51,21 +51,21 @@ export default function TermsOfServicePage() {
       <Section size="lg" className="pt-32 md:pt-40">
         <Container>
           <div className="mx-auto max-w-3xl mb-24">
-            <span className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-white/40">Legal</span>
+            <span className="mb-5 inline-block type-label uppercase tracking-[0.18em] text-white/40">Legal</span>
             <Heading as="h1" size="hero" className="mb-4">
               Terms of Service
             </Heading>
-            <p className="font-sans text-sm mb-16 text-white/40">
+            <p className="type-small mb-16 text-white/40">
               Last updated: August 19, 2026
             </p>
 
             <div className="space-y-12">
               {sections.map((section) => (
                 <div key={section.title}>
-                  <h2 className="font-display text-xl font-semibold text-white mb-4">
+                  <h2 className="type-h3 text-white mb-4">
                     {section.title}
                   </h2>
-                  <p className="font-sans text-base leading-relaxed text-white/60">
+                  <p className="type-body leading-relaxed text-white/60">
                     {section.content}
                   </p>
                 </div>

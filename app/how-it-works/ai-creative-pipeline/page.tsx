@@ -74,8 +74,8 @@ export default function AICreativePipelinePage() {
                 <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white mb-6">
                   <stage.icon className="w-5 h-5" />
                 </div>
-                <h3 className="font-display text-xl font-semibold text-white mb-3">{stage.title}</h3>
-                <p className="font-sans text-base text-white/50 leading-relaxed">{stage.desc}</p>
+                <h3 className="type-h3 text-white mb-3">{stage.title}</h3>
+                <p className="type-body text-white/50 leading-relaxed">{stage.desc}</p>
               </div>
             ))}
           </div>
@@ -94,8 +94,8 @@ export default function AICreativePipelinePage() {
                   <Icon className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-display text-xl font-semibold text-white mb-2">{title}</h3>
-                  <p className="font-sans text-sm text-white/50 leading-relaxed">{description}</p>
+                  <h3 className="type-h3 text-white mb-2">{title}</h3>
+                  <p className="type-small text-white/50 leading-relaxed">{description}</p>
                 </div>
               </div>
             ))}
@@ -103,7 +103,7 @@ export default function AICreativePipelinePage() {
 
           <div className="mt-12 p-6 rounded-xl bg-white/5 border border-white/10 flex items-start gap-4 max-w-2xl mx-auto">
             <Info className="w-5 h-5 text-white/40 mt-0.5 flex-shrink-0" />
-            <p className="font-sans text-sm text-white/50 italic leading-relaxed">
+            <p className="type-small text-white/50 italic leading-relaxed">
               Learn more about our broader <Link href="/trust" className="text-white underline hover:text-white/80 transition-colors">Trust & Safety</Link> practices.
             </p>
           </div>
@@ -114,7 +114,7 @@ export default function AICreativePipelinePage() {
       <Section className="py-20 border-t border-white/5">
         <Container>
           <div className="p-8 md:p-12 rounded-2xl bg-white/5 border border-white/10 max-w-4xl">
-            <h3 className="font-display text-2xl font-semibold text-white mb-4">Custom Calibration</h3>
+            <h3 className="type-h2 text-white mb-4">Custom Calibration</h3>
             <p className="font-sans text-white/70 leading-relaxed max-w-2xl">
               It's important to note that the AI Creative Pipeline is not one-size-fits-all. Every pipeline is calibrated per-brand, incorporating your unique visual assets, tone of voice, and industry-specific requirements to ensure every output is unmistakably yours.
             </p>

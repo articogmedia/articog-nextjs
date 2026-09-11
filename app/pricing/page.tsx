@@ -24,7 +24,7 @@ export default function PricingPage() {
       <Container>
         <div className="mx-auto max-w-3xl text-center mb-16">
           <span
-            className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em]"
+            className="mb-5 inline-block type-label uppercase tracking-[0.18em]"
             style={{ color: "rgba(255,255,255,0.40)" }}
           >
             WORK WITH US
@@ -35,7 +35,7 @@ export default function PricingPage() {
           </Heading>
 
           <p
-            className="mx-auto max-w-2xl font-sans text-base md:text-lg"
+            className="mx-auto max-w-2xl type-body md:text-lg"
             style={{
               color: "rgba(255,255,255,0.55)",
               lineHeight: 1.65,
@@ -52,15 +52,15 @@ export default function PricingPage() {
               className="rounded-2xl border border-white/[0.08] p-8"
               style={{ background: "rgba(255,255,255,0.02)" }}
             >
-              <h2 className="mb-4 font-display text-2xl font-semibold text-white">{option.title}</h2>
-              <p className="font-sans text-sm leading-relaxed text-white/50">{option.description}</p>
+              <h2 className="mb-4 type-h2 text-white">{option.title}</h2>
+              <p className="type-small leading-relaxed text-white/50">{option.description}</p>
             </div>
           ))}
         </div>
 
         <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-8 md:p-10 text-center">
-          <h2 className="mb-4 font-display text-3xl font-semibold text-white">Start with a quick discovery call</h2>
-          <p className="mx-auto mb-8 max-w-2xl font-sans text-sm leading-relaxed text-white/50">
+          <h2 className="mb-4 type-h2 text-white">Start with a quick discovery call</h2>
+          <p className="mx-auto mb-8 max-w-2xl type-small leading-relaxed text-white/50">
             We will review your goals, production needs, timeline, and creative output so we can recommend the best engagement for your team.
           </p>
           <Button asChild variant="primary" size="lg">

@@ -65,8 +65,8 @@ export default function AudioPage() {
                 <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white mb-6">
                   <item.icon className="w-5 h-5" />
                 </div>
-                <h3 className="font-display text-lg font-semibold text-white mb-2">{item.title}</h3>
-                <p className="font-sans text-sm text-white/50 leading-relaxed">{item.desc}</p>
+                <h3 className="type-h4 text-white mb-2">{item.title}</h3>
+                <p className="type-small text-white/50 leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -81,8 +81,8 @@ export default function AudioPage() {
                   <ArrowRight className="w-4 h-4" />
                 </div>
               </div>
-              <h3 className="font-display text-2xl font-semibold text-white mb-2">AI Voiceover</h3>
-              <p className="font-sans text-sm text-white/50 leading-relaxed">
+              <h3 className="type-h2 text-white mb-2">AI Voiceover</h3>
+              <p className="type-small text-white/50 leading-relaxed">
                 Hyper-realistic synthetic voice production for localization and rapid iteration.
               </p>
             </div>
@@ -96,8 +96,8 @@ export default function AudioPage() {
                   <ArrowRight className="w-4 h-4" />
                 </div>
               </div>
-              <h3 className="font-display text-2xl font-semibold text-white mb-2">Music & Sound Design</h3>
-              <p className="font-sans text-sm text-white/50 leading-relaxed">
+              <h3 className="type-h2 text-white mb-2">Music & Sound Design</h3>
+              <p className="type-small text-white/50 leading-relaxed">
                 Custom scoring and immersive soundscapes for cinematic impact.
               </p>
             </div>
@@ -105,7 +105,7 @@ export default function AudioPage() {
 
           <div className="mt-12 p-6 rounded-xl bg-white/5 border border-white/10 flex items-start gap-4 max-w-2xl">
             <Info className="w-5 h-5 text-white/40 mt-0.5 flex-shrink-0" />
-            <p className="font-sans text-sm text-white/50 italic leading-relaxed">
+            <p className="type-small text-white/50 italic leading-relaxed">
               Note: All synthetic voice use requires proper consent and rights clearance. Licensing terms and usage rights are confirmed per project as part of scope.
             </p>
           </div>

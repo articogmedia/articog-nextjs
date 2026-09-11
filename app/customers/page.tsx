@@ -19,7 +19,7 @@ export default function CustomersPage() {
         <Container>
           <div className="mx-auto max-w-3xl text-center">
             <span
-              className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em]"
+              className="mb-5 inline-block type-label uppercase tracking-[0.18em]"
               style={{ color: "rgba(255,255,255,0.40)" }}
             >
               CUSTOMER STORIES
@@ -28,7 +28,7 @@ export default function CustomersPage() {
               Real outcomes. Built with Articog.
             </Heading>
             <p
-              className="mx-auto max-w-2xl font-sans text-lg md:text-xl leading-relaxed"
+              className="mx-auto max-w-2xl type-body-lg md:text-xl leading-relaxed"
               style={{ color: "rgba(255,255,255,0.65)" }}
             >
               See how modern marketing teams are using AI-native production to break through creative bottlenecks and scale their brand.
@@ -54,7 +54,7 @@ export default function CustomersPage() {
                   >
                     {cs.metric}
                   </p>
-                  <p className="mt-2 font-sans text-xs uppercase tracking-widest text-white/30">
+                  <p className="mt-2 type-label uppercase tracking-widest text-white/30">
                     {cs.metricLabel}
                   </p>
                 </div>
@@ -83,7 +83,7 @@ export default function CustomersPage() {
 
                   <div className="mt-auto pt-6 border-t border-white/[0.05] flex items-end justify-between">
                     <div>
-                      <p className="font-display text-sm font-semibold text-white/70">
+                      <p className="type-h4 text-white/70">
                         {cs.client}
                       </p>
                       <p className="font-sans text-xs text-white/30">{cs.industry}</p>

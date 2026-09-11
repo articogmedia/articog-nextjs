@@ -82,8 +82,8 @@ export default function AIIPPage() {
                 <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white mb-6">
                   <policy.icon className="w-5 h-5" />
                 </div>
-                <h3 className="font-display text-xl font-semibold text-white mb-4">{policy.title}</h3>
-                <p className="font-sans text-sm text-white/50 leading-relaxed mb-6 flex-grow">{policy.desc}</p>
+                <h3 className="type-h3 text-white mb-4">{policy.title}</h3>
+                <p className="type-small text-white/50 leading-relaxed mb-6 flex-grow">{policy.desc}</p>
                 {policy.note && (
                   <p className="font-sans text-[10px] text-white/30 italic uppercase tracking-wider">{policy.note}</p>
                 )}
@@ -119,13 +119,13 @@ export default function AIIPPage() {
                   <principle.icon className="w-6 h-6 text-white/40" />
                 </div>
                 <h3 className="text-xl font-display font-semibold text-white mb-4">{principle.title}</h3>
-                <p className="font-sans text-sm leading-relaxed text-white/50">{principle.description}</p>
+                <p className="type-small leading-relaxed text-white/50">{principle.description}</p>
               </div>
             ))}
           </div>
           <div className="text-center pt-16 mt-16 border-t border-white/10">
             <h2 className="type-h2 mb-6 text-white">Commitment to Transparency</h2>
-            <p className="mx-auto max-w-xl font-sans text-base text-white/60">
+            <p className="mx-auto max-w-xl type-body text-white/60">
               Our approach to AI is built on the foundation of trust. We work closely with brand legal and creative teams to ensure every project aligns with both industry standards and company-specific values.
             </p>
           </div>

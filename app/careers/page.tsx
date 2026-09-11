@@ -16,7 +16,7 @@ export default function CareersPage() {
         <Container>
           <div className="mx-auto max-w-3xl text-center mb-20">
             <span
-              className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em]"
+              className="mb-5 inline-block type-label uppercase tracking-[0.18em]"
               style={{ color: "rgba(255,255,255,0.40)" }}
             >
               CAREERS
@@ -24,7 +24,7 @@ export default function CareersPage() {
             <Heading as="h1" size="hero" className="mb-6">
               Join the future of production
             </Heading>
-            <p className="mx-auto max-w-2xl font-sans text-base md:text-lg leading-relaxed mb-12" style={{ color: "rgba(255,255,255,0.65)" }}>
+            <p className="mx-auto max-w-2xl type-body md:text-lg leading-relaxed mb-12" style={{ color: "rgba(255,255,255,0.65)" }}>
               We're building the infrastructure for the next generation of creative work. At Articog, we combine creative excellence with cutting-edge technology to redefine what's possible.
             </p>
           </div>

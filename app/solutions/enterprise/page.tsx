@@ -70,8 +70,8 @@ export default function EnterpriseSolutionPage() {
                   <item.icon className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-display text-xl font-semibold text-white mb-2">{item.title}</h3>
-                  <p className="font-sans text-sm text-white/50 leading-relaxed">{item.desc}</p>
+                  <h3 className="type-h3 text-white mb-2">{item.title}</h3>
+                  <p className="type-small text-white/50 leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -79,7 +79,7 @@ export default function EnterpriseSolutionPage() {
 
           <div className="mt-12 p-6 rounded-xl bg-white/5 border border-white/10 flex items-start gap-4 max-w-2xl mx-auto text-center justify-center">
             <Info className="w-5 h-5 text-white/40 mt-0.5 flex-shrink-0" />
-            <p className="font-sans text-sm text-white/50 italic leading-relaxed">
+            <p className="type-small text-white/50 italic leading-relaxed">
               Procurement documentation and security whitepapers are available on request.
             </p>
           </div>

@@ -35,7 +35,7 @@ export default function TrustPage() {
         <Container>
           <div className="mx-auto max-w-3xl text-center mb-16">
             <span
-              className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em]"
+              className="mb-5 inline-block type-label uppercase tracking-[0.18em]"
               style={{ color: "rgba(255,255,255,0.40)" }}
             >
               TRUST CENTER
@@ -43,7 +43,7 @@ export default function TrustPage() {
             <Heading as="h1" size="hero" className="mb-6">
               Built on trust and transparency
             </Heading>
-            <p className="mx-auto max-w-2xl font-sans text-base md:text-lg leading-relaxed mb-12" style={{ color: "rgba(255,255,255,0.65)" }}>
+            <p className="mx-auto max-w-2xl type-body md:text-lg leading-relaxed mb-12" style={{ color: "rgba(255,255,255,0.65)" }}>
               We take IP, security, and licensing seriously. Learn how we protect your brand, data, and creative ownership.
             </p>
           </div>
@@ -75,7 +75,7 @@ export default function TrustPage() {
           </div>
 
           <div className="text-center pt-12 border-t border-white/10">
-            <p className="font-sans text-base mb-6 text-white/60">Have a question not covered here?</p>
+            <p className="type-body mb-6 text-white/60">Have a question not covered here?</p>
             <Button asChild variant="secondary" size="lg">
               <Link href="/contact">Contact us</Link>
             </Button>

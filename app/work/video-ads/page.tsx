@@ -26,7 +26,7 @@ export default function VideoAdsGalleryPage() {
         <Container>
           <div className="max-w-6xl mx-auto">
             <h1 className="type-h1 mb-6 text-white">Video Ad Gallery</h1>
-            <p className="text-zinc-400 text-xl mb-16 max-w-2xl leading-relaxed">
+            <p className="text-zinc-400 type-h3 mb-16 max-w-2xl leading-relaxed">
               Explore our latest AI-generated video creative across industries and formats.
             </p>
 
@@ -56,7 +56,7 @@ export default function VideoAdsGalleryPage() {
             </div>
 
             <Section className="mt-20 py-12 border-t border-zinc-900 text-center">
-              <p className="text-zinc-500 text-sm mb-8 italic">All displayed work is used with appropriate permissions.</p>
+              <p className="text-zinc-500 type-small mb-8 italic">All displayed work is used with appropriate permissions.</p>
               <Link to="/book-a-demo" className="text-white hover:underline underline-offset-4">
                 Book a Demo →
               </Link>

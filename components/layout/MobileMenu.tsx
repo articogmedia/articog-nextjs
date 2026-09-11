@@ -47,7 +47,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       >
         {/* Header */}
         <div className="flex items-center justify-between px-6 pt-6 pb-4 shrink-0">
-          <span className="font-display text-base font-semibold text-white">Articog</span>
+          <span className="type-h4 text-white">Articog</span>
           <button
             onClick={handleClose}
             className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/[0.10] text-white/45 hover:text-white/90 transition-colors"

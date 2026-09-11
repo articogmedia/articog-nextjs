@@ -84,8 +84,8 @@ export default function AdCreativePage() {
                 <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white mb-6">
                   <item.icon className="w-6 h-6" />
                 </div>
-                <h3 className="font-display text-xl font-semibold text-white mb-3">{item.title}</h3>
-                <p className="font-sans text-sm text-white/50 leading-relaxed">{item.desc}</p>
+                <h3 className="type-h3 text-white mb-3">{item.title}</h3>
+                <p className="type-small text-white/50 leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -95,8 +95,8 @@ export default function AdCreativePage() {
               const card = (
                 <>
                   <div>
-                    <h3 className="font-display text-xl font-semibold text-white mb-3">{service.title}</h3>
-                    <p className="font-sans text-sm text-white/50 leading-relaxed mb-6">{service.description}</p>
+                    <h3 className="type-h3 text-white mb-3">{service.title}</h3>
+                    <p className="type-small text-white/50 leading-relaxed mb-6">{service.description}</p>
                   </div>
                   {service.href && (
                     <div className="flex items-center text-xs font-bold tracking-widest text-white/30 group-hover:text-white/60 transition-colors uppercase">
@@ -129,7 +129,7 @@ export default function AdCreativePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="type-h2 mb-6 text-white">Built to Test</h2>
-              <p className="font-sans text-lg text-white/60 leading-relaxed mb-6">
+              <p className="type-body-lg text-white/60 leading-relaxed mb-6">
                 Stop relying on "best guesses." We deliver hundreds of on-brand variants optimized by performance signals.
               </p>
               <div className="space-y-4">
@@ -141,7 +141,7 @@ export default function AdCreativePage() {
                 ].map((feature) => (
                   <div key={feature} className="flex items-center gap-3 text-white/70">
                     <div className="w-1.5 h-1.5 rounded-full bg-white/30" />
-                    <span className="font-sans text-sm font-medium">{feature}</span>
+                    <span className="type-small">{feature}</span>
                   </div>
                 ))}
               </div>

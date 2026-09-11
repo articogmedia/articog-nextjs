@@ -14,16 +14,16 @@ export default function PrivacyChoicesPage() {
       <Section size="lg" className="pt-32 md:pt-40">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <span className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-white/40">
+            <span className="mb-5 inline-block type-label uppercase tracking-[0.18em] text-white/40">
               Legal
             </span>
             <Heading as="h1" size="hero" className="mb-6">
               Your Privacy Choices
             </Heading>
 
-            <div className="space-y-12 font-sans text-sm leading-relaxed text-white/60">
+            <div className="space-y-12 type-small leading-relaxed text-white/60">
               <section>
-                <h2 className="mb-4 font-display text-xl font-semibold text-white">
+                <h2 className="mb-4 type-h3 text-white">
                   Your Rights
                 </h2>
                 <p>
@@ -35,7 +35,7 @@ export default function PrivacyChoicesPage() {
               </section>
 
               <section>
-                <h2 className="mb-4 font-display text-xl font-semibold text-white">
+                <h2 className="mb-4 type-h3 text-white">
                   Global Privacy Control
                 </h2>
                 <p>
@@ -46,7 +46,7 @@ export default function PrivacyChoicesPage() {
               </section>
 
               <section>
-                <h2 className="mb-4 font-display text-xl font-semibold text-white">
+                <h2 className="mb-4 type-h3 text-white">
                   How to Submit a Request
                 </h2>
                 <p>

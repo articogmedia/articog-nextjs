@@ -13,11 +13,11 @@ export default function CookiePolicyPage() {
       <Section size="lg" className="pt-32 md:pt-40">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <span className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-white/40">Legal</span>
+            <span className="mb-5 inline-block type-label uppercase tracking-[0.18em] text-white/40">Legal</span>
             <Heading as="h1" size="hero" className="mb-6">Cookie Policy</Heading>
-            <p className="font-sans text-sm text-muted-safe mb-12 uppercase tracking-widest">Last updated: August 19, 2026</p>
+            <p className="type-small text-muted-safe mb-12 uppercase tracking-widest">Last updated: August 19, 2026</p>
 
-            <div className="space-y-12 font-sans text-sm leading-relaxed text-white/60">
+            <div className="space-y-12 type-small leading-relaxed text-white/60">
               <section>
                 <h2 className="text-xl font-display font-semibold text-white mb-4">1. What are cookies?</h2>
                 <p>Cookies are small text files that are stored on your device when you visit a website. They help the website recognize your device and remember information about your visit.</p>

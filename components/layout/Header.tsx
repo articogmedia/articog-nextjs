@@ -215,7 +215,7 @@ function DropdownPanel({
                 key={link.href}
                 href={link.href}
                 onClick={() => onClose()}
-                className="block rounded-lg px-3 py-2 font-sans text-[13px] font-medium text-white/60 transition-colors duration-150 hover:bg-white/[0.04] hover:text-white"
+                className="block rounded-lg px-3 py-2 type-nav text-white/60 transition-colors duration-150 hover:bg-white/[0.04] hover:text-white"
               >
                 {link.label}
               </Link>
@@ -542,7 +542,7 @@ export function Header() {
 
           <Link
             href="/"
-            className="font-display text-base font-semibold text-white transition-colors hover:text-white/75"
+            className="type-h4 text-white transition-colors hover:text-white/75"
             onClick={closeDropdown}
           >
             Articog
@@ -576,7 +576,7 @@ export function Header() {
                     e.stopPropagation();
                     toggleGroup(group.label);
                   }}
-                  className="inline-flex items-center gap-1 rounded-lg px-2 py-2 font-sans text-[13px] font-medium transition-colors duration-150 xl:px-3"
+                  className="inline-flex items-center gap-1 rounded-lg px-2 py-2 type-nav transition-colors duration-150 xl:px-3"
                   style={{
                     color:
                       activeGroup === group.label

@@ -32,11 +32,11 @@ export function Problems({ problems }: ProblemsProps) {
                   {p.number}
                 </span>
                 <div className="space-y-1.5">
-                  <h3 className="font-display text-base font-semibold text-white">
+                  <h3 className="type-h4 text-white">
                     {p.title}
                   </h3>
                   <p
-                    className="font-sans text-sm leading-relaxed"
+                    className="type-small leading-relaxed"
                     style={{ color: "rgba(255,255,255,0.50)" }}
                   >
                     {p.description}

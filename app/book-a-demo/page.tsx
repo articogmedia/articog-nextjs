@@ -68,7 +68,7 @@ export default function BookADemoPage() {
           {/* Header */}
           <div className="text-center mb-16">
             <span
-              className="mb-5 inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.18em]"
+              className="mb-5 inline-block type-label uppercase tracking-[0.18em]"
               style={{ color: "rgba(255,255,255,0.40)" }}
             >
               BOOK A DEMO
@@ -79,7 +79,7 @@ export default function BookADemoPage() {
             </h1>
 
             <p
-              className="mx-auto max-w-lg font-sans text-base md:text-lg"
+              className="mx-auto max-w-lg type-body md:text-lg"
               style={{
                 color: "rgba(255,255,255,0.55)",
                 lineHeight: 1.65,
@@ -107,7 +107,7 @@ export default function BookADemoPage() {
                 <div className="flex flex-col gap-2.5">
                   <label
                     htmlFor="firstName"
-                    className="font-sans text-[13px] font-medium text-white/70"
+                    className="type-nav text-white/70"
                   >
                     First Name <span className="text-accent">*</span>
                   </label>
@@ -130,7 +130,7 @@ export default function BookADemoPage() {
                 <div className="flex flex-col gap-2.5">
                   <label
                     htmlFor="lastName"
-                    className="font-sans text-[13px] font-medium text-white/70"
+                    className="type-nav text-white/70"
                   >
                     Last Name <span className="text-accent">*</span>
                   </label>
@@ -156,7 +156,7 @@ export default function BookADemoPage() {
                 <div className="flex flex-col gap-2.5">
                   <label
                     htmlFor="email"
-                    className="font-sans text-[13px] font-medium text-white/70"
+                    className="type-nav text-white/70"
                   >
                     Work Email <span className="text-accent">*</span>
                   </label>
@@ -179,7 +179,7 @@ export default function BookADemoPage() {
                 <div className="flex flex-col gap-2.5">
                   <label
                     htmlFor="company"
-                    className="font-sans text-[13px] font-medium text-white/70"
+                    className="type-nav text-white/70"
                   >
                     Company Name <span className="text-accent">*</span>
                   </label>
@@ -204,7 +204,7 @@ export default function BookADemoPage() {
               <div className="flex flex-col gap-2.5">
                 <label
                   htmlFor="role"
-                  className="font-sans text-[13px] font-medium text-white/70"
+                  className="type-nav text-white/70"
                 >
                   Your Role
                 </label>
@@ -225,7 +225,7 @@ export default function BookADemoPage() {
 
               {/* Service Interest */}
               <div className="flex flex-col gap-4">
-                <label className="font-sans text-[13px] font-medium text-white/70">
+                <label className="type-nav text-white/70">
                   Service Interest
                 </label>
 
@@ -250,7 +250,7 @@ export default function BookADemoPage() {
                         />
                       </div>
 
-                      <span className="font-sans text-sm text-white/60 transition-colors group-hover:text-white">
+                      <span className="type-small text-white/60 transition-colors group-hover:text-white">
                         {option}
                       </span>
                     </label>
@@ -263,7 +263,7 @@ export default function BookADemoPage() {
                 <div className="flex flex-col gap-2.5">
                   <label
                     htmlFor="budget"
-                    className="font-sans text-[13px] font-medium text-white/70"
+                    className="type-nav text-white/70"
                   >
                     Budget Range
                   </label>
@@ -282,7 +282,7 @@ export default function BookADemoPage() {
                 <div className="flex flex-col gap-2.5">
                   <label
                     htmlFor="timeline"
-                    className="font-sans text-[13px] font-medium text-white/70"
+                    className="type-nav text-white/70"
                   >
                     Timeline
                   </label>

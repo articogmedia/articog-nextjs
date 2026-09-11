@@ -278,16 +278,16 @@ export function ServiceDetails({ category }: { category: ServiceCategory }) {
               <summary className="flex cursor-pointer list-none items-center justify-between gap-6 p-5 marker:hidden md:p-6">
                 <div className="max-w-3xl">
                   <h3 className="type-h3 text-white">{group.title}</h3>
-                  <p className="mt-2 font-sans text-sm leading-relaxed text-white/50">{group.description}</p>
+                  <p className="mt-2 type-small leading-relaxed text-white/50">{group.description}</p>
                 </div>
-                <span className="shrink-0 font-sans text-2xl font-light text-white/40 transition-transform group-open:rotate-45">+</span>
+                <span className="shrink-0 type-h2 font-light text-white/40 transition-transform group-open:rotate-45">+</span>
               </summary>
               <div className="border-t border-white/10 p-5 md:p-6">
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
                   {group.items.map((item) => (
                     <div key={item.title} className="rounded-xl border border-white/10 p-5">
-                      <h4 className="mb-2 font-display text-base font-semibold text-white">{item.title}</h4>
-                      <p className="font-sans text-sm leading-relaxed text-white/50">{item.description}</p>
+                      <h4 className="mb-2 type-h4 text-white">{item.title}</h4>
+                      <p className="type-small leading-relaxed text-white/50">{item.description}</p>
                     </div>
                   ))}
                 </div>

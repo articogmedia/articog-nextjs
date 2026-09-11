@@ -83,8 +83,8 @@ export default function PostProductionPage() {
                   <item.icon className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-display text-xl font-semibold text-white mb-2">{item.title}</h3>
-                  <p className="font-sans text-sm text-white/50 leading-relaxed">{item.desc}</p>
+                  <h3 className="type-h3 text-white mb-2">{item.title}</h3>
+                  <p className="type-small text-white/50 leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -92,7 +92,7 @@ export default function PostProductionPage() {
 
           <div className="mt-12 p-6 rounded-xl bg-white/5 border border-white/10 flex items-start gap-4 max-w-2xl mx-auto">
             <Info className="w-5 h-5 text-white/40 mt-0.5 flex-shrink-0" />
-            <p className="font-sans text-sm text-white/50 italic leading-relaxed">
+            <p className="type-small text-white/50 italic leading-relaxed">
               Note: Final assets are formatted to your exact channel and platform delivery specifications.
             </p>
           </div>
@@ -105,8 +105,8 @@ export default function PostProductionPage() {
             {subPages.map((page) => {
               const card = (
                 <>
-                  <h3 className="font-display text-xl font-semibold text-white mb-2">{page.title}</h3>
-                  <p className="font-sans text-sm text-white/50 mb-6">{page.description}</p>
+                  <h3 className="type-h3 text-white mb-2">{page.title}</h3>
+                  <p className="type-small text-white/50 mb-6">{page.description}</p>
                   {page.href && (
                     <span className="inline-flex items-center gap-2 text-sm text-white/80 font-medium group-hover:text-white transition-colors">
                       Learn more <ArrowRight className="w-4 h-4" />

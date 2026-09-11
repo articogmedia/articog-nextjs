@@ -66,8 +66,8 @@ export default function SocialWorkPage() {
                 <div className="mb-5 flex h-12 w-12 items-center justify-center self-center rounded-xl border border-white/10 text-white/40">
                   <format.icon className="h-6 w-6" />
                 </div>
-                <h3 className="font-display text-xl font-semibold text-white mb-2">{format.title}</h3>
-                <p className="font-sans text-sm text-white/50 leading-relaxed max-w-[240px]">{format.desc}</p>
+                <h3 className="type-h3 text-white mb-2">{format.title}</h3>
+                <p className="type-small text-white/50 leading-relaxed max-w-[240px]">{format.desc}</p>
               </div>
             ))}
           </div>
@@ -76,8 +76,8 @@ export default function SocialWorkPage() {
             <div className="flex gap-4 items-start">
               <Info className="w-6 h-6 text-white/40 mt-1" />
               <div>
-                <h4 className="font-display text-xl font-semibold text-white mb-2">Organized for Scale</h4>
-                <p className="font-sans text-base text-white/60 leading-relaxed">
+                <h4 className="type-h3 text-white mb-2">Organized for Scale</h4>
+                <p className="type-body text-white/60 leading-relaxed">
                   All content is intelligently grouped into thematic series to ensure cross-channel consistency. Every asset is meticulously organized by campaign and format, making reference and implementation seamless for your team.
                 </p>
               </div>

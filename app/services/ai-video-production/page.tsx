@@ -72,8 +72,8 @@ export default function AIVideoProductionPage() {
               const card = (
                 <>
                   <div>
-                    <h3 className="font-display text-xl font-semibold text-white mb-3 group-hover:text-white transition-colors">{item.title}</h3>
-                    <p className="font-sans text-sm text-white/50 leading-relaxed mb-6">{item.desc}</p>
+                    <h3 className="type-h3 text-white mb-3 group-hover:text-white transition-colors">{item.title}</h3>
+                    <p className="type-small text-white/50 leading-relaxed mb-6">{item.desc}</p>
                   </div>
                   {item.path && (
                     <div className="flex items-center text-xs font-bold tracking-widest text-white/30 group-hover:text-white/60 transition-colors uppercase">
@@ -107,7 +107,7 @@ export default function AIVideoProductionPage() {
                 <Zap className="w-6 h-6 text-white" />
               </div>
               <h2 className="type-h2 text-white">How It Works</h2>
-              <p className="font-sans text-lg text-white/60 leading-relaxed">
+              <p className="type-body-lg text-white/60 leading-relaxed">
                 Our pipeline is designed for speed without compromising on creative integrity. From brief submission to final delivery, our process is streamlined to get your content live faster.
               </p>
               <Link href="/how-it-works" className="inline-flex items-center text-sm font-bold tracking-widest text-white hover:opacity-70 transition-opacity uppercase">
@@ -120,10 +120,10 @@ export default function AIVideoProductionPage() {
                 <ShieldCheck className="w-6 h-6 text-white" />
               </div>
               <h2 className="type-h2 text-white">Human Oversight & Quality</h2>
-              <p className="font-sans text-lg text-white/60 leading-relaxed">
+              <p className="type-body-lg text-white/60 leading-relaxed">
                 We don't just "hit generate." Every single asset produced by Articog goes through a rigorous human review process. Our creative directors ensure brand guidelines are met, quality is consistent, and the final output is ready for prime time.
               </p>
-              <div className="flex items-center gap-4 text-white/40 font-sans text-sm italic border-l-2 border-white/10 pl-6">
+              <div className="flex items-center gap-4 text-white/40 type-small italic border-l-2 border-white/10 pl-6">
                 <Users className="w-5 h-5 flex-shrink-0" />
                 <span>"AI enables the speed, but human taste ensures the soul."</span>
               </div>

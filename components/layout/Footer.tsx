@@ -118,12 +118,12 @@ export function Footer() {
           <div className="space-y-4 md:col-span-2">
             <Link
               href="/"
-              className="font-display text-base font-semibold text-white/90 hover:text-white transition-colors"
+              className="type-h4 text-white/90 hover:text-white transition-colors"
             >
               Articog
             </Link>
 
-            <p className="font-sans text-sm leading-relaxed max-w-xs text-white/40">
+            <p className="type-small leading-relaxed max-w-xs text-white/40">
               AI creative production for growth-stage brands.
             </p>
 
@@ -155,7 +155,7 @@ export function Footer() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="font-sans text-sm text-muted-safe hover:text-white/80 transition-colors w-fit"
+                    className="type-small text-muted-safe hover:text-white/80 transition-colors w-fit"
                   >
                     {item.label}
                   </Link>

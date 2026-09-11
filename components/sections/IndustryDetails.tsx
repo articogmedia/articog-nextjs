@@ -152,7 +152,7 @@ export function IndustryDetails() {
     <Section className="border-t border-white/10 py-20 text-left md:py-24">
       <Container>
         <div className="mb-12 max-w-2xl md:mb-16">
-          <p className="mb-3 font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-white/40">Explore by industry</p>
+          <p className="mb-3 type-label uppercase tracking-[0.2em] text-white/40">Explore by industry</p>
           <h2 className="type-h2 text-white">Creative production by industry</h2>
         </div>
         <div className="grid gap-4 lg:grid-cols-2">
@@ -162,13 +162,13 @@ export function IndustryDetails() {
                 <div className="flex items-start justify-between gap-6">
                   <div className="min-w-0">
                     <h3 className="type-h3 text-white">{industry.title}</h3>
-                    <p className="mt-4 max-w-xl font-sans text-sm leading-relaxed text-white/60">{industry.positioning}</p>
+                    <p className="mt-4 max-w-xl type-small leading-relaxed text-white/60">{industry.positioning}</p>
                   </div>
                   <span className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 text-lg font-light leading-none text-white/50 transition-transform group-open:rotate-45">+</span>
                 </div>
                 <div>
-                  <p className="mb-3 font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-white/35">Key focus</p>
-                  <p className="max-w-xl font-display text-sm font-medium leading-relaxed text-white/80">{industry.considerations[0].title}</p>
+                  <p className="mb-3 type-label uppercase tracking-[0.2em] text-white/35">Key focus</p>
+                  <p className="max-w-xl type-small leading-relaxed text-white/80">{industry.considerations[0].title}</p>
                   {industry.serviceLinks && (
                     <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-xs font-medium">
                       {industry.serviceLinks.map((link) => (
@@ -179,11 +179,11 @@ export function IndustryDetails() {
                 </div>
               </summary>
               <div className="border-t border-white/[0.08] px-6 pb-6 pt-6 md:px-8 md:pb-8">
-                <p className="mb-4 font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-white/35">Additional details</p>
+                <p className="mb-4 type-label uppercase tracking-[0.2em] text-white/35">Additional details</p>
                 <div className="grid gap-3 md:grid-cols-3">
                   {industry.considerations.slice(0, 3).map((item) => (
                     <div key={item.title} className="rounded-xl border border-white/[0.08] bg-black/10 p-4">
-                      <h4 className="mb-2 font-display text-sm font-semibold text-white">{item.title}</h4>
+                      <h4 className="mb-2 type-h4 text-white">{item.title}</h4>
                       <p className="font-sans text-xs leading-relaxed text-white/50">{item.description}</p>
                     </div>
                   ))}
@@ -199,8 +199,8 @@ export function IndustryDetails() {
                   <div className="mt-6 grid gap-4 md:grid-cols-2">
                     {industry.faqs.map((faq) => (
                       <div key={faq.question} className="border-l border-white/20 pl-5">
-                        <h4 className="mb-2 font-display text-base font-semibold text-white">{faq.question}</h4>
-                        <p className="font-sans text-sm leading-relaxed text-white/50">{faq.answer}</p>
+                        <h4 className="mb-2 type-h4 text-white">{faq.question}</h4>
+                        <p className="type-small leading-relaxed text-white/50">{faq.answer}</p>
                       </div>
                     ))}
                   </div>
