@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function PressPage() {
   const mediaAssets = [
     {
-      title: "Articog Logo — White",
+      title: "Articog Logo White",
       description:
         "Official Articog logo asset on black background for editorial and press use.",
       actionLabel: "Download Logo",
@@ -21,7 +21,7 @@ export default function PressPage() {
       alt: "Articog white logo on black background",
     },
     {
-      title: "Articog Logo — Black",
+      title: "Articog Logo Black",
       description:
         "Official Articog logo asset on white background for editorial and press use.",
       actionLabel: "Download Logo",
