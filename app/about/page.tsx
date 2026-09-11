@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://articog.com/about" },
-  title: "About Articog | Creative AI Production Company",
-  description: "Articog is a Creative AI Production Company. We produce AI brand films, commercials, ad creations, UGC, AI social content and audio ads for growth stage brands.",
+  title: "About Articog | AI Native Film & Production Company",
+  description:
+    "Articog is an AI Native Film & Production Company creating brand films, commercials, product films, UGC, social content, and campaign visuals through human directed AI production.",
 };
 import { Link } from "@/components/ui/Link";
 import { Container, Section, Button, Heading, Text } from "@/components/ui";
@@ -15,84 +16,81 @@ export default function AboutPage() {
       {/* Hero Section */}
       <Section size="lg" className="pt-32 md:pt-40">
         <Container>
-          <div className="mx-auto max-w-3xl text-center mb-16">
-            <span
-              className="mb-5 inline-block type-label text-white/40 uppercase tracking-[0.18em]"
-            >
+          <div className="mx-auto mb-16 max-w-3xl text-center">
+            <span className="mb-5 inline-block type-label uppercase tracking-[0.18em] text-white/40">
               ABOUT ARTICOG
             </span>
             <Heading as="h1" size="hero" className="mb-6">
-              About Articog
+              Production craft. Rebuilt for the AI era.
             </Heading>
             <Text as="p" size="lg" className="mx-auto max-w-2xl leading-relaxed text-white/65">
-              Articog produces brand films, commercials, ad creations, UGC, social content, and audio ads for growth stage brands, from brief to delivery in days.
+              Articog is an AI Native Film &amp; Production Company creating brand films, commercials, product films, UGC, social content, and campaign visuals for modern brands, from brief to delivery in days.
             </Text>
           </div>
         </Container>
       </Section>
 
-      {/* Why We Exist Section */}
       <Section size="md" className="border-t border-white/[0.05]">
         <Container>
           <div className="mx-auto grid max-w-4xl gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
             <div className="space-y-3">
-              <Heading as="p" size="label">Why We Exist</Heading>
+              <Heading as="p" size="label">
+                OUR FOUNDATION
+              </Heading>
               <Heading as="p" size="section">
-                Why creative production is broken
+                13+ years of production. Now AI native.
               </Heading>
             </div>
             <p className="type-body-lg leading-relaxed text-white/60">
-              Content demand scales, but headcount doesn&apos;t. Campaigns slip and assets get recycled. Spend grows, but creative volume stays flat and audiences saturate.
+              Articog is an initiative of Govada Creative Productions, established in 2013 and recognised by the Ministry of Culture, Government of India. We bring that production foundation into a new model, combining creative direction, generative AI, editing, sound, and finishing in one integrated workflow built for today&apos;s speed and scale.
             </p>
           </div>
         </Container>
       </Section>
 
-      {/* How We Work Section */}
       <Section size="md" className="border-t border-white/[0.05]">
         <Container>
-          <div className="mx-auto max-w-3xl text-center mb-16">
+          <div className="mx-auto mb-16 max-w-3xl text-center">
             <Heading as="h2" size="section" className="mb-6">
-              How We Work
+              Human directed. AI native.
             </Heading>
             <p
               className="type-body md:text-lg leading-relaxed"
               style={{ color: "rgba(255,255,255,0.65)" }}
             >
-              AI accelerates production; creative directors set direction and review every deliverable for brand alignment, quality, and compliance.
+              AI expands what can be produced and how quickly it can move. Human creative direction decides what should be made, how it should feel, and whether it is right for the brand. Every project combines both.
             </p>
           </div>
-          
+
           <div className="grid gap-10 md:grid-cols-3">
             <ApproachItem
+              title="Creative Direction First"
+              description="Every project starts with the idea, audience, brand, visual language, and campaign objective. We set the direction before generation begins."
+            />
+            <ApproachItem
               title="AI Native Production"
-              description="Our pipeline uses calibrated models to produce assets with high fidelity at scale."
+              description="Our production pipeline uses generative workflows to build characters, environments, product shots, motion, and creative variations with far less traditional production overhead."
             />
             <ApproachItem
-              title="Human Creative Direction"
-              description="Creative directors guide each project for emotional resonance and brand alignment."
-            />
-            <ApproachItem
-              title="Quality Oversight"
-              description="Human checks at every stage ensure files ready for production."
+              title="Production Ready Finish"
+              description="Creative directors and editors refine every deliverable through compositing, editing, sound, quality control, and platform specific finishing before it leaves the studio."
             />
           </div>
         </Container>
       </Section>
 
-      {/* Final CTA Section */}
       <Section size="lg" className="border-t border-white/[0.05]">
         <Container>
           <div
-            className="rounded-2xl p-12 text-center border border-white/[0.08]"
+            className="rounded-2xl border border-white/[0.08] p-12 text-center"
             style={{ background: "rgba(255,255,255,0.02)" }}
           >
             <Heading as="h2" size="section" className="mb-6">
-              Ready to scale your creative?
+              Ready to make your next campaign AI native?
             </Heading>
             <Button asChild variant="primary" size="lg">
               <Link to="/book-a-demo">
-                Work with us
+                Book a Demo
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
@@ -105,14 +103,9 @@ export default function AboutPage() {
 
 function ApproachItem({ title, description }: { title: string; description: string }) {
   return (
-    <div className="space-y-4 p-6 rounded-xl border border-white/[0.05] bg-white/[0.02]">
-      <h3 className="type-h3 text-white">
-        {title}
-      </h3>
-      <p
-        className="type-small leading-relaxed"
-        style={{ color: "rgba(255,255,255,0.50)" }}
-      >
+    <div className="space-y-4 rounded-xl border border-white/[0.05] bg-white/[0.02] p-6">
+      <h3 className="type-h3 text-white">{title}</h3>
+      <p className="type-small leading-relaxed" style={{ color: "rgba(255,255,255,0.50)" }}>
         {description}
       </p>
     </div>

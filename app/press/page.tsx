@@ -12,12 +12,22 @@ export const metadata: Metadata = {
 export default function PressPage() {
   const mediaAssets = [
     {
-      title: "Logo Pack",
+      title: "Articog Logo — White",
       description:
-        "Official Articog logo asset for editorial and press use.",
+        "Official Articog logo asset on black background for editorial and press use.",
       actionLabel: "Download Logo",
-      href: "/icon.svg",
-      asset: "/icon.svg",
+      href: "/articog-logo-white.png",
+      asset: "/articog-logo-white.png",
+      alt: "Articog white logo on black background",
+    },
+    {
+      title: "Articog Logo — Black",
+      description:
+        "Official Articog logo asset on white background for editorial and press use.",
+      actionLabel: "Download Logo",
+      href: "/articog-logo-black.png",
+      asset: "/articog-logo-black.png",
+      alt: "Articog black logo on white background",
     },
     {
       title: "Product Screenshots",
@@ -50,8 +60,8 @@ export default function PressPage() {
                 Media Kit
               </h2>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {mediaAssets.map((asset) => (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {mediaAssets.slice(0, 2).map((asset) => (
                   <div
                     key={asset.title}
                     className="bg-zinc-900/50 p-6 rounded-2xl border border-zinc-800 flex flex-col h-full"
@@ -61,13 +71,13 @@ export default function PressPage() {
                     </h3>
 
                     {asset.asset ? (
-                      <div className="mb-4 flex items-center justify-center rounded-xl border border-zinc-800 bg-black p-6">
+                      <div className="mb-4 flex items-center justify-center overflow-hidden rounded-xl border border-zinc-800 bg-black p-6">
                         <Image
                           src={asset.asset}
-                          alt="Articog logo"
-                          width={160}
-                          height={80}
-                          className="h-auto max-h-20 w-auto object-contain"
+                          alt={asset.alt}
+                          width={400}
+                          height={200}
+                          className="h-auto w-full max-w-[360px] object-contain"
                         />
                       </div>
                     ) : null}
@@ -80,11 +90,29 @@ export default function PressPage() {
                       <a
                         href={asset.href}
                         download
+                        aria-label={`Download ${asset.title}`}
                         className="mt-auto inline-flex items-center justify-center rounded-lg border border-zinc-700 bg-zinc-800 px-4 py-2 text-sm font-medium text-white transition-colors hover:border-zinc-500 hover:bg-zinc-700"
                       >
                         {asset.actionLabel}
                       </a>
                     ) : null}
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                {mediaAssets.slice(2).map((asset) => (
+                  <div
+                    key={asset.title}
+                    className="bg-zinc-900/50 p-6 rounded-2xl border border-zinc-800 flex flex-col h-full"
+                  >
+                    <h3 className="type-h3 mb-3 text-white">
+                      {asset.title}
+                    </h3>
+
+                    <p className="text-zinc-400 type-small leading-relaxed mb-6 flex-grow">
+                      {asset.description}
+                    </p>
                   </div>
                 ))}
               </div>
