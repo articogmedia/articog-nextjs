@@ -103,9 +103,9 @@ const serviceGroups: Record<ServiceCategory, ServiceGroup[]> = {
       title: "Monthly Social Content",
       description: "A predictable stream of on brand social content delivered around your calendar and campaign priorities.",
       items: [
-        { title: "Calendar-Tailored Posts", description: "Posts and graphics planned around your content calendar and priorities." },
+        { title: "Calendar Tailored Posts", description: "Posts and graphics planned around your content calendar and priorities." },
         { title: "Consistent Brand Voice", description: "Every asset matches your brand voice and visual identity." },
-        { title: "Platform-Specific Formatting", description: "Content formatted for the exact specifications and style of each channel." },
+        { title: "Platform Specific Formatting", description: "Content formatted for the exact specifications and style of each channel." },
       ],
     },
     {
@@ -226,7 +226,7 @@ const serviceGroups: Record<ServiceCategory, ServiceGroup[]> = {
       items: [
         { title: "Master Specs & Aspect Ratios", description: "High-resolution files in 9:16, 4:5, 1:1, and 16:9 as required." },
         { title: "Codec, Bitrate & Captions", description: "Platform codecs, bitrates, and burned-in or sidecar SRT/VTT captions." },
-        { title: "Audio Loudness & Archive", description: "Platform-specific LUFS mastering and secure archiving of final masters." },
+        { title: "Audio Loudness & Archive", description: "Platform specific LUFS mastering and secure archiving of final masters." },
       ],
     },
   ],

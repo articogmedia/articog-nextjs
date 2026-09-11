@@ -25,7 +25,7 @@ export default function WorkPage() {
     },
     {
       title: "Product Visuals",
-      description: "High-fidelity product visuals and campaign assets.",
+      description: "High quality product visuals and campaign assets.",
       href: "/work/product-visuals",
     },
     {
@@ -35,7 +35,7 @@ export default function WorkPage() {
     },
     {
       title: "AI Ad Library",
-      description: "A browsable library of AI-generated ad assets and variants.",
+      description: "A browsable library of AI generated ad assets and variants.",
       href: "/ai-ad-library",
     },
     {

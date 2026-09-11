@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "The AI Creative Pipeline Articog",
-  description: "Explore the technical details of our AI Creative Pipeline. From brief intake to multi-model generation and human-in-the-loop curation.",
+  description: "Explore the technical details of our AI Creative Pipeline. From brief intake to multiple model generation and human review curation.",
   alternates: { canonical: "https://articog.com/how-it-works/ai-creative-pipeline" },
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
@@ -17,7 +17,7 @@ export default function AICreativePipelinePage() {
       icon: ClipboardList,
     },
     {
-      title: "Multi-Model Generation",
+      title: "Multi Model Generation",
       desc: "Our pipeline runs across multiple specialized AI models and iteration loops, selecting and blending the best outputs for your specific brand.",
       icon: Cpu,
     },
@@ -27,7 +27,7 @@ export default function AICreativePipelinePage() {
       icon: UserCheck,
     },
     {
-      title: "Feedback-Driven Refinement",
+      title: "Feedback Driven Refinement",
       desc: "Your feedback is incorporated in fast, automated iteration cycles, moving at the speed of software rather than slow, manual revision rounds.",
       icon: RefreshCw,
     },
@@ -35,10 +35,10 @@ export default function AICreativePipelinePage() {
 
   const qaStandards = [
     ["Product & Logo Integrity", "Accurate representation of your brand identity and product features in every asset we produce.", ShieldCheck],
-    ["Text Accuracy", "Checking for legibility, spelling, and correctness of any on-screen or on-image text elements.", Type],
-    ["Policy Review", "Verifying assets against platform-specific advertising policies and legal requirements.", FileSearch],
-    ["Final Technical QC", "Double-checking resolution, frame rate, file format, and naming conventions before delivery.", HardDrive],
-    ["Human Review", "Every AI-generated asset is reviewed by a professional editor; we never ship automatically.", UserCheck],
+    ["Text Accuracy", "Checking for legibility, spelling, and correctness of any on screen or on image text elements.", Type],
+    ["Policy Review", "Verifying assets against platform specific advertising policies and legal requirements.", FileSearch],
+    ["Final Technical QC", "Double checking resolution, frame rate, file format, and naming conventions before delivery.", HardDrive],
+    ["Human Review", "Every AI generated asset is reviewed by a professional editor; we never ship automatically.", UserCheck],
   ] as const;
 
   return (
@@ -116,7 +116,7 @@ export default function AICreativePipelinePage() {
           <div className="p-8 md:p-12 rounded-2xl bg-white/5 border border-white/10 max-w-4xl">
             <h3 className="type-h2 text-white mb-4">Custom Calibration</h3>
             <p className="font-sans text-white/70 leading-relaxed max-w-2xl">
-              It's important to note that the AI Creative Pipeline is not one-size-fits-all. Every pipeline is calibrated per-brand, incorporating your unique visual assets, tone of voice, and industry-specific requirements to ensure every output is unmistakably yours.
+              It is important to note that the AI Creative Pipeline is not one size fits all. Every pipeline is calibrated per brand, incorporating your unique visual assets, tone of voice, and industry specific requirements to ensure every output is unmistakably yours.
             </p>
           </div>
         </Container>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   alternates: { canonical: "https://articog.com/services/post-production" },
-  title: "AI Post-Production Articog",
+  title: "AI Post Production Articog",
 };
 import { Container, Section, Heading, Button } from "@/components/ui";
 import { Link } from "@/components/ui/Link";

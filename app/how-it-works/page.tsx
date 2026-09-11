@@ -21,7 +21,7 @@ export default function HowItWorksPage() {
     {
       step: 2,
       title: "Generate",
-      description: "Our brand calibrated AI pipeline explores creative directions and delivers first outputs within hours.",
+      description: "Our AI pipeline calibrated to the brand explores creative directions and delivers first outputs within hours.",
       tag: "Day 1 to 2",
     },
     {
@@ -33,7 +33,7 @@ export default function HowItWorksPage() {
     {
       step: 4,
       title: "Deliver",
-      description: "Receive production-ready assets in the formats, aspect ratios, and language variants your campaign needs.",
+      description: "Receive assets ready for production in the formats, aspect ratios, and language variants your campaign needs.",
       tag: "Day 3 to 4",
     },
   ];
@@ -69,7 +69,7 @@ export default function HowItWorksPage() {
               From brief to live in days
             </Heading>
             <p className="mx-auto max-w-2xl type-body md:text-lg leading-relaxed mb-12" style={{ color: "rgba(255,255,255,0.65)" }}>
-              We replace rigid timelines and overhead with a high-velocity engine powered by AI and directed by humans.
+              We replace rigid timelines and overhead with a high velocity engine powered by AI and directed by humans.
             </p>
           </div>
 

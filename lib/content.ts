@@ -54,7 +54,7 @@ export const siteContent: SiteContent = {
       step: 2,
       title: "Generate",
       description:
-        "Our brand-calibrated AI pipeline produces first outputs within hours.",
+        "Our AI pipeline calibrated to the brand produces first outputs within hours.",
       tag: "Day 1 2",
     },
     {
@@ -68,7 +68,7 @@ export const siteContent: SiteContent = {
       step: 4,
       title: "Deliver",
       description:
-        "Receive production-ready assets, versioned for every platform.",
+        "Receive assets ready for production, versioned for every platform.",
       tag: "Day 3 4",
     },
   ],
@@ -89,12 +89,12 @@ export const siteContent: SiteContent = {
     {
       title: "Commercials and Advertisements",
       useCase: "TV, pre-roll, OOH, performance video ads",
-      outcome: "Broadcast-ready ads delivered without a production crew",
+      outcome: "Ads ready for broadcast delivered without a production crew",
       icon: "monitor",
     },
     {
       title: "AI Posters and Visual Content",
-      useCase: "Campaign posters, banners, OOH creative, print-ready assets",
+      useCase: "Campaign posters, banners, OOH creative, assets ready for print",
       outcome: "On brand visuals at any scale with consistent brand fidelity",
       icon: "image",
     },
@@ -118,7 +118,7 @@ export const siteContent: SiteContent = {
     },
     {
       title: "Creative Automations",
-      useCase: "Brief-to-delivery workflow integration",
+      useCase: "Workflow integration from brief to delivery",
       outcome: "80% fewer manual production steps. Plugs into your existing stack.",
       icon: "cpu",
     },

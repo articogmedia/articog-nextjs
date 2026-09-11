@@ -19,7 +19,7 @@ export default function CreativeStrategyPage() {
     },
     {
       title: "Brand Direction",
-      desc: "Ensuring every AI-generated asset reflects your brand's unique voice, tone, and visual identity perfectly.",
+      desc: "Ensuring every AI generated asset reflects your brand's unique voice, tone, and visual identity perfectly.",
       icon: Palette,
     },
     {

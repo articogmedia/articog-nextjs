@@ -19,7 +19,7 @@ export default function AIIPPage() {
     },
     {
       title: "Our Use of AI Tools",
-      desc: "We use a sophisticated, multi-model AI pipeline calibrated to your unique brand. Our process is transparent and designed to augment human creativity, not replace the strategic direction that makes your brand unique.",
+      desc: "We use a sophisticated, multi model AI pipeline calibrated to your unique brand. Our process is transparent and designed to augment human creativity, not replace the strategic direction that makes your brand unique.",
       icon: Scale,
     },
     {
@@ -37,7 +37,7 @@ export default function AIIPPage() {
     },
     {
       title: "No Deceptive Impersonation",
-      description: "We do not produce content designed to deceive audiences. Our AI-generated assets are intended for creative expression and brand storytelling, not for misleading impersonation without proper disclosure where appropriate.",
+      description: "We do not produce content designed to deceive audiences. Our AI generated assets are intended for creative expression and brand storytelling, not for misleading impersonation without proper disclosure where appropriate.",
       icon: ShieldCheck,
     },
     {

@@ -66,7 +66,7 @@ export default function AboutPage() {
           <div className="grid gap-10 md:grid-cols-3">
             <ApproachItem
               title="AI Native Production"
-              description="Our pipeline uses calibrated models to produce high-fidelity assets at scale."
+              description="Our pipeline uses calibrated models to produce assets with high fidelity at scale."
             />
             <ApproachItem
               title="Human Creative Direction"
@@ -74,7 +74,7 @@ export default function AboutPage() {
             />
             <ApproachItem
               title="Quality Oversight"
-              description="Human checks at every stage ensure production-ready files."
+              description="Human checks at every stage ensure files ready for production."
             />
           </div>
         </Container>

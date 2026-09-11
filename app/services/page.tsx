@@ -25,7 +25,7 @@ const serviceGroups = [
         title: "Brand Films",
         href: "/services/ai-video-production",
         description:
-          "High-fidelity films that define your brand identity.",
+          "Films with rich detail that define your brand identity.",
       },
       {
         title: "Product Commercials",
@@ -95,7 +95,7 @@ const serviceGroups = [
         title: "Social Creative",
         href: "/services/social-creative",
         description:
-          "Data-driven creative concepts designed for platform engagement.",
+          "Creative concepts driven by data and designed for platform engagement.",
       },
       {
         title: "Monthly Social Content",
@@ -196,7 +196,7 @@ const serviceGroups = [
     category: "Post Production",
     items: [
       {
-        title: "AI Post-Production",
+        title: "AI Post Production",
         href: "/services/post-production",
         description:
           "Professional editing, color grading, and technical finishing.",

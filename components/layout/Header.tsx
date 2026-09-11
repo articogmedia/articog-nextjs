@@ -241,25 +241,25 @@ function ServicesContent({
   const featured = [
     {
       title: "Brand Films & Commercials",
-      desc: "Story led films and broadcast ready ads, produced from brief in days.",
+      desc: "Story led films and ads ready for broadcast, produced from brief in days.",
       href: "/services/ai-video-production",
       icon: <Film size={14} />,
     },
     {
       title: "AI Social & UGC",
-      desc: "Platform native creations for Instagram, TikTok, YouTube and LinkedIn at scale.",
+      desc: "Creations native to each platform for Instagram, TikTok, YouTube, and LinkedIn at scale.",
       href: "/work/social",
       icon: <Smartphone size={14} />,
     },
     {
       title: "ML Ad Creations",
-      desc: "Hundreds of on brand variants, continuously optimised on performance signals.",
+      desc: "Hundreds of on brand variants, continuously optimized on performance signals.",
       href: "/services/ad-creative",
       icon: <TestTube2 size={14} />,
     },
     {
       title: "Creative Automations",
-      desc: "Brief-to-delivery workflow integration, 80% fewer manual production steps.",
+      desc: "Workflow integration from brief to delivery, with 80% fewer manual production steps.",
       href: "/how-it-works/ai-creative-pipeline",
       icon: <Workflow size={14} />,
     },

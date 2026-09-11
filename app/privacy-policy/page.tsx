@@ -48,7 +48,7 @@ const sections: PolicySection[] = [
         kind: "p",
         text: "This Privacy Policy is intended for website visitors, clients, " +
           "customers, prospects, and other individuals who interact with Articog " +
-          "through our customer-facing website and services.",
+          "through our customer facing website and services.",
       },
     ],
   },
@@ -202,7 +202,7 @@ const sections: PolicySection[] = [
         text: "Articog may use technology providers or business systems that store " +
           "or process information outside India. Where personal information is " +
           "transferred or processed across borders, Articog will do so in accordance " +
-          "with applicable data-protection requirements and reasonable security safeguards.",
+          "with applicable data protection requirements and reasonable security safeguards.",
       },
     ],
   },

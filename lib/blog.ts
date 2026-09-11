@@ -102,7 +102,7 @@ export const blogPosts: BlogEntry[] = [
   {
     type: "articog",
     slug: "the-4-systems-behind-high-velocity-campaign-production",
-    title: "The 4 systems behind high-velocity campaign production",
+    title: "The 4 systems behind high velocity campaign production",
     category: "AI Production",
     publishedAt: "2025-03-04",
     excerpt:
@@ -117,7 +117,7 @@ export const blogPosts: BlogEntry[] = [
       {
         type: "paragraph",
         value:
-          "High-velocity creative production is not a one-off sprint. It is a system that coordinates generation, review, iteration, and delivery across channels.",
+          "High velocity creative production is not a one off sprint. It is a system that coordinates generation, review, iteration, and delivery across channels.",
       },
       {
         type: "heading",
@@ -201,7 +201,7 @@ export const blogPosts: BlogEntry[] = [
     slug: "these-actors-dont-exist-this-entire-ad-was-made-with-ai",
     title: "These Actors Don’t Exist. This Entire Ad Was Made With AI | Articog",
     excerpt:
-      "An Articog AI-native production showcasing how an entire ad can be created using AI-generated actors and creative production workflows.",
+      "An Articog AI native production showcasing how an entire ad can be created using AI generated actors and creative production workflows.",
     publishedAt: "2026-09-01",
     featuredImage:
       "https://img.youtube.com/vi/l5pReVGFVqs/hqdefault.jpg",

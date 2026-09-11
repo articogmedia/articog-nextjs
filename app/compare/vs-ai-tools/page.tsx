@@ -14,10 +14,10 @@ export default function CompareAIToolsPage() {
       metric: "Creative Direction",
       diy: {
         value: "Inconsistent",
-        desc: "Without a trained eye, raw outputs often lack the strategic intention and nuance required for high-stakes brand work.",
+        desc: "Without a trained eye, raw outputs often lack the strategic intention and nuance required for brand work with high stakes.",
       },
       articog: {
-        value: "Expert-Guided",
+        value: "Guided by Experts",
         desc: "Every asset is guided by experienced creative direction, ensuring technical brilliance is matched by strategic purpose.",
       },
     },
@@ -25,7 +25,7 @@ export default function CompareAIToolsPage() {
       metric: "Technical Expertise",
       diy: {
         value: "Steep Learning Curve",
-        desc: "Managing multiple specialized AI tools requires significant time to master prompting, parameters, and post-production.",
+        desc: "Managing multiple specialized AI tools requires significant time to master prompting, parameters, and post production.",
       },
       articog: {
         value: "Calibrated Pipeline",

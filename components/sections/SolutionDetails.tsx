@@ -12,11 +12,11 @@ const detailGroups: Record<SolutionCategory, DetailGroup[]> = {
   monthly: [
     {
       title: "Always On Content",
-      description: "Continuous cross-channel production for brands that need a steady flow of organic and paid content without more headcount.",
+      description: "Continuous cross channel production for brands that need a steady flow of organic and paid content without more headcount.",
       items: [
         { title: "Continuous Production", description: "An ongoing content engine that keeps video, social, and visual channels active across campaign cycles." },
         { title: "Scalable Volume", description: "Output can flex with your needs while maintaining a consistent brand system and delivery cadence." },
-        { title: "Subscription vs Infrastructure", description: "The subscription provides a predictable monthly package; broader always-on infrastructure supports variable output across channels." },
+        { title: "Subscription vs Infrastructure", description: "The subscription provides a predictable monthly package; broader always on infrastructure supports variable output across channels." },
       ],
     },
   ],

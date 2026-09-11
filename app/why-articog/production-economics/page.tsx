@@ -14,7 +14,7 @@ export default function ProductionEconomicsPage() {
     {
       title: "Traditional Cost Structure",
       icon: <BarChart3 className="w-6 h-6 text-white/40" />,
-      description: "Traditional production is heavily weighted toward labor and physical overhead. Retainers, large crews, location fees, and extended post-production cycles create a high floor for project costs that scale linearly with volume.",
+      description: "Traditional production is heavily weighted toward labor and physical overhead. Retainers, large crews, location fees, and extended post production cycles create a high floor for project costs that scale linearly with volume.",
     },
     {
       title: "Volume Economics",

@@ -38,7 +38,7 @@ export default function HelpCenterPage() {
         },
         {
           q: "How do I choose the right service for my campaign?",
-          a: "Most clients start with a specific goal, like a product launch or social growth. You can browse our industry-specific solutions or book a brief discovery call to map out a custom production plan."
+          a: "Most clients start with a specific goal, like a product launch or social growth. You can browse our industry specific solutions or book a brief discovery call to map out a custom production plan."
         }
       ]
     },
@@ -71,7 +71,7 @@ export default function HelpCenterPage() {
       faqs: [
         {
           q: "What formats and specs do you deliver?",
-          a: "We deliver in all standard campaign formats: 9:16 vertical (Social), 4:5 portrait (Feed), 1:1 square, and 16:9 landscape. All video is delivered in high-resolution MP4/MOV, and images in high-fidelity JPEG/PNG."
+          a: "We deliver in all standard campaign formats: 9:16 vertical (Social), 4:5 portrait (Feed), 1:1 square, and 16:9 landscape. All video is delivered in high resolution MP4/MOV, and images in high quality JPEG/PNG."
         }
       ]
     }

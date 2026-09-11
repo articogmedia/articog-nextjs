@@ -20,7 +20,7 @@ export default function AdCreativePage() {
     },
     {
       title: "Display",
-      desc: "Clean, high-fidelity banner ads sized for every placement and programmatic network requirements.",
+      desc: "Clean banner ads with high fidelity sized for every placement and programmatic network requirements.",
       icon: Monitor,
     },
     {

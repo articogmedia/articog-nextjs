@@ -29,7 +29,7 @@ export default function SitemapPage() {
         { label: "Product Visuals", href: "/services/product-visuals" },
         { label: "Audio", href: "/services/audio" },
         { label: "Creative Strategy", href: "/services/creative-strategy" },
-        { label: "Post-Production", href: "/services/post-production" },
+        { label: "Post Production", href: "/services/post-production" },
       ]
     },
     {
