@@ -187,8 +187,8 @@ function DropdownPanel({
     <div
       className="absolute left-0 top-full z-[99999]"
       style={{
-        width: isServices ? "900px" : "260px",
-        maxWidth: isServices ? "calc(100vw - 32px)" : undefined,
+        width: isServices ? "min(100vw - 32px, 1080px)" : "min(100vw - 32px, 320px)",
+        maxWidth: "calc(100vw - 32px)",
         paddingTop: "12px",
       }}
       onClick={(e) => e.stopPropagation()}
@@ -203,7 +203,7 @@ function DropdownPanel({
             "0 20px 60px rgba(0,0,0,0.85), 0 0 0 1px rgba(255,255,255,0.05)",
           backdropFilter: "blur(28px)",
           WebkitBackdropFilter: "blur(28px)",
-          padding: isServices ? "32px" : "12px",
+          padding: isServices ? "28px" : "12px",
         }}
       >
         {isServices ? (
@@ -363,7 +363,7 @@ function ServicesContent({
   return (
     <>
       {/* Featured Services */}
-      <div className="mb-8 grid grid-cols-4 gap-6">
+      <div className="mb-8 grid grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-4 xl:gap-5">
         {featured.map((item) => (
           <Link
             key={item.title}
@@ -372,7 +372,7 @@ function ServicesContent({
               e.stopPropagation();
               onClose();
             }}
-            className="group flex flex-col gap-3 rounded-xl p-4 transition-colors hover:bg-white/[0.04]"
+            className="group flex flex-col gap-3 rounded-xl border border-white/[0.08] bg-white/[0.02] p-4 transition-colors hover:bg-white/[0.04]"
           >
             <div className="flex items-center justify-between">
               <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/[0.06] bg-white/[0.03] text-zinc-400 transition-colors group-hover:text-white">
